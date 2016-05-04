@@ -1,0 +1,24 @@
+lifo_classif:
+    path: /
+    defaults:
+        _controller: LIFOClassifBundle:Platform:index
+        
+lifo_classif_telechargement:
+    path:     /telechargement
+    defaults: { _controller: LIFOClassifBundle:Platform:telechargement }
+    
+lifo_classif_upload:
+    path:     /upload
+    defaults: { _controller: LIFOClassifBundle:Platform:upload }
+    
+lifo_classif_recherche:
+    path:     /recherche
+    defaults: { _controller: LIFOClassifBundle:Platform:recherche }
+    
+lifo_classif_classification:
+    path:     /classification
+    defaults: { _controller: LIFOClassifBundle:Platform:classification }
+    
+lifo_classif_tesson:
+    path:     /tesson
+    defaults: { _controller: LIFOClassifBundle:Platform:tesson }

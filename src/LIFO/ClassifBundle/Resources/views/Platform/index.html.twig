@@ -1,0 +1,19 @@
+{% extends "LIFOClassifBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+
+{% block body %}
+	<p>
+		Bienvenue sur l'outil d'aide à la classification de tesson
+	</p>
+	 <form id="monForm" method="post">
+        <fieldset>
+        <legend>Connexion</legend>
+        <p><label for="id">Identifiant :&nbsp;</label><input type="text" name="id" id="id" onblur="veridID(this)" /></p>
+        <p><label for="password">Mot de passe :&nbsp;</label><input type="password" name="password" /></p>
+        <p><label name="nostyle">&nbsp;</label>
+        <input type="submit" value="Envoyer" name="envoyer" />
+        <input type="reset" value="Tout effacer" /></p>
+        </fieldset>
+    </form>
+{% endblock %}

@@ -1,0 +1,3 @@
+lifo_classif:
+    resource: "@LIFOClassifBundle/Resources/config/routing.yml"
+    prefix:   /

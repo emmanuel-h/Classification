@@ -1,0 +1,102 @@
+<?php
+
+namespace LIFO\ClassifBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * US
+ *
+ * @ORM\Table(name="u_s")
+ * @ORM\Entity(repositoryClass="LIFO\ClassifBundle\Repository\USRepository")
+ */
+class US
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="numero", type="integer")
+     */
+    private $numero;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text")
+     */
+    private $description="Aucune";
+    
+    /**
+     * @ORM\ManyToMany(targetEntity="LIFO\ClassifBundle\Entity\Tesson",
+     * mappedBy="us")
+     */
+    private $tesson;
+    
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set numero
+     *
+     * @param integer $numero
+     *
+     * @return US
+     */
+    public function setNumero($numero)
+    {
+        $this->numero = $numero;
+
+        return $this;
+    }
+
+    /**
+     * Get numero
+     *
+     * @return integer
+     */
+    public function getNumero()
+    {
+        return $this->numero;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return US
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+}

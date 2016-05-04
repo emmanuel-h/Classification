@@ -1,0 +1,96 @@
+<?php
+
+namespace LIFO\ClassifBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PropositionClasse
+ *
+ * @ORM\Table(name="proposition_classe")
+ * @ORM\Entity(repositoryClass="LIFO\ClassifBundle\Repository\PropositionClasseRepository")
+ */
+class PropositionClasse
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date", type="datetime")
+     */
+    private $date;
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\Tesson",
+     * inversedBy="proposition classe")
+     * 
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $tesson;
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\Classe")
+     * 
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $classe;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="LIFO\ClassifBundle\Entity\EssaiClassification",
+     * mappedBy="propositionClasse",
+     * cascade={"persist"})
+     * 
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $essaiClassification;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set date
+     *
+     * @param \DateTime $date
+     *
+     * @return PropositionClasse
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date
+     *
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->classe = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+}

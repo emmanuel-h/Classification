@@ -1,0 +1,44 @@
+<?php
+
+namespace LIFO\ClassifBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Sequence
+ *
+ * @ORM\Table(name="sequence")
+ * @ORM\Entity(repositoryClass="LIFO\ClassifBundle\Repository\SequenceRepository")
+ */
+class Sequence
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="numeroSequence", type="integer")
+     */
+    private $numeroSequence;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text")
+     */
+    private $description;
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\Site")
+     * 
+     * @ORM\JoinColumn(nullable=false))
+     */
+    private $site;
+}

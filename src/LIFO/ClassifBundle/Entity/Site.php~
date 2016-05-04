@@ -1,0 +1,144 @@
+<?php
+
+namespace LIFO\ClassifBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Site
+ *
+ * @ORM\Table(name="site")
+ * @ORM\Entity(repositoryClass="LIFO\ClassifBundle\Repository\SiteRepository")
+ */
+class Site
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="codeINSEE", type="integer")
+     */
+    private $codeINSEE;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="numSiteCommune", type="integer")
+     */
+    private $numSiteCommune;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="LIFO\ClassifBundle\Entity\Zone",
+     * mappedBy="site",
+     * cascade={"persist"})
+     */
+    private $zone;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set codeINSEE
+     *
+     * @param integer $codeINSEE
+     *
+     * @return Site
+     */
+    public function setCodeINSEE($codeINSEE)
+    {
+        $this->codeINSEE = $codeINSEE;
+
+        return $this;
+    }
+
+    /**
+     * Get codeINSEE
+     *
+     * @return int
+     */
+    public function getCodeINSEE()
+    {
+        return $this->codeINSEE;
+    }
+
+    /**
+     * Set numSiteCommune
+     *
+     * @param integer $numSiteCommune
+     *
+     * @return Site
+     */
+    public function setNumSiteCommune($numSiteCommune)
+    {
+        $this->numSiteCommune = $numSiteCommune;
+
+        return $this;
+    }
+
+    /**
+     * Get numSiteCommune
+     *
+     * @return int
+     */
+    public function getNumSiteCommune()
+    {
+        return $this->numSiteCommune;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->numIsolation = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add zone
+     *
+     * @param \LIFO\ClassifBundle\Entity\Zone $zone
+     *
+     * @return Site
+     */
+    public function addZone(\LIFO\ClassifBundle\Entity\Zone $zone)
+    {
+        $this->zone[] = $zone;
+
+        return $this;
+    }
+
+    /**
+     * Remove zone
+     *
+     * @param \LIFO\ClassifBundle\Entity\Zone $zone
+     */
+    public function removeZone(\LIFO\ClassifBundle\Entity\Zone $zone)
+    {
+        $this->zone->removeElement($zone);
+    }
+
+    /**
+     * Get zone
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getZone()
+    {
+        return $this->zone;
+    }
+}

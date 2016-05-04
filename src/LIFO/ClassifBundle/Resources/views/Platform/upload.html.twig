@@ -1,0 +1,106 @@
+{% extends "LIFOClassifBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Upload{% endblock %}
+
+{% block body %}
+	{{ parent() }}
+	
+	
+
+<h3>Tesson</h3>
+
+<div class="well">
+  {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+  {# Les erreurs générales du formulaire. #}
+  {{ form_errors(form) }}
+
+  <div class="form-group">
+    {{ form_label(form.anneeDecouverte, "Année de découverte", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+    {{ form_errors(form.anneeDecouverte) }}
+    <div class="col-sm-1">
+      {{ form_widget(form.anneeDecouverte, {'attr': {'class': 'form-control'}}) }}
+    </div>
+  </div>
+  <div class="form-group">
+    {{ form_label(form.developpe, "Developpé", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+    {{ form_errors(form.developpe) }}
+    <div class="col-sm-1">
+      {{ form_widget(form.developpe, {'attr': {'class': 'form-control'}}) }}
+    </div>
+  </div>
+  <div class="form-group">
+    {{ form_label(form.lotIndividu, "Lot / Individu", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+    {{ form_errors(form.lotIndividu) }}
+    <div class="col-sm-1">
+      {{ form_widget(form.lotIndividu, {'attr': {'class': 'form-control'}}) }}
+    </div>
+  </div>
+  <div class="form-group">
+    {{ form_label(form.numTombe, "Numéro de tombe", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+    {{ form_errors(form.numTombe) }}
+    <div class="col-sm-1">
+      {{ form_widget(form.numTombe, {'attr': {'class': 'form-control'}}) }}
+    </div>
+  </div>
+  <div class="form-group">
+    {{ form_label(form.fait, "Fait", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+    {{ form_errors(form.fait) }}
+    <div class="col-sm-1">
+      {{ form_widget(form.fait, {'attr': {'class': 'form-control'}}) }}
+    </div>
+  </div>
+  <div class="form-group">
+    {{ form_label(form.ordreLargeur, "Largeur", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+    {{ form_errors(form.ordreLargeur) }}
+    <div class="col-sm-1">
+      {{ form_widget(form.ordreLargeur, {'attr': {'class': 'form-control'}}) }}
+    </div>
+	<div class="col-sm-1">
+      {{ form_widget(form.largeur, {'attr': {'class': 'form-control'}}) }}
+	</div>
+  </div>
+  <div class="form-group">
+    {{ form_label(form.ordreLongueur, "Longueur", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+    {{ form_errors(form.ordreLongueur) }}
+    <div class="col-sm-1">
+      {{ form_widget(form.ordreLongueur, {'attr': {'class': 'form-control'}}) }}
+    </div>
+	<div class="col-sm-1">
+      {{ form_widget(form.longueur, {'attr': {'class': 'form-control'}}) }}
+	</div>
+  </div>
+  <div class="form-group">
+    {{ form_label(form.commentaire, "Commentaires", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+    {{ form_errors(form.commentaire) }}
+    <div class="col-sm-2">
+      {{ form_widget(form.commentaire, {'attr': {'class': 'form-control'}}) }}
+    </div>
+  </div>
+  <div class="form-group">
+    {{ form_label(form.nombreMotifsVerticaux, "Nombre de motifs verticaux", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+    {{ form_errors(form.nombreMotifsVerticaux) }}
+    <div class="col-sm-1">
+      {{ form_widget(form.nombreMotifsVerticaux, {'attr': {'class': 'form-control'}}) }}
+    </div>
+  </div>
+  <div class="form-group">
+    {{ form_label(form.nombreMotifsHorizontaux, "Nombre de motifs horizontaux", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+    {{ form_errors(form.nombreMotifsHorizontaux) }}
+    <div class="col-sm-1">
+      {{ form_widget(form.nombreMotifsHorizontaux, {'attr': {'class': 'form-control'}}) }}
+    </div>
+  </div>
+
+  {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}
+
+  {# Génération automatique des champs pas encore écrits.
+     Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
+     et tous les champs cachés (type « hidden »). #}
+  {{ form_rest(form) }}
+
+  {# Fermeture de la balise <form> du formulaire HTML #}
+  {{ form_end(form) }}
+</div>
+
+{% endblock %}
