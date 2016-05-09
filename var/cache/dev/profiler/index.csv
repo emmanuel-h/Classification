@@ -93,3 +93,7 @@ b1f08b,::1,GET,http://localhost/Classification/web/app_dev.php/upload,1462263142
 de5af6,::1,GET,http://localhost/Classification/web/app_dev.php/telechargement,1462266990,,200
 98ef39,::1,GET,http://localhost/Classification/web/app_dev.php/upload,1462266992,,200
 1c3939,::1,GET,http://localhost/Classification/web/app_dev.php/upload,1462354263,,200
+55a4fd,::1,GET,http://localhost/Classification/web/app_dev.php/upload,1462360522,,200
+d4ecc2,::1,GET,http://localhost/Classification/web/app_dev.php/telechargement,1462360527,,200
+c611d4,::1,GET,http://localhost/Classification/web/app_dev.php/recherche,1462360530,,200
+458897,::1,GET,http://localhost/Classification/web/app_dev.php/upload,1462360531,,200

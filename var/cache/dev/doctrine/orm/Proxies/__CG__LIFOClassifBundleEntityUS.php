@@ -64,10 +64,10 @@ class US extends \LIFO\ClassifBundle\Entity\US implements \Doctrine\ORM\Proxy\Pr
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\US' . "\0" . 'id', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\US' . "\0" . 'numero', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\US' . "\0" . 'description'];
+            return ['__isInitialized__', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\US' . "\0" . 'id', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\US' . "\0" . 'nom', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\US' . "\0" . 'description'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\US' . "\0" . 'id', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\US' . "\0" . 'numero', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\US' . "\0" . 'description'];
+        return ['__isInitialized__', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\US' . "\0" . 'id', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\US' . "\0" . 'nom', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\US' . "\0" . 'description'];
     }
 
     /**
@@ -191,28 +191,6 @@ class US extends \LIFO\ClassifBundle\Entity\US implements \Doctrine\ORM\Proxy\Pr
     /**
      * {@inheritDoc}
      */
-    public function setNumero($numero)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setNumero', [$numero]);
-
-        return parent::setNumero($numero);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getNumero()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNumero', []);
-
-        return parent::getNumero();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function setDescription($description)
     {
 
@@ -230,6 +208,28 @@ class US extends \LIFO\ClassifBundle\Entity\US implements \Doctrine\ORM\Proxy\Pr
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDescription', []);
 
         return parent::getDescription();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setNom($nom)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setNom', [$nom]);
+
+        return parent::setNom($nom);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getNom()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNom', []);
+
+        return parent::getNom();
     }
 
 }

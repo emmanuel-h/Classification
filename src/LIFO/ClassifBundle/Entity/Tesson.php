@@ -3,7 +3,6 @@
 namespace LIFO\ClassifBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Config\Definition\IntegerNode;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
@@ -26,7 +25,7 @@ class Tesson
     /**
      * @var int
      *
-     * @ORM\Column(name="numEnregistrement", type="integer", unique=true)
+     * @ORM\Column(name="numEnregistrement", type="integer", unique=true, nullable=true)
      */
     private $numEnregistrement;
     
@@ -84,14 +83,14 @@ class Tesson
      *
      * @ORM\Column(name="ordreLargeur", type="string", length=255)
      */
-    private $ordreLargeur="e";
+    private $ordreLargeur="=";
 
     /**
      * @var string
      *
      * @ORM\Column(name="ordreLongueur", type="string", length=255)
      */
-    private $ordreLongueur="e";
+    private $ordreLongueur="=";
 
     /**
      * @var string
@@ -108,11 +107,32 @@ class Tesson
     private $nombreMotifsVerticaux;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="ordreMotifsVerticaux", type="string", length=255)
+     */
+    private $ordreMotifsVerticaux="=";
+
+    /**
      * @var int
      *
      * @ORM\Column(name="nombreMotifsHorizontaux", type="integer", nullable=true)
      */
     private $nombreMotifsHorizontaux;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ordremotifsHorizontaux", type="string", length=255)
+     */
+    private $ordreMotifsHorizontaux="=";
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="numIsolation", type="integer")
+     */
+    private $numIsolation;
 
     /**
      * @var \DateTime
@@ -138,12 +158,14 @@ class Tesson
      * @ORM\ManyToMany(targetEntity="LIFO\ClassifBundle\Entity\Decor",
      * inversedBy="tesson")
      * 
-     * @ORM\JoinColumn(nullable=false) 
+     * 
      */
+    
+    //@ORM\JoinColumn(nullable=false) 
     private $decor;
     
     /**
-     * @ORM\ManyToMany(targetEntity="LIFO\ClassifBundle\Entity\US",
+     * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\US",
      * inversedBy="tesson")
      * 
      * @ORM\JoinColumn(nullable=false)
@@ -151,17 +173,10 @@ class Tesson
     private $us;
     
     /**
-     * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\NumIsolation")
-     * 
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $numIsolation;
-    
-    /**
      * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\Site")
      * 
-     * @ORM\JoinColumn(nullable=false)
      */
+    //@ORM\JoinColumn(nullable=false)
     private $site;
     
     /**
@@ -214,6 +229,19 @@ class Tesson
      * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\Sequence")
      */
     private $sequence;
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->numerisation = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->decor = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->us = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->typageEn = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->propositionClasse = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->typeDecor = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->numIsolation=0;
+    }
 
     /**
      * Get id
@@ -514,6 +542,30 @@ class Tesson
     }
 
     /**
+     * Set ordreMotifsVerticaux
+     *
+     * @param string $ordreMotifsVerticaux
+     *
+     * @return Tesson
+     */
+    public function setOrdreMotifsVerticaux($ordreMotifsVerticaux)
+    {
+        $this->ordreMotifsVerticaux = $ordreMotifsVerticaux;
+
+        return $this;
+    }
+
+    /**
+     * Get ordreMotifsVerticaux
+     *
+     * @return string
+     */
+    public function getOrdreMotifsVerticaux()
+    {
+        return $this->ordreMotifsVerticaux;
+    }
+
+    /**
      * Set nombreMotifsHorizontaux
      *
      * @param integer $nombreMotifsHorizontaux
@@ -535,6 +587,78 @@ class Tesson
     public function getNombreMotifsHorizontaux()
     {
         return $this->nombreMotifsHorizontaux;
+    }
+
+    /**
+     * Set ordreMotifsHorizontaux
+     *
+     * @param string $ordreMotifsHorizontaux
+     *
+     * @return Tesson
+     */
+    public function setOrdreMotifsHorizontaux($ordreMotifsHorizontaux)
+    {
+        $this->ordreMotifsHorizontaux = $ordreMotifsHorizontaux;
+
+        return $this;
+    }
+
+    /**
+     * Get ordreMotifsHorizontaux
+     *
+     * @return string
+     */
+    public function getOrdreMotifsHorizontaux()
+    {
+        return $this->ordreMotifsHorizontaux;
+    }
+
+    /**
+     * Set numIsolation
+     *
+     * @param integer $numIsolation
+     *
+     * @return Tesson
+     */
+    public function setNumIsolation($numIsolation)
+    {
+        $this->numIsolation = $numIsolation;
+
+        return $this;
+    }
+
+    /**
+     * Get numIsolation
+     *
+     * @return integer
+     */
+    public function getNumIsolation()
+    {
+        return $this->numIsolation;
+    }
+
+    /**
+     * Set dateEnregistrement
+     *
+     * @param \DateTime $dateEnregistrement
+     *
+     * @return Tesson
+     */
+    public function setDateEnregistrement($dateEnregistrement)
+    {
+        $this->dateEnregistrement = $dateEnregistrement;
+
+        return $this;
+    }
+
+    /**
+     * Get dateEnregistrement
+     *
+     * @return \DateTime
+     */
+    public function getDateEnregistrement()
+    {
+        return $this->dateEnregistrement;
     }
 
     /**
@@ -596,51 +720,42 @@ class Tesson
     }
 
     /**
-     * Set us
+     * Add decor
      *
-     * @param \LIFO\ClassifBundle\Entity\US $us
+     * @param \LIFO\ClassifBundle\Entity\Decor $decor
      *
      * @return Tesson
      */
-    public function setUs(\LIFO\ClassifBundle\Entity\US $us)
+    public function addDecor(\LIFO\ClassifBundle\Entity\Decor $decor)
     {
-        $this->us = $us;
-
+    	// Si l'objet fait déjà partie de la collection on ne l'ajoute pas
+    	if (!$this->decor->contains($decor)) {
+    		if (!$decor->getTesson()->contains($this)) {
+    			$decor->addTesson($this);
+    		}
+    		$this->decor->add($decor);
+    	}
         return $this;
     }
 
     /**
-     * Get us
+     * Remove decor
      *
-     * @return \LIFO\ClassifBundle\Entity\US
+     * @param \LIFO\ClassifBundle\Entity\Decor $decor
      */
-    public function getUs()
+    public function removeDecor(\LIFO\ClassifBundle\Entity\Decor $decor)
     {
-        return $this->us;
+        $this->decor->removeElement($decor);
     }
 
     /**
-     * Set numIsolation
+     * Get decor
      *
-     * @param \LIFO\ClassifBundle\Entity\NumIsolation $numIsolation
-     *
-     * @return Tesson
+     * @return \Doctrine\Common\Collections\Collection
      */
-    public function setNumIsolation(\LIFO\ClassifBundle\Entity\NumIsolation $numIsolation)
+    public function getDecor()
     {
-        $this->numIsolation = $numIsolation;
-
-        return $this;
-    }
-
-    /**
-     * Get numIsolation
-     *
-     * @return \LIFO\ClassifBundle\Entity\NumIsolation
-     */
-    public function getNumIsolation()
-    {
-        return $this->numIsolation;
+        return $this->decor;
     }
 
     /**
@@ -808,49 +923,6 @@ class Tesson
     }
 
     /**
-     * Add decor
-     *
-     * @param \LIFO\ClassifBundle\Entity\Decor $decor
-     *
-     * @return Tesson
-     */
-    public function addDecor(\LIFO\ClassifBundle\Entity\Decor $decor)
-    {
-    	// Si l'objet fait déjà partie de la collection on ne l'ajoute pas
-    	if (!$this->decor->contains($decor)) {
-    		if (!$decor->getTesson()->contains($this)) {
-    			$decor->addTesson($this);
-    		}
-    		$this->decor->add($decor);
-    	}
-        return $this;
-    }
-
-    /**
-     * Remove decor
-     *
-     * @param \LIFO\ClassifBundle\Entity\Decor $decor
-     */
-    public function removeDecor(\LIFO\ClassifBundle\Entity\Decor $decor)
-    {
-        $this->decor->removeElement($decor);
-    }
-
-    /**
-     * Get decor
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getDecor()
-    {
-        return $this->decor;
-    }
-    
-    public function __toString(){
-    	return "tesson d'id ".$this->numEnregistrement;
-    }
-
-    /**
      * Add typeDecor
      *
      * @param \LIFO\ClassifBundle\Entity\TypeDecor $typeDecor
@@ -858,7 +930,7 @@ class Tesson
      * @return Tesson
      */
     public function addTypeDecor(\LIFO\ClassifBundle\Entity\TypeDecor $typeDecor)
-    {	
+    {
     	// Si l'objet fait déjà partie de la collection on ne l'ajoute pas
     	if (!$this->typeDecor->contains($typeDecor)) {
     		if (!$typeDecor->getTesson()->contains($this)) {
@@ -887,30 +959,6 @@ class Tesson
     public function getTypeDecor()
     {
         return $this->typeDecor;
-    }
-
-    /**
-     * Set dateEnregistrement
-     *
-     * @param \DateTime $dateEnregistrement
-     *
-     * @return Tesson
-     */
-    public function setDateEnregistrement($dateEnregistrement)
-    {
-        $this->dateEnregistrement = $dateEnregistrement;
-
-        return $this;
-    }
-
-    /**
-     * Get dateEnregistrement
-     *
-     * @return \DateTime
-     */
-    public function getDateEnregistrement()
-    {
-        return $this->dateEnregistrement;
     }
 
     /**
@@ -984,40 +1032,28 @@ class Tesson
     {
         return $this->sequence;
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->numerisation = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->decor = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->us = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->typageEn = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->propositionClasse = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->typeDecor = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
     /**
-     * Add us
+     * Set us
      *
      * @param \LIFO\ClassifBundle\Entity\US $us
      *
      * @return Tesson
      */
-    public function addU(\LIFO\ClassifBundle\Entity\US $us)
+    public function setUs(\LIFO\ClassifBundle\Entity\US $us)
     {
-        $this->us[] = $us;
+        $this->us = $us;
 
         return $this;
     }
 
     /**
-     * Remove us
+     * Get us
      *
-     * @param \LIFO\ClassifBundle\Entity\US $us
+     * @return \LIFO\ClassifBundle\Entity\US
      */
-    public function removeU(\LIFO\ClassifBundle\Entity\US $us)
+    public function getUs()
     {
-        $this->us->removeElement($us);
+        return $this->us;
     }
 }

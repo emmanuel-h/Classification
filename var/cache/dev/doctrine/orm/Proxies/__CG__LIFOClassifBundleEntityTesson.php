@@ -64,10 +64,10 @@ class Tesson extends \LIFO\ClassifBundle\Entity\Tesson implements \Doctrine\ORM\
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'id', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'numEnregistrement', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'anneeDecouverte', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'developpe', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'lotIndividu', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'numTombe', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'fait', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'largeur', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'longueur', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'ordreLargeur', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'ordreLongueur', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'commentaire', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'nombreMotifsVerticaux', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'nombreMotifsHorizontaux', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'dateEnregistrement', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'tessonMolette', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'numerisation', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'decor', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'us', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'numIsolation', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'site', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'zone', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'dateTesson', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'validePar', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'enregistrePar', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'typageEn', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'propositionClasse', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'typeDecor'];
+            return ['__isInitialized__', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'id', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'numEnregistrement', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'anneeDecouverte', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'developpe', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'lotIndividu', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'numTombe', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'fait', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'largeur', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'longueur', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'ordreLargeur', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'ordreLongueur', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'commentaire', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'nombreMotifsVerticaux', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'ordreMotifsVerticaux', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'nombreMotifsHorizontaux', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'ordreMotifsHorizontaux', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'numIsolation', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'dateEnregistrement', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'tessonMolette', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'numerisation', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'decor', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'us', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'site', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'zone', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'validePar', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'enregistrePar', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'typageEn', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'propositionClasse', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'typeDecor', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'periode', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'phase', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'sequence'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'id', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'numEnregistrement', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'anneeDecouverte', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'developpe', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'lotIndividu', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'numTombe', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'fait', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'largeur', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'longueur', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'ordreLargeur', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'ordreLongueur', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'commentaire', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'nombreMotifsVerticaux', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'nombreMotifsHorizontaux', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'dateEnregistrement', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'tessonMolette', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'numerisation', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'decor', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'us', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'numIsolation', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'site', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'zone', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'dateTesson', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'validePar', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'enregistrePar', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'typageEn', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'propositionClasse', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'typeDecor'];
+        return ['__isInitialized__', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'id', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'numEnregistrement', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'anneeDecouverte', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'developpe', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'lotIndividu', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'numTombe', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'fait', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'largeur', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'longueur', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'ordreLargeur', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'ordreLongueur', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'commentaire', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'nombreMotifsVerticaux', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'ordreMotifsVerticaux', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'nombreMotifsHorizontaux', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'ordreMotifsHorizontaux', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'numIsolation', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'dateEnregistrement', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'tessonMolette', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'numerisation', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'decor', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'us', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'site', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'zone', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'validePar', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'enregistrePar', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'typageEn', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'propositionClasse', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'typeDecor', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'periode', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'phase', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Tesson' . "\0" . 'sequence'];
     }
 
     /**
@@ -455,6 +455,28 @@ class Tesson extends \LIFO\ClassifBundle\Entity\Tesson implements \Doctrine\ORM\
     /**
      * {@inheritDoc}
      */
+    public function setOrdreMotifsVerticaux($ordreMotifsVerticaux)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setOrdreMotifsVerticaux', [$ordreMotifsVerticaux]);
+
+        return parent::setOrdreMotifsVerticaux($ordreMotifsVerticaux);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getOrdreMotifsVerticaux()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getOrdreMotifsVerticaux', []);
+
+        return parent::getOrdreMotifsVerticaux();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function setNombreMotifsHorizontaux($nombreMotifsHorizontaux)
     {
 
@@ -472,6 +494,72 @@ class Tesson extends \LIFO\ClassifBundle\Entity\Tesson implements \Doctrine\ORM\
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNombreMotifsHorizontaux', []);
 
         return parent::getNombreMotifsHorizontaux();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setOrdreMotifsHorizontaux($ordreMotifsHorizontaux)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setOrdreMotifsHorizontaux', [$ordreMotifsHorizontaux]);
+
+        return parent::setOrdreMotifsHorizontaux($ordreMotifsHorizontaux);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getOrdreMotifsHorizontaux()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getOrdreMotifsHorizontaux', []);
+
+        return parent::getOrdreMotifsHorizontaux();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setNumIsolation($numIsolation)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setNumIsolation', [$numIsolation]);
+
+        return parent::setNumIsolation($numIsolation);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getNumIsolation()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNumIsolation', []);
+
+        return parent::getNumIsolation();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setDateEnregistrement($dateEnregistrement)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDateEnregistrement', [$dateEnregistrement]);
+
+        return parent::setDateEnregistrement($dateEnregistrement);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getDateEnregistrement()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDateEnregistrement', []);
+
+        return parent::getDateEnregistrement();
     }
 
     /**
@@ -532,45 +620,34 @@ class Tesson extends \LIFO\ClassifBundle\Entity\Tesson implements \Doctrine\ORM\
     /**
      * {@inheritDoc}
      */
-    public function setUs(\LIFO\ClassifBundle\Entity\US $us)
+    public function addDecor(\LIFO\ClassifBundle\Entity\Decor $decor)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUs', [$us]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addDecor', [$decor]);
 
-        return parent::setUs($us);
+        return parent::addDecor($decor);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getUs()
+    public function removeDecor(\LIFO\ClassifBundle\Entity\Decor $decor)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUs', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeDecor', [$decor]);
 
-        return parent::getUs();
+        return parent::removeDecor($decor);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function setNumIsolation(\LIFO\ClassifBundle\Entity\NumIsolation $numIsolation)
+    public function getDecor()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setNumIsolation', [$numIsolation]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDecor', []);
 
-        return parent::setNumIsolation($numIsolation);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getNumIsolation()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNumIsolation', []);
-
-        return parent::getNumIsolation();
+        return parent::getDecor();
     }
 
     /**
@@ -615,28 +692,6 @@ class Tesson extends \LIFO\ClassifBundle\Entity\Tesson implements \Doctrine\ORM\
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getZone', []);
 
         return parent::getZone();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setDateTesson(\LIFO\ClassifBundle\Entity\DateTesson $dateTesson)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDateTesson', [$dateTesson]);
-
-        return parent::setDateTesson($dateTesson);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getDateTesson()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDateTesson', []);
-
-        return parent::getDateTesson();
     }
 
     /**
@@ -752,50 +807,6 @@ class Tesson extends \LIFO\ClassifBundle\Entity\Tesson implements \Doctrine\ORM\
     /**
      * {@inheritDoc}
      */
-    public function addDecor(\LIFO\ClassifBundle\Entity\Decor $decor)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addDecor', [$decor]);
-
-        return parent::addDecor($decor);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function removeDecor(\LIFO\ClassifBundle\Entity\Decor $decor)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeDecor', [$decor]);
-
-        return parent::removeDecor($decor);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getDecor()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDecor', []);
-
-        return parent::getDecor();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function __toString()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', []);
-
-        return parent::__toString();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function addTypeDecor(\LIFO\ClassifBundle\Entity\TypeDecor $typeDecor)
     {
 
@@ -829,23 +840,89 @@ class Tesson extends \LIFO\ClassifBundle\Entity\Tesson implements \Doctrine\ORM\
     /**
      * {@inheritDoc}
      */
-    public function setDateEnregistrement($dateEnregistrement)
+    public function setPeriode(\LIFO\ClassifBundle\Entity\Periode $periode = NULL)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDateEnregistrement', [$dateEnregistrement]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPeriode', [$periode]);
 
-        return parent::setDateEnregistrement($dateEnregistrement);
+        return parent::setPeriode($periode);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getDateEnregistrement()
+    public function getPeriode()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDateEnregistrement', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPeriode', []);
 
-        return parent::getDateEnregistrement();
+        return parent::getPeriode();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setPhase(\LIFO\ClassifBundle\Entity\Phase $phase = NULL)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPhase', [$phase]);
+
+        return parent::setPhase($phase);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPhase()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPhase', []);
+
+        return parent::getPhase();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setSequence(\LIFO\ClassifBundle\Entity\Sequence $sequence = NULL)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSequence', [$sequence]);
+
+        return parent::setSequence($sequence);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getSequence()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSequence', []);
+
+        return parent::getSequence();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setUs(\LIFO\ClassifBundle\Entity\US $us)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUs', [$us]);
+
+        return parent::setUs($us);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getUs()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUs', []);
+
+        return parent::getUs();
     }
 
 }

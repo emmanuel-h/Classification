@@ -64,10 +64,10 @@ class Site extends \LIFO\ClassifBundle\Entity\Site implements \Doctrine\ORM\Prox
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Site' . "\0" . 'id', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Site' . "\0" . 'codeINSEE', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Site' . "\0" . 'numSiteCommune', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Site' . "\0" . 'periode', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Site' . "\0" . 'zone'];
+            return ['__isInitialized__', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Site' . "\0" . 'id', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Site' . "\0" . 'codeINSEE', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Site' . "\0" . 'numSiteCommune', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Site' . "\0" . 'zone'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Site' . "\0" . 'id', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Site' . "\0" . 'codeINSEE', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Site' . "\0" . 'numSiteCommune', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Site' . "\0" . 'periode', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Site' . "\0" . 'zone'];
+        return ['__isInitialized__', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Site' . "\0" . 'id', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Site' . "\0" . 'codeINSEE', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Site' . "\0" . 'numSiteCommune', '' . "\0" . 'LIFO\\ClassifBundle\\Entity\\Site' . "\0" . 'zone'];
     }
 
     /**
@@ -230,39 +230,6 @@ class Site extends \LIFO\ClassifBundle\Entity\Site implements \Doctrine\ORM\Prox
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNumSiteCommune', []);
 
         return parent::getNumSiteCommune();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function addPeriode(\LIFO\ClassifBundle\Entity\Periode $periode)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addPeriode', [$periode]);
-
-        return parent::addPeriode($periode);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function removePeriode(\LIFO\ClassifBundle\Entity\Periode $periode)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removePeriode', [$periode]);
-
-        return parent::removePeriode($periode);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getPeriode()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPeriode', []);
-
-        return parent::getPeriode();
     }
 
     /**

@@ -22,11 +22,11 @@ class US
     private $id;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="numero", type="integer")
+     * @ORM\Column(name="nom", type="string", length=255)
      */
-    private $numero;
+    private $nom;
 
     /**
      * @var string
@@ -53,30 +53,6 @@ class US
     }
 
     /**
-     * Set numero
-     *
-     * @param integer $numero
-     *
-     * @return US
-     */
-    public function setNumero($numero)
-    {
-        $this->numero = $numero;
-
-        return $this;
-    }
-
-    /**
-     * Get numero
-     *
-     * @return integer
-     */
-    public function getNumero()
-    {
-        return $this->numero;
-    }
-
-    /**
      * Set description
      *
      * @param string $description
@@ -98,5 +74,46 @@ class US
     public function getDescription()
     {
         return $this->description;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->tesson = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add tesson
+     *
+     * @param \LIFO\ClassifBundle\Entity\Tesson $tesson
+     *
+     * @return US
+     */
+    public function addTesson(\LIFO\ClassifBundle\Entity\Tesson $tesson)
+    {
+        $this->tesson[] = $tesson;
+
+        return $this;
+    }
+
+    /**
+     * Remove tesson
+     *
+     * @param \LIFO\ClassifBundle\Entity\Tesson $tesson
+     */
+    public function removeTesson(\LIFO\ClassifBundle\Entity\Tesson $tesson)
+    {
+        $this->tesson->removeElement($tesson);
+    }
+
+    /**
+     * Get tesson
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTesson()
+    {
+        return $this->tesson;
     }
 }

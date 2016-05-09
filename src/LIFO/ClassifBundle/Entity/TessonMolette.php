@@ -27,13 +27,6 @@ class TessonMolette
      * @ORM\Column(name="egal", type="boolean")
      */
     private $egal;
-
-    /**
-     * @var boolean
-     *
-     * @ORM\Column(name="moletteDessinee", type="boolean")
-     */
-    private $moletteDessinee;
     
     /**
      * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\Molette")
@@ -107,29 +100,5 @@ class TessonMolette
     public function getMolette()
     {
         return $this->molette;
-    }
-
-    /**
-     * Set moletteDessinee
-     *
-     * @param boolean $moletteDessinee
-     *
-     * @return TessonMolette
-     */
-    public function setMoletteDessinee($moletteDessinee)
-    {
-        $this->moletteDessinee = $moletteDessinee;
-
-        return $this;
-    }
-
-    /**
-     * Get moletteDessinee
-     *
-     * @return boolean
-     */
-    public function getMoletteDessinee()
-    {
-        return $this->moletteDessinee;
     }
 }

@@ -22,11 +22,11 @@ class US
     private $id;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="numero", type="integer")
+     * @ORM\Column(name="nom", type="string", length=255)
      */
-    private $numero;
+    private $nom;
 
     /**
      * @var string
@@ -34,12 +34,6 @@ class US
      * @ORM\Column(name="description", type="text")
      */
     private $description="Aucune";
-    
-    /**
-     * @ORM\ManyToMany(targetEntity="LIFO\ClassifBundle\Entity\Tesson",
-     * mappedBy="us")
-     */
-    private $tesson;
     
 
     /**
@@ -50,30 +44,6 @@ class US
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set numero
-     *
-     * @param integer $numero
-     *
-     * @return US
-     */
-    public function setNumero($numero)
-    {
-        $this->numero = $numero;
-
-        return $this;
-    }
-
-    /**
-     * Get numero
-     *
-     * @return integer
-     */
-    public function getNumero()
-    {
-        return $this->numero;
     }
 
     /**
@@ -99,45 +69,28 @@ class US
     {
         return $this->description;
     }
+    
     /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->tesson = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Add tesson
+     * Set nom
      *
-     * @param \LIFO\ClassifBundle\Entity\Tesson $tesson
+     * @param string $nom
      *
      * @return US
      */
-    public function addTesson(\LIFO\ClassifBundle\Entity\Tesson $tesson)
+    public function setNom($nom)
     {
-        $this->tesson[] = $tesson;
+        $this->nom = $nom;
 
         return $this;
     }
 
     /**
-     * Remove tesson
+     * Get nom
      *
-     * @param \LIFO\ClassifBundle\Entity\Tesson $tesson
+     * @return string
      */
-    public function removeTesson(\LIFO\ClassifBundle\Entity\Tesson $tesson)
+    public function getNom()
     {
-        $this->tesson->removeElement($tesson);
-    }
-
-    /**
-     * Get tesson
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getTesson()
-    {
-        return $this->tesson;
+        return $this->nom;
     }
 }
