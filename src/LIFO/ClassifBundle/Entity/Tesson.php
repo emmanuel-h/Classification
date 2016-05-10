@@ -160,13 +160,11 @@ class Tesson
      * 
      * 
      */
-    
     //@ORM\JoinColumn(nullable=false) 
     private $decor;
     
     /**
-     * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\US",
-     * inversedBy="tesson")
+     * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\US")
      * 
      * @ORM\JoinColumn(nullable=false)
      */
@@ -174,9 +172,9 @@ class Tesson
     
     /**
      * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\Site")
-     * 
+     *
+     * @ORM\JoinColumn(nullable=false)
      */
-    //@ORM\JoinColumn(nullable=false)
     private $site;
     
     /**
@@ -236,11 +234,11 @@ class Tesson
     {
         $this->numerisation = new \Doctrine\Common\Collections\ArrayCollection();
         $this->decor = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->us = new \Doctrine\Common\Collections\ArrayCollection();
         $this->typageEn = new \Doctrine\Common\Collections\ArrayCollection();
         $this->propositionClasse = new \Doctrine\Common\Collections\ArrayCollection();
         $this->typeDecor = new \Doctrine\Common\Collections\ArrayCollection();
         $this->numIsolation=0;
+        $this->dateEnregistrement= new \DateTime();
     }
 
     /**

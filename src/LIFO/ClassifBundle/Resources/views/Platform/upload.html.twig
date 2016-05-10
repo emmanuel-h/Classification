@@ -4,10 +4,6 @@
 
 {% block body %}
 	{{ parent() }}
-	
-	
-
-<h3>Tesson</h3>
 
 <div class="well">
   {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
@@ -15,6 +11,8 @@
   {# Les erreurs générales du formulaire. #}
   {{ form_errors(form) }}
 
+<fieldset>
+	<legend> Tesson </legend>
   <div class="form-group">
     {{ form_label(form.anneeDecouverte, "Année de découverte", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
     {{ form_errors(form.anneeDecouverte) }}
@@ -22,6 +20,7 @@
       {{ form_widget(form.anneeDecouverte, {'attr': {'class': 'form-control'}}) }}
     </div>
   </div>
+  
   <div class="form-group">
     {{ form_label(form.developpe, "Developpé", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
     {{ form_errors(form.developpe) }}
@@ -29,6 +28,7 @@
       {{ form_widget(form.developpe, {'attr': {'class': 'form-control'}}) }}
     </div>
   </div>
+  
   <div class="form-group">
     {{ form_label(form.lotIndividu, "Lot / Individu", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
     {{ form_errors(form.lotIndividu) }}
@@ -36,6 +36,7 @@
       {{ form_widget(form.lotIndividu, {'attr': {'class': 'form-control'}}) }}
     </div>
   </div>
+  
   <div class="form-group">
     {{ form_label(form.numTombe, "Numéro de tombe", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
     {{ form_errors(form.numTombe) }}
@@ -43,6 +44,7 @@
       {{ form_widget(form.numTombe, {'attr': {'class': 'form-control'}}) }}
     </div>
   </div>
+  
   <div class="form-group">
     {{ form_label(form.fait, "Fait", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
     {{ form_errors(form.fait) }}
@@ -50,6 +52,7 @@
       {{ form_widget(form.fait, {'attr': {'class': 'form-control'}}) }}
     </div>
   </div>
+  
   <div class="form-group">
     {{ form_label(form.ordreLargeur, "Largeur", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
     {{ form_errors(form.ordreLargeur) }}
@@ -60,6 +63,7 @@
       {{ form_widget(form.largeur, {'attr': {'class': 'form-control'}}) }}
 	</div>
   </div>
+  
   <div class="form-group">
     {{ form_label(form.ordreLongueur, "Longueur", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
     {{ form_errors(form.ordreLongueur) }}
@@ -70,6 +74,7 @@
       {{ form_widget(form.longueur, {'attr': {'class': 'form-control'}}) }}
 	</div>
   </div>
+  
   <div class="form-group">
     {{ form_label(form.commentaire, "Commentaires", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
     {{ form_errors(form.commentaire) }}
@@ -77,26 +82,73 @@
       {{ form_widget(form.commentaire, {'attr': {'class': 'form-control'}}) }}
     </div>
   </div>
+  
+  
   <div class="form-group">
-    {{ form_label(form.nombreMotifsVerticaux, "Nombre de motifs verticaux", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
-    {{ form_errors(form.nombreMotifsVerticaux) }}
+    {{ form_label(form.ordreMotifsHorizontaux, "Motifs Horizontaux", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+    {{ form_errors(form.ordreMotifsHorizontaux) }}
     <div class="col-sm-1">
-      {{ form_widget(form.nombreMotifsVerticaux, {'attr': {'class': 'form-control'}}) }}
+      {{ form_widget(form.ordreMotifsHorizontaux, {'attr': {'class': 'form-control'}}) }}
     </div>
-  </div>
-  <div class="form-group">
-    {{ form_label(form.nombreMotifsHorizontaux, "Nombre de motifs horizontaux", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
-    {{ form_errors(form.nombreMotifsHorizontaux) }}
-    <div class="col-sm-1">
+	<div class="col-sm-1">
       {{ form_widget(form.nombreMotifsHorizontaux, {'attr': {'class': 'form-control'}}) }}
+	</div>
+  </div>
+  
+  <div class="form-group">
+    {{ form_label(form.ordreMotifsVerticaux, "Motifs Verticaux", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+    {{ form_errors(form.ordreMotifsVerticaux) }}
+    <div class="col-sm-1">
+      {{ form_widget(form.ordreMotifsVerticaux, {'attr': {'class': 'form-control'}}) }}
+    </div>
+	<div class="col-sm-1">
+      {{ form_widget(form.nombreMotifsVerticaux, {'attr': {'class': 'form-control'}}) }}
+	</div>
+  </div>
+  </fieldset>
+
+<fieldset> 
+    <legend> US</legend> 
+  <div class="form-group">
+    {{ form_label(form.US.nom, "Nom", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+    {{ form_errors(form.US.nom) }}
+    <div class="col-sm-1">
+      {{ form_widget(form.US.nom, {'attr': {'class': 'form-control'}}) }}
     </div>
   </div>
+
+  <div class="form-group">
+    {{ form_label(form.US.description, "Description", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+    {{ form_errors(form.US.description) }}
+        <div class="col-sm-2">
+      {{ form_widget(form.US.description, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    </div>
+  
+</fieldset>
+  
+<fieldset>
+	<legend>Site</legend>
+  <div class="form-group">
+    {{ form_label(form.site.codeINSEE, "Code INSEE", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+    {{ form_errors(form.site.codeINSEE) }}
+    <div class="col-sm-1">
+      {{ form_widget(form.site.codeINSEE, {'attr': {'class': 'form-control'}}) }}
+    </div>
+  </div>
+
+  <div class="form-group">
+    {{ form_label(form.site.numSiteCommune, "Numéro de commune", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+    {{ form_errors(form.site.numSiteCommune) }}
+        <div class="col-sm-1">
+      {{ form_widget(form.site.numSiteCommune, {'attr': {'class': 'form-control'}}) }}
+    </div>
+  </div>
+</fieldset>
 
   {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}
 
-  {# Génération automatique des champs pas encore écrits.
-     Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
-     et tous les champs cachés (type « hidden »). #}
+  {# Génération automatique des champs pas encore écrits #}
   {{ form_rest(form) }}
 
   {# Fermeture de la balise <form> du formulaire HTML #}

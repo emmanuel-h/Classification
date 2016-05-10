@@ -35,6 +35,12 @@ class US
      */
     private $description="Aucune";
     
+    /**
+     * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\Site")
+     * 
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $site;
 
     /**
      * Get id
@@ -92,5 +98,29 @@ class US
     public function getNom()
     {
         return $this->nom;
+    }
+
+    /**
+     * Set site
+     *
+     * @param \LIFO\ClassifBundle\Entity\Site $site
+     *
+     * @return US
+     */
+    public function setSite(\LIFO\ClassifBundle\Entity\Site $site)
+    {
+        $this->site = $site;
+
+        return $this;
+    }
+
+    /**
+     * Get site
+     *
+     * @return \LIFO\ClassifBundle\Entity\Site
+     */
+    public function getSite()
+    {
+        return $this->site;
     }
 }

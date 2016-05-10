@@ -254,10 +254,17 @@ class ImportCommand extends ContainerAwareCommand {
 			$em->persist ( $site );
 			$tesson->setSite ( $site );
 			
+			//US
 			if ($row ['US'] == "") {
-				$us = $em->getRepository ( 'LIFOClassifBundle:US' )->findOneByNom ( "0" );
+				$us = $em->getRepository ( 'LIFOClassifBundle:US' )->findOneBy ( array (
+						'nom' => 0,
+						'site' => $site 
+				));
 			} else {
-				$us = $em->getRepository ( 'LIFOClassifBundle:US' )->findOneByNom ( $row ['US'] );
+				$us = $em->getRepository ( 'LIFOClassifBundle:US' )->findOneBy ( array (
+						'nom' => $row['US'],
+						'site' => $site 
+				));
 			}
 			if (! is_object ( $us )) {
 				$us = new US ();
@@ -266,6 +273,7 @@ class ImportCommand extends ContainerAwareCommand {
 				} else {
 					$us->setNom ( "0" );
 				}
+				$us->setSite($site);
 			}
 			$tesson->setUs ( $us );
 			$em->persist ( $us );

@@ -100,13 +100,6 @@ class Site
     {
         return $this->numSiteCommune;
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->numIsolation = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
     /**
      * Add zone

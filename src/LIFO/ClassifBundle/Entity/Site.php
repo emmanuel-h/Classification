@@ -134,4 +134,12 @@ class Site
     {
         return $this->zone;
     }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->zone = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
 }

@@ -36,11 +36,11 @@ class US
     private $description="Aucune";
     
     /**
-     * @ORM\ManyToMany(targetEntity="LIFO\ClassifBundle\Entity\Tesson",
-     * mappedBy="us")
+     * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\Site")
+     * 
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $tesson;
-    
+    private $site;
 
     /**
      * Get id
@@ -75,45 +75,28 @@ class US
     {
         return $this->description;
     }
+    
     /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->tesson = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Add tesson
+     * Set nom
      *
-     * @param \LIFO\ClassifBundle\Entity\Tesson $tesson
+     * @param string $nom
      *
      * @return US
      */
-    public function addTesson(\LIFO\ClassifBundle\Entity\Tesson $tesson)
+    public function setNom($nom)
     {
-        $this->tesson[] = $tesson;
+        $this->nom = $nom;
 
         return $this;
     }
 
     /**
-     * Remove tesson
+     * Get nom
      *
-     * @param \LIFO\ClassifBundle\Entity\Tesson $tesson
+     * @return string
      */
-    public function removeTesson(\LIFO\ClassifBundle\Entity\Tesson $tesson)
+    public function getNom()
     {
-        $this->tesson->removeElement($tesson);
-    }
-
-    /**
-     * Get tesson
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getTesson()
-    {
-        return $this->tesson;
+        return $this->nom;
     }
 }
