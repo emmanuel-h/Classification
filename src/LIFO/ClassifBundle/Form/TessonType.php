@@ -74,6 +74,7 @@ class TessonType extends AbstractType
 			    )))
 			->add('US', USType::class)
 			->add('site', SiteType::class)
+			->add('numIsolation', IntegerType::class)
             ->add('save', SubmitType::class)
         ;
     }

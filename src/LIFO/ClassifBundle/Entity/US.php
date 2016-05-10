@@ -42,6 +42,10 @@ class US
      */
     private $site;
 
+    public function __construct(){
+    	$this->nom="0";
+    }
+    
     /**
      * Get id
      *

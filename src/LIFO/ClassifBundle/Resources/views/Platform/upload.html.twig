@@ -54,6 +54,14 @@
   </div>
   
   <div class="form-group">
+    {{ form_label(form.numIsolation, "Numéro d'isolation", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+    {{ form_errors(form.numIsolation) }}
+    <div class="col-sm-1">
+      {{ form_widget(form.numIsolation, {'attr': {'class': 'form-control'}}) }}
+    </div>
+  </div>
+  
+  <div class="form-group">
     {{ form_label(form.ordreLargeur, "Largeur", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
     {{ form_errors(form.ordreLargeur) }}
     <div class="col-sm-1">

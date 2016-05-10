@@ -254,17 +254,17 @@ class ImportCommand extends ContainerAwareCommand {
 			$em->persist ( $site );
 			$tesson->setSite ( $site );
 			
-			//US
+			// US
 			if ($row ['US'] == "") {
 				$us = $em->getRepository ( 'LIFOClassifBundle:US' )->findOneBy ( array (
 						'nom' => 0,
 						'site' => $site 
-				));
+				) );
 			} else {
 				$us = $em->getRepository ( 'LIFOClassifBundle:US' )->findOneBy ( array (
-						'nom' => $row['US'],
+						'nom' => $row ['US'],
 						'site' => $site 
-				));
+				) );
 			}
 			if (! is_object ( $us )) {
 				$us = new US ();
@@ -273,7 +273,7 @@ class ImportCommand extends ContainerAwareCommand {
 				} else {
 					$us->setNom ( "0" );
 				}
-				$us->setSite($site);
+				$us->setSite ( $site );
 			}
 			$tesson->setUs ( $us );
 			$em->persist ( $us );
@@ -306,11 +306,7 @@ class ImportCommand extends ContainerAwareCommand {
 			} else {
 				if ($tesson->getNumIsolation () == 0) {
 					$numIsolation = $em->getRepository ( 'LIFOClassifBundle:Tesson' )->findNumIsolationMax ( $tesson->getUs ()->getId () );
-					if ($numIsolation == 0) {
-						$tesson->setNumIsolation ( 1 );
-					} else {
-						$tesson->setNumIsolation ( ($numIsolation + 1) );
-					}
+					$tesson->setNumIsolation ( ($numIsolation + 1) );
 				}
 			}
 			
@@ -380,7 +376,7 @@ class ImportCommand extends ContainerAwareCommand {
 				$em->persist ( $decor );
 			}
 			
-			//Type de décor
+			// Type de décor
 			$typeDecorArray = str_replace ( "?", "", $row ['TYPE DE DÉCOR'] );
 			$typeDecorArray = str_replace ( array (
 					" et ",
@@ -401,7 +397,7 @@ class ImportCommand extends ContainerAwareCommand {
 				$em->persist ( $typeDecor );
 			}
 			
-			//Séquence
+			// Séquence
 			$str = str_replace ( "?", "", $row ['N° SEQUENCE'] );
 			$str = str_replace ( " ", "", $str );
 			if ($str != "") {
@@ -418,7 +414,7 @@ class ImportCommand extends ContainerAwareCommand {
 				$tesson->setSequence ( $sequence );
 			}
 			
-			//Phase
+			// Phase
 			$str = str_replace ( "?", "", $row ['N° PHASE'] );
 			$str = str_replace ( " ", "", $str );
 			if ($str != "") {
