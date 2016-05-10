@@ -17,50 +17,44 @@ use LIFO\ClassifBundle\Entity\TessonMolette;
 use LIFO\ClassifBundle\Entity\Decor;
 use LIFO\ClassifBundle\Entity\TypeDecor;
 use LIFO\ClassifBundle\Entity\Utilisateur;
+use LIFO\ClassifBundle\Entity\Sequence;
+use LIFO\ClassifBundle\Entity\Phase;
+use LIFO\ClassifBundle\Entity\Periode;
 
 class ImportCommand extends ContainerAwareCommand {
 	protected function configure() {
-		// Name and description for app/console command
 		$this->setName ( 'import:csv' )->setDescription ( 'Fill database from CSV file' );
 	}
 	protected function execute(InputInterface $input, OutputInterface $output) {
-		// Showing when the script is launched
 		$now = new \DateTime ();
 		$output->writeln ( '<comment>Start : ' . $now->format ( 'd-m-Y G:i:s' ) . ' ---</comment>' );
-		
-		// Importing CSV on DB via Doctrine ORM
 		$this->import ( $input, $output );
 		
-		// Showing when the script is over
 		$now = new \DateTime ();
 		$output->writeln ( '<comment>End : ' . $now->format ( 'd-m-Y G:i:s' ) . ' ---</comment>' );
 	}
 	protected function import(InputInterface $input, OutputInterface $output) {
-		// Getting php array of data from CSV
 		$data = $this->get ( $input, $output );
 		
-		// Getting doctrine manager
 		$em = $this->getContainer ()->get ( 'doctrine' )->getManager ();
-		// Turning off doctrine default logs queries for saving memory
 		$em->getConnection ()->getConfiguration ()->setSQLLogger ( null );
 		
-		// Define the size of record, the frequency for persisting the data and the current index of records
 		$size = count ( $data );
 		$batchSize = 20;
 		$i = 1;
 		
-		// Starting progress
 		$progress = new ProgressBar ( $output, $size );
 		$progress->start ();
 		
-		// Processing on each row of data
 		foreach ( $data as $row ) {
 			
+			// Récupération du tesson
 			$tesson = $em->getRepository ( 'LIFOClassifBundle:Tesson' )->findOneByNumEnregistrement ( $row ['N° enregistrement'] );
 			if (! is_object ( $tesson )) {
 				$tesson = new Tesson ();
 			}
 			
+			// Attributs simples de tesson
 			$annee = $row ['année'];
 			if ($annee != "") {
 				if (strlen ( $annee ) > 4) {
@@ -99,6 +93,7 @@ class ImportCommand extends ContainerAwareCommand {
 				$tesson->setFait ( NULL );
 			}
 			
+			// Largeur
 			$str = str_replace ( "(?)", "", $row ['largeur'] );
 			$str = str_replace ( "?", "", $str );
 			$str = str_replace ( " ", "", $str );
@@ -128,6 +123,7 @@ class ImportCommand extends ContainerAwareCommand {
 				$tesson->setLargeur ( $str );
 			}
 			
+			// Longueur
 			$str = str_replace ( "(?)", "", $row ['longueur'] );
 			$str = str_replace ( "?", "", $str );
 			$str = str_replace ( " ", "", $str );
@@ -157,6 +153,7 @@ class ImportCommand extends ContainerAwareCommand {
 				$tesson->setLongueur ( $str );
 			}
 			
+			// Nombre de motifs horizontaux
 			$str = str_replace ( "(?)", "", $row ['nbre motifs h'] );
 			$str = str_replace ( "?", "", $str );
 			$str = str_replace ( " ", "", $str );
@@ -198,6 +195,7 @@ class ImportCommand extends ContainerAwareCommand {
 				}
 			}
 			
+			// Nombre de motifs verticaux
 			$str = str_replace ( "(?)", "", $row ['nbre motifs v'] );
 			$str = str_replace ( "?", "", $str );
 			$str = str_replace ( " ", "", $str );
@@ -239,6 +237,7 @@ class ImportCommand extends ContainerAwareCommand {
 				}
 			}
 			
+			// Site
 			$str = str_replace ( " ", "", $row ['site'] );
 			$codeINSEE = substr ( $str, 0, 5 );
 			$numSite = substr ( $str, 5, strlen ( $str ) );
@@ -271,6 +270,7 @@ class ImportCommand extends ContainerAwareCommand {
 			$tesson->setUs ( $us );
 			$em->persist ( $us );
 			
+			// Zone
 			if ($row ['Zone'] != "") {
 				$zone = $em->getRepository ( 'LIFOClassifBundle:Zone' )->findOneBy ( array (
 						'numero' => $row ['Zone'],
@@ -285,6 +285,7 @@ class ImportCommand extends ContainerAwareCommand {
 				$em->persist ( $zone );
 			}
 			
+			// Numéro d'isolation
 			$str = str_replace ( " ", "", $row ['N° isolation 1'] );
 			$str = str_replace ( "n°", "", $str );
 			if ($str != "") {
@@ -305,6 +306,7 @@ class ImportCommand extends ContainerAwareCommand {
 				}
 			}
 			
+			// Molette
 			$nomMolette = "";
 			if ($row ['égal type'] != "") {
 				$nomMolette = $row ['égal type'];
@@ -339,6 +341,7 @@ class ImportCommand extends ContainerAwareCommand {
 				$em->persist ( $tessonMolette );
 			}
 			
+			// Position du décor
 			$positionDecorArray = str_replace ( array (
 					" (?)",
 					"\r\n",
@@ -369,6 +372,7 @@ class ImportCommand extends ContainerAwareCommand {
 				$em->persist ( $decor );
 			}
 			
+			//Type de décor
 			$typeDecorArray = str_replace ( "?", "", $row ['TYPE DE DÉCOR'] );
 			$typeDecorArray = str_replace ( array (
 					" et ",
@@ -389,6 +393,58 @@ class ImportCommand extends ContainerAwareCommand {
 				$em->persist ( $typeDecor );
 			}
 			
+			//Séquence
+			$str = str_replace ( "?", "", $row ['N° SEQUENCE'] );
+			$str = str_replace ( " ", "", $str );
+			if ($str != "") {
+				$sequence = $em->getRepository ( 'LIFOClassifBundle:Sequence' )->findOneBy ( array (
+						'numeroSequence' => $str,
+						'site' => $site 
+				) );
+				if (! is_object ( $sequence )) {
+					$sequence = new Sequence ();
+					$sequence->setNumeroSequence ( $str );
+					$sequence->setSite ( $site );
+					$em->persist ( $sequence );
+				}
+				$tesson->setSequence ( $sequence );
+			}
+			
+			//Phase
+			$str = str_replace ( "?", "", $row ['N° PHASE'] );
+			$str = str_replace ( " ", "", $str );
+			if ($str != "") {
+				$phase = $em->getRepository ( 'LIFOClassifBundle:Phase' )->findOneBy ( array (
+						'numeroPhase' => $str,
+						'site' => $site 
+				) );
+				if (! is_object ( $phase )) {
+					$phase = new Phase ();
+					$phase->setNumeroPhase ( $str );
+					$phase->setSite ( $site );
+					$em->persist ( $phase );
+				}
+				$tesson->setPhase ( $phase );
+			}
+			
+			// Période
+			$str = str_replace ( "?", "", $row ['N° PERIODE'] );
+			$str = str_replace ( " ", "", $str );
+			if ($str != "") {
+				$periode = $em->getRepository ( 'LIFOClassifBundle:Periode' )->findOneBy ( array (
+						'numeroPeriode' => $str,
+						'site' => $site 
+				) );
+				if (! is_object ( $periode )) {
+					$periode = new Periode ();
+					$periode->setNumeroPeriode ( $str );
+					$periode->setSite ( $site );
+					$em->persist ( $periode );
+				}
+				$tesson->setPeriode ( $periode );
+			}
+			
+			// Utilisateur + date d'enregistrement
 			$utilisateur = $em->getRepository ( 'LIFOClassifBundle:Utilisateur' )->findOneByNom ( "Automatique" );
 			if (! is_object ( $utilisateur )) {
 				$utilisateur = new Utilisateur ();
@@ -401,11 +457,9 @@ class ImportCommand extends ContainerAwareCommand {
 			$em->persist ( $tesson );
 			
 			$em->flush ();
-			// Detaches all objects from Doctrine for memory save
 			$em->clear ();
 			
 			if (($i % $batchSize) === 0) {
-				// Advancing for progress display on console
 				$progress->advance ( $batchSize );
 				
 				$now = new \DateTime ();
@@ -415,19 +469,14 @@ class ImportCommand extends ContainerAwareCommand {
 			$i ++;
 		}
 		
-		// Flushing and clear data on queue
-		
 		$em->flush ();
 		$em->clear ();
 		
-		// Ending the progress bar process
 		$progress->finish ();
 	}
 	protected function get(InputInterface $input, OutputInterface $output) {
-		// Getting the CSV from filesystem
 		$fileName = 'web/uploads/import/molette.csv';
 		
-		// Using service for converting CSV to PHP Array
 		$converter = $this->getContainer ()->get ( 'import.csvtoarray' );
 		$data = $converter->convert ( $fileName, ';' );
 		

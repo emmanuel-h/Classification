@@ -42,6 +42,10 @@ class Sequence
      */
     private $site;
 
+    public function __construct(){
+    	$this->description="Aucune";
+    }
+    
     /**
      * Get id
      *
