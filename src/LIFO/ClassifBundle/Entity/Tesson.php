@@ -158,9 +158,8 @@ class Tesson
      * @ORM\ManyToMany(targetEntity="LIFO\ClassifBundle\Entity\Decor",
      * inversedBy="tesson")
      * 
-     * 
+     * @ORM\JoinColumn(nullable=false) 
      */
-    //@ORM\JoinColumn(nullable=false) 
     private $decor;
     
     /**

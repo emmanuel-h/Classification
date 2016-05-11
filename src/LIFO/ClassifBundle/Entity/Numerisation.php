@@ -18,12 +18,18 @@ class Numerisation {
 	 *      @ORM\GeneratedValue(strategy="AUTO")
 	 */
 	private $id;
+
+	/**
+	* @ORM\Column(name="url", type="string", length=255)
+	*/
+	private $url;
 	
 	/**
-	 *
-	 * @var string @ORM\Column(name="path", type="string", length=255)
-	 */
-	private $path;
+	* @ORM\Column(name="alt", type="string", length=255)
+	*/
+	private $alt;
+	
+	private $file;
 	
 	/**
 	 * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\Tesson",
@@ -127,4 +133,62 @@ class Numerisation {
     {
         return $this->typeNumerisation;
     }
+
+    /**
+     * Set url
+     *
+     * @param string $url
+     *
+     * @return Numerisation
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+
+        return $this;
+    }
+
+    /**
+     * Get url
+     *
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->url;
+    }
+
+    /**
+     * Set alt
+     *
+     * @param string $alt
+     *
+     * @return Numerisation
+     */
+    public function setAlt($alt)
+    {
+        $this->alt = $alt;
+
+        return $this;
+    }
+
+    /**
+     * Get alt
+     *
+     * @return string
+     */
+    public function getAlt()
+    {
+        return $this->alt;
+    }
+  
+  public function getFile()
+  {
+    return $this->file;
+  }
+
+  public function setFile(UploadedFile $file = null)
+  {
+    $this->file = $file;
+  }
 }

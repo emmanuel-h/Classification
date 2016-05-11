@@ -11,11 +11,16 @@ use Doctrine\ORM\EntityRepository;
  * repository methods below.
  */
 class TessonRepository extends \Doctrine\ORM\EntityRepository {
-	
-	public function findNumIsolationMax($us_id) {
-
-		$query = $this->_em->createQuery("SELECT MAX(t.numIsolation) FROM LIFOClassifBundle:Tesson t JOIN t.us u WHERE u.id = :us_id");
-		$query->setParameter('us_id', $us_id);
-		return $query->getSingleScalarResult();
+	public function findNumIsolationMax($us_id, $site_id) {
+		$qb = $this->_em->createQueryBuilder('t')
+		->select('MAX(t.numIsolation)')
+		->from('LIFOClassifBundle:Tesson', 't')
+		->leftJoin('t.us', 'u')
+		->leftJoin('t.site', 's')
+		->where('u.id=:us_id')
+		->andWhere('s.id=:site_id')
+		->setParameter('us_id', $us_id)
+		->setParameter('site_id', $site_id);
+		return $qb->getQuery()->getSingleScalarResult ();
 	}
 }

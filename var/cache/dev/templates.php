@@ -116,4 +116,5 @@
   'WebProfilerBundle:Profiler:toolbar_js.html.twig' => 'C:\\wamp64\\www\\Classification\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Profiler/toolbar_js.html.twig',
   'WebProfilerBundle:Profiler:toolbar_redirect.html.twig' => 'C:\\wamp64\\www\\Classification\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Profiler/toolbar_redirect.html.twig',
   'WebProfilerBundle:Router:panel.html.twig' => 'C:\\wamp64\\www\\Classification\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Router/panel.html.twig',
+  '::layout.html.twig' => 'C:\\wamp64\\www\\Classification\\app/Resources\\views/layout.html.twig',
 );

@@ -7,6 +7,8 @@ use LIFO\ClassifBundle\Entity\Tesson;
 use LIFO\ClassifBundle\Entity\US;
 use LIFO\ClassifBundle\Entity\Site;
 use LIFO\ClassifBundle\Entity\Utilisateur;
+use LIFO\ClassifBundle\Entity\Numerisation;
+use LIFO\ClassifBundle\Entity\TypeNumerisation;
 use LIFO\ClassifBundle\Form\TessonType;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -24,6 +26,12 @@ class PlatformController extends Controller {
 		$tesson->setUS ( new US () );
 		$tesson->setSite ( new Site () );
 		$tesson->getUS ()->setSite ( $tesson->getSite () );
+		$listeTypeNumerisation=$em->getRepository('LIFOClassifBundle:TypeNumerisation')->findAll();
+		foreach($listeTypeNumerisation as $typeNumerisation){
+			$numerisation = new Numerisation();
+			$numerisation->setTypeNumerisation($typeNumerisation);
+			$tesson->addNumerisation($numerisation);
+		}
 		$utilisateur = $em->getRepository ( 'LIFOClassifBundle:Utilisateur' )->findOneBy ( array (
 				'nom' => "upload",
 				'prenom' => "test" 
@@ -46,8 +54,8 @@ class PlatformController extends Controller {
 			
 			if (! is_object ( $site )) {
 				$site = new Site ();
-				$site->setCodeINSEE ( $tesson->getSite()->getCodeINSEE() );
-				$site->setNumSiteCommune ( $tesson->getSite()->getNumSiteCommune() );
+				$site->setCodeINSEE ( $tesson->getSite ()->getCodeINSEE () );
+				$site->setNumSiteCommune ( $tesson->getSite ()->getNumSiteCommune () );
 			}
 			$em->persist ( $site );
 			$tesson->setSite ( $site );
@@ -58,15 +66,17 @@ class PlatformController extends Controller {
 			) );
 			if (! is_object ( $us )) {
 				$us = new US ();
+				$us->setNom ( $tesson->getUs ()->getNom () );
 				$us->setSite ( $site );
 				$em->persist ( $us );
 			}
 			$tesson->setUs ( $us );
 			
 			if ($tesson->getNumIsolation () == 0) {
-				$numIsolation = $em->getRepository ( 'LIFOClassifBundle:Tesson' )->findNumIsolationMax ( $tesson->getUs ()->getId () );
+				$numIsolation = $em->getRepository ( 'LIFOClassifBundle:Tesson' )->findNumIsolationMax ( $tesson->getUs ()->getId (), $tesson->getSite ()->getId () );
 				$tesson->setNumIsolation ( ($numIsolation + 1) );
 			}
+			
 			$em->persist ( $utilisateur );
 			$em->persist ( $tesson );
 			$em->persist ( $tesson->getUS () );

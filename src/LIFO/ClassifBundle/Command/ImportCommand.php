@@ -305,7 +305,8 @@ class ImportCommand extends ContainerAwareCommand {
 				$tesson->setNumIsolation ( $str );
 			} else {
 				if ($tesson->getNumIsolation () == 0) {
-					$numIsolation = $em->getRepository ( 'LIFOClassifBundle:Tesson' )->findNumIsolationMax ( $tesson->getUs ()->getId () );
+					$numIsolation = $em->getRepository ( 'LIFOClassifBundle:Tesson' )->findNumIsolationMax
+						( $tesson->getUs ()->getId (), $tesson->getSite ()->getId () );
 					$tesson->setNumIsolation ( ($numIsolation + 1) );
 				}
 			}
