@@ -33,7 +33,7 @@ class TypeDecor
      *
      * @ORM\Column(name="description", type="text")
      */
-    private $description="Aucune";
+    private $description;
     
     /**
      * @ORM\ManyToMany(targetEntity="LIFO\ClassifBundle\Entity\Tesson",
@@ -105,6 +105,7 @@ class TypeDecor
     public function __construct()
     {
         $this->tesson = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->description="Aucune";
     }
 
     /**

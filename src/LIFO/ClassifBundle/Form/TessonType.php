@@ -79,9 +79,21 @@ class TessonType extends AbstractType
 			->add('US', USType::class)
 			->add('site', SiteType::class)
 			->add('numIsolation', IntegerType::class)
+			->add('periode', PeriodeType::class, array(
+		    	'required'     => false))
+			->add('phase', PhaseType::class, array(
+		    	'required'     => false))
+			->add('sequence', SequenceType::class, array(
+		    	'required'     => false))
 			->add('decor', EntityType::class, array(
 		        'class'   		=> 'LIFOClassifBundle:Decor',
 		        'choice_label'  => 'position',
+		        'multiple'		=> true,
+				'expanded' 		=> true
+		    ))
+			->add('typeDecor', EntityType::class, array(
+		        'class'   		=> 'LIFOClassifBundle:TypeDecor',
+		        'choice_label'  => 'nom',
 		        'multiple'		=> true,
 				'expanded' 		=> true
 		    ))

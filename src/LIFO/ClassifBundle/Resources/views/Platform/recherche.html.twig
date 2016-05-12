@@ -2,9 +2,8 @@
 
 {% block title %}{{ parent() }} - Recherche{% endblock %}
 
-{% block body %}
-	{{ parent() }}
+{% block LIFOClassif_body %}
 	<p>
-		Pour rechercher un tesson suivant certains critères
+	{{ form(form) }}
 	</p>
 {% endblock %}

@@ -2,8 +2,7 @@
 
 {% block title %}{{ parent() }} - Tesson{% endblock %}
 
-{% block body %}
-	{{ parent() }}
+{% block LIFOClassif_body %}
 	{% for numerisation in listeNumerisation %}
 	<p>
 	{{ numerisation.typeNumerisation.nom }}

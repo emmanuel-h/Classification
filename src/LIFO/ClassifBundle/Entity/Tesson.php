@@ -693,11 +693,6 @@ class Tesson
     {
         $this->numerisation[] = $numerisation;
         return $this;
-    	/*if (!$this->numerisation->contains($numerisation)) {
-    		$numerisation->setTesson($this);
-    		$this->numerisation->add($numerisation);
-    	}
-        return $this;*/
     }
 
     /**
@@ -932,7 +927,6 @@ class Tesson
      */
     public function addTypeDecor(\LIFO\ClassifBundle\Entity\TypeDecor $typeDecor)
     {
-    	// Si l'objet fait déjà partie de la collection on ne l'ajoute pas
     	if (!$this->typeDecor->contains($typeDecor)) {
     		if (!$typeDecor->getTesson()->contains($this)) {
     			$typeDecor->addTesson($this);

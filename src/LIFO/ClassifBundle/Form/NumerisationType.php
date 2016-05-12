@@ -22,7 +22,7 @@ class NumerisationType extends AbstractType
 		        'class'   		=> 'LIFOClassifBundle:TypeNumerisation',
 		        'choice_label'  => 'nom',
 		        'multiple'		=> false,
-				'expanded' 		=> true
+				'expanded' 		=> false
 		      ))
         ;
     }

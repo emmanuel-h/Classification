@@ -4,20 +4,6 @@
 
 {% block LIFOClassif_body %}
 
-
-
-
-
-{# src/OC/PlatformBundle/Resources/views/Advert/form.html.twig #}
-
-
-
-
-
-
-
-{# src/OC/PlatformBundle/Resources/views/Advert/form.html.twig #}
-
 <div class="well">
   {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
 
@@ -114,42 +100,32 @@
     </div>
   </div>
   <fieldset>
-	<legend> US </legend>
-  <div class="form-group">
-    {{ form_label(form.US.nom, "Nom", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
-    {{ form_errors(form.US.nom) }}
-    <div class="col-sm-10">
-      {{ form_widget(form.US.nom, {'attr': {'class': 'form-control'}}) }}
-    </div>
-  </div>
-  <div class="form-group">
-    {{ form_label(form.US.description, "Description", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
-    {{ form_errors(form.US.description) }}
-    <div class="col-sm-10">
-      {{ form_widget(form.US.description, {'attr': {'class': 'form-control'}}) }}
-    </div>
-  </div>
+  <legend></legend>
+  {{ form_row(form.site) }}
   </fieldset>
   <fieldset>
-	<legend> Site </legend>
-  <div class="form-group">
-    {{ form_label(form.site.codeINSEE, "CodeINSEE", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
-    {{ form_errors(form.site.codeINSEE) }}
-    <div class="col-sm-10">
-      {{ form_widget(form.site.codeINSEE, {'attr': {'class': 'form-control'}}) }}
-    </div>
-  </div>
-  <div class="form-group">
-    {{ form_label(form.site.numSiteCommune, "Numéro de la commune", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
-    {{ form_errors(form.site.numSiteCommune) }}
-    <div class="col-sm-10">
-      {{ form_widget(form.site.numSiteCommune, {'attr': {'class': 'form-control'}}) }}
-    </div>
-  </div>
+  <legend></legend>
+  {{ form_row(form.US) }}
   </fieldset>
   <fieldset>
-  <legend>Décor</legend>
+  <legend></legend>
+  {{ form_row(form.sequence) }}
+  </fieldset>
+  <fieldset>
+  <legend></legend>
+  {{ form_row(form.periode) }}
+  </fieldset>
+  <fieldset>
+  <legend></legend>
+  {{ form_row(form.phase) }}
+  </fieldset>
+  <fieldset>
+  <legend></legend>
   {{ form_row(form.decor) }}
+  </fieldset>
+  <fieldset>
+  <legend></legend>
+  {{ form_row(form.typeDecor) }}
   </fieldset>
   <fieldset>
   <legend></legend>
@@ -163,7 +139,6 @@
   {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}
 
   {# Génération automatique des champs pas encore écrits.
-     Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
      et tous les champs cachés (type « hidden »). #}
   {{ form_rest(form) }}
 
@@ -177,11 +152,8 @@
 
 
 
-{# On charge la bibliothèque jQuery. Ici, je la prends depuis le CDN google
-   mais si vous l'avez en local, changez simplement l'adresse. #}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-{# Voici le script en question : #}
 <script type="text/javascript">
   $(document).ready(function() {
     // On récupère la balise <div> en question qui contient l'attribut « data-prototype » qui nous intéresse.
@@ -198,17 +170,17 @@
       return false;
     });
 
-    // On ajoute un premier champ automatiquement s'il n'en existe pas déjà un (cas d'une nouvelle annonce par exemple).
+    // On ajoute un premier champ automatiquement s'il n'en existe pas déjà un.
     if (index == 0) {
       addNumerisation($container);
     } else {
-      // S'il existe déjà des catégories, on ajoute un lien de suppression pour chacune d'entre elles
+      // S'il existe déjà des champs on ajoute un lien de suppression pour chacune d'entre eux
       $container.children('div').each(function() {
         addDeleteLink($(this));
       });
     }
 
-    // La fonction qui ajoute un formulaire CategoryType
+    // La fonction qui ajoute un formulaire
     function addNumerisation($container) {
       // Dans le contenu de l'attribut « data-prototype », on remplace :
       // - le texte "__name__label__" qu'il contient par le label du champ
@@ -221,7 +193,7 @@
       // On crée un objet jquery qui contient ce template
       var $prototype = $(template);
 
-      // On ajoute au prototype un lien pour pouvoir supprimer la catégorie
+      // On ajoute au prototype un lien pour pouvoir supprimer
       addDeleteLink($prototype);
 
       // On ajoute le prototype modifié à la fin de la balise <div>
@@ -231,7 +203,7 @@
       index++;
     }
 
-    // La fonction qui ajoute un lien de suppression d'une catégorie
+    // La fonction qui ajoute un lien de suppression
     function addDeleteLink($prototype) {
       // Création du lien
       var $deleteLink = $('<a href="#" class="btn btn-danger">Supprimer</a>');
@@ -239,7 +211,7 @@
       // Ajout du lien
       $prototype.append($deleteLink);
 
-      // Ajout du listener sur le clic du lien pour effectivement supprimer la catégorie
+      // Ajout du listener sur le clic du lien pour effectivement supprimer
       $deleteLink.click(function(e) {
         $prototype.remove();
 

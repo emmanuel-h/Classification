@@ -11,6 +11,7 @@ use Doctrine\ORM\EntityRepository;
  * repository methods below.
  */
 class TessonRepository extends \Doctrine\ORM\EntityRepository {
+	
 	public function findNumIsolationMax($us_id, $site_id) {
 		$qb = $this->_em->createQueryBuilder('t')
 		->select('MAX(t.numIsolation)')

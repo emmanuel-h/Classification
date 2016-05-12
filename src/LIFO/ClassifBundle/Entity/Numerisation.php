@@ -64,32 +64,10 @@ class Numerisation {
 	}
 	
 	/**
-	 * Set path
-	 *
-	 * @param string $path        	
-	 *
-	 * @return Image
-	 */
-	public function setPath($path) {
-		$this->path = $path;
-		
-		return $this;
-	}
-	
-	/**
-	 * Get path
-	 *
-	 * @return string
-	 */
-	public function getPath() {
-		return $this->path;
-	}
-	/**
 	 * Constructor
 	 */
 	public function __construct() {
 		$this->tesson = new \Doctrine\Common\Collections\ArrayCollection ();
-		$this->typeImage = new \Doctrine\Common\Collections\ArrayCollection ();
 	}
 	
 	/**
