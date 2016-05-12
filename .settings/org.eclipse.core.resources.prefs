@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding//src/LIFO/ClassifBundle/Command/ImportCommand.php=UTF-8
+encoding//src/LIFO/ClassifBundle/Controller/PlatformController.php=UTF-8
 encoding//src/LIFO/ClassifBundle/Entity/Tesson.php=UTF-8
 encoding//src/LIFO/ClassifBundle/Form/TessonType.php=UTF-8
 encoding//src/LIFO/ClassifBundle/Resources/views/Platform/upload.html.twig=UTF-8

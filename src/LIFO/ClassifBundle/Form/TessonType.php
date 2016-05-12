@@ -84,12 +84,13 @@ class TessonType extends AbstractType
 		        'choice_label'  => 'position',
 		        'multiple'		=> true,
 				'expanded' 		=> true
-		      ))
+		    ))
 		    ->add('numerisation', CollectionType::class, array(
 		        'entry_type'   =>NumerisationType::class,
 		        'allow_add'    => true,
-		        'allow_delete' => true
-		      ))
+		        'allow_delete' => true,
+		    	'required'     => false
+		    ))
             ->add('save', SubmitType::class)
         ;
     }

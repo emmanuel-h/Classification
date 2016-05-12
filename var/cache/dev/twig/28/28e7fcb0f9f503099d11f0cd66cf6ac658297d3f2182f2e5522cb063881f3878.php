@@ -22,33 +22,33 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e9ef9b49bf03dc824c9e4e7fc5e99c245ae43b4084574a957c656676e4bba347 = $this->env->getExtension("native_profiler");
-        $__internal_e9ef9b49bf03dc824c9e4e7fc5e99c245ae43b4084574a957c656676e4bba347->enter($__internal_e9ef9b49bf03dc824c9e4e7fc5e99c245ae43b4084574a957c656676e4bba347_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:upload.html.twig"));
+        $__internal_42357ab86e744989424042096d32debae4ee60b4b418a084d2ac1e7aba8c17c7 = $this->env->getExtension("native_profiler");
+        $__internal_42357ab86e744989424042096d32debae4ee60b4b418a084d2ac1e7aba8c17c7->enter($__internal_42357ab86e744989424042096d32debae4ee60b4b418a084d2ac1e7aba8c17c7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:upload.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_e9ef9b49bf03dc824c9e4e7fc5e99c245ae43b4084574a957c656676e4bba347->leave($__internal_e9ef9b49bf03dc824c9e4e7fc5e99c245ae43b4084574a957c656676e4bba347_prof);
+        $__internal_42357ab86e744989424042096d32debae4ee60b4b418a084d2ac1e7aba8c17c7->leave($__internal_42357ab86e744989424042096d32debae4ee60b4b418a084d2ac1e7aba8c17c7_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_3239391f035d44a190568a14beb518950eb233088d7872919d0d8a22345ba26b = $this->env->getExtension("native_profiler");
-        $__internal_3239391f035d44a190568a14beb518950eb233088d7872919d0d8a22345ba26b->enter($__internal_3239391f035d44a190568a14beb518950eb233088d7872919d0d8a22345ba26b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_b3f6b2a125c7a9ca0a45cfa8fd29c9383d5c44858ef56665ef32e604da129758 = $this->env->getExtension("native_profiler");
+        $__internal_b3f6b2a125c7a9ca0a45cfa8fd29c9383d5c44858ef56665ef32e604da129758->enter($__internal_b3f6b2a125c7a9ca0a45cfa8fd29c9383d5c44858ef56665ef32e604da129758_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Upload";
         
-        $__internal_3239391f035d44a190568a14beb518950eb233088d7872919d0d8a22345ba26b->leave($__internal_3239391f035d44a190568a14beb518950eb233088d7872919d0d8a22345ba26b_prof);
+        $__internal_b3f6b2a125c7a9ca0a45cfa8fd29c9383d5c44858ef56665ef32e604da129758->leave($__internal_b3f6b2a125c7a9ca0a45cfa8fd29c9383d5c44858ef56665ef32e604da129758_prof);
 
     }
 
     // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_1857926805d55cf03755eff93170ef8719c0cb8a898de7a4f46772d953196e96 = $this->env->getExtension("native_profiler");
-        $__internal_1857926805d55cf03755eff93170ef8719c0cb8a898de7a4f46772d953196e96->enter($__internal_1857926805d55cf03755eff93170ef8719c0cb8a898de7a4f46772d953196e96_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_64e98051eb5fd3b1782b6624e16f73c7d7a9d5f0fdbb1c0dfafa8e3e071f4f92 = $this->env->getExtension("native_profiler");
+        $__internal_64e98051eb5fd3b1782b6624e16f73c7d7a9d5f0fdbb1c0dfafa8e3e071f4f92->enter($__internal_64e98051eb5fd3b1782b6624e16f73c7d7a9d5f0fdbb1c0dfafa8e3e071f4f92_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 6
         echo "
@@ -357,36 +357,125 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "decor", array()), 'row');
         echo "
   </fieldset>
-\t\t";
-        // line 154
+  <fieldset>
+  <legend></legend>
+\t";
+        // line 156
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "numerisation", array()), 'row');
         echo "
+  <a href=\"#\" id=\"add_numerisation\" class=\"btn btn-default\">Ajouter une numérisation</a>
+</fieldset>
   <br/>
   <br/>
 
   ";
-        // line 159
+        // line 163
         echo "  ";
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'widget', array("attr" => array("class" => "btn btn-primary")));
         echo "
 
   ";
-        // line 164
+        // line 168
         echo "  ";
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
 
   ";
-        // line 167
+        // line 171
         echo "  ";
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 </div>
 
 
+
+
+
+
+
+";
+        // line 182
+        echo "<script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js\"></script>
+
+";
+        // line 185
+        echo "<script type=\"text/javascript\">
+  \$(document).ready(function() {
+    // On récupère la balise <div> en question qui contient l'attribut « data-prototype » qui nous intéresse.
+    var \$container = \$('div#tesson_numerisation');
+
+    // On définit un compteur unique pour nommer les champs qu'on va ajouter dynamiquement
+    var index = \$container.find(':input').length;
+
+    // On ajoute un nouveau champ à chaque clic sur le lien d'ajout.
+    \$('#add_numerisation').click(function(e) {
+      addNumerisation(\$container);
+
+      e.preventDefault(); // évite qu'un # apparaisse dans l'URL
+      return false;
+    });
+
+    // On ajoute un premier champ automatiquement s'il n'en existe pas déjà un (cas d'une nouvelle annonce par exemple).
+    if (index == 0) {
+      addNumerisation(\$container);
+    } else {
+      // S'il existe déjà des catégories, on ajoute un lien de suppression pour chacune d'entre elles
+      \$container.children('div').each(function() {
+        addDeleteLink(\$(this));
+      });
+    }
+
+    // La fonction qui ajoute un formulaire CategoryType
+    function addNumerisation(\$container) {
+      // Dans le contenu de l'attribut « data-prototype », on remplace :
+      // - le texte \"__name__label__\" qu'il contient par le label du champ
+      // - le texte \"__name__\" qu'il contient par le numéro du champ
+      var template = \$container.attr('data-prototype')
+        .replace(/__name__label__/g, 'n°' + (index+1))
+        .replace(/__name__/g,        index)
+      ;
+
+      // On crée un objet jquery qui contient ce template
+      var \$prototype = \$(template);
+
+      // On ajoute au prototype un lien pour pouvoir supprimer la catégorie
+      addDeleteLink(\$prototype);
+
+      // On ajoute le prototype modifié à la fin de la balise <div>
+      \$container.append(\$prototype);
+
+      // Enfin, on incrémente le compteur pour que le prochain ajout se fasse avec un autre numéro
+      index++;
+    }
+
+    // La fonction qui ajoute un lien de suppression d'une catégorie
+    function addDeleteLink(\$prototype) {
+      // Création du lien
+      var \$deleteLink = \$('<a href=\"#\" class=\"btn btn-danger\">Supprimer</a>');
+
+      // Ajout du lien
+      \$prototype.append(\$deleteLink);
+
+      // Ajout du listener sur le clic du lien pour effectivement supprimer la catégorie
+      \$deleteLink.click(function(e) {
+        \$prototype.remove();
+
+        e.preventDefault(); // évite qu'un # apparaisse dans l'URL
+        return false;
+      });
+    }
+  });
+</script>
+
+
+
+
+
+
+
 ";
         
-        $__internal_1857926805d55cf03755eff93170ef8719c0cb8a898de7a4f46772d953196e96->leave($__internal_1857926805d55cf03755eff93170ef8719c0cb8a898de7a4f46772d953196e96_prof);
+        $__internal_64e98051eb5fd3b1782b6624e16f73c7d7a9d5f0fdbb1c0dfafa8e3e071f4f92->leave($__internal_64e98051eb5fd3b1782b6624e16f73c7d7a9d5f0fdbb1c0dfafa8e3e071f4f92_prof);
 
     }
 
@@ -402,7 +491,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 
     public function getDebugInfo()
     {
-        return array (  381 => 167,  375 => 164,  369 => 159,  362 => 154,  357 => 152,  348 => 146,  343 => 144,  339 => 143,  332 => 139,  327 => 137,  323 => 136,  313 => 129,  308 => 127,  304 => 126,  297 => 122,  292 => 120,  288 => 119,  279 => 113,  274 => 111,  270 => 110,  263 => 106,  257 => 103,  252 => 101,  248 => 100,  241 => 96,  235 => 93,  230 => 91,  226 => 90,  219 => 86,  214 => 84,  210 => 83,  203 => 79,  197 => 76,  192 => 74,  188 => 73,  181 => 69,  175 => 66,  170 => 64,  166 => 63,  159 => 59,  154 => 57,  150 => 56,  143 => 52,  138 => 50,  134 => 49,  127 => 45,  122 => 43,  118 => 42,  111 => 38,  106 => 36,  102 => 35,  95 => 31,  90 => 29,  86 => 28,  79 => 25,  74 => 22,  70 => 20,  61 => 12,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
+        return array (  402 => 185,  398 => 182,  385 => 171,  379 => 168,  373 => 163,  364 => 156,  357 => 152,  348 => 146,  343 => 144,  339 => 143,  332 => 139,  327 => 137,  323 => 136,  313 => 129,  308 => 127,  304 => 126,  297 => 122,  292 => 120,  288 => 119,  279 => 113,  274 => 111,  270 => 110,  263 => 106,  257 => 103,  252 => 101,  248 => 100,  241 => 96,  235 => 93,  230 => 91,  226 => 90,  219 => 86,  214 => 84,  210 => 83,  203 => 79,  197 => 76,  192 => 74,  188 => 73,  181 => 69,  175 => 66,  170 => 64,  166 => 63,  159 => 59,  154 => 57,  150 => 56,  143 => 52,  138 => 50,  134 => 49,  127 => 45,  122 => 43,  118 => 42,  111 => 38,  106 => 36,  102 => 35,  95 => 31,  90 => 29,  86 => 28,  79 => 25,  74 => 22,  70 => 20,  61 => 12,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends "LIFOClassifBundle::layout.html.twig" %}*/
@@ -558,7 +647,11 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 /*   <legend>Décor</legend>*/
 /*   {{ form_row(form.decor) }}*/
 /*   </fieldset>*/
-/* 		{{ form_row(form.numerisation)	}}*/
+/*   <fieldset>*/
+/*   <legend></legend>*/
+/* 	{{ form_row(form.numerisation)	}}*/
+/*   <a href="#" id="add_numerisation" class="btn btn-default">Ajouter une numérisation</a>*/
+/* </fieldset>*/
 /*   <br/>*/
 /*   <br/>*/
 /* */
@@ -573,6 +666,90 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 /*   {# Fermeture de la balise <form> du formulaire HTML #}*/
 /*   {{ form_end(form) }}*/
 /* </div>*/
+/* */
+/* */
+/* */
+/* */
+/* */
+/* */
+/* */
+/* {# On charge la bibliothèque jQuery. Ici, je la prends depuis le CDN google*/
+/*    mais si vous l'avez en local, changez simplement l'adresse. #}*/
+/* <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>*/
+/* */
+/* {# Voici le script en question : #}*/
+/* <script type="text/javascript">*/
+/*   $(document).ready(function() {*/
+/*     // On récupère la balise <div> en question qui contient l'attribut « data-prototype » qui nous intéresse.*/
+/*     var $container = $('div#tesson_numerisation');*/
+/* */
+/*     // On définit un compteur unique pour nommer les champs qu'on va ajouter dynamiquement*/
+/*     var index = $container.find(':input').length;*/
+/* */
+/*     // On ajoute un nouveau champ à chaque clic sur le lien d'ajout.*/
+/*     $('#add_numerisation').click(function(e) {*/
+/*       addNumerisation($container);*/
+/* */
+/*       e.preventDefault(); // évite qu'un # apparaisse dans l'URL*/
+/*       return false;*/
+/*     });*/
+/* */
+/*     // On ajoute un premier champ automatiquement s'il n'en existe pas déjà un (cas d'une nouvelle annonce par exemple).*/
+/*     if (index == 0) {*/
+/*       addNumerisation($container);*/
+/*     } else {*/
+/*       // S'il existe déjà des catégories, on ajoute un lien de suppression pour chacune d'entre elles*/
+/*       $container.children('div').each(function() {*/
+/*         addDeleteLink($(this));*/
+/*       });*/
+/*     }*/
+/* */
+/*     // La fonction qui ajoute un formulaire CategoryType*/
+/*     function addNumerisation($container) {*/
+/*       // Dans le contenu de l'attribut « data-prototype », on remplace :*/
+/*       // - le texte "__name__label__" qu'il contient par le label du champ*/
+/*       // - le texte "__name__" qu'il contient par le numéro du champ*/
+/*       var template = $container.attr('data-prototype')*/
+/*         .replace(/__name__label__/g, 'n°' + (index+1))*/
+/*         .replace(/__name__/g,        index)*/
+/*       ;*/
+/* */
+/*       // On crée un objet jquery qui contient ce template*/
+/*       var $prototype = $(template);*/
+/* */
+/*       // On ajoute au prototype un lien pour pouvoir supprimer la catégorie*/
+/*       addDeleteLink($prototype);*/
+/* */
+/*       // On ajoute le prototype modifié à la fin de la balise <div>*/
+/*       $container.append($prototype);*/
+/* */
+/*       // Enfin, on incrémente le compteur pour que le prochain ajout se fasse avec un autre numéro*/
+/*       index++;*/
+/*     }*/
+/* */
+/*     // La fonction qui ajoute un lien de suppression d'une catégorie*/
+/*     function addDeleteLink($prototype) {*/
+/*       // Création du lien*/
+/*       var $deleteLink = $('<a href="#" class="btn btn-danger">Supprimer</a>');*/
+/* */
+/*       // Ajout du lien*/
+/*       $prototype.append($deleteLink);*/
+/* */
+/*       // Ajout du listener sur le clic du lien pour effectivement supprimer la catégorie*/
+/*       $deleteLink.click(function(e) {*/
+/*         $prototype.remove();*/
+/* */
+/*         e.preventDefault(); // évite qu'un # apparaisse dans l'URL*/
+/*         return false;*/
+/*       });*/
+/*     }*/
+/*   });*/
+/* </script>*/
+/* */
+/* */
+/* */
+/* */
+/* */
 /* */
 /* */
 /* {% endblock %}*/

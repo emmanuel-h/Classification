@@ -130,8 +130,8 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // lifo_classif_tesson
-        if ($pathinfo === '/tesson') {
-            return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::tessonAction',  '_route' => 'lifo_classif_tesson',);
+        if (0 === strpos($pathinfo, '/tesson') && preg_match('#^/tesson/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_tesson')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::tessonAction',));
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

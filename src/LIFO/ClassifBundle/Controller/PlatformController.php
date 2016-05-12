@@ -11,6 +11,7 @@ use LIFO\ClassifBundle\Entity\Numerisation;
 use LIFO\ClassifBundle\Entity\TypeNumerisation;
 use LIFO\ClassifBundle\Form\TessonType;
 use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 class PlatformController extends Controller {
 	public function indexAction() {
@@ -26,12 +27,6 @@ class PlatformController extends Controller {
 		$tesson->setUS ( new US () );
 		$tesson->setSite ( new Site () );
 		$tesson->getUS ()->setSite ( $tesson->getSite () );
-		$listeTypeNumerisation=$em->getRepository('LIFOClassifBundle:TypeNumerisation')->findAll();
-		foreach($listeTypeNumerisation as $typeNumerisation){
-			$numerisation = new Numerisation();
-			$numerisation->setTypeNumerisation($typeNumerisation);
-			$tesson->addNumerisation($numerisation);
-		}
 		$utilisateur = $em->getRepository ( 'LIFOClassifBundle:Utilisateur' )->findOneBy ( array (
 				'nom' => "upload",
 				'prenom' => "test" 
@@ -77,29 +72,45 @@ class PlatformController extends Controller {
 				$tesson->setNumIsolation ( ($numIsolation + 1) );
 			}
 			
+			foreach($tesson->getNumerisation() as $numerisation){
+				if(NULL===$numerisation->getFile()){
+					$tesson->removeNumerisation($numerisation);
+				} else {
+					$numerisation->setTesson($tesson);
+				}
+			}
+			
+			if(count($tesson->getDecor())==0){
+				$tesson->addDecor($em->getRepository('LIFOClassifBundle:Decor')->findOneByPosition("indéterminé"));
+			}
+			
 			$em->persist ( $utilisateur );
 			$em->persist ( $tesson );
 			$em->persist ( $tesson->getUS () );
 			$em->persist ( $tesson->getSite () );
 			$em->flush ();
 			
-			$request->getSession ()->getFlashBag ()->add ( 'notice', 'Tesson enregistr�.' );
-			return $this->redirectToRoute ( 'lifo_classif_tesson', array (
-					'id' => $tesson->getId () 
-			) );
+			$request->getSession ()->getFlashBag ()->add ( 'notice', 'Tesson enregistré.' );
+			return $this->redirectToRoute ( 'lifo_classif_tesson', array ('id' => $tesson->getId ()) );
 		}
 		
 		return $this->render ( 'LIFOClassifBundle:Platform:upload.html.twig', array (
 				'form' => $form->createView () 
 		) );
 	}
+	
 	public function rechercheAction() {
 		return $this->render ( 'LIFOClassifBundle:Platform:recherche.html.twig' );
 	}
+	
 	public function classificationAction() {
 		return $this->render ( 'LIFOClassifBundle:Platform:classification.html.twig' );
 	}
-	public function tessonAction() {
-		return $this->render ( 'LIFOClassifBundle:Platform:tesson.html.twig' );
+	
+	public function tessonAction($id) {
+		$em = $this->getDoctrine ()->getManager ();
+		$tesson = $em->getRepository('LIFOClassifBundle:Tesson')->findOneById($id);
+		return $this->render ( 'LIFOClassifBundle:Platform:tesson.html.twig', array(
+					'listeNumerisation' => $tesson->getNumerisation() ));
 	}
 }

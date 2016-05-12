@@ -20,5 +20,7 @@ lifo_classif_classification:
     defaults: { _controller: LIFOClassifBundle:Platform:classification }
     
 lifo_classif_tesson:
-    path:     /tesson
+    path:     /tesson/{id}
     defaults: { _controller: LIFOClassifBundle:Platform:tesson }
+    requirements:
+        id: \d+

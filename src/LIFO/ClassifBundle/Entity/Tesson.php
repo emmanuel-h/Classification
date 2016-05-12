@@ -149,7 +149,7 @@ class Tesson
     
     /**
      * @ORM\OneToMany(targetEntity="LIFO\ClassifBundle\Entity\Numerisation",
-     * cascade={"persist"},
+     * cascade={"persist", "remove"},
      * mappedBy="tesson")
      */
     private $numerisation;
@@ -692,8 +692,12 @@ class Tesson
     public function addNumerisation(\LIFO\ClassifBundle\Entity\Numerisation $numerisation)
     {
         $this->numerisation[] = $numerisation;
-
         return $this;
+    	/*if (!$this->numerisation->contains($numerisation)) {
+    		$numerisation->setTesson($this);
+    		$this->numerisation->add($numerisation);
+    	}
+        return $this;*/
     }
 
     /**

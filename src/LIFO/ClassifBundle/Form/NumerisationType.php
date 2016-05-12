@@ -6,6 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class NumerisationType extends AbstractType
 {
@@ -17,6 +18,12 @@ class NumerisationType extends AbstractType
     {
         $builder
             ->add('file', FileType::class)
+            ->add('typeNumerisation', EntityType::class, array(
+		        'class'   		=> 'LIFOClassifBundle:TypeNumerisation',
+		        'choice_label'  => 'nom',
+		        'multiple'		=> false,
+				'expanded' 		=> true
+		      ))
         ;
     }
     

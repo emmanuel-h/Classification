@@ -22,44 +22,63 @@ class __TwigTemplate_15d248a09ffea0fb775fe3f599fcd38529064bdfc740d5528a4417b15b6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8d8fb2a8acc2b769b0ab0b303677dd5c250d75f9d31c2384d02beb2d5c97bb7b = $this->env->getExtension("native_profiler");
-        $__internal_8d8fb2a8acc2b769b0ab0b303677dd5c250d75f9d31c2384d02beb2d5c97bb7b->enter($__internal_8d8fb2a8acc2b769b0ab0b303677dd5c250d75f9d31c2384d02beb2d5c97bb7b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:tesson.html.twig"));
+        $__internal_4995dc9de410e78c8634f903915fbb68ef55b703bc9fccb6a3fc4369615ad333 = $this->env->getExtension("native_profiler");
+        $__internal_4995dc9de410e78c8634f903915fbb68ef55b703bc9fccb6a3fc4369615ad333->enter($__internal_4995dc9de410e78c8634f903915fbb68ef55b703bc9fccb6a3fc4369615ad333_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:tesson.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_8d8fb2a8acc2b769b0ab0b303677dd5c250d75f9d31c2384d02beb2d5c97bb7b->leave($__internal_8d8fb2a8acc2b769b0ab0b303677dd5c250d75f9d31c2384d02beb2d5c97bb7b_prof);
+        $__internal_4995dc9de410e78c8634f903915fbb68ef55b703bc9fccb6a3fc4369615ad333->leave($__internal_4995dc9de410e78c8634f903915fbb68ef55b703bc9fccb6a3fc4369615ad333_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_62ad305a08bc797ec8325b734e5c32d11f160fe13b14750d70bb372e4d0c752a = $this->env->getExtension("native_profiler");
-        $__internal_62ad305a08bc797ec8325b734e5c32d11f160fe13b14750d70bb372e4d0c752a->enter($__internal_62ad305a08bc797ec8325b734e5c32d11f160fe13b14750d70bb372e4d0c752a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_2ae21efb0e96a690b2d4a3b871cd6fffa2e1788df9912b4e08f96d9d43864d49 = $this->env->getExtension("native_profiler");
+        $__internal_2ae21efb0e96a690b2d4a3b871cd6fffa2e1788df9912b4e08f96d9d43864d49->enter($__internal_2ae21efb0e96a690b2d4a3b871cd6fffa2e1788df9912b4e08f96d9d43864d49_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Tesson";
         
-        $__internal_62ad305a08bc797ec8325b734e5c32d11f160fe13b14750d70bb372e4d0c752a->leave($__internal_62ad305a08bc797ec8325b734e5c32d11f160fe13b14750d70bb372e4d0c752a_prof);
+        $__internal_2ae21efb0e96a690b2d4a3b871cd6fffa2e1788df9912b4e08f96d9d43864d49->leave($__internal_2ae21efb0e96a690b2d4a3b871cd6fffa2e1788df9912b4e08f96d9d43864d49_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_912960f10b719c84b942ea79c9766aad1c018ef76245ce80cb8d1491c0e57dc7 = $this->env->getExtension("native_profiler");
-        $__internal_912960f10b719c84b942ea79c9766aad1c018ef76245ce80cb8d1491c0e57dc7->enter($__internal_912960f10b719c84b942ea79c9766aad1c018ef76245ce80cb8d1491c0e57dc7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_da613c2eafe899ea9c90c925d97e3553f50f8376e6f99bb9e20b09164170a0b0 = $this->env->getExtension("native_profiler");
+        $__internal_da613c2eafe899ea9c90c925d97e3553f50f8376e6f99bb9e20b09164170a0b0->enter($__internal_da613c2eafe899ea9c90c925d97e3553f50f8376e6f99bb9e20b09164170a0b0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "\t";
         $this->displayParentBlock("body", $context, $blocks);
         echo "
-\t<p>
-\t\tPour travailler sur un tesson
+\t";
+        // line 7
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["listeNumerisation"]) ? $context["listeNumerisation"] : $this->getContext($context, "listeNumerisation")));
+        foreach ($context['_seq'] as $context["_key"] => $context["numerisation"]) {
+            // line 8
+            echo "\t<p>
+\t";
+            // line 9
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["numerisation"], "typeNumerisation", array()), "nom", array()), "html", null, true);
+            echo "
+\t<img src=\"";
+            // line 10
+            echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl($this->getAttribute($context["numerisation"], "webPath", array())), "html", null, true);
+            echo "\" alt=\"";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["numerisation"], "alt", array()), "html", null, true);
+            echo "\"/>
 \t</p>
-";
+\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['numerisation'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_912960f10b719c84b942ea79c9766aad1c018ef76245ce80cb8d1491c0e57dc7->leave($__internal_912960f10b719c84b942ea79c9766aad1c018ef76245ce80cb8d1491c0e57dc7_prof);
+        $__internal_da613c2eafe899ea9c90c925d97e3553f50f8376e6f99bb9e20b09164170a0b0->leave($__internal_da613c2eafe899ea9c90c925d97e3553f50f8376e6f99bb9e20b09164170a0b0_prof);
 
     }
 
@@ -75,7 +94,7 @@ class __TwigTemplate_15d248a09ffea0fb775fe3f599fcd38529064bdfc740d5528a4417b15b6
 
     public function getDebugInfo()
     {
-        return array (  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
+        return array (  70 => 10,  66 => 9,  63 => 8,  59 => 7,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends "LIFOClassifBundle::layout.html.twig" %}*/
@@ -84,7 +103,10 @@ class __TwigTemplate_15d248a09ffea0fb775fe3f599fcd38529064bdfc740d5528a4417b15b6
 /* */
 /* {% block body %}*/
 /* 	{{ parent() }}*/
+/* 	{% for numerisation in listeNumerisation %}*/
 /* 	<p>*/
-/* 		Pour travailler sur un tesson*/
+/* 	{{ numerisation.typeNumerisation.nom }}*/
+/* 	<img src="{{ asset(numerisation.webPath) }}" alt="{{ numerisation.alt }}"/>*/
 /* 	</p>*/
+/* 	{% endfor %}*/
 /* {% endblock %}*/

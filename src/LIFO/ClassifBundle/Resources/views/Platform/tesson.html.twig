@@ -4,7 +4,10 @@
 
 {% block body %}
 	{{ parent() }}
+	{% for numerisation in listeNumerisation %}
 	<p>
-		Pour travailler sur un tesson
+	{{ numerisation.typeNumerisation.nom }}
+	<img src="{{ asset(numerisation.webPath) }}" alt="{{ numerisation.alt }}"/>
 	</p>
+	{% endfor %}
 {% endblock %}
