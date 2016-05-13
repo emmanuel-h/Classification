@@ -39,6 +39,8 @@ class Molette
      * @ORM\OneToOne(targetEntity="LIFO\ClassifBundle\Entity\Tesson")
      */
     private $referencePar;
+    
+    private $reference;
 
 
     /**
@@ -121,5 +123,13 @@ class Molette
     public function getNom()
     {
         return $this->nom;
+    }
+    
+    public function setReference($b){
+    	$this->reference=$b;
+    }
+    
+    public function getReference(){
+    	return $this->reference;
     }
 }

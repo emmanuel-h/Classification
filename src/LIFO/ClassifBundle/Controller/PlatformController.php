@@ -13,9 +13,10 @@ use LIFO\ClassifBundle\Entity\Utilisateur;
 use LIFO\ClassifBundle\Entity\Numerisation;
 use LIFO\ClassifBundle\Form\TessonType;
 use Symfony\Component\HttpFoundation\Request;
-use LIFO\ClassifBundle\Form\ChercherTessonType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use LIFO\ClassifBundle\Entity\Molette;
+use LIFO\ClassifBundle\Entity\TessonMolette;
 
 class PlatformController extends Controller {
 	public function indexAction() {
@@ -139,13 +140,33 @@ class PlatformController extends Controller {
 				$tesson->addDecor($em->getRepository('LIFOClassifBundle:Decor')->findOneByPosition("indéterminé"));
 			}
 			
+			if(($tesson->getTessonMolette()->getEgal() == true || $tesson->getTessonMolette()->getEgal() == false)
+					&& $tesson->getTessonMolette()->getMolette()->getNom() != "" ){
+				$reference=$tesson->getTessonMolette()->getMolette()->getReference();
+				$descriptionMolette=$tesson->getTessonMolette()->getMolette()->getdescription();
+				$molette=$em->getRepository('LIFOClassifBundle:Molette')->findOneByNom($tesson->getTessonMolette()->getMolette()->getNom());
+				if(is_object($molette)){
+					$tesson->getTessonMolette()->setMolette($molette);
+				}
+				if($reference == true){
+					$tesson->getTessonMolette()->getMolette()->setReferencePar($tesson);
+				}
+				if($descriptionMolette == NULL){
+					$tesson->getTessonMolette()->getMolette()->setDescription("Aucune");
+				}
+				$em->persist($tesson->getTessonMolette()->getMolette());
+				$em->persist($tesson->getTessonMolette());
+			} else {
+				$tesson->setTessonMolette(NULL);
+			}
+			
 			$em->persist ( $utilisateur );
 			$em->persist ( $tesson );
 			$em->persist ( $tesson->getUS () );
 			$em->persist ( $tesson->getSite () );
 			$em->flush ();
 			
-			$request->getSession ()->getFlashBag ()->add ( 'notice', 'Tesson enregistré.' );
+			$request->getSession ()->getFlashBag ()->add ( 'notice', 'Tesson enregistré' );
 			return $this->redirectToRoute ( 'lifo_classif_tesson', array ('id' => $tesson->getId ()) );
 		}
 		
@@ -155,15 +176,14 @@ class PlatformController extends Controller {
 	}
 	
 	public function rechercheAction(Request $request) {
-		//$form = $this->createForm(new ChercherTessonType());
 		
 
 		$defaultData = array('message' => 'Type your message here');
 		$form = $this->createFormBuilder($defaultData)
-		->add('Identifiant', IntegerType::class)
-		->add('send', SubmitType::class)
-		->getForm();
-		
+					 ->add('Identifiant', IntegerType::class)
+					 ->add('send', SubmitType::class)
+					 ->getForm();
+
 		
 		if ($request->isMethod ( 'POST' ) && $form->handleRequest ( $request )->isValid ()) {
 			$em = $this->getDoctrine ()->getManager ();
@@ -174,6 +194,10 @@ class PlatformController extends Controller {
 		}
 		return $this->render ( 'LIFOClassifBundle:Platform:recherche.html.twig', array (
 				'form' => $form->createView () ) );
+	}
+	
+	public function adminAction(){
+		return $this->render ( 'LIFOClassifBundle:Platform:admin.html.twig' );
 	}
 	
 	public function classificationAction() {

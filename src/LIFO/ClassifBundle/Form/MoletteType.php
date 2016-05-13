@@ -5,6 +5,9 @@ namespace LIFO\ClassifBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class MoletteType extends AbstractType
 {
@@ -15,9 +18,12 @@ class MoletteType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('nom')
-            ->add('description')
-            ->add('referencePar')
+            ->add('nom', TextType::class, array(
+		    	'required'     => false))
+            ->add('description', TextareaType::class, array(
+		    	'required'     => false))
+            ->add('reference', CheckboxType::class, array(
+		    	'required'     => false))
         ;
     }
     

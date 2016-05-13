@@ -5,6 +5,9 @@ namespace LIFO\ClassifBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\RadioType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class TessonMoletteType extends AbstractType
 {
@@ -15,8 +18,16 @@ class TessonMoletteType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('egal')
-            ->add('molette')
+            ->add('egal', ChoiceType::class, array(
+            		'choices' 	=> array(
+            				'egal'=>true,
+            				'equi'=>false
+            		),
+            		'multiple'	=>false,
+            		'expanded'	=>true,
+		    		'required'	=> false
+            ))
+		    ->add('molette', MoletteType::class)
         ;
     }
     

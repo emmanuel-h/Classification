@@ -103,6 +103,7 @@ class TessonType extends AbstractType
 		        'allow_delete' => true,
 		    	'required'     => false
 		    ))
+		    ->add('tessonMolette', TessonMoletteType::class)
             ->add('save', SubmitType::class)
         ;
     }

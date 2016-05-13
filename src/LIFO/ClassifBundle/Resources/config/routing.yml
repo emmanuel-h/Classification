@@ -24,3 +24,7 @@ lifo_classif_tesson:
     defaults: { _controller: LIFOClassifBundle:Platform:tesson }
     requirements:
         id: \d+
+        
+lifo_classif_admin:
+    path:     /admin
+    defaults: { _controller: LIFOClassifBundle:Platform:admin}

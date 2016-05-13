@@ -134,6 +134,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_tesson')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::tessonAction',));
         }
 
+        // lifo_classif_admin
+        if ($pathinfo === '/admin') {
+            return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::adminAction',  '_route' => 'lifo_classif_admin',);
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }
