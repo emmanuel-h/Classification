@@ -4,6 +4,23 @@
 
 {% block LIFOClassif_body %}
 
-<h1> Administration </h1>
+<div class="well">
+<p>
+<fieldset>
+<legend>Suppression</legend>
+{{ form(formSuppression) }}
+</fieldset>
+</p>
+<p>
+<fieldset>
+<legend>Ajout d'un décor</legend>
+{{ form(formAjoutDecor) }}
+</fieldset>
+<fieldset>
+<legend>Ajout d'un type de décor</legend>
+{{ form(formAjoutTypeDecor) }}
+</fieldset>
+</p>
+</div>
 
 {% endblock %}
