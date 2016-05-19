@@ -1,0 +1,25 @@
+{% extends "LIFOClassifBundle::layoutAdmin.html.twig" %}
+
+{% block LIFOClassif_body %}
+
+<div class="well">
+	<font color = "red">{{messageImportant}}</font>
+	<p>
+		<fieldset>
+			<legend>{{user.username}}</legend>
+			Role actuel : 
+			{% if is_granted('ROLE_ADMIN') %}
+			Administrateur
+			{% else %}
+				{% if is_granted('ROLE_ARCHEOLOGUE') %}
+				Archéologue
+				{% else %}
+					Utilisateur standard
+				{% endif %}
+			{% endif %}
+			{{ form(formModifierRole) }}
+		</fieldset>
+	</p>
+</div>
+
+{% endblock %}

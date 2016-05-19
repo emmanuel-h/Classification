@@ -8,7 +8,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("LIFOClassifBundle::layout.html.twig", "LIFOClassifBundle:Platform:upload.html.twig", 1);
+        $this->parent = $this->loadTemplate("LIFOClassifBundle::layoutGeneral.html.twig", "LIFOClassifBundle:Platform:upload.html.twig", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'LIFOClassif_body' => array($this, 'block_LIFOClassif_body'),
@@ -17,38 +17,38 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 
     protected function doGetParent(array $context)
     {
-        return "LIFOClassifBundle::layout.html.twig";
+        return "LIFOClassifBundle::layoutGeneral.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_94a751c892cade3b1d79fa3f3822c5444fa0d8fe0105e8c338e5569b2e69774d = $this->env->getExtension("native_profiler");
-        $__internal_94a751c892cade3b1d79fa3f3822c5444fa0d8fe0105e8c338e5569b2e69774d->enter($__internal_94a751c892cade3b1d79fa3f3822c5444fa0d8fe0105e8c338e5569b2e69774d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:upload.html.twig"));
+        $__internal_fbd817cdbe3186d2b81417764238db5362a4cc8a78f8e8f3adfd9979e179b8bf = $this->env->getExtension("native_profiler");
+        $__internal_fbd817cdbe3186d2b81417764238db5362a4cc8a78f8e8f3adfd9979e179b8bf->enter($__internal_fbd817cdbe3186d2b81417764238db5362a4cc8a78f8e8f3adfd9979e179b8bf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:upload.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_94a751c892cade3b1d79fa3f3822c5444fa0d8fe0105e8c338e5569b2e69774d->leave($__internal_94a751c892cade3b1d79fa3f3822c5444fa0d8fe0105e8c338e5569b2e69774d_prof);
+        $__internal_fbd817cdbe3186d2b81417764238db5362a4cc8a78f8e8f3adfd9979e179b8bf->leave($__internal_fbd817cdbe3186d2b81417764238db5362a4cc8a78f8e8f3adfd9979e179b8bf_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_2a8434e3c692249b89d88336f6f00fa59c8d57aebf265186579a0c87b230efec = $this->env->getExtension("native_profiler");
-        $__internal_2a8434e3c692249b89d88336f6f00fa59c8d57aebf265186579a0c87b230efec->enter($__internal_2a8434e3c692249b89d88336f6f00fa59c8d57aebf265186579a0c87b230efec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_80258cc1dfe5b073cbe2ce78d72cfd25b30afa2aa7bf9fbf777c06a83d1771bc = $this->env->getExtension("native_profiler");
+        $__internal_80258cc1dfe5b073cbe2ce78d72cfd25b30afa2aa7bf9fbf777c06a83d1771bc->enter($__internal_80258cc1dfe5b073cbe2ce78d72cfd25b30afa2aa7bf9fbf777c06a83d1771bc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Upload";
         
-        $__internal_2a8434e3c692249b89d88336f6f00fa59c8d57aebf265186579a0c87b230efec->leave($__internal_2a8434e3c692249b89d88336f6f00fa59c8d57aebf265186579a0c87b230efec_prof);
+        $__internal_80258cc1dfe5b073cbe2ce78d72cfd25b30afa2aa7bf9fbf777c06a83d1771bc->leave($__internal_80258cc1dfe5b073cbe2ce78d72cfd25b30afa2aa7bf9fbf777c06a83d1771bc_prof);
 
     }
 
     // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_850d61189c8f41ed0803c68a7cfefd4443ae11e91359bea01aaf4285f2398d2a = $this->env->getExtension("native_profiler");
-        $__internal_850d61189c8f41ed0803c68a7cfefd4443ae11e91359bea01aaf4285f2398d2a->enter($__internal_850d61189c8f41ed0803c68a7cfefd4443ae11e91359bea01aaf4285f2398d2a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_a64c18a03d20f89d077abf1a414e400deaa42a915729544a23632c57a1b6cc27 = $this->env->getExtension("native_profiler");
+        $__internal_a64c18a03d20f89d077abf1a414e400deaa42a915729544a23632c57a1b6cc27->enter($__internal_a64c18a03d20f89d077abf1a414e400deaa42a915729544a23632c57a1b6cc27_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 6
         echo "
@@ -434,7 +434,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 
 ";
         
-        $__internal_850d61189c8f41ed0803c68a7cfefd4443ae11e91359bea01aaf4285f2398d2a->leave($__internal_850d61189c8f41ed0803c68a7cfefd4443ae11e91359bea01aaf4285f2398d2a_prof);
+        $__internal_a64c18a03d20f89d077abf1a414e400deaa42a915729544a23632c57a1b6cc27->leave($__internal_a64c18a03d20f89d077abf1a414e400deaa42a915729544a23632c57a1b6cc27_prof);
 
     }
 
@@ -453,7 +453,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
         return array (  348 => 150,  342 => 147,  336 => 143,  328 => 137,  320 => 132,  313 => 128,  306 => 124,  299 => 120,  292 => 116,  285 => 112,  278 => 108,  271 => 104,  263 => 99,  258 => 97,  254 => 96,  247 => 92,  241 => 89,  236 => 87,  232 => 86,  225 => 82,  219 => 79,  214 => 77,  210 => 76,  203 => 72,  198 => 70,  194 => 69,  187 => 65,  181 => 62,  176 => 60,  172 => 59,  165 => 55,  159 => 52,  154 => 50,  150 => 49,  143 => 45,  138 => 43,  134 => 42,  127 => 38,  122 => 36,  118 => 35,  111 => 31,  106 => 29,  102 => 28,  95 => 24,  90 => 22,  86 => 21,  79 => 17,  74 => 15,  70 => 14,  63 => 11,  58 => 8,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
     }
 }
-/* {% extends "LIFOClassifBundle::layout.html.twig" %}*/
+/* {% extends "LIFOClassifBundle::layoutGeneral.html.twig" %}*/
 /* */
 /* {% block title %}{{ parent() }} - Upload{% endblock %}*/
 /* */

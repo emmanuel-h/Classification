@@ -8,7 +8,7 @@ class __TwigTemplate_15d248a09ffea0fb775fe3f599fcd38529064bdfc740d5528a4417b15b6
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("LIFOClassifBundle::layout.html.twig", "LIFOClassifBundle:Platform:tesson.html.twig", 1);
+        $this->parent = $this->loadTemplate("LIFOClassifBundle::layoutGeneral.html.twig", "LIFOClassifBundle:Platform:tesson.html.twig", 1);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'LIFOClassif_body' => array($this, 'block_LIFOClassif_body'),
@@ -17,38 +17,38 @@ class __TwigTemplate_15d248a09ffea0fb775fe3f599fcd38529064bdfc740d5528a4417b15b6
 
     protected function doGetParent(array $context)
     {
-        return "LIFOClassifBundle::layout.html.twig";
+        return "LIFOClassifBundle::layoutGeneral.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7f8db1d99febd06f1e3cbf77f812cfdb5ccffd49403e8040defd44d4d2487694 = $this->env->getExtension("native_profiler");
-        $__internal_7f8db1d99febd06f1e3cbf77f812cfdb5ccffd49403e8040defd44d4d2487694->enter($__internal_7f8db1d99febd06f1e3cbf77f812cfdb5ccffd49403e8040defd44d4d2487694_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:tesson.html.twig"));
+        $__internal_10096fa7ca3774f2b1160e42f9fa603c144221c832fb7c79d7fb04b7f36a4577 = $this->env->getExtension("native_profiler");
+        $__internal_10096fa7ca3774f2b1160e42f9fa603c144221c832fb7c79d7fb04b7f36a4577->enter($__internal_10096fa7ca3774f2b1160e42f9fa603c144221c832fb7c79d7fb04b7f36a4577_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:tesson.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_7f8db1d99febd06f1e3cbf77f812cfdb5ccffd49403e8040defd44d4d2487694->leave($__internal_7f8db1d99febd06f1e3cbf77f812cfdb5ccffd49403e8040defd44d4d2487694_prof);
+        $__internal_10096fa7ca3774f2b1160e42f9fa603c144221c832fb7c79d7fb04b7f36a4577->leave($__internal_10096fa7ca3774f2b1160e42f9fa603c144221c832fb7c79d7fb04b7f36a4577_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_3b34fa1df77e5adfcf8dd4c40f727089020a416d038c251e316260b7ab19f9de = $this->env->getExtension("native_profiler");
-        $__internal_3b34fa1df77e5adfcf8dd4c40f727089020a416d038c251e316260b7ab19f9de->enter($__internal_3b34fa1df77e5adfcf8dd4c40f727089020a416d038c251e316260b7ab19f9de_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_c87b8722ef2c8b754e83be58068d41eafdb596730f2bbd17372ea6b0ff62dd93 = $this->env->getExtension("native_profiler");
+        $__internal_c87b8722ef2c8b754e83be58068d41eafdb596730f2bbd17372ea6b0ff62dd93->enter($__internal_c87b8722ef2c8b754e83be58068d41eafdb596730f2bbd17372ea6b0ff62dd93_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Tesson";
         
-        $__internal_3b34fa1df77e5adfcf8dd4c40f727089020a416d038c251e316260b7ab19f9de->leave($__internal_3b34fa1df77e5adfcf8dd4c40f727089020a416d038c251e316260b7ab19f9de_prof);
+        $__internal_c87b8722ef2c8b754e83be58068d41eafdb596730f2bbd17372ea6b0ff62dd93->leave($__internal_c87b8722ef2c8b754e83be58068d41eafdb596730f2bbd17372ea6b0ff62dd93_prof);
 
     }
 
     // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_d84485c1aa96c8c6cd7e23b1560f8067bc93029a41edf1105beaeab5a4ceef93 = $this->env->getExtension("native_profiler");
-        $__internal_d84485c1aa96c8c6cd7e23b1560f8067bc93029a41edf1105beaeab5a4ceef93->enter($__internal_d84485c1aa96c8c6cd7e23b1560f8067bc93029a41edf1105beaeab5a4ceef93_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_773216f34fdaa8062bd4a3dfbed2bb05954982ca6bfe75e1e000d110bba86cc8 = $this->env->getExtension("native_profiler");
+        $__internal_773216f34fdaa8062bd4a3dfbed2bb05954982ca6bfe75e1e000d110bba86cc8->enter($__internal_773216f34fdaa8062bd4a3dfbed2bb05954982ca6bfe75e1e000d110bba86cc8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 6
         echo "\t";
@@ -74,7 +74,7 @@ class __TwigTemplate_15d248a09ffea0fb775fe3f599fcd38529064bdfc740d5528a4417b15b6
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['numerisation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_d84485c1aa96c8c6cd7e23b1560f8067bc93029a41edf1105beaeab5a4ceef93->leave($__internal_d84485c1aa96c8c6cd7e23b1560f8067bc93029a41edf1105beaeab5a4ceef93_prof);
+        $__internal_773216f34fdaa8062bd4a3dfbed2bb05954982ca6bfe75e1e000d110bba86cc8->leave($__internal_773216f34fdaa8062bd4a3dfbed2bb05954982ca6bfe75e1e000d110bba86cc8_prof);
 
     }
 
@@ -93,7 +93,7 @@ class __TwigTemplate_15d248a09ffea0fb775fe3f599fcd38529064bdfc740d5528a4417b15b6
         return array (  66 => 9,  62 => 8,  59 => 7,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
     }
 }
-/* {% extends "LIFOClassifBundle::layout.html.twig" %}*/
+/* {% extends "LIFOClassifBundle::layoutGeneral.html.twig" %}*/
 /* */
 /* {% block title %}{{ parent() }} - Tesson{% endblock %}*/
 /* */

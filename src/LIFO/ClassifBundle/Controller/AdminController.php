@@ -13,6 +13,7 @@ use LIFO\ClassifBundle\Entity\Decor;
 use LIFO\ClassifBundle\Entity\Utilisateur;
 use LIFO\ClassifBundle\Form\UtilisateurType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class AdminController extends Controller{
 	
@@ -124,7 +125,26 @@ class AdminController extends Controller{
             				'Administrateur' => "Administrateur")))
             -> add('valider', SubmitType::class)
 			->getForm();
+			
+		$formSearchUser = $this->createFormBuilder()
+			->add('Username', TextType::class)
+			->add('Rechercher', SubmitType::class)
+			->getForm();
 		
+
+		if ($request->isMethod ( 'POST' ) && $formSearchUser->handleRequest ( $request )->isValid ()) {
+			$username = $formSearchUser->get('Username')->getData();
+			$verifyUser = $em->getRepository('LIFOClassifBundle:Utilisateur')->findOneByUsername($username);
+			if(! is_object($verifyUser)){
+				return $this->render ( 'LIFOClassifBundle:Admin:utilisateur.html.twig', array (
+						'formAddUser' => $formAddUser->createView (),
+						'formSearchUser' => $formSearchUser->createView (),
+						'messageImportant' => "Nom d'utilisateur inconnu"));
+			} else {
+				return $this->redirectToRoute ( 'lifo_classif_admin_afficher_utilisateur', array ('id' => $verifyUser->getId ()) );
+			}
+		}
+			
 		if ($request->isMethod ( 'POST' ) && $formAddUser->handleRequest ( $request )->isValid ()) {
 			$user = $formAddUser->get('Utilisateur')->getData();
 			$username = $user->getUsername();
@@ -132,30 +152,86 @@ class AdminController extends Controller{
 			if(is_object($verifyUsername)){
 				return $this->render ( 'LIFOClassifBundle:Admin:utilisateur.html.twig', array (
 						'formAddUser' => $formAddUser->createView (),
+						'formSearchUser' => $formSearchUser->createView (),
 						'messageImportant' => "Nom d'utilisateur déjà pris"));
+			} else {
+				$options = ['cost' => 12,];
+				$user->setPassword(password_hash($user->getPassword(), PASSWORD_BCRYPT, $options));
+				$role = $formAddUser->get('Role')->getData();
+				if("User" == $role){
+	      			$user->setRoles(array('ROLE_USER'));
+				}
+				if("Archéologue" == $role){
+	      			$user->setRoles(array('ROLE_USER', 'ROLE_ARCHEOLOGUE'));
+				}
+				if("Administrateur" == $role){
+	      			$user->setRoles(array('ROLE_USER','ROLE_ADMIN'));
+				}
+				$user->setSalt('');
+				$em->persist($user);
+				$em->flush($user);
+				return $this->redirectToRoute ( 'lifo_classif_admin_utilisateur');
 			}
-			$options = ['cost' => 12,];
-			$user->setPassword(password_hash($user->getPassword(), PASSWORD_BCRYPT, $options));
-			$role = $formAddUser->get('Role')->getData();
-			if("User" == $role){
-      			$user->setRoles(array('ROLE_USER'));
-			}
-			if("Archéologue" == $role){
-      			$user->setRoles(array('ROLE_USER', 'ROLE_ARCHEOLOGUE'));
-			}
-			if("Administrateur" == $role){
-      			$user->setRoles(array('ROLE_USER','ROLE_ADMIN'));
-			}
-			$user->setSalt('');
-			$em->persist($user);
-			$em->flush($user);
-			return $this->redirectToRoute ( 'lifo_classif_admin_utilisateur');
 		}
 		
 		return $this->render ( 'LIFOClassifBundle:Admin:utilisateur.html.twig', array (
 				'formAddUser' => $formAddUser->createView (),
+				'formSearchUser' => $formSearchUser->createView (),
 				'messageImportant' => ""
 		) );
+	}
+	
+	/**
+	 * @Security("has_role('ROLE_ADMIN')")
+	 */
+	public function allUserAction(Request $request){
+
+		return $this->render ( 'LIFOClassifBundle:Admin:allUser.html.twig' );
+	    
+	}
+	
+	/**
+	 * @Security("has_role('ROLE_ADMIN')")
+	 */
+	public function afficherUtilisateurAction(Request $request, $id){
+		$em = $this->getDoctrine ()->getManager ();
+		$user = $em->getRepository('LIFOClassifBundle:Utilisateur')->findOneById($id);
+		$formModifierRole = $this->createFormBuilder()
+			->add('nouveauRole', ChoiceType::class, array(
+            		'choices'  => array(
+            				'Utilisateur Normal' => "User",
+            				'Archéologue' => "Archéologue",
+            				'Administrateur' => "Administrateur")))
+            -> add('valider', SubmitType::class)
+            -> getForm();
+			
+		if ($request->isMethod ( 'POST' ) && $formModifierRole->handleRequest ( $request )->isValid ()) {
+
+			$role = $formModifierRole->get('nouveauRole')->getData();
+			if("User" == $role){
+				$user->setRoles(array('ROLE_USER'));
+			}
+			if("Archéologue" == $role){
+				$user->setRoles(array('ROLE_USER', 'ROLE_ARCHEOLOGUE'));
+			}
+			if("Administrateur" == $role){
+				$user->setRoles(array('ROLE_USER','ROLE_ADMIN'));
+			}
+			$em->persist($user);
+			$em->flush($user);
+			return $this->render ( 'LIFOClassifBundle:Admin:afficherUtilisateur.html.twig', array (
+				'user' => $user,
+				'formModifierRole' => $formModifierRole->createView(),
+				'messageImportant' => "Changements enregistrés"
+			) );
+		}
+
+		return $this->render ( 'LIFOClassifBundle:Admin:afficherUtilisateur.html.twig', array (
+				'user' => $user,
+				'formModifierRole' => $formModifierRole->createView(),
+				'messageImportant' => ""
+		) );
+	    
 	}
 	
 }

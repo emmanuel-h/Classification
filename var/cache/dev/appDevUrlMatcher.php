@@ -150,9 +150,22 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::ajoutAction',  '_route' => 'lifo_classif_admin_ajout',);
             }
 
-            // lifo_classif_admin_utilisateur
-            if ($pathinfo === '/admin/utilisateur') {
-                return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::utilisateurAction',  '_route' => 'lifo_classif_admin_utilisateur',);
+            if (0 === strpos($pathinfo, '/admin/utilisateur')) {
+                // lifo_classif_admin_utilisateur
+                if ($pathinfo === '/admin/utilisateur') {
+                    return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::utilisateurAction',  '_route' => 'lifo_classif_admin_utilisateur',);
+                }
+
+                // lifo_classif_admin_all_user
+                if ($pathinfo === '/admin/utilisateur/tous') {
+                    return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::allUserAction',  '_route' => 'lifo_classif_admin_all_user',);
+                }
+
+                // lifo_classif_admin_afficher_utilisateur
+                if (0 === strpos($pathinfo, '/admin/utilisateur/afficher') && preg_match('#^/admin/utilisateur/afficher/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_admin_afficher_utilisateur')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::afficherUtilisateurAction',));
+                }
+
             }
 
         }
