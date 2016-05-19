@@ -10,6 +10,9 @@ use LIFO\ClassifBundle\Entity\TypeDecor;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use LIFO\ClassifBundle\Entity\Decor;
+use LIFO\ClassifBundle\Entity\Utilisateur;
+use LIFO\ClassifBundle\Form\UtilisateurType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class AdminController extends Controller{
 	
@@ -110,8 +113,49 @@ class AdminController extends Controller{
 	/**
 	 * @Security("has_role('ROLE_ADMIN')")
 	 */
-	public function utilisateurAction(){
+	public function utilisateurAction(Request $request){
+		$em = $this->getDoctrine ()->getManager ();
+		$formAddUser = $this->createFormBuilder()
+			->add('Utilisateur', UtilisateurType::class)
+			->add('Role', ChoiceType::class, array(
+            		'choices'  => array(
+            				'Utilisateur Normal' => "User",
+            				'Archéologue' => "Archéologue",
+            				'Administrateur' => "Administrateur")))
+            -> add('valider', SubmitType::class)
+			->getForm();
 		
+		if ($request->isMethod ( 'POST' ) && $formAddUser->handleRequest ( $request )->isValid ()) {
+			$user = $formAddUser->get('Utilisateur')->getData();
+			$username = $user->getUsername();
+			$verifyUsername = $em->getRepository('LIFOClassifBundle:Utilisateur')->findOneByUsername($username);
+			if(is_object($verifyUsername)){
+				return $this->render ( 'LIFOClassifBundle:Admin:utilisateur.html.twig', array (
+						'formAddUser' => $formAddUser->createView (),
+						'messageImportant' => "Nom d'utilisateur déjà pris"));
+			}
+			$options = ['cost' => 12,];
+			$user->setPassword(password_hash($user->getPassword(), PASSWORD_BCRYPT, $options));
+			$role = $formAddUser->get('Role')->getData();
+			if("User" == $role){
+      			$user->setRoles(array('ROLE_USER'));
+			}
+			if("Archéologue" == $role){
+      			$user->setRoles(array('ROLE_USER', 'ROLE_ARCHEOLOGUE'));
+			}
+			if("Administrateur" == $role){
+      			$user->setRoles(array('ROLE_USER','ROLE_ADMIN'));
+			}
+			$user->setSalt('');
+			$em->persist($user);
+			$em->flush($user);
+			return $this->redirectToRoute ( 'lifo_classif_admin_utilisateur');
+		}
+		
+		return $this->render ( 'LIFOClassifBundle:Admin:utilisateur.html.twig', array (
+				'formAddUser' => $formAddUser->createView (),
+				'messageImportant' => ""
+		) );
 	}
 	
 }

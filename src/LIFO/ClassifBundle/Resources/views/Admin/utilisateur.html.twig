@@ -3,6 +3,13 @@
 {% block LIFOClassif_body %}
 
 <div class="well">
+<p>
+<font color = "red">{{messageImportant}}</font>
+<fieldset>
+<legend>Ajouter un utilisateur</legend>
+{{ form(formAddUser) }}
+</fieldset>
+</p>
 </div>
 
 {% endblock %}
