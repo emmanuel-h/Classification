@@ -3,7 +3,9 @@
 security:
 
     encoders:
-        LIFO\UserBundle\Entity\Utilisateur: md5
+        LIFO\ClassifBundle\Entity\Utilisateur:
+            algorithm: bcrypt
+            cost: 12
 
     role_hierarchy:
       ROLE_ARCHEOLOGUE: [ROLE_USER]
@@ -14,7 +16,7 @@ security:
     providers:
         main:
             entity:
-              class:    LIFO\UserBundle\Entity\Utilisateur
+              class:    LIFO\ClassifBundle\Entity\Utilisateur
               property: username
 
     firewalls:

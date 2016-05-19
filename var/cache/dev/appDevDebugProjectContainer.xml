@@ -5,7 +5,7 @@
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
     <parameter key="kernel.name">app</parameter>
-    <parameter key="kernel.cache_dir">C:\wamp64\www\Classification\var\cache\dev</parameter>
+    <parameter key="kernel.cache_dir">C:/wamp64/www/Classification/var/cache/dev</parameter>
     <parameter key="kernel.logs_dir">C:\wamp64\www\Classification\var\logs</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
@@ -16,7 +16,6 @@
       <parameter key="DoctrineBundle">Doctrine\Bundle\DoctrineBundle\DoctrineBundle</parameter>
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
       <parameter key="LIFOClassifBundle">LIFO\ClassifBundle\LIFOClassifBundle</parameter>
-      <parameter key="LIFOUserBundle">LIFO\UserBundle\LIFOUserBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -61,7 +60,7 @@
     <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_master_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:C:\wamp64\www\Classification\var\cache\dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:C:/wamp64/www/Classification/var/cache/dev/profiler</parameter>
     <parameter key="router.options.generator_class">Symfony\Component\Routing\Generator\UrlGenerator</parameter>
     <parameter key="router.options.generator_base_class">Symfony\Component\Routing\Generator\UrlGenerator</parameter>
     <parameter key="router.options.generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\PhpGeneratorDumper</parameter>
@@ -78,7 +77,7 @@
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">C:\wamp64\www\Classification\var\cache\dev/appDevDebugProjectContainer.xml</parameter>
+    <parameter key="debug.container.dump">C:/wamp64/www/Classification/var/cache/dev/appDevDebugProjectContainer.xml</parameter>
     <parameter key="security.authentication.trust_resolver.anonymous_class">Symfony\Component\Security\Core\Authentication\Token\AnonymousToken</parameter>
     <parameter key="security.authentication.trust_resolver.rememberme_class">Symfony\Component\Security\Core\Authentication\Token\RememberMeToken</parameter>
     <parameter key="security.role_hierarchy.roles" type="collection">
@@ -187,7 +186,7 @@
     <parameter key="swiftmailer.mailer.default.transport.smtp.auth_mode">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.timeout">30</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.source_ip">null</parameter>
-    <parameter key="swiftmailer.spool.default.memory.path">C:\wamp64\www\Classification\var\cache\dev/swiftmailer/spool/default</parameter>
+    <parameter key="swiftmailer.spool.default.memory.path">C:/wamp64/www/Classification/var/cache/dev/swiftmailer/spool/default</parameter>
     <parameter key="swiftmailer.mailer.default.spool.enabled">true</parameter>
     <parameter key="swiftmailer.mailer.default.plugin.impersonate">null</parameter>
     <parameter key="swiftmailer.mailer.default.single_address">null</parameter>
@@ -305,7 +304,7 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">C:\wamp64\www\Classification\var\cache\dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">C:/wamp64/www/Classification/var/cache/dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="sensio_framework_extra.view.guesser.class">Sensio\Bundle\FrameworkExtraBundle\Templating\TemplateGuesser</parameter>
     <parameter key="sensio_framework_extra.controller.listener.class">Sensio\Bundle\FrameworkExtraBundle\EventListener\ControllerListener</parameter>
@@ -608,7 +607,7 @@
         </argument>
       </argument>
       <argument type="collection">
-        <argument key="cache_dir">C:\wamp64\www\Classification\var\cache\dev/translations</argument>
+        <argument key="cache_dir">C:/wamp64/www/Classification/var/cache/dev/translations</argument>
         <argument key="debug">true</argument>
       </argument>
       <argument type="collection"/>
@@ -1068,7 +1067,7 @@
     <service id="templating.filename_parser" class="Symfony\Bundle\FrameworkBundle\Templating\TemplateFilenameParser"/>
     <service id="templating.locator" class="Symfony\Bundle\FrameworkBundle\Templating\Loader\TemplateLocator" public="false">
       <argument type="service" id="file_locator"/>
-      <argument>C:\wamp64\www\Classification\var\cache\dev</argument>
+      <argument>C:/wamp64/www/Classification/var/cache/dev</argument>
     </service>
     <service id="validator" class="Symfony\Component\Validator\Validator\ValidatorInterface">
       <factory service="validator.builder" method="getValidator"/>
@@ -1130,7 +1129,7 @@
       <tag name="monolog.logger" channel="profiler"/>
       <argument type="service">
         <service class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage" public="false">
-          <argument>file:C:\wamp64\www\Classification\var\cache\dev/profiler</argument>
+          <argument>file:C:/wamp64/www/Classification/var/cache/dev/profiler</argument>
         </service>
       </argument>
       <argument type="service" id="monolog.logger.profiler" on-invalid="null"/>
@@ -1509,7 +1508,7 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>573c7b812978c6.25740066</argument>
+            <argument>573d7d2bf31552.93672889</argument>
           </service>
         </argument>
         <argument type="service">
@@ -1523,7 +1522,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>573c7b812978c6.25740066</argument>
+            <argument>573d7d2bf31552.93672889</argument>
           </service>
         </argument>
       </argument>
@@ -1668,7 +1667,7 @@
     </service>
     <service id="security.user.provider.concrete.main" class="Symfony\Bridge\Doctrine\Security\User\EntityUserProvider" public="false">
       <argument type="service" id="doctrine"/>
-      <argument>LIFO\UserBundle\Entity\Utilisateur</argument>
+      <argument>LIFO\ClassifBundle\Entity\Utilisateur</argument>
       <argument>username</argument>
       <argument>null</argument>
     </service>
@@ -1693,7 +1692,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>573c7b812978c6.25740066</argument>
+            <argument>573d7d2bf31552.93672889</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -1814,7 +1813,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>573c7b812978c6.25740066</argument>
+            <argument>573d7d2bf31552.93672889</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -1854,7 +1853,7 @@
         </argument>
         <argument key="exception_controller">twig.controller.exception:showAction</argument>
         <argument key="autoescape">filename</argument>
-        <argument key="cache">C:\wamp64\www\Classification\var\cache\dev/twig</argument>
+        <argument key="cache">C:/wamp64/www/Classification/var/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="paths" type="collection"/>
         <argument key="date" type="collection">
@@ -2199,7 +2198,6 @@
           <call method="setEntityNamespaces">
             <argument type="collection">
               <argument key="LIFOClassifBundle">LIFO\ClassifBundle\Entity</argument>
-              <argument key="LIFOUserBundle">LIFO\UserBundle\Entity</argument>
             </argument>
           </call>
           <call method="setMetadataCacheImpl">
@@ -2220,29 +2218,16 @@
                       <argument type="service" id="annotation_reader"/>
                       <argument type="collection">
                         <argument>C:\wamp64\www\Classification\src\LIFO\ClassifBundle\Entity</argument>
-                        <argument>C:\wamp64\www\Classification\src\LIFO\UserBundle\Entity</argument>
                       </argument>
                     </service>
                   </argument>
                   <argument>LIFO\ClassifBundle\Entity</argument>
                 </call>
-                <call method="addDriver">
-                  <argument type="service">
-                    <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
-                      <argument type="service" id="annotation_reader"/>
-                      <argument type="collection">
-                        <argument>C:\wamp64\www\Classification\src\LIFO\ClassifBundle\Entity</argument>
-                        <argument>C:\wamp64\www\Classification\src\LIFO\UserBundle\Entity</argument>
-                      </argument>
-                    </service>
-                  </argument>
-                  <argument>LIFO\UserBundle\Entity</argument>
-                </call>
               </service>
             </argument>
           </call>
           <call method="setProxyDir">
-            <argument>C:\wamp64\www\Classification\var\cache\dev/doctrine/orm/Proxies</argument>
+            <argument>C:/wamp64/www/Classification/var/cache/dev/doctrine/orm/Proxies</argument>
           </call>
           <call method="setProxyNamespace">
             <argument>Proxies</argument>
@@ -2544,7 +2529,7 @@
       <argument>true</argument>
     </service>
     <service id="session.storage.filesystem" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage">
-      <argument>C:\wamp64\www\Classification\var\cache\dev/sessions</argument>
+      <argument>C:/wamp64/www/Classification/var/cache/dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
@@ -2564,7 +2549,7 @@
       <argument type="service" id="service_container"/>
       <argument>C:\wamp64\www\Classification\app/config/routing_dev.yml</argument>
       <argument type="collection">
-        <argument key="cache_dir">C:\wamp64\www\Classification\var\cache\dev</argument>
+        <argument key="cache_dir">C:/wamp64/www/Classification/var/cache/dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
         <argument key="generator_base_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
@@ -2588,19 +2573,17 @@
       </argument>
       <argument type="service">
         <service class="Doctrine\Common\Cache\FilesystemCache" public="false">
-          <argument>C:\wamp64\www\Classification\var\cache\dev/annotations</argument>
+          <argument>C:/wamp64/www/Classification/var/cache/dev/annotations</argument>
         </service>
       </argument>
       <argument>true</argument>
     </service>
     <service id="security.encoder_factory" class="Symfony\Component\Security\Core\Encoder\EncoderFactory">
       <argument type="collection">
-        <argument key="LIFO\UserBundle\Entity\Utilisateur" type="collection">
-          <argument key="class">Symfony\Component\Security\Core\Encoder\MessageDigestPasswordEncoder</argument>
+        <argument key="LIFO\ClassifBundle\Entity\Utilisateur" type="collection">
+          <argument key="class">Symfony\Component\Security\Core\Encoder\BCryptPasswordEncoder</argument>
           <argument key="arguments" type="collection">
-            <argument>md5</argument>
-            <argument>true</argument>
-            <argument>5000</argument>
+            <argument>12</argument>
           </argument>
         </argument>
       </argument>
@@ -2636,10 +2619,6 @@
       <call method="addPath">
         <argument>C:\wamp64\www\Classification\src\LIFO\ClassifBundle/Resources/views</argument>
         <argument>LIFOClassif</argument>
-      </call>
-      <call method="addPath">
-        <argument>C:\wamp64\www\Classification\src\LIFO\UserBundle/Resources/views</argument>
-        <argument>LIFOUser</argument>
       </call>
       <call method="addPath">
         <argument>C:\wamp64\www\Classification\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/views</argument>

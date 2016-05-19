@@ -5,7 +5,7 @@ lifo_classif:
 login:
     path: /login
     defaults:
-        _controller: LIFOUserBundle:Security:login
+        _controller: LIFOClassifBundle:Security:login
 
 login_check:
     path: /login_check

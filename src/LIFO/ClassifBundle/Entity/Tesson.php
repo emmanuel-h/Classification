@@ -182,12 +182,12 @@ class Tesson
     private $zone;
     
     /**
-     * @ORM\ManyToOne(targetEntity="LIFO\UserBundle\Entity\Utilisateur")
+     * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\Utilisateur")
      */
     private $validePar;
     
     /**
-     * @ORM\ManyToOne(targetEntity="LIFO\UserBundle\Entity\Utilisateur")
+     * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\Utilisateur")
      * 
      * @ORM\JoinColumn(nullable=false)
      */

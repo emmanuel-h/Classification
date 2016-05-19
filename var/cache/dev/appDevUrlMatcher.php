@@ -143,7 +143,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             if (0 === strpos($pathinfo, '/login')) {
                 // login
                 if ($pathinfo === '/login') {
-                    return array (  '_controller' => 'LIFO\\UserBundle\\Controller\\SecurityController::loginAction',  '_route' => 'login',);
+                    return array (  '_controller' => 'LIFOClassifBundle:Security:login',  '_route' => 'login',);
                 }
 
                 // login_check

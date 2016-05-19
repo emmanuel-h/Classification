@@ -49,14 +49,10 @@ class PlatformController extends Controller {
 		$tesson->setPhase ( new Phase () );
 		$tesson->setSequence ( new Sequence () );
 		$tesson->getUS ()->setSite ( $tesson->getSite () );
-		$utilisateur = $em->getRepository ( 'LIFOClassifBundle:Utilisateur' )->findOneBy ( array (
-				'nom' => "upload",
-				'prenom' => "test" 
-		) );
+		$utilisateur = $em->getRepository ( 'LIFOClassifBundle:Utilisateur' )->findOneByUsername ("Upload test" );
 		if (! is_object ( $utilisateur )) {
 			$utilisateur = new Utilisateur ();
-			$utilisateur->setPrenom ( "test" );
-			$utilisateur->setNom ( "upload" );
+			$utilisateur->setUsername( "Upload test" );
 		}
 		
 		$tesson->setEnregistrePar ( $utilisateur );
