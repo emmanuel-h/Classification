@@ -134,16 +134,34 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_tesson')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::tessonAction',));
         }
 
-        // lifo_classif_admin
-        if ($pathinfo === '/admin') {
-            return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::adminAction',  '_route' => 'lifo_classif_admin',);
+        if (0 === strpos($pathinfo, '/admin')) {
+            // lifo_classif_admin
+            if ($pathinfo === '/admin') {
+                return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::adminAction',  '_route' => 'lifo_classif_admin',);
+            }
+
+            // lifo_classif_admin_suppression
+            if ($pathinfo === '/admin/suppression') {
+                return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::suppressionAction',  '_route' => 'lifo_classif_admin_suppression',);
+            }
+
+            // lifo_classif_admin_ajout
+            if ($pathinfo === '/admin/ajout') {
+                return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::ajoutAction',  '_route' => 'lifo_classif_admin_ajout',);
+            }
+
+            // lifo_classif_admin_utilisateur
+            if ($pathinfo === '/admin/utilisateur') {
+                return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::utilisateurAction',  '_route' => 'lifo_classif_admin_utilisateur',);
+            }
+
         }
 
         if (0 === strpos($pathinfo, '/log')) {
             if (0 === strpos($pathinfo, '/login')) {
                 // login
                 if ($pathinfo === '/login') {
-                    return array (  '_controller' => 'LIFOClassifBundle:Security:login',  '_route' => 'login',);
+                    return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\SecurityController::loginAction',  '_route' => 'login',);
                 }
 
                 // login_check

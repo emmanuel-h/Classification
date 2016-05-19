@@ -27,4 +27,16 @@ lifo_classif_tesson:
         
 lifo_classif_admin:
     path:     /admin
-    defaults: { _controller: LIFOClassifBundle:Platform:admin}
+    defaults: { _controller: LIFOClassifBundle:Admin:admin}
+    
+lifo_classif_admin_suppression:
+    path:     /admin/suppression
+    defaults: { _controller: LIFOClassifBundle:Admin:suppression}
+    
+lifo_classif_admin_ajout:
+    path:     /admin/ajout
+    defaults: { _controller: LIFOClassifBundle:Admin:ajout}
+    
+lifo_classif_admin_utilisateur:
+    path:     /admin/utilisateur
+    defaults: { _controller: LIFOClassifBundle:Admin:utilisateur}

@@ -12,15 +12,11 @@ use LIFO\ClassifBundle\Entity\Sequence;
 use LIFO\ClassifBundle\Entity\Utilisateur;
 use LIFO\ClassifBundle\Entity\Numerisation;
 use LIFO\ClassifBundle\Entity\Decor;
-use LIFO\ClassifBundle\Entity\TypeDecor;
 use LIFO\ClassifBundle\Form\TessonType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use LIFO\ClassifBundle\Entity\Molette;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
-use LIFO\ClassifBundle\Form\DecorType;
-use LIFO\ClassifBundle\Form\TypeDecorType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use LIFO;
 
@@ -207,83 +203,6 @@ class PlatformController extends Controller {
 		}
 		return $this->render ( 'LIFOClassifBundle:Platform:recherche.html.twig', array (
 				'form' => $form->createView () ) );
-	}
-
-	/**
-	 * @Security("has_role('ROLE_ADMIN')")
-	 */
-	public function adminAction(Request $request){
-		$formSuppression = $this->createFormBuilder()
-			->add('decor', EntityType::class, array(
-		        'class'   		=> 'LIFOClassifBundle:Decor',
-		        'choice_label'  => 'position',
-		        'multiple'		=> true,
-				'expanded' 		=> true
-		    ))
-			->add('typeDecor', EntityType::class, array(
-		        'class'   		=> 'LIFOClassifBundle:TypeDecor',
-		        'choice_label'  => 'nom',
-		        'multiple'		=> true,
-				'expanded' 		=> true
-		    ))
-			->add('Supprimer', SubmitType::class)
-			->getForm();
-
-		$decorAjout = new Decor();
-		$formAjoutDecor = $this->get ( 'form.factory' )->create ( DecorType::class, $decorAjout );
-		$formAjoutDecor->add('Valider', SubmitType::class);
-		
-		$typeDecorAjout = new TypeDecor();
-		$formAjoutTypeDecor = $this->get ( 'form.factory' )->create ( TypeDecorType::class, $typeDecorAjout );
-		$formAjoutTypeDecor->add('Valider', SubmitType::class);
-
-		$em = $this->getDoctrine ()->getManager ();
-	    if ($request->isMethod ( 'POST' ) && $formSuppression->handleRequest ( $request )->isValid ()) {
-	    	$listeDecor=$formSuppression->get('decor')->getData();
-	    	$listeTypeDecor=$formSuppression->get('typeDecor')->getData();
-	    	foreach ($listeDecor as $decor){
-		    	if(is_object($decor)){
-		    		$em->remove($decor);
-		    	}
-	    	}
-	    	foreach ($listeTypeDecor as $typeDecor){
-		    	if(is_object($typeDecor)){
-		    		$em->remove($typeDecor);
-		    	}
-	    	}
-			$em->flush ();
-			
-			return $this->redirectToRoute ( 'lifo_classif_admin');
-		}
-
-
-		if ($request->isMethod ( 'POST' ) && $formAjoutDecor->handleRequest ( $request )->isValid ()) {
-			if(is_object($decorAjout)){
-				$testDecorAjout=$em->getRepository('LIFOClassifBundle:Decor')->findOneByPosition($decorAjout->getPosition());
-				if(!is_object($testDecorAjout)){
-					$em->persist($decorAjout);
-				}
-				$em->flush();
-			}
-			return $this->redirectToRoute ( 'lifo_classif_admin');
-		}
-
-		if ($request->isMethod ( 'POST' ) && $formAjoutTypeDecor->handleRequest ( $request )->isValid ()) {
-			if(is_object($typeDecorAjout)){
-				$testTypeDecorAjout=$em->getRepository('LIFOClassifBundle:TypeDecor')->findOneByNom($typeDecorAjout->getNom());
-				if(!is_object($testTypeDecorAjout)){
-					$em->persist($typeDecorAjout);
-				}
-				$em->flush();
-			}
-			return $this->redirectToRoute ( 'lifo_classif_admin');
-		}
-			
-		return $this->render ( 'LIFOClassifBundle:Platform:admin.html.twig', array (
-				'formSuppression' => $formSuppression->createView (),
-				'formAjoutDecor' => $formAjoutDecor->createView (),
-				'formAjoutTypeDecor' => $formAjoutTypeDecor->createView ()
-		) );
 	}
 
 	/**

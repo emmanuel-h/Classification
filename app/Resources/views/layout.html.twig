@@ -15,12 +15,15 @@
     <div id="header" class="jumbotron">
       <h1></h1>
       <p>
-    <a href="{{ path('lifo_classif_telechargement') }}">Téléchargement</a>
-    <a href="{{ path('lifo_classif_upload') }}">Upload</a>
-    <a href="{{ path('lifo_classif_recherche') }}">Recherche</a>
-    <a href="{{ path('lifo_classif_classification') }}">Classification</a>
-	{% if is_granted('ROLE_ADMIN') %}
-		<a href="{{ path('lifo_classif_admin') }}">Administration</a>
+	{% if app.user %}
+		<a href="{{ path('lifo_classif_telechargement') }}">Téléchargement</a>
+		<a href="{{ path('lifo_classif_upload') }}">Upload</a>
+		<a href="{{ path('lifo_classif_recherche') }}">Recherche</a>
+		<a href="{{ path('lifo_classif_classification') }}">Classification</a>
+		{% if is_granted('ROLE_ADMIN') %}
+			<a href="{{ path('lifo_classif_admin') }}">Administration</a>
+		{% endif %}
+		<a href="{{ path('logout') }}">Déconnexion</a>
 	{% endif %}
 	<br/>
 	<br/>
