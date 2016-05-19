@@ -19,7 +19,9 @@
     <a href="{{ path('lifo_classif_upload') }}">Upload</a>
     <a href="{{ path('lifo_classif_recherche') }}">Recherche</a>
     <a href="{{ path('lifo_classif_classification') }}">Classification</a>
-    <a href="{{ path('lifo_classif_admin') }}">Administration</a>
+	{% if is_granted('ROLE_ARCHEOLOGUE') %}
+		<a href="{{ path('lifo_classif_admin') }}">Administration</a>
+	{% endif %}
 	<br/>
 	<br/>
       </p>

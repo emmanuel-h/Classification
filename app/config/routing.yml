@@ -1,3 +1,14 @@
 lifo_classif:
     resource: "@LIFOClassifBundle/Resources/config/routing.yml"
     prefix:   /
+
+login:
+    path: /login
+    defaults:
+        _controller: LIFOUserBundle:Security:login
+
+login_check:
+    path: /login_check
+
+logout:
+    path: /logout

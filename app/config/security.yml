@@ -2,10 +2,20 @@
 # http://symfony.com/doc/current/book/security.html
 security:
 
+    encoders:
+        LIFO\UserBundle\Entity\Utilisateur: md5
+
+    role_hierarchy:
+      ROLE_ARCHEOLOGUE: [ROLE_USER]
+      ROLE_ADMIN:       [ROLE_ARCHEOLOGUE]
+      ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+    
     # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
-        in_memory:
-            memory: ~
+        main:
+            entity:
+              class:    LIFO\UserBundle\Entity\Utilisateur
+              property: username
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -13,12 +23,17 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
+        main_login:
+          pattern:   ^/login$
+          anonymous: true
+        
         main:
-            anonymous: ~
-            # activate different ways to authenticate
-
-            # http_basic: ~
-            # http://symfony.com/doc/current/book/security.html#a-configuring-how-your-users-will-authenticate
-
-            # form_login: ~
-            # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+          pattern:   ^/
+          anonymous: true
+          provider:     main
+          form_login:
+            login_path: login
+            check_path: login_check
+          logout:
+            path:       logout
+            target:     /login

@@ -22,51 +22,41 @@ class __TwigTemplate_45469c73f234b31b6bec59b12ff8781d17bcdaf17f0e66c248db4e16b92
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_750a61db37c4e5c363aebf32d1c4ce879d3f26a2049c2c164e5d3d048891df0b = $this->env->getExtension("native_profiler");
-        $__internal_750a61db37c4e5c363aebf32d1c4ce879d3f26a2049c2c164e5d3d048891df0b->enter($__internal_750a61db37c4e5c363aebf32d1c4ce879d3f26a2049c2c164e5d3d048891df0b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:index.html.twig"));
+        $__internal_a848ca54a337e1fb1bb793d9c5190daa3108324e496466021c03ad103826a2ac = $this->env->getExtension("native_profiler");
+        $__internal_a848ca54a337e1fb1bb793d9c5190daa3108324e496466021c03ad103826a2ac->enter($__internal_a848ca54a337e1fb1bb793d9c5190daa3108324e496466021c03ad103826a2ac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_750a61db37c4e5c363aebf32d1c4ce879d3f26a2049c2c164e5d3d048891df0b->leave($__internal_750a61db37c4e5c363aebf32d1c4ce879d3f26a2049c2c164e5d3d048891df0b_prof);
+        $__internal_a848ca54a337e1fb1bb793d9c5190daa3108324e496466021c03ad103826a2ac->leave($__internal_a848ca54a337e1fb1bb793d9c5190daa3108324e496466021c03ad103826a2ac_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_8d9af3b5edf93fbe4dd44ff6e1f69a175be5b02b66944971fdb19f415aa43215 = $this->env->getExtension("native_profiler");
-        $__internal_8d9af3b5edf93fbe4dd44ff6e1f69a175be5b02b66944971fdb19f415aa43215->enter($__internal_8d9af3b5edf93fbe4dd44ff6e1f69a175be5b02b66944971fdb19f415aa43215_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_77439115d6b00e585ea4d22609434307b641e89cb878b2155ce8f983cfbe6225 = $this->env->getExtension("native_profiler");
+        $__internal_77439115d6b00e585ea4d22609434307b641e89cb878b2155ce8f983cfbe6225->enter($__internal_77439115d6b00e585ea4d22609434307b641e89cb878b2155ce8f983cfbe6225_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Index";
         
-        $__internal_8d9af3b5edf93fbe4dd44ff6e1f69a175be5b02b66944971fdb19f415aa43215->leave($__internal_8d9af3b5edf93fbe4dd44ff6e1f69a175be5b02b66944971fdb19f415aa43215_prof);
+        $__internal_77439115d6b00e585ea4d22609434307b641e89cb878b2155ce8f983cfbe6225->leave($__internal_77439115d6b00e585ea4d22609434307b641e89cb878b2155ce8f983cfbe6225_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_6eeeda0634674bd2d2b4b9f886a77ae963f0b8250bf9cebec0421f14f756a5ef = $this->env->getExtension("native_profiler");
-        $__internal_6eeeda0634674bd2d2b4b9f886a77ae963f0b8250bf9cebec0421f14f756a5ef->enter($__internal_6eeeda0634674bd2d2b4b9f886a77ae963f0b8250bf9cebec0421f14f756a5ef_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_215b17d197e05d72afd29f54ea9b17d3a5898976ba7118b84f3de67e470faf30 = $this->env->getExtension("native_profiler");
+        $__internal_215b17d197e05d72afd29f54ea9b17d3a5898976ba7118b84f3de67e470faf30->enter($__internal_215b17d197e05d72afd29f54ea9b17d3a5898976ba7118b84f3de67e470faf30_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "\t<p>
 \t\tBienvenue sur l'outil d'aide à la classification de tesson
 \t</p>
-\t <form id=\"monForm\" method=\"post\">
-        <fieldset>
-        <legend>Connexion</legend>
-        <p><label for=\"id\">Identifiant :&nbsp;</label><input type=\"text\" name=\"id\" id=\"id\" onblur=\"veridID(this)\" /></p>
-        <p><label for=\"password\">Mot de passe :&nbsp;</label><input type=\"password\" name=\"password\" /></p>
-        <p><label name=\"nostyle\">&nbsp;</label>
-        <input type=\"submit\" value=\"Envoyer\" name=\"envoyer\" />
-        <input type=\"reset\" value=\"Tout effacer\" /></p>
-        </fieldset>
-    </form>
 ";
         
-        $__internal_6eeeda0634674bd2d2b4b9f886a77ae963f0b8250bf9cebec0421f14f756a5ef->leave($__internal_6eeeda0634674bd2d2b4b9f886a77ae963f0b8250bf9cebec0421f14f756a5ef_prof);
+        $__internal_215b17d197e05d72afd29f54ea9b17d3a5898976ba7118b84f3de67e470faf30->leave($__internal_215b17d197e05d72afd29f54ea9b17d3a5898976ba7118b84f3de67e470faf30_prof);
 
     }
 
@@ -93,14 +83,4 @@ class __TwigTemplate_45469c73f234b31b6bec59b12ff8781d17bcdaf17f0e66c248db4e16b92
 /* 	<p>*/
 /* 		Bienvenue sur l'outil d'aide à la classification de tesson*/
 /* 	</p>*/
-/* 	 <form id="monForm" method="post">*/
-/*         <fieldset>*/
-/*         <legend>Connexion</legend>*/
-/*         <p><label for="id">Identifiant :&nbsp;</label><input type="text" name="id" id="id" onblur="veridID(this)" /></p>*/
-/*         <p><label for="password">Mot de passe :&nbsp;</label><input type="password" name="password" /></p>*/
-/*         <p><label name="nostyle">&nbsp;</label>*/
-/*         <input type="submit" value="Envoyer" name="envoyer" />*/
-/*         <input type="reset" value="Tout effacer" /></p>*/
-/*         </fieldset>*/
-/*     </form>*/
 /* {% endblock %}*/

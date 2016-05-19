@@ -21,15 +21,24 @@ use LIFO\ClassifBundle\Entity\Molette;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use LIFO\ClassifBundle\Form\DecorType;
 use LIFO\ClassifBundle\Form\TypeDecorType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use LIFO;
 
 class PlatformController extends Controller {
 	public function indexAction() {
 		return $this->render ( 'LIFOClassifBundle:Platform:index.html.twig' );
 	}
+	
+	/**
+     * @Security("has_role('ROLE_USER')")
+     */
 	public function telechargementAction() {
 		return $this->render ( 'LIFOClassifBundle:Platform:telechargement.html.twig' );
 	}
+	
+	/**
+     * @Security("has_role('ROLE_USER')")
+     */
 	public function uploadAction(Request $request) {
 		$em = $this->getDoctrine ()->getManager ();
 		
@@ -179,7 +188,10 @@ class PlatformController extends Controller {
 				'form' => $form->createView () 
 		) );
 	}
-	
+
+	/**
+	 * @Security("has_role('ROLE_USER')")
+	 */
 	public function rechercheAction(Request $request) {
 		
 
@@ -200,7 +212,10 @@ class PlatformController extends Controller {
 		return $this->render ( 'LIFOClassifBundle:Platform:recherche.html.twig', array (
 				'form' => $form->createView () ) );
 	}
-	
+
+	/**
+	 * @Security("has_role('ROLE_ADMIN')")
+	 */
 	public function adminAction(Request $request){
 		$formSuppression = $this->createFormBuilder()
 			->add('decor', EntityType::class, array(
@@ -274,11 +289,17 @@ class PlatformController extends Controller {
 				'formAjoutTypeDecor' => $formAjoutTypeDecor->createView ()
 		) );
 	}
-	
+
+	/**
+	 * @Security("has_role('ROLE_USER')")
+	 */
 	public function classificationAction() {
 		return $this->render ( 'LIFOClassifBundle:Platform:classification.html.twig' );
 	}
-	
+
+	/**
+	 * @Security("has_role('ROLE_USER')")
+	 */
 	public function tessonAction($id) {
 		$em = $this->getDoctrine ()->getManager ();
 		$tesson = $em->getRepository('LIFOClassifBundle:Tesson')->findOneById($id);
