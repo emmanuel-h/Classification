@@ -41,9 +41,13 @@ lifo_classif_admin_utilisateur:
     path:     /admin/utilisateur
     defaults: { _controller: LIFOClassifBundle:Admin:utilisateur}
     
-lifo_classif_admin_all_user:
-    path:     /admin/utilisateur/tous
-    defaults: { _controller: LIFOClassifBundle:Admin:allUser}
+lifo_classif_admin_all_users:
+    path:     /admin/utilisateur/afficher/tous{page}
+    defaults:
+        _controller: LIFOClassifBundle:Admin:allUsers
+        page: 1
+    requirements:
+        page: \d+
     
 lifo_classif_admin_afficher_utilisateur:
     path:     /admin/utilisateur/afficher/{id}

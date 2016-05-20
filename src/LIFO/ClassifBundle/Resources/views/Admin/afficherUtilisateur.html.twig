@@ -8,18 +8,11 @@
 		<fieldset>
 			<legend>{{user.username}}</legend>
 			Role actuel : 
-			{% if is_granted('ROLE_ADMIN') %}
-			Administrateur
-			{% else %}
-				{% if is_granted('ROLE_ARCHEOLOGUE') %}
-				Archéologue
-				{% else %}
-					Utilisateur standard
-				{% endif %}
-			{% endif %}
+			{{ user.rolesToString }}
 			{{ form(formModifierRole) }}
 		</fieldset>
 	</p>
 </div>
+<a href="#null" onclick="javascript:history.back();">Page précédente</a>
 
 {% endblock %}

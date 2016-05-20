@@ -184,10 +184,24 @@ class AdminController extends Controller{
 	/**
 	 * @Security("has_role('ROLE_ADMIN')")
 	 */
-	public function allUserAction(Request $request){
+	public function allUsersAction($page){
+		$em = $this->getDoctrine()->getManager();
+		$nbUtilisateursParPage=2;
+		
+		$utilisateurs = $em->getRepository('LIFOClassifBundle:Utilisateur')
+		->pagination($page, $nbUtilisateursParPage);
+		
+		$pagination = array(
+				'page' => $page,
+				'nbPages' => ceil(count($utilisateurs) / $nbUtilisateursParPage),
+				'nomRoute' => 'lifo_classif_admin_all_users',
+				'paramsRoute' => array()
+		);
 
-		return $this->render ( 'LIFOClassifBundle:Admin:allUser.html.twig' );
-	    
+		return $this->render ( 'LIFOClassifBundle:Admin:allUsers.html.twig', array(
+				'utilisateurs' => $utilisateurs,
+				'pagination' => $pagination
+		)); 
 	}
 	
 	/**
@@ -232,6 +246,28 @@ class AdminController extends Controller{
 				'messageImportant' => ""
 		) );
 	    
+	}
+
+	/**
+	 * @Security("has_role('ROLE_ADMIN')")
+	 */
+	public function afficherAllUserAction(Request $request){
+		$em = $this->getDoctrine()->getManager();
+		
+		$utilisateurs = $em->getRepository('LIFOClassifBundle:Utilisateur')
+		->pagination($page, 10);
+		
+		$pagination = array(
+				'page' => $page,
+				'nbPages' => ceil(count($articles) / $nbArticlesParPage),
+				'nomRoute' => 'lifo_classif_admin_afficher_tous_utilisateurs',
+				'paramsRoute' => array()
+		);
+
+		return $this->render ( 'LIFOClassifBundle:Admin:afficherTousUtilisateurs.html.twig', array(
+				'utilisateurs' => $utilisateurs,
+				'pagination' => $pagination
+		)); 
 	}
 	
 }

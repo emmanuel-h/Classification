@@ -173,4 +173,16 @@ class Utilisateur implements UserInterface, EquatableInterface
     
     	return true;
     }
+    
+    public function getRolesToString(){
+    	$str="";
+    	foreach($this->roles as $role){
+    		if($str == ""){
+    			$str = $str . " " . strtolower(substr($role, 5));
+    		} else {
+    			$str = $str . " / " . strtolower(substr($role, 5));
+    		}
+    	}
+    	return $str;
+    }
 }
