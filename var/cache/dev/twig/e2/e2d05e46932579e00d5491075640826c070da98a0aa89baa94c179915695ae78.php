@@ -22,33 +22,33 @@ class __TwigTemplate_15d248a09ffea0fb775fe3f599fcd38529064bdfc740d5528a4417b15b6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_77dec75ebfc7542a10920386606238ecb3d31f63caf0c1928661231260e3e396 = $this->env->getExtension("native_profiler");
-        $__internal_77dec75ebfc7542a10920386606238ecb3d31f63caf0c1928661231260e3e396->enter($__internal_77dec75ebfc7542a10920386606238ecb3d31f63caf0c1928661231260e3e396_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:tesson.html.twig"));
+        $__internal_8d88042deb8aaeb4fa4722bca34ccb28a6acc6eb783aee61ca862e1e0312a4c5 = $this->env->getExtension("native_profiler");
+        $__internal_8d88042deb8aaeb4fa4722bca34ccb28a6acc6eb783aee61ca862e1e0312a4c5->enter($__internal_8d88042deb8aaeb4fa4722bca34ccb28a6acc6eb783aee61ca862e1e0312a4c5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:tesson.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_77dec75ebfc7542a10920386606238ecb3d31f63caf0c1928661231260e3e396->leave($__internal_77dec75ebfc7542a10920386606238ecb3d31f63caf0c1928661231260e3e396_prof);
+        $__internal_8d88042deb8aaeb4fa4722bca34ccb28a6acc6eb783aee61ca862e1e0312a4c5->leave($__internal_8d88042deb8aaeb4fa4722bca34ccb28a6acc6eb783aee61ca862e1e0312a4c5_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_27787b3c11f232e1a5b24dd5b6f03392851a37534cd48b7bcaa7f7cd22fe6620 = $this->env->getExtension("native_profiler");
-        $__internal_27787b3c11f232e1a5b24dd5b6f03392851a37534cd48b7bcaa7f7cd22fe6620->enter($__internal_27787b3c11f232e1a5b24dd5b6f03392851a37534cd48b7bcaa7f7cd22fe6620_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_b479e1897f9eb0829678185bb544bbb1ac83772ee5e0f300a624755c53352cf9 = $this->env->getExtension("native_profiler");
+        $__internal_b479e1897f9eb0829678185bb544bbb1ac83772ee5e0f300a624755c53352cf9->enter($__internal_b479e1897f9eb0829678185bb544bbb1ac83772ee5e0f300a624755c53352cf9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Tesson";
         
-        $__internal_27787b3c11f232e1a5b24dd5b6f03392851a37534cd48b7bcaa7f7cd22fe6620->leave($__internal_27787b3c11f232e1a5b24dd5b6f03392851a37534cd48b7bcaa7f7cd22fe6620_prof);
+        $__internal_b479e1897f9eb0829678185bb544bbb1ac83772ee5e0f300a624755c53352cf9->leave($__internal_b479e1897f9eb0829678185bb544bbb1ac83772ee5e0f300a624755c53352cf9_prof);
 
     }
 
     // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_fe04274ef7c0285c1b2a55c5088abd7d559fec4d49bdeba9ae6c7311ea881d6a = $this->env->getExtension("native_profiler");
-        $__internal_fe04274ef7c0285c1b2a55c5088abd7d559fec4d49bdeba9ae6c7311ea881d6a->enter($__internal_fe04274ef7c0285c1b2a55c5088abd7d559fec4d49bdeba9ae6c7311ea881d6a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_89b4f4542815c39cc4f48d36818474d0a2b5f1b846db7d528e769c0e6ee6a76b = $this->env->getExtension("native_profiler");
+        $__internal_89b4f4542815c39cc4f48d36818474d0a2b5f1b846db7d528e769c0e6ee6a76b->enter($__internal_89b4f4542815c39cc4f48d36818474d0a2b5f1b846db7d528e769c0e6ee6a76b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 6
         echo "
@@ -226,7 +226,7 @@ class __TwigTemplate_15d248a09ffea0fb775fe3f599fcd38529064bdfc740d5528a4417b15b6
 \t<table class=\"table table-bordered table-striped table-hover\">
 \t\t<thead><tr><td colspan = \"2\" class=\"warning\" align=\"center\"><b>Numérisations</b></td></tr></thead>
 \t\t<tbody>
-\t\t\t<tr><td>Type de Numérisation</td><td>Numérisation</td></tr>
+\t\t\t<tr><td>Type de numérisation</td><td>Numérisation</td></tr>
 \t\t\t";
         // line 84
         if ( !twig_test_empty($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "numerisation", array()))) {
@@ -244,27 +244,36 @@ class __TwigTemplate_15d248a09ffea0fb775fe3f599fcd38529064bdfc740d5528a4417b15b6
                 echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl($this->getAttribute($context["numerisation"], "webPath", array())), "html", null, true);
                 echo "\" width=\"400\" height=\"300\" alt=\"";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["numerisation"], "alt", array()), "html", null, true);
-                echo "\"/></td>
+                echo "\"/>
+\t\t\t\t\t\t<a href=\"";
+                // line 88
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("lifo_classif_telechargement_numerisation", array("id" => $this->getAttribute($context["numerisation"], "id", array()))), "html", null, true);
+                echo "\">Télécharger l'image</a></td>
 \t\t\t\t\t</tr>
 \t\t\t\t";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['numerisation'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 90
+            // line 91
             echo "\t\t\t";
         } else {
-            // line 91
+            // line 92
             echo "\t\t\t<tr><td colspan=\"2\" align=\"center\">Pas de numérisations trouvées pour ce tesson</td></tr>
 \t\t\t";
         }
-        // line 93
+        // line 94
         echo "\t\t</tbody>
 \t</table>
+\t
+\t<a href=\"";
+        // line 97
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("lifo_classif_telechargement_toutes_numerisations", array("id" => $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "id", array()))), "html", null, true);
+        echo "\">Télécharger toutes les numérisations de ce tesson</a>
 \t\t\t\t
 ";
         
-        $__internal_fe04274ef7c0285c1b2a55c5088abd7d559fec4d49bdeba9ae6c7311ea881d6a->leave($__internal_fe04274ef7c0285c1b2a55c5088abd7d559fec4d49bdeba9ae6c7311ea881d6a_prof);
+        $__internal_89b4f4542815c39cc4f48d36818474d0a2b5f1b846db7d528e769c0e6ee6a76b->leave($__internal_89b4f4542815c39cc4f48d36818474d0a2b5f1b846db7d528e769c0e6ee6a76b_prof);
 
     }
 
@@ -280,7 +289,7 @@ class __TwigTemplate_15d248a09ffea0fb775fe3f599fcd38529064bdfc740d5528a4417b15b6
 
     public function getDebugInfo()
     {
-        return array (  262 => 93,  258 => 91,  255 => 90,  244 => 87,  239 => 86,  234 => 85,  232 => 84,  221 => 75,  217 => 73,  214 => 72,  205 => 70,  200 => 69,  198 => 68,  194 => 66,  185 => 64,  181 => 63,  168 => 53,  164 => 52,  160 => 51,  148 => 42,  144 => 41,  140 => 40,  136 => 39,  132 => 38,  118 => 29,  112 => 28,  106 => 27,  100 => 26,  88 => 17,  84 => 16,  80 => 15,  76 => 14,  72 => 13,  68 => 12,  64 => 11,  60 => 10,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
+        return array (  271 => 97,  266 => 94,  262 => 92,  259 => 91,  250 => 88,  244 => 87,  239 => 86,  234 => 85,  232 => 84,  221 => 75,  217 => 73,  214 => 72,  205 => 70,  200 => 69,  198 => 68,  194 => 66,  185 => 64,  181 => 63,  168 => 53,  164 => 52,  160 => 51,  148 => 42,  144 => 41,  140 => 40,  136 => 39,  132 => 38,  118 => 29,  112 => 28,  106 => 27,  100 => 26,  88 => 17,  84 => 16,  80 => 15,  76 => 14,  72 => 13,  68 => 12,  64 => 11,  60 => 10,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends "LIFOClassifBundle::layoutGeneral.html.twig" %}*/
@@ -365,11 +374,12 @@ class __TwigTemplate_15d248a09ffea0fb775fe3f599fcd38529064bdfc740d5528a4417b15b6
 /* 	<table class="table table-bordered table-striped table-hover">*/
 /* 		<thead><tr><td colspan = "2" class="warning" align="center"><b>Numérisations</b></td></tr></thead>*/
 /* 		<tbody>*/
-/* 			<tr><td>Type de Numérisation</td><td>Numérisation</td></tr>*/
+/* 			<tr><td>Type de numérisation</td><td>Numérisation</td></tr>*/
 /* 			{% if tesson.numerisation is not empty %}*/
 /* 				{% for numerisation in tesson.numerisation %}*/
 /* 					<tr><td>{{ numerisation.typeNumerisation.nom }}</td>*/
-/* 						<td><img src="{{ asset(numerisation.webPath) }}" width="400" height="300" alt="{{ numerisation.alt }}"/></td>*/
+/* 						<td><img src="{{ asset(numerisation.webPath) }}" width="400" height="300" alt="{{ numerisation.alt }}"/>*/
+/* 						<a href="{{ path('lifo_classif_telechargement_numerisation', {'id': numerisation.id}) }}">Télécharger l'image</a></td>*/
 /* 					</tr>*/
 /* 				{% endfor %}*/
 /* 			{% else %}*/
@@ -377,5 +387,7 @@ class __TwigTemplate_15d248a09ffea0fb775fe3f599fcd38529064bdfc740d5528a4417b15b6
 /* 			{% endif %}*/
 /* 		</tbody>*/
 /* 	</table>*/
+/* 	*/
+/* 	<a href="{{ path('lifo_classif_telechargement_toutes_numerisations', {'id': tesson.id}) }}">Télécharger toutes les numérisations de ce tesson</a>*/
 /* 				*/
 /* {% endblock %}*/

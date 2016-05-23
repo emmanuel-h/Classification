@@ -19,19 +19,13 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use LIFO\ClassifBundle\Entity\Molette;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use LIFO;
-use LIFO\ClassifBundle\Form\SiteType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\HttpFoundation\Response;
+use ZipArchive;
 
 class PlatformController extends Controller {
 	public function indexAction() {
 		return $this->render ( 'LIFOClassifBundle:Platform:index.html.twig' );
-	}
-	
-	/**
-     * @Security("has_role('ROLE_USER')")
-     */
-	public function telechargementAction() {
-		return $this->render ( 'LIFOClassifBundle:Platform:telechargement.html.twig' );
 	}
 	
 	/**
@@ -302,5 +296,45 @@ class PlatformController extends Controller {
 		return $this->render('LIFOClassifBundle:Platform:menu.html.twig', array(	
 			'listeTessons' => $listeTessons
 		));
+	}
+	
+	public function telechargementNumerisationAction($id){
+		$em = $this->getDoctrine ()->getManager ();
+	   $numerisation = $em->getRepository('LIFOClassifBundle:Numerisation')->findOneById($id);
+	   if(is_object ($numerisation)){
+		   $fichier = $numerisation->getWebPath();
+		         
+		   $response = new Response();
+		   $response->setContent(file_get_contents($fichier));
+		   $response->headers->set('Content-Type', 'application/force-download'); // modification du content-type pour forcer le téléchargement (sinon le navigateur internet essaie d'afficher le document)
+		   $response->headers->set('Content-disposition', 'filename='. $fichier);
+		         
+		   return $response;
+	   }
+	} 
+	
+	public function telechargementToutesNumerisationsAction($id){
+
+		$em = $this->getDoctrine ()->getManager ();
+		$tesson = $em->getRepository('LIFOClassifBundle:Tesson')->findOneById($id);
+		
+		$zip = new ZipArchive();
+		
+		if($zip->open('Archive.zip', ZipArchive::OVERWRITE) == TRUE)
+		{
+			foreach($tesson->getNumerisation() as $numerisation)
+			{
+				$zip->addFile($numerisation->getWebPath(), $numerisation->getWebPath());
+			}
+			// On ferme l’archive.
+			$zip->close();
+			 
+			header('Content-Transfer-Encoding: binary'); //Transfert en binaire (fichier).
+			header('Content-Disposition: attachment; filename="Archive.zip"'); //Nom du fichier.
+			header('Content-Length: '.filesize('Archive.zip')); //Taille du fichier.
+			 
+			readfile('Archive.zip');
+		}
+		
 	}
 }

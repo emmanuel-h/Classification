@@ -22,33 +22,33 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_fea884e4a2b3432991dc79c8eb797eb73e3f8bb3e7a40c8bfdf4f3aa5bcff3a0 = $this->env->getExtension("native_profiler");
-        $__internal_fea884e4a2b3432991dc79c8eb797eb73e3f8bb3e7a40c8bfdf4f3aa5bcff3a0->enter($__internal_fea884e4a2b3432991dc79c8eb797eb73e3f8bb3e7a40c8bfdf4f3aa5bcff3a0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:upload.html.twig"));
+        $__internal_fceefa0e3e3336bba34ff2dc69f601a8164c81ee46fae87837c699c7f335a5e1 = $this->env->getExtension("native_profiler");
+        $__internal_fceefa0e3e3336bba34ff2dc69f601a8164c81ee46fae87837c699c7f335a5e1->enter($__internal_fceefa0e3e3336bba34ff2dc69f601a8164c81ee46fae87837c699c7f335a5e1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:upload.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_fea884e4a2b3432991dc79c8eb797eb73e3f8bb3e7a40c8bfdf4f3aa5bcff3a0->leave($__internal_fea884e4a2b3432991dc79c8eb797eb73e3f8bb3e7a40c8bfdf4f3aa5bcff3a0_prof);
+        $__internal_fceefa0e3e3336bba34ff2dc69f601a8164c81ee46fae87837c699c7f335a5e1->leave($__internal_fceefa0e3e3336bba34ff2dc69f601a8164c81ee46fae87837c699c7f335a5e1_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_0b10291d1f24435e5c7e7adc60e8f1b8b1e1090dc006963c5947aa879f6bdb30 = $this->env->getExtension("native_profiler");
-        $__internal_0b10291d1f24435e5c7e7adc60e8f1b8b1e1090dc006963c5947aa879f6bdb30->enter($__internal_0b10291d1f24435e5c7e7adc60e8f1b8b1e1090dc006963c5947aa879f6bdb30_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_b14c7b1f75fe02d1214d7ea8aae5f45a96cac51703903ac681b4b2fa9dd62f70 = $this->env->getExtension("native_profiler");
+        $__internal_b14c7b1f75fe02d1214d7ea8aae5f45a96cac51703903ac681b4b2fa9dd62f70->enter($__internal_b14c7b1f75fe02d1214d7ea8aae5f45a96cac51703903ac681b4b2fa9dd62f70_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Upload";
         
-        $__internal_0b10291d1f24435e5c7e7adc60e8f1b8b1e1090dc006963c5947aa879f6bdb30->leave($__internal_0b10291d1f24435e5c7e7adc60e8f1b8b1e1090dc006963c5947aa879f6bdb30_prof);
+        $__internal_b14c7b1f75fe02d1214d7ea8aae5f45a96cac51703903ac681b4b2fa9dd62f70->leave($__internal_b14c7b1f75fe02d1214d7ea8aae5f45a96cac51703903ac681b4b2fa9dd62f70_prof);
 
     }
 
     // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_293143dad21b30f5f00725bc4bd071e6413d1a0bdd0dbc195a6954c550c37fe6 = $this->env->getExtension("native_profiler");
-        $__internal_293143dad21b30f5f00725bc4bd071e6413d1a0bdd0dbc195a6954c550c37fe6->enter($__internal_293143dad21b30f5f00725bc4bd071e6413d1a0bdd0dbc195a6954c550c37fe6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_d3db879563974458d7161b3ee5a58b865bbae9b30aa2a636777530b6a280aab6 = $this->env->getExtension("native_profiler");
+        $__internal_d3db879563974458d7161b3ee5a58b865bbae9b30aa2a636777530b6a280aab6->enter($__internal_d3db879563974458d7161b3ee5a58b865bbae9b30aa2a636777530b6a280aab6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 6
         echo "
@@ -321,10 +321,11 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
         echo "
   <a href=\"#\" id=\"add_numerisation\" class=\"btn btn-default\">Ajouter une numérisation</a>
 </fieldset>
+<br/>
   <fieldset>
   <legend></legend>
   ";
-        // line 137
+        // line 138
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "tessonMolette", array()), 'row');
         echo "
   </fieldset>
@@ -332,19 +333,19 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
   <br/>
 
   ";
-        // line 143
+        // line 144
         echo "  ";
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'widget', array("attr" => array("class" => "btn btn-primary")));
         echo "
 
   ";
-        // line 147
+        // line 148
         echo "  ";
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
 
   ";
-        // line 150
+        // line 151
         echo "  ";
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
@@ -434,7 +435,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 
 ";
         
-        $__internal_293143dad21b30f5f00725bc4bd071e6413d1a0bdd0dbc195a6954c550c37fe6->leave($__internal_293143dad21b30f5f00725bc4bd071e6413d1a0bdd0dbc195a6954c550c37fe6_prof);
+        $__internal_d3db879563974458d7161b3ee5a58b865bbae9b30aa2a636777530b6a280aab6->leave($__internal_d3db879563974458d7161b3ee5a58b865bbae9b30aa2a636777530b6a280aab6_prof);
 
     }
 
@@ -450,7 +451,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 
     public function getDebugInfo()
     {
-        return array (  348 => 150,  342 => 147,  336 => 143,  328 => 137,  320 => 132,  313 => 128,  306 => 124,  299 => 120,  292 => 116,  285 => 112,  278 => 108,  271 => 104,  263 => 99,  258 => 97,  254 => 96,  247 => 92,  241 => 89,  236 => 87,  232 => 86,  225 => 82,  219 => 79,  214 => 77,  210 => 76,  203 => 72,  198 => 70,  194 => 69,  187 => 65,  181 => 62,  176 => 60,  172 => 59,  165 => 55,  159 => 52,  154 => 50,  150 => 49,  143 => 45,  138 => 43,  134 => 42,  127 => 38,  122 => 36,  118 => 35,  111 => 31,  106 => 29,  102 => 28,  95 => 24,  90 => 22,  86 => 21,  79 => 17,  74 => 15,  70 => 14,  63 => 11,  58 => 8,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
+        return array (  349 => 151,  343 => 148,  337 => 144,  329 => 138,  320 => 132,  313 => 128,  306 => 124,  299 => 120,  292 => 116,  285 => 112,  278 => 108,  271 => 104,  263 => 99,  258 => 97,  254 => 96,  247 => 92,  241 => 89,  236 => 87,  232 => 86,  225 => 82,  219 => 79,  214 => 77,  210 => 76,  203 => 72,  198 => 70,  194 => 69,  187 => 65,  181 => 62,  176 => 60,  172 => 59,  165 => 55,  159 => 52,  154 => 50,  150 => 49,  143 => 45,  138 => 43,  134 => 42,  127 => 38,  122 => 36,  118 => 35,  111 => 31,  106 => 29,  102 => 28,  95 => 24,  90 => 22,  86 => 21,  79 => 17,  74 => 15,  70 => 14,  63 => 11,  58 => 8,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends "LIFOClassifBundle::layoutGeneral.html.twig" %}*/
@@ -587,6 +588,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 /* 	{{ form_row(form.numerisation)	}}*/
 /*   <a href="#" id="add_numerisation" class="btn btn-default">Ajouter une numérisation</a>*/
 /* </fieldset>*/
+/* <br/>*/
 /*   <fieldset>*/
 /*   <legend></legend>*/
 /*   {{ form_row(form.tessonMolette) }}*/

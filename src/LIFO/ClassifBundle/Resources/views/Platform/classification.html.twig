@@ -7,8 +7,9 @@
 <br/>
 <br/>
 {% if tessons is not empty %}
-	<TABLE border=1>
-	<tr><td width=5%></td><td width=10%>ID tesson</td><td width=10%>Classe</td><td width=10%>Type classification</td></tr>
+	<table class="table table-bordered table-striped table-hover">
+	<thead><tr class="warning" align="center"><td width=5%></td><td width=10%><b>ID tesson</b></td><td width=10%><b>Classe</b></td><td width=10%><b>Type classification</b></td></tr></thead>
+	<tbody>
     {% for tesson in tessons %}
 		<tr>
 			<td>
@@ -32,6 +33,7 @@
 			{% endif %}
 		</tr>
     {% endfor %}
+	</tbody>
 	</table>
 {% else %}
     <p>Il n'y a aucun tesson sans classification.</p>

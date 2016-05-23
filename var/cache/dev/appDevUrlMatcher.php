@@ -109,11 +109,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::indexAction',  '_route' => 'lifo_classif',);
         }
 
-        // lifo_classif_telechargement
-        if ($pathinfo === '/telechargement') {
-            return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::telechargementAction',  '_route' => 'lifo_classif_telechargement',);
-        }
-
         // lifo_classif_upload
         if ($pathinfo === '/upload') {
             return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::uploadAction',  '_route' => 'lifo_classif_upload',);
@@ -169,6 +164,19 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
                 }
 
+            }
+
+        }
+
+        if (0 === strpos($pathinfo, '/tesson/telecharger/numerisation')) {
+            // lifo_classif_telechargement_numerisation
+            if (preg_match('#^/tesson/telecharger/numerisation/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_telechargement_numerisation')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::telechargementNumerisationAction',));
+            }
+
+            // lifo_classif_telechargement_toutes_numerisations
+            if (0 === strpos($pathinfo, '/tesson/telecharger/numerisations') && preg_match('#^/tesson/telecharger/numerisations/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_telechargement_toutes_numerisations')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::telechargementToutesNumerisationsAction',));
             }
 
         }

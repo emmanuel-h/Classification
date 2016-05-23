@@ -6,14 +6,11 @@
 <br/>
 {% if utilisateurs is not empty %}
 	<table class="table table-bordered table-striped table-hover">
-	<thead><tr class="warning"><td width=5%></td><td width=10%>Nom d'utilisateur</td><td width=10%>Rôle</td></tr></thead>
+	<thead><tr class="warning"><td width=10%>Nom d'utilisateur</td><td width=10%>Rôle</td></tr></thead>
 	<tbody>
     {% for utilisateur in utilisateurs %}
 		<tr>
-			<td>
-			<a href="{{ path('lifo_classif_admin_afficher_utilisateur', {'id': utilisateur.id}) }}">Voir</a>
-			</td>
-			<td>{{ utilisateur.username }}</td>
+			<td><a href="{{ path('lifo_classif_admin_afficher_utilisateur', {'id': utilisateur.id}) }}">{{utilisateur.username}}</a></td>
 			<td>{{ utilisateur.rolesToString }}</td>
 		</tr>
     {% endfor %}

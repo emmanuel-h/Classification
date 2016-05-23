@@ -84,7 +84,8 @@
 			{% if tesson.numerisation is not empty %}
 				{% for numerisation in tesson.numerisation %}
 					<tr><td>{{ numerisation.typeNumerisation.nom }}</td>
-						<td><img src="{{ asset(numerisation.webPath) }}" width="400" height="300" alt="{{ numerisation.alt }}"/></td>
+						<td><img src="{{ asset(numerisation.webPath) }}" width="400" height="300" alt="{{ numerisation.alt }}"/>
+						<a href="{{ path('lifo_classif_telechargement_numerisation', {'id': numerisation.id}) }}">Télécharger l'image</a></td>
 					</tr>
 				{% endfor %}
 			{% else %}
@@ -92,5 +93,7 @@
 			{% endif %}
 		</tbody>
 	</table>
+	
+	<a href="{{ path('lifo_classif_telechargement_toutes_numerisations', {'id': tesson.id}) }}">Télécharger toutes les numérisations de ce tesson</a>
 				
 {% endblock %}

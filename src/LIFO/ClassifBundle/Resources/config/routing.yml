@@ -2,10 +2,6 @@ lifo_classif:
     path: /
     defaults:
         _controller: LIFOClassifBundle:Platform:index
-        
-lifo_classif_telechargement:
-    path:     /telechargement
-    defaults: { _controller: LIFOClassifBundle:Platform:telechargement }
     
 lifo_classif_upload:
     path:     /upload
@@ -56,5 +52,17 @@ lifo_classif_admin_all_users:
 lifo_classif_admin_afficher_utilisateur:
     path:     /admin/utilisateur/afficher/{id}
     defaults: { _controller: LIFOClassifBundle:Admin:afficherUtilisateur}
+    requirements:
+        id: \d+
+        
+lifo_classif_telechargement_numerisation:
+    path:     /tesson/telecharger/numerisation/{id}
+    defaults: { _controller: LIFOClassifBundle:Platform:telechargementNumerisation}
+    requirements:
+        id: \d+
+        
+lifo_classif_telechargement_toutes_numerisations:
+    path:     /tesson/telecharger/numerisations/{id}
+    defaults: { _controller: LIFOClassifBundle:Platform:telechargementToutesNumerisations}
     requirements:
         id: \d+
