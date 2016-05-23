@@ -21,20 +21,20 @@ class __TwigTemplate_d99edc8ad5702cf7659fc0ccd0b976e3dc48d07768b99775a9538ae07e7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c0e65a4e5c202852b57a6a91caa07db977532a3f6386290c7c8224dd5b2ac4ac = $this->env->getExtension("native_profiler");
-        $__internal_c0e65a4e5c202852b57a6a91caa07db977532a3f6386290c7c8224dd5b2ac4ac->enter($__internal_c0e65a4e5c202852b57a6a91caa07db977532a3f6386290c7c8224dd5b2ac4ac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Admin:allUsers.html.twig"));
+        $__internal_2e48ecda55a135217e9d9e13e7e370286266c0f1a63a5a64e50facaf813a1cee = $this->env->getExtension("native_profiler");
+        $__internal_2e48ecda55a135217e9d9e13e7e370286266c0f1a63a5a64e50facaf813a1cee->enter($__internal_2e48ecda55a135217e9d9e13e7e370286266c0f1a63a5a64e50facaf813a1cee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Admin:allUsers.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c0e65a4e5c202852b57a6a91caa07db977532a3f6386290c7c8224dd5b2ac4ac->leave($__internal_c0e65a4e5c202852b57a6a91caa07db977532a3f6386290c7c8224dd5b2ac4ac_prof);
+        $__internal_2e48ecda55a135217e9d9e13e7e370286266c0f1a63a5a64e50facaf813a1cee->leave($__internal_2e48ecda55a135217e9d9e13e7e370286266c0f1a63a5a64e50facaf813a1cee_prof);
 
     }
 
     // line 3
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_440b08a4ff24ad752c6ea52117a68d2a73ef837d6dd97506e71601196d76b001 = $this->env->getExtension("native_profiler");
-        $__internal_440b08a4ff24ad752c6ea52117a68d2a73ef837d6dd97506e71601196d76b001->enter($__internal_440b08a4ff24ad752c6ea52117a68d2a73ef837d6dd97506e71601196d76b001_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_8ce5456b2841615b1eb9d019ecfcb8d3e0417f95e093de1f7cfd24579758d08e = $this->env->getExtension("native_profiler");
+        $__internal_8ce5456b2841615b1eb9d019ecfcb8d3e0417f95e093de1f7cfd24579758d08e->enter($__internal_8ce5456b2841615b1eb9d019ecfcb8d3e0417f95e093de1f7cfd24579758d08e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 4
         echo "
@@ -45,7 +45,7 @@ class __TwigTemplate_d99edc8ad5702cf7659fc0ccd0b976e3dc48d07768b99775a9538ae07e7
         if ( !twig_test_empty((isset($context["utilisateurs"]) ? $context["utilisateurs"] : $this->getContext($context, "utilisateurs")))) {
             // line 8
             echo "\t<TABLE border=1>
-\t<tr><td width=10%>Nom d'utilisateur</td><td width=10%>Rôle</td></tr>
+\t<tr><td width=5%></td><td width=10%>Nom d'utilisateur</td><td width=10%>Rôle</td></tr>
     ";
             // line 10
             $context['_parent'] = $context;
@@ -57,12 +57,14 @@ class __TwigTemplate_d99edc8ad5702cf7659fc0ccd0b976e3dc48d07768b99775a9538ae07e7
 \t\t\t<a href=\"";
                 // line 13
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("lifo_classif_admin_afficher_utilisateur", array("id" => $this->getAttribute($context["utilisateur"], "id", array()))), "html", null, true);
-                echo "\">";
-                echo twig_escape_filter($this->env, $this->getAttribute($context["utilisateur"], "username", array()), "html", null, true);
-                echo "</a>
+                echo "\">Voir</a>
 \t\t\t</td>
 \t\t\t<td>";
                 // line 15
+                echo twig_escape_filter($this->env, $this->getAttribute($context["utilisateur"], "username", array()), "html", null, true);
+                echo "</td>
+\t\t\t<td>";
+                // line 16
                 echo twig_escape_filter($this->env, $this->getAttribute($context["utilisateur"], "rolesToString", array()), "html", null, true);
                 echo "</td>
 \t\t</tr>
@@ -71,24 +73,24 @@ class __TwigTemplate_d99edc8ad5702cf7659fc0ccd0b976e3dc48d07768b99775a9538ae07e7
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['utilisateur'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 18
+            // line 19
             echo "\t</table>
 ";
         } else {
-            // line 20
+            // line 21
             echo "    <p>Il n'y a aucun utilisateur enregistré.</p>
 ";
         }
-        // line 22
+        // line 23
         echo "
 ";
-        // line 23
-        $this->loadTemplate("LIFOClassifBundle::pagination.html.twig", "LIFOClassifBundle:Admin:allUsers.html.twig", 23)->display($context);
         // line 24
+        $this->loadTemplate("LIFOClassifBundle::pagination.html.twig", "LIFOClassifBundle:Admin:allUsers.html.twig", 24)->display($context);
+        // line 25
         echo "
 ";
         
-        $__internal_440b08a4ff24ad752c6ea52117a68d2a73ef837d6dd97506e71601196d76b001->leave($__internal_440b08a4ff24ad752c6ea52117a68d2a73ef837d6dd97506e71601196d76b001_prof);
+        $__internal_8ce5456b2841615b1eb9d019ecfcb8d3e0417f95e093de1f7cfd24579758d08e->leave($__internal_8ce5456b2841615b1eb9d019ecfcb8d3e0417f95e093de1f7cfd24579758d08e_prof);
 
     }
 
@@ -104,7 +106,7 @@ class __TwigTemplate_d99edc8ad5702cf7659fc0ccd0b976e3dc48d07768b99775a9538ae07e7
 
     public function getDebugInfo()
     {
-        return array (  88 => 24,  86 => 23,  83 => 22,  79 => 20,  75 => 18,  66 => 15,  59 => 13,  55 => 11,  51 => 10,  47 => 8,  45 => 7,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  90 => 25,  88 => 24,  85 => 23,  81 => 21,  77 => 19,  68 => 16,  64 => 15,  59 => 13,  55 => 11,  51 => 10,  47 => 8,  45 => 7,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "LIFOClassifBundle::layoutAdmin.html.twig" %}*/
@@ -115,12 +117,13 @@ class __TwigTemplate_d99edc8ad5702cf7659fc0ccd0b976e3dc48d07768b99775a9538ae07e7
 /* <br/>*/
 /* {% if utilisateurs is not empty %}*/
 /* 	<TABLE border=1>*/
-/* 	<tr><td width=10%>Nom d'utilisateur</td><td width=10%>Rôle</td></tr>*/
+/* 	<tr><td width=5%></td><td width=10%>Nom d'utilisateur</td><td width=10%>Rôle</td></tr>*/
 /*     {% for utilisateur in utilisateurs %}*/
 /* 		<tr>*/
 /* 			<td>*/
-/* 			<a href="{{ path('lifo_classif_admin_afficher_utilisateur', {'id': utilisateur.id}) }}">{{ utilisateur.username }}</a>*/
+/* 			<a href="{{ path('lifo_classif_admin_afficher_utilisateur', {'id': utilisateur.id}) }}">Voir</a>*/
 /* 			</td>*/
+/* 			<td>{{ utilisateur.username }}</td>*/
 /* 			<td>{{ utilisateur.rolesToString }}</td>*/
 /* 		</tr>*/
 /*     {% endfor %}*/

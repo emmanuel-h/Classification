@@ -14,18 +14,19 @@ class TypageEn
 {
     /**
      * @ORM\Id
-     * @ORM\ManyToOne(targetEntity="TypeClassification")
+     * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\TypeClassification")
      */
     private $typeClassification;
     
     /**
      * @ORM\Id
-     * @ORM\ManyToOne(targetEntity="Tesson")
+     * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\Tesson",
+     * inversedBy="typageEn")
      */
     private $tesson;
     
     /**
-     * @ORM\ManyToOne(targetEntity="Classe")
+     * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\Classe")
      */
     private $classe;
 

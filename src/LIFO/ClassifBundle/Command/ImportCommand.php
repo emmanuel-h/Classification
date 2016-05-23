@@ -450,12 +450,7 @@ class ImportCommand extends ContainerAwareCommand {
 			}
 			
 			// Utilisateur + date d'enregistrement
-			$utilisateur = $em->getRepository ( 'LIFOClassifBundle:Utilisateur' )->findOneByNom ( "Automatique" );
-			if (! is_object ( $utilisateur )) {
-				$utilisateur = new Utilisateur ();
-				$utilisateur->setPrenom ( "Import CSV" );
-				$utilisateur->setNom ( "Automatique" );
-			}
+			$utilisateur = $em->getRepository ( 'LIFOClassifBundle:Utilisateur' )->findOneByUsername ( "Import CSV" );
 			$em->persist ( $utilisateur );
 			$tesson->setEnregistrePar ( $utilisateur );
 			$tesson->setDateEnregistrement ( new \Datetime () );

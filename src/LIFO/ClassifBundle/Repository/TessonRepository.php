@@ -47,7 +47,11 @@ class TessonRepository extends \Doctrine\ORM\EntityRepository {
 		}
 	
 		$qb = $this->createQueryBuilder('t')
+		->leftjoin('t.typageEn', 'e')
+		->where('e.tesson is NULL')
 		->orderBy('t.id', 'ASC');
+		
+		//$qb->add('where', $qb->expr()->isNull('e.tesson'));
 	
 		$query = $qb->getQuery();
 	

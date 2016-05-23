@@ -30,7 +30,7 @@ class PropositionClasse
     
     /**
      * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\Tesson",
-     * inversedBy="proposition classe")
+     * inversedBy="propositionClasse")
      * 
      * @ORM\JoinColumn(nullable=false)
      */

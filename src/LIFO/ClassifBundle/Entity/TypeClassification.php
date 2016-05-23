@@ -34,10 +34,6 @@ class TypeClassification
      * @ORM\Column(name="description", type="text")
      */
     private $description;
-    
-
-    /** @ORM\OneToMany(targetEntity="TypageEn", mappedBy="typeClassification") */
-    private $typageEn;
 
 
     /**
@@ -105,37 +101,4 @@ class TypeClassification
         $this->typageEn = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
-    /**
-     * Add typageEn
-     *
-     * @param \LIFO\ClassifBundle\Entity\TypageEn $typageEn
-     *
-     * @return TypeClassification
-     */
-    public function addTypageEn(\LIFO\ClassifBundle\Entity\TypageEn $typageEn)
-    {
-        $this->typageEn[] = $typageEn;
-
-        return $this;
-    }
-
-    /**
-     * Remove typageEn
-     *
-     * @param \LIFO\ClassifBundle\Entity\TypageEn $typageEn
-     */
-    public function removeTypageEn(\LIFO\ClassifBundle\Entity\TypageEn $typageEn)
-    {
-        $this->typageEn->removeElement($typageEn);
-    }
-
-    /**
-     * Get typageEn
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getTypageEn()
-    {
-        return $this->typageEn;
-    }
 }

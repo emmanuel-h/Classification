@@ -125,8 +125,8 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // lifo_classif_classification
-        if ($pathinfo === '/classification') {
-            return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::classificationAction',  '_route' => 'lifo_classif_classification',);
+        if (0 === strpos($pathinfo, '/classification') && preg_match('#^/classification(?:/(?P<page>\\d+))?$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_classification')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::classificationAction',  'page' => 1,));
         }
 
         // lifo_classif_tesson
@@ -158,7 +158,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
                 if (0 === strpos($pathinfo, '/admin/utilisateur/afficher')) {
                     // lifo_classif_admin_all_users
-                    if (0 === strpos($pathinfo, '/admin/utilisateur/afficher/tous') && preg_match('#^/admin/utilisateur/afficher/tous(?:(?P<page>\\d+))?$#s', $pathinfo, $matches)) {
+                    if (0 === strpos($pathinfo, '/admin/utilisateur/afficher/tous') && preg_match('#^/admin/utilisateur/afficher/tous(?:/(?P<page>\\d+))?$#s', $pathinfo, $matches)) {
                         return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_admin_all_users')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::allUsersAction',  'page' => 1,));
                     }
 

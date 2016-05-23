@@ -208,8 +208,25 @@ class PlatformController extends Controller {
 	/**
 	 * @Security("has_role('ROLE_USER')")
 	 */
-	public function classificationAction() {
-		return $this->render ( 'LIFOClassifBundle:Platform:classification.html.twig' );
+	public function classificationAction($page) {
+
+		$em = $this->getDoctrine()->getManager();
+		$nbTessonsParPage=10;
+		
+		$tessons = $em->getRepository('LIFOClassifBundle:Tesson')
+		->pagination($page, $nbTessonsParPage);
+		
+		$pagination = array(
+				'page' => $page,
+				'nbPages' => ceil(count($tessons) / $nbTessonsParPage),
+				'nomRoute' => 'lifo_classif_classification',
+				'paramsRoute' => array()
+		);
+		
+		return $this->render ( 'LIFOClassifBundle:Platform:classification.html.twig', array(
+				'tessons' => $tessons,
+				'pagination' => $pagination
+		));
 	}
 
 	/**

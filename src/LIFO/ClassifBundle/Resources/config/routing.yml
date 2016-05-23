@@ -16,8 +16,12 @@ lifo_classif_recherche:
     defaults: { _controller: LIFOClassifBundle:Platform:recherche }
     
 lifo_classif_classification:
-    path:     /classification
-    defaults: { _controller: LIFOClassifBundle:Platform:classification }
+    path:     /classification/{page}
+    defaults:
+        _controller: LIFOClassifBundle:Platform:classification
+        page: 1
+    requirements:
+        page: \d+
     
 lifo_classif_tesson:
     path:     /tesson/{id}
@@ -42,7 +46,7 @@ lifo_classif_admin_utilisateur:
     defaults: { _controller: LIFOClassifBundle:Admin:utilisateur}
     
 lifo_classif_admin_all_users:
-    path:     /admin/utilisateur/afficher/tous{page}
+    path:     /admin/utilisateur/afficher/tous/{page}
     defaults:
         _controller: LIFOClassifBundle:Admin:allUsers
         page: 1

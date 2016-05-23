@@ -201,7 +201,7 @@ class Tesson
     /**
      * @ORM\OneToMany(targetEntity="LIFO\ClassifBundle\Entity\PropositionClasse",
      * mappedBy="tesson",
-     * cascade={"persist"})
+     * cascade={"persist", "remove"})
      */
     private $propositionClasse;
     

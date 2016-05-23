@@ -47,8 +47,7 @@ class Numerisation {
 	private $tesson;
 	
 	/**
-	 * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\TypeNumerisation",
-	 * inversedBy="numerisation")
+	 * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\TypeNumerisation")
 	 *
 	 * @ORM\JoinColumn(nullable=false)
 	 */

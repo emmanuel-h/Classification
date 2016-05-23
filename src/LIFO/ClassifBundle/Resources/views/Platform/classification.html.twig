@@ -2,9 +2,41 @@
 
 {% block title %}{{ parent() }} - Classification{% endblock %}
 
-{% block body %}
-	{{ parent() }}
-	<p>
-		Pour classifier un tesson
-	</p>
+{% block LIFOClassif_body %}
+
+<br/>
+<br/>
+{% if tessons is not empty %}
+	<TABLE border=1>
+	<tr><td width=5%></td><td width=10%>ID tesson</td><td width=10%>Classe</td><td width=10%>Type classification</td></tr>
+    {% for tesson in tessons %}
+		<tr>
+			<td>
+			<a href="{{ path('lifo_classif_classification') }}">Classifier</a>
+			</td>
+			<td>{{ tesson.id }}</td>
+			{% if tesson.propositionClasse is not empty %}
+				{% for propClasse in tesson.propositionClasse %}
+						<td>{{ propClasse.classe.nomClasse }}</td>
+						{% if propClasse.essaiClassification is not empty %}
+							{% for essaiClassif in propClasse.essaiClassification %}
+								<td>{{ essaiClassif.typeClassification.nomType }}
+							{% endfor %}
+						{% else %}
+							<td>Aucun essai de classification</td>
+						{% endif %}
+				{% endfor %}
+			{% else %}
+				<td>Aucune proposition de classe</td>
+				<td>Aucun essai de classification</td>
+			{% endif %}
+		</tr>
+    {% endfor %}
+	</table>
+{% else %}
+    <p>Il n'y a aucun tesson sans classification.</p>
+{% endif %}
+
+{% include 'LIFOClassifBundle::pagination.html.twig' %}
+
 {% endblock %}
