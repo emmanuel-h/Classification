@@ -3,10 +3,94 @@
 {% block title %}{{ parent() }} - Tesson{% endblock %}
 
 {% block LIFOClassif_body %}
-	{% for numerisation in listeNumerisation %}
-	<p>
-	{{ numerisation.typeNumerisation.nom }}
-	<img src="{{ asset(numerisation.webPath) }}" alt="{{ numerisation.alt }}"/>
-	</p>
-	{% endfor %}
+
+	<table class="table table-bordered table-striped table-hover">
+		<thead><tr><td colspan = "2" class="warning" align="center"><b>Description du tesson</b></td></tr></thead>
+		<tbody>
+			<tr><td>Identifiant</td><td>{{tesson.id}}</td></tr>
+			<tr><td>Année de découverte</td><td>{{tesson.anneeDecouverte}}</td></tr>
+			<tr><td>Developpé</td><td>{{tesson.developpe}}</td></tr>
+			<tr><td>Lot / Individu</td><td>{{tesson.lotIndividu}}</td></tr>
+			<tr><td>Numéro de tombe</td><td>{{tesson.numTombe|default('Aucun')}}</td></tr>
+			<tr><td>Fait</td><td>{{tesson.fait|default('Aucun')}}</td></tr>
+			<tr><td>Commentaire</td><td>{{tesson.commentaire}}</td></tr>
+			<tr><td>Date d'enregistrement</td><td>{{tesson.dateEnregistrement|date('Y-m-d')}}</td></tr>
+		</tbody>
+	</table>
+	
+	<br />
+	
+	<table class="table table-bordered table-striped table-hover">
+		<thead><tr><td colspan = "2" class="warning" align="center"><b>Dimensions</b></td></tr></thead>
+		<tbody>
+			<tr><td>Largeur</td><td>{{tesson.ordreLargeur}}&nbsp;{{tesson.largeur}}</td></tr>
+			<tr><td>Longueur</td><td>{{tesson.ordreLongueur}}&nbsp;{{tesson.longueur}}</td></tr>
+			<tr><td>Nombre de motifs verticaux</td><td>{{tesson.ordreMotifsVerticaux}}&nbsp;{{tesson.nombreMotifsVerticaux}}</td></tr>
+			<tr><td>Nombre de motifs horizontaux</td><td>{{tesson.ordreMotifsHorizontaux}}&nbsp;{{tesson.nombreMotifsHorizontaux}}</td></tr>
+		</tbody>
+	</table>
+	
+	<br />
+	
+	<table class="table table-bordered table-striped table-hover">
+		<thead><tr><td colspan = "2" class="warning" align="center"><b>Localisation</b></td></tr></thead>
+		<tbody>
+			<tr><td>Code INSEE</td><td>{{tesson.site.codeINSEE}}</td></tr>
+			<tr><td>Numéro de Commune</td><td>{{tesson.site.numSiteCommune}}</td></tr>
+			<tr><td>Zone</td><td>{{tesson.zone.numero|default('Aucune')}}</td></tr>
+			<tr><td>US</td><td>{{tesson.us.nom}}</td></tr>
+			<tr><td>Numéro d'isolation</td><td>{{tesson.numIsolation}}</td></tr>
+		</tbody>
+	</table>
+	
+	<br />
+	
+	<table class="table table-bordered table-striped table-hover">
+		<thead><tr><td colspan = "2" class="warning" align="center"><b>Datation</b></td></tr></thead>
+		<tbody>
+			<tr><td>Période</td><td>{{tesson.periode.numeroPeriode|default('Non renseigné')}}</td></tr>
+			<tr><td>Phase</td><td>{{tesson.phase.numeroPhase|default('Non renseigné')}}</td></tr>
+			<tr><td>Séquence</td><td>{{tesson.sequence.numeroSequence|default('Non renseigné')}}</td></tr>
+		</tbody>
+	</table>
+	
+	<br />
+	
+	<table class="table table-bordered table-striped table-hover">
+		<thead><tr><td colspan = "2" class="warning" align="center"><b>Décor</b></td></tr></thead>
+		<tbody>
+			<tr><td>Position</td><td>
+			{% for position in tesson.decor %}
+				{{position.position}}
+			{% endfor %}
+			</td></tr>
+			<tr><td>Type</td><td>
+			{% if tesson.typeDecor is not empty %}
+				{% for type in tesson.typeDecor %}
+					{{type.nom}}
+				{% endfor %}
+			{% else %}
+				Non renseigné
+			{% endif %}
+			</td></tr>
+		</tbody>
+	</table>
+
+	
+	<table class="table table-bordered table-striped table-hover">
+		<thead><tr><td colspan = "2" class="warning" align="center"><b>Numérisations</b></td></tr></thead>
+		<tbody>
+			<tr><td>Type de numérisation</td><td>Numérisation</td></tr>
+			{% if tesson.numerisation is not empty %}
+				{% for numerisation in tesson.numerisation %}
+					<tr><td>{{ numerisation.typeNumerisation.nom }}</td>
+						<td><img src="{{ asset(numerisation.webPath) }}" width="400" height="300" alt="{{ numerisation.alt }}"/></td>
+					</tr>
+				{% endfor %}
+			{% else %}
+			<tr><td colspan="2" align="center">Pas de numérisations trouvées pour ce tesson</td></tr>
+			{% endif %}
+		</tbody>
+	</table>
+				
 {% endblock %}

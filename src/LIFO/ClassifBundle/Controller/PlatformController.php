@@ -47,11 +47,7 @@ class PlatformController extends Controller {
 		$tesson->setPhase ( new Phase () );
 		$tesson->setSequence ( new Sequence () );
 		$tesson->getUS ()->setSite ( $tesson->getSite () );
-		$utilisateur = $em->getRepository ( 'LIFOClassifBundle:Utilisateur' )->findOneByUsername ("Upload test" );
-		if (! is_object ( $utilisateur )) {
-			$utilisateur = new Utilisateur ();
-			$utilisateur->setUsername( "Upload test" );
-		}
+		$utilisateur = $this->getUser();
 		
 		$tesson->setEnregistrePar ( $utilisateur );
 		$form = $this->get ( 'form.factory' )->create ( TessonType::class, $tesson );
@@ -288,9 +284,12 @@ class PlatformController extends Controller {
 		$em = $this->getDoctrine ()->getManager ();
 		$tesson = $em->getRepository('LIFOClassifBundle:Tesson')->findOneById($id);
 		return $this->render ( 'LIFOClassifBundle:Platform:tesson.html.twig', array(
-					'listeNumerisation' => $tesson->getNumerisation() ));
+					'tesson' => $tesson));
 	}
-	
+
+	/**
+	 * @Security("has_role('ROLE_USER')")
+	 */
 	public function menuAction(){
 		$em = $this->getDoctrine ()->getManager ();
 		$maxTessons=10;
