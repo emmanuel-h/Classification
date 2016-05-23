@@ -31,7 +31,9 @@
     </div>
  
     <div class="row">
-      <div id="menu" class="col-md-3"></div>
+      <div id="menu" class="col-md-3">
+      {{ render(controller("LIFOClassifBundle:Platform:menu")) }}
+	  </div>
  
       <div id="content" class="col-md-9">
       {% block body %}

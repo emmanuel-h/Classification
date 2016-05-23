@@ -22,44 +22,56 @@ class __TwigTemplate_197a2bc7dbeeae78a123c058f6ba898579a32e6e18909d6330a667da26b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_fb05d6f79b85f1326e0cfa1d6c664bb135833343fa73c3d13009e74755f04fca = $this->env->getExtension("native_profiler");
-        $__internal_fb05d6f79b85f1326e0cfa1d6c664bb135833343fa73c3d13009e74755f04fca->enter($__internal_fb05d6f79b85f1326e0cfa1d6c664bb135833343fa73c3d13009e74755f04fca_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/recherche.html.twig"));
+        $__internal_5eb8a9a07df9a033732401d4eb1b0acec90816f6b6d0f80570a5ab7bba9a2f01 = $this->env->getExtension("native_profiler");
+        $__internal_5eb8a9a07df9a033732401d4eb1b0acec90816f6b6d0f80570a5ab7bba9a2f01->enter($__internal_5eb8a9a07df9a033732401d4eb1b0acec90816f6b6d0f80570a5ab7bba9a2f01_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/recherche.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_fb05d6f79b85f1326e0cfa1d6c664bb135833343fa73c3d13009e74755f04fca->leave($__internal_fb05d6f79b85f1326e0cfa1d6c664bb135833343fa73c3d13009e74755f04fca_prof);
+        $__internal_5eb8a9a07df9a033732401d4eb1b0acec90816f6b6d0f80570a5ab7bba9a2f01->leave($__internal_5eb8a9a07df9a033732401d4eb1b0acec90816f6b6d0f80570a5ab7bba9a2f01_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_8fff968ea33620356c9d624d6a79d2c3a930757dd3b4b07e2005828755046317 = $this->env->getExtension("native_profiler");
-        $__internal_8fff968ea33620356c9d624d6a79d2c3a930757dd3b4b07e2005828755046317->enter($__internal_8fff968ea33620356c9d624d6a79d2c3a930757dd3b4b07e2005828755046317_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_21b5396c6d5e4ffdd56340f599b07eefa67cd9df97bba540f28e9ac5bd64acac = $this->env->getExtension("native_profiler");
+        $__internal_21b5396c6d5e4ffdd56340f599b07eefa67cd9df97bba540f28e9ac5bd64acac->enter($__internal_21b5396c6d5e4ffdd56340f599b07eefa67cd9df97bba540f28e9ac5bd64acac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Recherche";
         
-        $__internal_8fff968ea33620356c9d624d6a79d2c3a930757dd3b4b07e2005828755046317->leave($__internal_8fff968ea33620356c9d624d6a79d2c3a930757dd3b4b07e2005828755046317_prof);
+        $__internal_21b5396c6d5e4ffdd56340f599b07eefa67cd9df97bba540f28e9ac5bd64acac->leave($__internal_21b5396c6d5e4ffdd56340f599b07eefa67cd9df97bba540f28e9ac5bd64acac_prof);
 
     }
 
     // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_ea18a8c028dad14d9174b23890ee23ded1c1449cea7a4ca3453d7df963027e80 = $this->env->getExtension("native_profiler");
-        $__internal_ea18a8c028dad14d9174b23890ee23ded1c1449cea7a4ca3453d7df963027e80->enter($__internal_ea18a8c028dad14d9174b23890ee23ded1c1449cea7a4ca3453d7df963027e80_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_b83b058318ff1eab9ec0ee1b9a01aa2b3839c72d82c660657fe3050e51ce117c = $this->env->getExtension("native_profiler");
+        $__internal_b83b058318ff1eab9ec0ee1b9a01aa2b3839c72d82c660657fe3050e51ce117c->enter($__internal_b83b058318ff1eab9ec0ee1b9a01aa2b3839c72d82c660657fe3050e51ce117c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 6
         echo "\t<p>
-\t";
+\t\t<font color = \"red\">";
         // line 7
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form');
+        echo twig_escape_filter($this->env, (isset($context["messageImportant"]) ? $context["messageImportant"] : $this->getContext($context, "messageImportant")), "html", null, true);
+        echo "</font>
+\t</p>
+\t<p>
+\t\t";
+        // line 10
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formRechercheID"]) ? $context["formRechercheID"] : $this->getContext($context, "formRechercheID")), 'form');
+        echo "
+\t</p>
+\t<p>
+\t\t";
+        // line 13
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formRechercheLocalisation"]) ? $context["formRechercheLocalisation"] : $this->getContext($context, "formRechercheLocalisation")), 'form');
         echo "
 \t</p>
 ";
         
-        $__internal_ea18a8c028dad14d9174b23890ee23ded1c1449cea7a4ca3453d7df963027e80->leave($__internal_ea18a8c028dad14d9174b23890ee23ded1c1449cea7a4ca3453d7df963027e80_prof);
+        $__internal_b83b058318ff1eab9ec0ee1b9a01aa2b3839c72d82c660657fe3050e51ce117c->leave($__internal_b83b058318ff1eab9ec0ee1b9a01aa2b3839c72d82c660657fe3050e51ce117c_prof);
 
     }
 
@@ -75,7 +87,7 @@ class __TwigTemplate_197a2bc7dbeeae78a123c058f6ba898579a32e6e18909d6330a667da26b
 
     public function getDebugInfo()
     {
-        return array (  57 => 7,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
+        return array (  69 => 13,  63 => 10,  57 => 7,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends "LIFOClassifBundle::layoutGeneral.html.twig" %}*/
@@ -84,6 +96,12 @@ class __TwigTemplate_197a2bc7dbeeae78a123c058f6ba898579a32e6e18909d6330a667da26b
 /* */
 /* {% block LIFOClassif_body %}*/
 /* 	<p>*/
-/* 	{{ form(form) }}*/
+/* 		<font color = "red">{{messageImportant}}</font>*/
+/* 	</p>*/
+/* 	<p>*/
+/* 		{{ form(formRechercheID) }}*/
+/* 	</p>*/
+/* 	<p>*/
+/* 		{{ form(formRechercheLocalisation) }}*/
 /* 	</p>*/
 /* {% endblock %}*/

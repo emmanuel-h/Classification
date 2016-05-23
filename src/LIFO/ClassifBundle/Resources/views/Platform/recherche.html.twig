@@ -3,7 +3,21 @@
 {% block title %}{{ parent() }} - Recherche{% endblock %}
 
 {% block LIFOClassif_body %}
+<div class="well">
 	<p>
-	{{ form(form) }}
+		<font color = "red">{{messageImportant}}</font>
 	</p>
+	<p>
+		<fieldset>
+			<legend>Rechercher par identifiant</legend>
+			{{ form(formRechercheID) }}
+		</fieldset>
+	</p>
+	<p>
+		<fieldset>
+			<legend> Rechercher par localisation </legend>
+			{{ form(formRechercheLocalisation) }}
+		</fieldset>
+	</p>
+<div>
 {% endblock %}

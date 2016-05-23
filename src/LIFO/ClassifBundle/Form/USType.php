@@ -18,7 +18,7 @@ class USType extends AbstractType
     {
         $builder
             ->add('nom', TextType::class)
-            ->add('description', TextareaType::class)
+            ->add('description', TextareaType::class, array("required" => false))
         ;
     }
     

@@ -21,20 +21,20 @@ class __TwigTemplate_bf46e5820a4b32e71aa5b199617467b31f2ef8dbc4719cf18e028f47716
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6ebc2d7600c81c16951da64ffd79b197dc65b6be35e80914d90c880cb282f47e = $this->env->getExtension("native_profiler");
-        $__internal_6ebc2d7600c81c16951da64ffd79b197dc65b6be35e80914d90c880cb282f47e->enter($__internal_6ebc2d7600c81c16951da64ffd79b197dc65b6be35e80914d90c880cb282f47e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Admin/afficherUtilisateur.html.twig"));
+        $__internal_4f57112a62f7459f4be53b5e9440721f5b54805696cd181d75079fd7922eb8f0 = $this->env->getExtension("native_profiler");
+        $__internal_4f57112a62f7459f4be53b5e9440721f5b54805696cd181d75079fd7922eb8f0->enter($__internal_4f57112a62f7459f4be53b5e9440721f5b54805696cd181d75079fd7922eb8f0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Admin/afficherUtilisateur.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_6ebc2d7600c81c16951da64ffd79b197dc65b6be35e80914d90c880cb282f47e->leave($__internal_6ebc2d7600c81c16951da64ffd79b197dc65b6be35e80914d90c880cb282f47e_prof);
+        $__internal_4f57112a62f7459f4be53b5e9440721f5b54805696cd181d75079fd7922eb8f0->leave($__internal_4f57112a62f7459f4be53b5e9440721f5b54805696cd181d75079fd7922eb8f0_prof);
 
     }
 
     // line 3
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_466f7ddfad9952e1bfc3768758d1a922a09b4fb645c8eeeda013bee9f595e4de = $this->env->getExtension("native_profiler");
-        $__internal_466f7ddfad9952e1bfc3768758d1a922a09b4fb645c8eeeda013bee9f595e4de->enter($__internal_466f7ddfad9952e1bfc3768758d1a922a09b4fb645c8eeeda013bee9f595e4de_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_54bdcc8ffc2f3cfc3f844c22af86b7d5490d7538f48a4abde35559ed6e77fd0f = $this->env->getExtension("native_profiler");
+        $__internal_54bdcc8ffc2f3cfc3f844c22af86b7d5490d7538f48a4abde35559ed6e77fd0f->enter($__internal_54bdcc8ffc2f3cfc3f844c22af86b7d5490d7538f48a4abde35559ed6e77fd0f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 4
         echo "
@@ -49,17 +49,23 @@ class __TwigTemplate_bf46e5820a4b32e71aa5b199617467b31f2ef8dbc4719cf18e028f47716
         // line 9
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "username", array()), "html", null, true);
         echo "</legend>
+\t\t\tRole actuel : 
 \t\t\t";
-        // line 10
+        // line 11
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "rolesToString", array()), "html", null, true);
+        echo "
+\t\t\t";
+        // line 12
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formModifierRole"]) ? $context["formModifierRole"] : $this->getContext($context, "formModifierRole")), 'form');
         echo "
 \t\t</fieldset>
 \t</p>
 </div>
+<a href=\"#null\" onclick=\"javascript:history.back();\">Page précédente</a>
 
 ";
         
-        $__internal_466f7ddfad9952e1bfc3768758d1a922a09b4fb645c8eeeda013bee9f595e4de->leave($__internal_466f7ddfad9952e1bfc3768758d1a922a09b4fb645c8eeeda013bee9f595e4de_prof);
+        $__internal_54bdcc8ffc2f3cfc3f844c22af86b7d5490d7538f48a4abde35559ed6e77fd0f->leave($__internal_54bdcc8ffc2f3cfc3f844c22af86b7d5490d7538f48a4abde35559ed6e77fd0f_prof);
 
     }
 
@@ -75,7 +81,7 @@ class __TwigTemplate_bf46e5820a4b32e71aa5b199617467b31f2ef8dbc4719cf18e028f47716
 
     public function getDebugInfo()
     {
-        return array (  54 => 10,  50 => 9,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  59 => 12,  55 => 11,  50 => 9,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "LIFOClassifBundle::layoutAdmin.html.twig" %}*/
@@ -87,9 +93,12 @@ class __TwigTemplate_bf46e5820a4b32e71aa5b199617467b31f2ef8dbc4719cf18e028f47716
 /* 	<p>*/
 /* 		<fieldset>*/
 /* 			<legend>{{user.username}}</legend>*/
+/* 			Role actuel : */
+/* 			{{ user.rolesToString }}*/
 /* 			{{ form(formModifierRole) }}*/
 /* 		</fieldset>*/
 /* 	</p>*/
 /* </div>*/
+/* <a href="#null" onclick="javascript:history.back();">Page précédente</a>*/
 /* */
 /* {% endblock %}*/

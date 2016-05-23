@@ -22,44 +22,64 @@ class __TwigTemplate_d009ef91ff410b0ab263261e5f5c37facc0417e2776bb4574da2d003a98
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_16dbb14a22a0723d9119c0c59ca1fa7fe196cfddbf689fcdcf9d10d3ace58b1a = $this->env->getExtension("native_profiler");
-        $__internal_16dbb14a22a0723d9119c0c59ca1fa7fe196cfddbf689fcdcf9d10d3ace58b1a->enter($__internal_16dbb14a22a0723d9119c0c59ca1fa7fe196cfddbf689fcdcf9d10d3ace58b1a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:recherche.html.twig"));
+        $__internal_88696e0f16610d0b13db76590b737b55c65c4a0a1a71c319c36654c0bcc64f55 = $this->env->getExtension("native_profiler");
+        $__internal_88696e0f16610d0b13db76590b737b55c65c4a0a1a71c319c36654c0bcc64f55->enter($__internal_88696e0f16610d0b13db76590b737b55c65c4a0a1a71c319c36654c0bcc64f55_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:recherche.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_16dbb14a22a0723d9119c0c59ca1fa7fe196cfddbf689fcdcf9d10d3ace58b1a->leave($__internal_16dbb14a22a0723d9119c0c59ca1fa7fe196cfddbf689fcdcf9d10d3ace58b1a_prof);
+        $__internal_88696e0f16610d0b13db76590b737b55c65c4a0a1a71c319c36654c0bcc64f55->leave($__internal_88696e0f16610d0b13db76590b737b55c65c4a0a1a71c319c36654c0bcc64f55_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_b0b959cef41903f4df85960cb37fe5171524f2be0dc2ccbe634f667b892ffca2 = $this->env->getExtension("native_profiler");
-        $__internal_b0b959cef41903f4df85960cb37fe5171524f2be0dc2ccbe634f667b892ffca2->enter($__internal_b0b959cef41903f4df85960cb37fe5171524f2be0dc2ccbe634f667b892ffca2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_3980bfa2370f6eff037a093610fd7b4a7bf35e03f9fc3198a88823f87095af64 = $this->env->getExtension("native_profiler");
+        $__internal_3980bfa2370f6eff037a093610fd7b4a7bf35e03f9fc3198a88823f87095af64->enter($__internal_3980bfa2370f6eff037a093610fd7b4a7bf35e03f9fc3198a88823f87095af64_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Recherche";
         
-        $__internal_b0b959cef41903f4df85960cb37fe5171524f2be0dc2ccbe634f667b892ffca2->leave($__internal_b0b959cef41903f4df85960cb37fe5171524f2be0dc2ccbe634f667b892ffca2_prof);
+        $__internal_3980bfa2370f6eff037a093610fd7b4a7bf35e03f9fc3198a88823f87095af64->leave($__internal_3980bfa2370f6eff037a093610fd7b4a7bf35e03f9fc3198a88823f87095af64_prof);
 
     }
 
     // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_4c33617627ae534b5065ea8e9f41041b2b9caed1fadd01c71e7e9b4c1a319f7b = $this->env->getExtension("native_profiler");
-        $__internal_4c33617627ae534b5065ea8e9f41041b2b9caed1fadd01c71e7e9b4c1a319f7b->enter($__internal_4c33617627ae534b5065ea8e9f41041b2b9caed1fadd01c71e7e9b4c1a319f7b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_47f3c11b6732d096b4a103850180758ece4cba89ca0d8a41f832aa902afee456 = $this->env->getExtension("native_profiler");
+        $__internal_47f3c11b6732d096b4a103850180758ece4cba89ca0d8a41f832aa902afee456->enter($__internal_47f3c11b6732d096b4a103850180758ece4cba89ca0d8a41f832aa902afee456_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 6
-        echo "\t<p>
-\t";
-        // line 7
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form');
-        echo "
+        echo "<div class=\"well\">
+\t<p>
+\t\t<font color = \"red\">";
+        // line 8
+        echo twig_escape_filter($this->env, (isset($context["messageImportant"]) ? $context["messageImportant"] : $this->getContext($context, "messageImportant")), "html", null, true);
+        echo "</font>
 \t</p>
+\t<p>
+\t\t<fieldset>
+\t\t\t<legend>Rechercher par identifiant</legend>
+\t\t\t";
+        // line 13
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formRechercheID"]) ? $context["formRechercheID"] : $this->getContext($context, "formRechercheID")), 'form');
+        echo "
+\t\t</fieldset>
+\t</p>
+\t<p>
+\t\t<fieldset>
+\t\t\t<legend> Rechercher par localisation </legend>
+\t\t\t";
+        // line 19
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formRechercheLocalisation"]) ? $context["formRechercheLocalisation"] : $this->getContext($context, "formRechercheLocalisation")), 'form');
+        echo "
+\t\t</fieldset>
+\t</p>
+<div>
 ";
         
-        $__internal_4c33617627ae534b5065ea8e9f41041b2b9caed1fadd01c71e7e9b4c1a319f7b->leave($__internal_4c33617627ae534b5065ea8e9f41041b2b9caed1fadd01c71e7e9b4c1a319f7b_prof);
+        $__internal_47f3c11b6732d096b4a103850180758ece4cba89ca0d8a41f832aa902afee456->leave($__internal_47f3c11b6732d096b4a103850180758ece4cba89ca0d8a41f832aa902afee456_prof);
 
     }
 
@@ -75,7 +95,7 @@ class __TwigTemplate_d009ef91ff410b0ab263261e5f5c37facc0417e2776bb4574da2d003a98
 
     public function getDebugInfo()
     {
-        return array (  57 => 7,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
+        return array (  75 => 19,  66 => 13,  58 => 8,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends "LIFOClassifBundle::layoutGeneral.html.twig" %}*/
@@ -83,7 +103,21 @@ class __TwigTemplate_d009ef91ff410b0ab263261e5f5c37facc0417e2776bb4574da2d003a98
 /* {% block title %}{{ parent() }} - Recherche{% endblock %}*/
 /* */
 /* {% block LIFOClassif_body %}*/
+/* <div class="well">*/
 /* 	<p>*/
-/* 	{{ form(form) }}*/
+/* 		<font color = "red">{{messageImportant}}</font>*/
 /* 	</p>*/
+/* 	<p>*/
+/* 		<fieldset>*/
+/* 			<legend>Rechercher par identifiant</legend>*/
+/* 			{{ form(formRechercheID) }}*/
+/* 		</fieldset>*/
+/* 	</p>*/
+/* 	<p>*/
+/* 		<fieldset>*/
+/* 			<legend> Rechercher par localisation </legend>*/
+/* 			{{ form(formRechercheLocalisation) }}*/
+/* 		</fieldset>*/
+/* 	</p>*/
+/* <div>*/
 /* {% endblock %}*/

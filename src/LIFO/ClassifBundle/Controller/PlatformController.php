@@ -19,6 +19,8 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use LIFO\ClassifBundle\Entity\Molette;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use LIFO;
+use LIFO\ClassifBundle\Form\SiteType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class PlatformController extends Controller {
 	public function indexAction() {
@@ -186,23 +188,73 @@ class PlatformController extends Controller {
 	 */
 	public function rechercheAction(Request $request) {
 		
-
-		$defaultData = array('message' => 'Recherche');
-		$form = $this->createFormBuilder($defaultData)
-					 ->add('Identifiant', IntegerType::class)
-					 ->add('Valider', SubmitType::class)
-					 ->getForm();
-
+		$messageImportant ="";
 		
-		if ($request->isMethod ( 'POST' ) && $form->handleRequest ( $request )->isValid ()) {
-			$em = $this->getDoctrine ()->getManager ();
-			$tesson = $em->getRepository('LIFOClassifBundle:Tesson')->findOneById($form->getData(0));
+		$formRechercheID = $this->createFormBuilder()
+					 ->add('identifiant', IntegerType::class)
+					 ->add('Rechercher', SubmitType::class)
+					 ->getForm();
+		
+		$formRechercheLocalisation = $this->createFormBuilder()
+					->add('codeInsee', IntegerType::class)
+					->add('numeroCommune', IntegerType::class)
+					->add('us', TextType::class)
+					->add('numeroIsolation', IntegerType::class)
+					->add('Rechercher', SubmitType::class)
+					->getForm();
+
+
+		$em = $this->getDoctrine ()->getManager ();
+					
+		if ($request->isMethod ( 'POST' ) && $formRechercheID->handleRequest ( $request )->isValid ()) {
+			$tesson = $em->getRepository('LIFOClassifBundle:Tesson')->findOneById($formRechercheID->getData(0));
 			if(is_object($tesson)){
 				return $this->redirectToRoute ( 'lifo_classif_tesson', array ('id' => $tesson->getId ()) );
 			}
 		}
+		
+		if ($request->isMethod ( 'POST' ) && $formRechercheLocalisation->handleRequest ( $request )->isValid ()) {
+			
+			//On vérifie que le site existe
+			$codeInsee=$formRechercheLocalisation->get('codeInsee')->getData();
+			$numSiteCommune=$formRechercheLocalisation->get('numeroCommune')->getData();
+			$site = $em->getRepository ( 'LIFOClassifBundle:Site' )->findOneBy ( array (
+					'codeINSEE' => $codeInsee,
+					'numSiteCommune' => $numSiteCommune
+			) );
+			if ( is_object ( $site )) {
+				
+				//Puis que l'US lui est bien associé
+				$us = $em->getRepository ( 'LIFOClassifBundle:US' )->findOneBy ( array (
+						'nom' => $formRechercheLocalisation->get('us')->getData(),
+						'site' => $site
+				) );
+				if ( is_object ( $us )) {
+					
+					//Puis que le numero d'isolation donné amène effectivement à un tesson
+					$numIsolation = $formRechercheLocalisation->get('numeroIsolation')->getData();
+					$t = $em->getRepository ( 'LIFOClassifBundle:Tesson' )->findOneBy ( array (
+							'us' => $us,
+							'site' => $site,
+							'numIsolation' => $numIsolation
+					) );
+					if(is_object($t)){
+						return $this->redirectToRoute ( 'lifo_classif_tesson', array ('id' => $tesson->getId ()) );
+					} else {
+						$messageImportant = "Pas de numero d'isolation correspondant";
+					}
+				} else {
+					$messageImportant = "Pas d'US correspondant";
+				}
+			} else {
+				$messageImportant = "Pas de site correspondant";
+			}
+		}
 		return $this->render ( 'LIFOClassifBundle:Platform:recherche.html.twig', array (
-				'form' => $form->createView () ) );
+				'formRechercheID' => $formRechercheID->createView (),
+				'formRechercheLocalisation' => $formRechercheLocalisation->createView (),
+				'messageImportant' => $messageImportant
+		) );
 	}
 
 	/**
@@ -237,5 +289,19 @@ class PlatformController extends Controller {
 		$tesson = $em->getRepository('LIFOClassifBundle:Tesson')->findOneById($id);
 		return $this->render ( 'LIFOClassifBundle:Platform:tesson.html.twig', array(
 					'listeNumerisation' => $tesson->getNumerisation() ));
+	}
+	
+	public function menuAction(){
+		$em = $this->getDoctrine ()->getManager ();
+		$maxTessons=10;
+		$listeTessons = $em->getRepository('LIFOClassifBundle:Tesson')->findBy(
+				array(),
+				array('id' => 'desc'),
+				$maxTessons,
+				0);
+		
+		return $this->render('LIFOClassifBundle:Platform:menu.html.twig', array(	
+			'listeTessons' => $listeTessons
+		));
 	}
 }
