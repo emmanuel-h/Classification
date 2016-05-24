@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//app/Resources/views/layout.html.twig=UTF-8
 encoding//src/LIFO/ClassifBundle/Command/ImportCommand.php=UTF-8
 encoding//src/LIFO/ClassifBundle/Controller/AdminController.php=UTF-8
 encoding//src/LIFO/ClassifBundle/Controller/PlatformController.php=UTF-8
