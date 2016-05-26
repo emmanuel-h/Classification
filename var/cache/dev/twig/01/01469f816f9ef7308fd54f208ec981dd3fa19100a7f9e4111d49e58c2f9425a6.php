@@ -7,82 +7,62 @@ class __TwigTemplate_cc209a980d5ec969f75d752fbf3846ef146b84dc96a9151baa6c59c1962
     {
         parent::__construct($env);
 
-        // line 1
-        $this->parent = $this->loadTemplate("LIFOClassifBundle::layoutGeneral.html.twig", "LIFOClassifBundle:Security:login.html.twig", 1);
-        $this->blocks = array(
-            'title' => array($this, 'block_title'),
-            'LIFOClassif_body' => array($this, 'block_LIFOClassif_body'),
-        );
-    }
+        $this->parent = false;
 
-    protected function doGetParent(array $context)
-    {
-        return "LIFOClassifBundle::layoutGeneral.html.twig";
+        $this->blocks = array(
+        );
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_38751424233c25e50f69199388c26233fb58e6de6a338f3059902a4e2632e0c0 = $this->env->getExtension("native_profiler");
-        $__internal_38751424233c25e50f69199388c26233fb58e6de6a338f3059902a4e2632e0c0->enter($__internal_38751424233c25e50f69199388c26233fb58e6de6a338f3059902a4e2632e0c0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Security:login.html.twig"));
+        $__internal_b8efa33bfa044e694bffcad921b29c15e8c2a22fb5809a7f73657aede675f88a = $this->env->getExtension("native_profiler");
+        $__internal_b8efa33bfa044e694bffcad921b29c15e8c2a22fb5809a7f73657aede675f88a->enter($__internal_b8efa33bfa044e694bffcad921b29c15e8c2a22fb5809a7f73657aede675f88a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Security:login.html.twig"));
 
-        $this->parent->display($context, array_merge($this->blocks, $blocks));
-        
-        $__internal_38751424233c25e50f69199388c26233fb58e6de6a338f3059902a4e2632e0c0->leave($__internal_38751424233c25e50f69199388c26233fb58e6de6a338f3059902a4e2632e0c0_prof);
+        // line 1
+        echo "<!DOCTYPE html>
+<html lang=\"fr\">
+  <head>
+    <meta charset=\"utf-8\">
+    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name=\"description\" content=\"\">
+    <meta name=\"author\" content=\"\">
+    <link rel=\"icon\" href=\"../../favicon.ico\">
 
-    }
+    <title>Authentification</title>
 
-    // line 3
-    public function block_title($context, array $blocks = array())
-    {
-        $__internal_f2ba201d110d38d40457111a8e132fee824917f965fd5888c91939e1c0cc5a3f = $this->env->getExtension("native_profiler");
-        $__internal_f2ba201d110d38d40457111a8e132fee824917f965fd5888c91939e1c0cc5a3f->enter($__internal_f2ba201d110d38d40457111a8e132fee824917f965fd5888c91939e1c0cc5a3f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+    <!-- Bootstrap core CSS -->
+\t<link href=\"../bootstrap/css/bootstrap.min.css\"
+\trel=\"stylesheet\">
+\t
+    <link href=\"../styles/signin.css\" rel=\"stylesheet\">
 
-        $this->displayParentBlock("title", $context, $blocks);
-        echo " - Authentification";
-        
-        $__internal_f2ba201d110d38d40457111a8e132fee824917f965fd5888c91939e1c0cc5a3f->leave($__internal_f2ba201d110d38d40457111a8e132fee824917f965fd5888c91939e1c0cc5a3f_prof);
+  </head>
 
-    }
+  <body>
 
-    // line 5
-    public function block_LIFOClassif_body($context, array $blocks = array())
-    {
-        $__internal_a136ce8fe00bcac511386e16a40fa5740b52f0f3f8b1945ed6154497cbfa75b6 = $this->env->getExtension("native_profiler");
-        $__internal_a136ce8fe00bcac511386e16a40fa5740b52f0f3f8b1945ed6154497cbfa75b6->enter($__internal_a136ce8fe00bcac511386e16a40fa5740b52f0f3f8b1945ed6154497cbfa75b6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+    <div class=\"container\">
 
-        // line 6
-        echo "
-  ";
-        // line 8
-        echo "  ";
-        if ((isset($context["error"]) ? $context["error"] : $this->getContext($context, "error"))) {
-            // line 9
-            echo "    <div class=\"alert alert-danger\">";
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["error"]) ? $context["error"] : $this->getContext($context, "error")), "message", array()), "html", null, true);
-            echo "</div>
-  ";
-        }
-        // line 11
-        echo "
-  <form action=\"";
-        // line 12
+      <form class=\"form-signin\" action=\"";
+        // line 26
         echo $this->env->getExtension('routing')->getPath("login_check");
         echo "\" method=\"post\">
-    <label for=\"username\">Identifiant :</label>
-    <input type=\"text\" id=\"username\" name=\"_username\" value=\"";
-        // line 14
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) ? $context["last_username"] : $this->getContext($context, "last_username")), "html", null, true);
-        echo "\" />
+        <h2 class=\"form-signin-heading\">S'authentifier</h2>
+        <label for=\"username\" class=\"sr-only\">Nom d'utilisateur</label>
+        <input type=\"text\" id=\"username\" name=\"_username\" class=\"form-control\" placeholder=\"Nom d'utilisateur\" required autofocus>
+        <label for=\"password\" class=\"sr-only\">Mot de passe</label>
+        <input type=\"password\" id=\"password\" name=\"_password\" class=\"form-control\" placeholder=\"Mot de passe\" required>
+        <button class=\"btn btn-lg btn-primary btn-block\" type=\"submit\">Connexion</button>
+      </form>
 
-    <label for=\"password\">Mot de passe :</label>
-    <input type=\"password\" id=\"password\" name=\"_password\" />
-    <br />
-    <input type=\"submit\" value=\"Connexion\" />
-  </form>
+    </div> <!-- /container -->
 
+  </body>
+</html>
 ";
         
-        $__internal_a136ce8fe00bcac511386e16a40fa5740b52f0f3f8b1945ed6154497cbfa75b6->leave($__internal_a136ce8fe00bcac511386e16a40fa5740b52f0f3f8b1945ed6154497cbfa75b6_prof);
+        $__internal_b8efa33bfa044e694bffcad921b29c15e8c2a22fb5809a7f73657aede675f88a->leave($__internal_b8efa33bfa044e694bffcad921b29c15e8c2a22fb5809a7f73657aede675f88a_prof);
 
     }
 
@@ -98,28 +78,45 @@ class __TwigTemplate_cc209a980d5ec969f75d752fbf3846ef146b84dc96a9151baa6c59c1962
 
     public function getDebugInfo()
     {
-        return array (  74 => 14,  69 => 12,  66 => 11,  60 => 9,  57 => 8,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
+        return array (  49 => 26,  22 => 1,);
     }
 }
-/* {% extends "LIFOClassifBundle::layoutGeneral.html.twig" %}*/
+/* <!DOCTYPE html>*/
+/* <html lang="fr">*/
+/*   <head>*/
+/*     <meta charset="utf-8">*/
+/*     <meta http-equiv="X-UA-Compatible" content="IE=edge">*/
+/*     <meta name="viewport" content="width=device-width, initial-scale=1">*/
+/*     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->*/
+/*     <meta name="description" content="">*/
+/*     <meta name="author" content="">*/
+/*     <link rel="icon" href="../../favicon.ico">*/
 /* */
-/* {% block title %}{{ parent() }} - Authentification{% endblock %}*/
+/*     <title>Authentification</title>*/
 /* */
-/* {% block LIFOClassif_body %}*/
+/*     <!-- Bootstrap core CSS -->*/
+/* 	<link href="../bootstrap/css/bootstrap.min.css"*/
+/* 	rel="stylesheet">*/
+/* 	*/
+/*     <link href="../styles/signin.css" rel="stylesheet">*/
 /* */
-/*   {# S'il y a une erreur, on l'affiche dans un joli cadre #}*/
-/*   {% if error %}*/
-/*     <div class="alert alert-danger">{{ error.message }}</div>*/
-/*   {% endif %}*/
+/*   </head>*/
 /* */
-/*   <form action="{{ path('login_check') }}" method="post">*/
-/*     <label for="username">Identifiant :</label>*/
-/*     <input type="text" id="username" name="_username" value="{{ last_username }}" />*/
+/*   <body>*/
 /* */
-/*     <label for="password">Mot de passe :</label>*/
-/*     <input type="password" id="password" name="_password" />*/
-/*     <br />*/
-/*     <input type="submit" value="Connexion" />*/
-/*   </form>*/
+/*     <div class="container">*/
 /* */
-/* {% endblock %}*/
+/*       <form class="form-signin" action="{{ path('login_check') }}" method="post">*/
+/*         <h2 class="form-signin-heading">S'authentifier</h2>*/
+/*         <label for="username" class="sr-only">Nom d'utilisateur</label>*/
+/*         <input type="text" id="username" name="_username" class="form-control" placeholder="Nom d'utilisateur" required autofocus>*/
+/*         <label for="password" class="sr-only">Mot de passe</label>*/
+/*         <input type="password" id="password" name="_password" class="form-control" placeholder="Mot de passe" required>*/
+/*         <button class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>*/
+/*       </form>*/
+/* */
+/*     </div> <!-- /container -->*/
+/* */
+/*   </body>*/
+/* </html>*/
+/* */

@@ -19,159 +19,197 @@ class __TwigTemplate_6b38e3adfb8c555dff7f4b99cf2d24b614bf91d13ec68765fb9c776960d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ae886dc53812b57fe8af92ad80e83064112690297fac34185b90dfb1790d1ff7 = $this->env->getExtension("native_profiler");
-        $__internal_ae886dc53812b57fe8af92ad80e83064112690297fac34185b90dfb1790d1ff7->enter($__internal_ae886dc53812b57fe8af92ad80e83064112690297fac34185b90dfb1790d1ff7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "layout.html.twig"));
+        $__internal_a7afe3c8577ff0f0b6d6d5637c428f1f9ea22d7549bef1242a850d55147ab986 = $this->env->getExtension("native_profiler");
+        $__internal_a7afe3c8577ff0f0b6d6d5637c428f1f9ea22d7549bef1242a850d55147ab986->enter($__internal_a7afe3c8577ff0f0b6d6d5637c428f1f9ea22d7549bef1242a850d55147ab986_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "layout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE HTML>
 <html>
-  <head>
-    <meta charset=\"utf-8\">
-\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-    <title>";
-        // line 6
+<head>
+<meta charset=\"utf-8\">
+<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+<meta name=\"description\" content=\"\">
+<meta name=\"author\" content=\"\">
+<link rel=\"icon\" href=\"../../favicon.ico\">
+<title>";
+        // line 10
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
-\t";
-        // line 8
-        echo "\t\t<link rel=\"stylesheet\" href=\"//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css\">
-   ";
-        // line 10
-        echo "  </head>
-  <body>
+<link href=\" ";
+        // line 11
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bootstrap/css/bootstrap.min.css"), "html", null, true);
+        echo "\"
+\trel=\"stylesheet\">
+<link href=\" ";
+        // line 13
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bootstrap/css/bootstrap-theme.min.css"), "html", null, true);
+        echo "\"
+\trel=\"stylesheet\">
+<link href=\" ";
+        // line 15
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("styles/layout.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\" />
+</head>
+<body>
 
-\t
-  <div class=\"container\">
-    <div id=\"header\" class=\"jumbotron\">
-      <h1></h1>
-      <p>
-\t";
-        // line 18
-        if ($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array())) {
-            // line 19
-            echo "\t\t<a href=\"";
-            echo $this->env->getExtension('routing')->getPath("lifo_classif_telechargement");
-            echo "\">Téléchargement</a>
-\t\t<a href=\"";
-            // line 20
-            echo $this->env->getExtension('routing')->getPath("lifo_classif_upload");
-            echo "\">Upload</a>
-\t\t<a href=\"";
-            // line 21
-            echo $this->env->getExtension('routing')->getPath("lifo_classif_recherche");
-            echo "\">Recherche</a>
-\t\t<a href=\"";
-            // line 22
-            echo $this->env->getExtension('routing')->getPath("lifo_classif_classification");
-            echo "\">Classification</a>
-\t\t";
-            // line 23
-            if ($this->env->getExtension('security')->isGranted("ROLE_ADMIN")) {
-                // line 24
-                echo "\t\t\t<a href=\"";
-                echo $this->env->getExtension('routing')->getPath("lifo_classif_admin");
-                echo "\">Administration</a>
-\t\t";
-            }
-            // line 26
-            echo "\t\t<a href=\"";
-            echo $this->env->getExtension('routing')->getPath("logout");
-            echo "\">Déconnexion</a>
-\t";
-        }
-        // line 28
-        echo "\t<br/>
-\t<br/>
-      </p>
-    </div>
- 
-    <div class=\"row\">
-      <div id=\"menu\" class=\"col-md-3\">
-      ";
+\t<div class=\"navbar navbar-inverse navbar-fixed-top\">
+
+\t\t<div class=\"container\">
+\t\t\t<div class=\"navbar-header\">
+\t\t\t\t<button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">
+\t\t\t\t\t<span class=\"sr-only\">Toggle navigation</span>
+\t\t\t\t\t<span class=\"icon-bar\"></span>
+\t\t\t\t\t<span class=\"icon-bar\"></span>
+\t\t\t\t\t<span class=\"icon-bar\"></span>
+\t\t\t\t</button>
+\t\t\t</div>
+\t\t\t\t<div id=\"navbar\" class=\"navbar-collapse collapse\">
+\t\t\t\t\t<ul class=\"nav navbar-nav\">
+\t\t\t\t\t\t<li><a href=\"";
+        // line 32
+        echo $this->env->getExtension('routing')->getPath("lifo_classif_upload");
+        echo "\">Upload</a></li>
+\t\t\t\t\t\t<li><a href=\"";
+        // line 33
+        echo $this->env->getExtension('routing')->getPath("lifo_classif_recherche");
+        echo "\">Recherche</a></li>
+\t\t\t\t\t\t<li><a href=\"";
+        // line 34
+        echo $this->env->getExtension('routing')->getPath("lifo_classif_classification");
+        echo "\">Classification</a></li>
+\t\t\t\t\t\t";
         // line 35
-        echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("LIFOClassifBundle:Platform:menu"));
-        echo "
-\t  </div>
- 
-      <div id=\"content\" class=\"col-md-9\">
-      ";
-        // line 39
-        $this->displayBlock('body', $context, $blocks);
-        // line 41
-        echo "      </div>
- 
-    </div>
- 
-    <hr>
- 
-    ";
+        if ($this->env->getExtension('security')->isGranted("ROLE_ARCHEOLOGUE")) {
+            // line 36
+            echo "\t\t\t\t\t\t\t<li class=\"dropdown\"> <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\" href=\"#\">Paramètres<b class=\"caret\"></b></a>
+\t\t\t\t\t\t\t\t<ul class=\"dropdown-menu\">
+\t\t\t\t\t\t\t\t\t<li><a href=\"";
+            // line 38
+            echo $this->env->getExtension('routing')->getPath("lifo_classif_parametres_typeDecor");
+            echo "\">Type de décor</a></li>
+\t\t\t\t\t\t\t\t\t<li><a href=\"";
+            // line 39
+            echo $this->env->getExtension('routing')->getPath("lifo_classif_parametres_positionDecor");
+            echo "\">Position de décor</a></li>
+\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t";
+        }
+        // line 43
+        echo "\t\t\t\t\t\t";
+        if ($this->env->getExtension('security')->isGranted("ROLE_ADMIN")) {
+            // line 44
+            echo "\t\t\t\t\t\t
+\t\t\t\t\t\t<li><a href=\"";
+            // line 45
+            echo $this->env->getExtension('routing')->getPath("lifo_classif_admin");
+            echo "\">Administration</a></li>
+\t\t\t\t\t\t";
+        }
         // line 47
+        echo "\t\t\t\t\t\t<li><a href=\"";
+        echo $this->env->getExtension('routing')->getPath("logout");
+        echo "\">Déconnexion</a></li>
+\t\t\t\t\t</ul>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+
+\t<div class=\"container theme-showcase\" role=\"main\">
+\t\t<div class=\"starter-template\">
+\t\t\t<div class=\"row\">
+\t\t\t\t<div class=\"col-lg-3\">
+\t\t\t\t\t<div class=\"chose\">
+\t\t\t\t\t\t";
+        // line 58
+        if ($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array())) {
+            // line 59
+            echo "\t\t\t\t\t\t<h4>Derniers tessons ajoutés</h4>
+\t\t\t\t\t\t";
+            // line 60
+            echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("LIFOClassifBundle:Platform:menu"));
+            echo " ";
+        }
+        // line 62
+        echo "\t\t\t\t\t</div>
+\t\t\t\t</div>
+
+\t\t\t\t<div id=\"content\" class=\"col-lg-9\">";
+        // line 65
+        $this->displayBlock('body', $context, $blocks);
+        echo "</div>
+\t\t\t</div>
+\t\t</div>
+
+\t\t<hr>
+
+\t\t";
+        // line 71
         $this->displayBlock('footer', $context, $blocks);
-        // line 49
-        echo " 
-  </div>
+        // line 72
+        echo "
+\t</div>
 
 \t";
-        // line 52
+        // line 75
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 56
-        echo "  </body>
+        // line 79
+        echo "</body>
 </html>";
         
-        $__internal_ae886dc53812b57fe8af92ad80e83064112690297fac34185b90dfb1790d1ff7->leave($__internal_ae886dc53812b57fe8af92ad80e83064112690297fac34185b90dfb1790d1ff7_prof);
+        $__internal_a7afe3c8577ff0f0b6d6d5637c428f1f9ea22d7549bef1242a850d55147ab986->leave($__internal_a7afe3c8577ff0f0b6d6d5637c428f1f9ea22d7549bef1242a850d55147ab986_prof);
 
     }
 
-    // line 6
+    // line 10
     public function block_title($context, array $blocks = array())
     {
-        $__internal_4de5cddb418d814a92099c5e2565a9325ef9054da851dd71f30cb9998dfdd660 = $this->env->getExtension("native_profiler");
-        $__internal_4de5cddb418d814a92099c5e2565a9325ef9054da851dd71f30cb9998dfdd660->enter($__internal_4de5cddb418d814a92099c5e2565a9325ef9054da851dd71f30cb9998dfdd660_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_269cfdfae25a9a1b850d91e4d49bcb685937975cab9677d55f17ecc501839971 = $this->env->getExtension("native_profiler");
+        $__internal_269cfdfae25a9a1b850d91e4d49bcb685937975cab9677d55f17ecc501839971->enter($__internal_269cfdfae25a9a1b850d91e4d49bcb685937975cab9677d55f17ecc501839971_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Classification";
         
-        $__internal_4de5cddb418d814a92099c5e2565a9325ef9054da851dd71f30cb9998dfdd660->leave($__internal_4de5cddb418d814a92099c5e2565a9325ef9054da851dd71f30cb9998dfdd660_prof);
+        $__internal_269cfdfae25a9a1b850d91e4d49bcb685937975cab9677d55f17ecc501839971->leave($__internal_269cfdfae25a9a1b850d91e4d49bcb685937975cab9677d55f17ecc501839971_prof);
 
     }
 
-    // line 39
+    // line 65
     public function block_body($context, array $blocks = array())
     {
-        $__internal_7456f159ee05f15f6187ba324302908cc7885a45f84b6bf59e633fa96316fe24 = $this->env->getExtension("native_profiler");
-        $__internal_7456f159ee05f15f6187ba324302908cc7885a45f84b6bf59e633fa96316fe24->enter($__internal_7456f159ee05f15f6187ba324302908cc7885a45f84b6bf59e633fa96316fe24_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_5a63544ca1c7b9852a4ab7483766b7d6fc6e39c74b7badc9e4db895d78a04a54 = $this->env->getExtension("native_profiler");
+        $__internal_5a63544ca1c7b9852a4ab7483766b7d6fc6e39c74b7badc9e4db895d78a04a54->enter($__internal_5a63544ca1c7b9852a4ab7483766b7d6fc6e39c74b7badc9e4db895d78a04a54_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 40
-        echo "      ";
+        echo " ";
         
-        $__internal_7456f159ee05f15f6187ba324302908cc7885a45f84b6bf59e633fa96316fe24->leave($__internal_7456f159ee05f15f6187ba324302908cc7885a45f84b6bf59e633fa96316fe24_prof);
+        $__internal_5a63544ca1c7b9852a4ab7483766b7d6fc6e39c74b7badc9e4db895d78a04a54->leave($__internal_5a63544ca1c7b9852a4ab7483766b7d6fc6e39c74b7badc9e4db895d78a04a54_prof);
 
     }
 
-    // line 47
+    // line 71
     public function block_footer($context, array $blocks = array())
     {
-        $__internal_086c4d9e24b757220a0f3ae8836714a8e77b8a83e7220d4a172505a491248903 = $this->env->getExtension("native_profiler");
-        $__internal_086c4d9e24b757220a0f3ae8836714a8e77b8a83e7220d4a172505a491248903->enter($__internal_086c4d9e24b757220a0f3ae8836714a8e77b8a83e7220d4a172505a491248903_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
+        $__internal_1f7b6a9cca74e81cc53f393fe08ffc743f58045d97e8011c30a6618b6a60e3d1 = $this->env->getExtension("native_profiler");
+        $__internal_1f7b6a9cca74e81cc53f393fe08ffc743f58045d97e8011c30a6618b6a60e3d1->enter($__internal_1f7b6a9cca74e81cc53f393fe08ffc743f58045d97e8011c30a6618b6a60e3d1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 48
-        echo "    ";
+        echo " ";
         
-        $__internal_086c4d9e24b757220a0f3ae8836714a8e77b8a83e7220d4a172505a491248903->leave($__internal_086c4d9e24b757220a0f3ae8836714a8e77b8a83e7220d4a172505a491248903_prof);
+        $__internal_1f7b6a9cca74e81cc53f393fe08ffc743f58045d97e8011c30a6618b6a60e3d1->leave($__internal_1f7b6a9cca74e81cc53f393fe08ffc743f58045d97e8011c30a6618b6a60e3d1_prof);
 
     }
 
-    // line 52
+    // line 75
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_5ba1b427ed8a842ba4ab46778c6980f15c7f1187f54771fb3343295a39882888 = $this->env->getExtension("native_profiler");
-        $__internal_5ba1b427ed8a842ba4ab46778c6980f15c7f1187f54771fb3343295a39882888->enter($__internal_5ba1b427ed8a842ba4ab46778c6980f15c7f1187f54771fb3343295a39882888_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_2c2a567618f06c1871de22248af9d6769ff06e0d7928b37a90893e50975a9317 = $this->env->getExtension("native_profiler");
+        $__internal_2c2a567618f06c1871de22248af9d6769ff06e0d7928b37a90893e50975a9317->enter($__internal_2c2a567618f06c1871de22248af9d6769ff06e0d7928b37a90893e50975a9317_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 53
-        echo "    <script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js\"></script>
-    <script src=\"//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js\"></script>
-  ";
+        // line 76
+        echo "\t<script src=\"../bootstrap/js/jquery.js\"></script>
+\t<script src=\"../bootstrap/js/bootstrap.min.js\"></script>
+\t";
         
-        $__internal_5ba1b427ed8a842ba4ab46778c6980f15c7f1187f54771fb3343295a39882888->leave($__internal_5ba1b427ed8a842ba4ab46778c6980f15c7f1187f54771fb3343295a39882888_prof);
+        $__internal_2c2a567618f06c1871de22248af9d6769ff06e0d7928b37a90893e50975a9317->leave($__internal_2c2a567618f06c1871de22248af9d6769ff06e0d7928b37a90893e50975a9317_prof);
 
     }
 
@@ -187,63 +225,86 @@ class __TwigTemplate_6b38e3adfb8c555dff7f4b99cf2d24b614bf91d13ec68765fb9c776960d
 
     public function getDebugInfo()
     {
-        return array (  170 => 53,  164 => 52,  157 => 48,  151 => 47,  144 => 40,  138 => 39,  126 => 6,  118 => 56,  116 => 52,  111 => 49,  109 => 47,  101 => 41,  99 => 39,  92 => 35,  83 => 28,  77 => 26,  71 => 24,  69 => 23,  65 => 22,  61 => 21,  57 => 20,  52 => 19,  50 => 18,  40 => 10,  37 => 8,  33 => 6,  26 => 1,);
+        return array (  208 => 76,  202 => 75,  190 => 71,  178 => 65,  166 => 10,  158 => 79,  156 => 75,  151 => 72,  149 => 71,  140 => 65,  135 => 62,  131 => 60,  128 => 59,  126 => 58,  111 => 47,  106 => 45,  103 => 44,  100 => 43,  93 => 39,  89 => 38,  85 => 36,  83 => 35,  79 => 34,  75 => 33,  71 => 32,  51 => 15,  46 => 13,  41 => 11,  37 => 10,  26 => 1,);
     }
 }
 /* <!DOCTYPE HTML>*/
 /* <html>*/
-/*   <head>*/
-/*     <meta charset="utf-8">*/
-/* 	<meta name="viewport" content="width=device-width, initial-scale=1">*/
-/*     <title>{% block title %}Classification{% endblock %}</title>*/
-/* 	{# {% block stylesheets %} #}*/
-/* 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">*/
-/*    {# {% endblock %} #}*/
-/*   </head>*/
-/*   <body>*/
+/* <head>*/
+/* <meta charset="utf-8">*/
+/* <meta http-equiv="X-UA-Compatible" content="IE=edge">*/
+/* <meta name="viewport" content="width=device-width, initial-scale=1">*/
+/* <meta name="description" content="">*/
+/* <meta name="author" content="">*/
+/* <link rel="icon" href="../../favicon.ico">*/
+/* <title>{% block title %}Classification{% endblock %}</title>*/
+/* <link href=" {{ asset('bootstrap/css/bootstrap.min.css') }}"*/
+/* 	rel="stylesheet">*/
+/* <link href=" {{ asset ('bootstrap/css/bootstrap-theme.min.css') }}"*/
+/* 	rel="stylesheet">*/
+/* <link href=" {{ asset ('styles/layout.css') }}" rel="stylesheet" />*/
+/* </head>*/
+/* <body>*/
 /* */
-/* 	*/
-/*   <div class="container">*/
-/*     <div id="header" class="jumbotron">*/
-/*       <h1></h1>*/
-/*       <p>*/
-/* 	{% if app.user %}*/
-/* 		<a href="{{ path('lifo_classif_telechargement') }}">Téléchargement</a>*/
-/* 		<a href="{{ path('lifo_classif_upload') }}">Upload</a>*/
-/* 		<a href="{{ path('lifo_classif_recherche') }}">Recherche</a>*/
-/* 		<a href="{{ path('lifo_classif_classification') }}">Classification</a>*/
-/* 		{% if is_granted('ROLE_ADMIN') %}*/
-/* 			<a href="{{ path('lifo_classif_admin') }}">Administration</a>*/
-/* 		{% endif %}*/
-/* 		<a href="{{ path('logout') }}">Déconnexion</a>*/
-/* 	{% endif %}*/
-/* 	<br/>*/
-/* 	<br/>*/
-/*       </p>*/
-/*     </div>*/
-/*  */
-/*     <div class="row">*/
-/*       <div id="menu" class="col-md-3">*/
-/*       {{ render(controller("LIFOClassifBundle:Platform:menu")) }}*/
-/* 	  </div>*/
-/*  */
-/*       <div id="content" class="col-md-9">*/
-/*       {% block body %}*/
-/*       {% endblock %}*/
-/*       </div>*/
-/*  */
-/*     </div>*/
-/*  */
-/*     <hr>*/
-/*  */
-/*     {% block footer %}*/
-/*     {% endblock %}*/
-/*  */
-/*   </div>*/
+/* 	<div class="navbar navbar-inverse navbar-fixed-top">*/
+/* */
+/* 		<div class="container">*/
+/* 			<div class="navbar-header">*/
+/* 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">*/
+/* 					<span class="sr-only">Toggle navigation</span>*/
+/* 					<span class="icon-bar"></span>*/
+/* 					<span class="icon-bar"></span>*/
+/* 					<span class="icon-bar"></span>*/
+/* 				</button>*/
+/* 			</div>*/
+/* 				<div id="navbar" class="navbar-collapse collapse">*/
+/* 					<ul class="nav navbar-nav">*/
+/* 						<li><a href="{{ path('lifo_classif_upload') }}">Upload</a></li>*/
+/* 						<li><a href="{{ path('lifo_classif_recherche') }}">Recherche</a></li>*/
+/* 						<li><a href="{{ path('lifo_classif_classification') }}">Classification</a></li>*/
+/* 						{% if is_granted('ROLE_ARCHEOLOGUE') %}*/
+/* 							<li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="#">Paramètres<b class="caret"></b></a>*/
+/* 								<ul class="dropdown-menu">*/
+/* 									<li><a href="{{ path('lifo_classif_parametres_typeDecor') }}">Type de décor</a></li>*/
+/* 									<li><a href="{{ path('lifo_classif_parametres_positionDecor') }}">Position de décor</a></li>*/
+/* 								</ul>*/
+/* 							</li>*/
+/* 						{% endif %}*/
+/* 						{% if is_granted('ROLE_ADMIN') %}*/
+/* 						*/
+/* 						<li><a href="{{ path('lifo_classif_admin') }}">Administration</a></li>*/
+/* 						{% endif %}*/
+/* 						<li><a href="{{ path('logout') }}">Déconnexion</a></li>*/
+/* 					</ul>*/
+/* 				</div>*/
+/* 			</div>*/
+/* 		</div>*/
+/* */
+/* 	<div class="container theme-showcase" role="main">*/
+/* 		<div class="starter-template">*/
+/* 			<div class="row">*/
+/* 				<div class="col-lg-3">*/
+/* 					<div class="chose">*/
+/* 						{% if app.user %}*/
+/* 						<h4>Derniers tessons ajoutés</h4>*/
+/* 						{{ render(controller("LIFOClassifBundle:Platform:menu")) }} {%*/
+/* 						endif %}*/
+/* 					</div>*/
+/* 				</div>*/
+/* */
+/* 				<div id="content" class="col-lg-9">{% block body %} {% endblock %}</div>*/
+/* 			</div>*/
+/* 		</div>*/
+/* */
+/* 		<hr>*/
+/* */
+/* 		{% block footer %} {% endblock %}*/
+/* */
+/* 	</div>*/
 /* */
 /* 	{% block javascripts %}*/
-/*     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>*/
-/*     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>*/
-/*   {% endblock %}*/
-/*   </body>*/
+/* 	<script src="../bootstrap/js/jquery.js"></script>*/
+/* 	<script src="../bootstrap/js/bootstrap.min.js"></script>*/
+/* 	{% endblock %}*/
+/* </body>*/
 /* </html>*/

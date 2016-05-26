@@ -129,39 +129,39 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_tesson')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::tessonAction',));
         }
 
-        if (0 === strpos($pathinfo, '/admin')) {
-            // lifo_classif_admin
-            if ($pathinfo === '/admin') {
-                return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::adminAction',  '_route' => 'lifo_classif_admin',);
+        // lifo_classif_admin
+        if ($pathinfo === '/admin') {
+            return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::adminAction',  '_route' => 'lifo_classif_admin',);
+        }
+
+        if (0 === strpos($pathinfo, '/parametres')) {
+            // lifo_classif_parametres_positionDecor
+            if ($pathinfo === '/parametres/positiondecor') {
+                return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\ParametresController::positionDecorAction',  '_route' => 'lifo_classif_parametres_positionDecor',);
             }
 
-            // lifo_classif_admin_suppression
-            if ($pathinfo === '/admin/suppression') {
-                return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::suppressionAction',  '_route' => 'lifo_classif_admin_suppression',);
+            // lifo_classif_parametres_typeDecor
+            if ($pathinfo === '/parametres/typedecor') {
+                return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\ParametresController::typeDecorAction',  '_route' => 'lifo_classif_parametres_typeDecor',);
             }
 
-            // lifo_classif_admin_ajout
-            if ($pathinfo === '/admin/ajout') {
-                return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::ajoutAction',  '_route' => 'lifo_classif_admin_ajout',);
+        }
+
+        if (0 === strpos($pathinfo, '/admin/utilisateur')) {
+            // lifo_classif_admin_utilisateur
+            if ($pathinfo === '/admin/utilisateur') {
+                return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::utilisateurAction',  '_route' => 'lifo_classif_admin_utilisateur',);
             }
 
-            if (0 === strpos($pathinfo, '/admin/utilisateur')) {
-                // lifo_classif_admin_utilisateur
-                if ($pathinfo === '/admin/utilisateur') {
-                    return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::utilisateurAction',  '_route' => 'lifo_classif_admin_utilisateur',);
+            if (0 === strpos($pathinfo, '/admin/utilisateur/afficher')) {
+                // lifo_classif_admin_all_users
+                if (0 === strpos($pathinfo, '/admin/utilisateur/afficher/tous') && preg_match('#^/admin/utilisateur/afficher/tous(?:/(?P<page>\\d+))?$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_admin_all_users')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::allUsersAction',  'page' => 1,));
                 }
 
-                if (0 === strpos($pathinfo, '/admin/utilisateur/afficher')) {
-                    // lifo_classif_admin_all_users
-                    if (0 === strpos($pathinfo, '/admin/utilisateur/afficher/tous') && preg_match('#^/admin/utilisateur/afficher/tous(?:/(?P<page>\\d+))?$#s', $pathinfo, $matches)) {
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_admin_all_users')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::allUsersAction',  'page' => 1,));
-                    }
-
-                    // lifo_classif_admin_afficher_utilisateur
-                    if (preg_match('#^/admin/utilisateur/afficher/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_admin_afficher_utilisateur')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::afficherUtilisateurAction',));
-                    }
-
+                // lifo_classif_admin_afficher_utilisateur
+                if (preg_match('#^/admin/utilisateur/afficher/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_admin_afficher_utilisateur')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::afficherUtilisateurAction',));
                 }
 
             }

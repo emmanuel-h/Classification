@@ -4,19 +4,25 @@
 
 {% block LIFOClassif_body %}
 <div class="well">
-	<p>
-		<font color = "red">{{messageImportant}}</font>
-	</p>
+	{%  if messageImportant != "" %}
+      <div class="alert alert-danger" role="alert">
+		<strong>Attention ! </strong>{{messageImportant}}
+	</div>
+	{% endif %}
 	<p>
 		<fieldset>
 			<legend>Rechercher par identifiant</legend>
-			{{ form(formRechercheID) }}
+			{{ form_start(formRechercheID, {'name':'formRechercheID' })  }}
+			{{ form_rest(formRechercheID) }}
+			{{ form_end(formRechercheID) }}
 		</fieldset>
 	</p>
 	<p>
 		<fieldset>
 			<legend> Rechercher par localisation </legend>
-			{{ form(formRechercheLocalisation) }}
+			{{ form_start(formRechercheLocalisation, {'name':'FormRechercheLocalisation' })  }}
+			{{ form_rest(formRechercheLocalisation) }}
+			{{ form_end(formRechercheLocalisation) }}
 		</fieldset>
 	</p>
 <div>

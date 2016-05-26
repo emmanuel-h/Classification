@@ -22,48 +22,63 @@ class __TwigTemplate_d009ef91ff410b0ab263261e5f5c37facc0417e2776bb4574da2d003a98
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_88696e0f16610d0b13db76590b737b55c65c4a0a1a71c319c36654c0bcc64f55 = $this->env->getExtension("native_profiler");
-        $__internal_88696e0f16610d0b13db76590b737b55c65c4a0a1a71c319c36654c0bcc64f55->enter($__internal_88696e0f16610d0b13db76590b737b55c65c4a0a1a71c319c36654c0bcc64f55_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:recherche.html.twig"));
+        $__internal_bb7d8742e01664da0700a7626c204406fac10de5d3bc18fd07fa01270dcd6432 = $this->env->getExtension("native_profiler");
+        $__internal_bb7d8742e01664da0700a7626c204406fac10de5d3bc18fd07fa01270dcd6432->enter($__internal_bb7d8742e01664da0700a7626c204406fac10de5d3bc18fd07fa01270dcd6432_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:recherche.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_88696e0f16610d0b13db76590b737b55c65c4a0a1a71c319c36654c0bcc64f55->leave($__internal_88696e0f16610d0b13db76590b737b55c65c4a0a1a71c319c36654c0bcc64f55_prof);
+        $__internal_bb7d8742e01664da0700a7626c204406fac10de5d3bc18fd07fa01270dcd6432->leave($__internal_bb7d8742e01664da0700a7626c204406fac10de5d3bc18fd07fa01270dcd6432_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_3980bfa2370f6eff037a093610fd7b4a7bf35e03f9fc3198a88823f87095af64 = $this->env->getExtension("native_profiler");
-        $__internal_3980bfa2370f6eff037a093610fd7b4a7bf35e03f9fc3198a88823f87095af64->enter($__internal_3980bfa2370f6eff037a093610fd7b4a7bf35e03f9fc3198a88823f87095af64_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_395a07b4c04900aae0c1a81162ee0d4f3ef653989f211ad8b999bd7e4d6a7545 = $this->env->getExtension("native_profiler");
+        $__internal_395a07b4c04900aae0c1a81162ee0d4f3ef653989f211ad8b999bd7e4d6a7545->enter($__internal_395a07b4c04900aae0c1a81162ee0d4f3ef653989f211ad8b999bd7e4d6a7545_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Recherche";
         
-        $__internal_3980bfa2370f6eff037a093610fd7b4a7bf35e03f9fc3198a88823f87095af64->leave($__internal_3980bfa2370f6eff037a093610fd7b4a7bf35e03f9fc3198a88823f87095af64_prof);
+        $__internal_395a07b4c04900aae0c1a81162ee0d4f3ef653989f211ad8b999bd7e4d6a7545->leave($__internal_395a07b4c04900aae0c1a81162ee0d4f3ef653989f211ad8b999bd7e4d6a7545_prof);
 
     }
 
     // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_47f3c11b6732d096b4a103850180758ece4cba89ca0d8a41f832aa902afee456 = $this->env->getExtension("native_profiler");
-        $__internal_47f3c11b6732d096b4a103850180758ece4cba89ca0d8a41f832aa902afee456->enter($__internal_47f3c11b6732d096b4a103850180758ece4cba89ca0d8a41f832aa902afee456_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_bbb49d246b9b0f79ff1a17f3db6b633f264c2d7b56274cc4f7f7fbf75b438d52 = $this->env->getExtension("native_profiler");
+        $__internal_bbb49d246b9b0f79ff1a17f3db6b633f264c2d7b56274cc4f7f7fbf75b438d52->enter($__internal_bbb49d246b9b0f79ff1a17f3db6b633f264c2d7b56274cc4f7f7fbf75b438d52_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 6
         echo "<div class=\"well\">
-\t<p>
-\t\t<font color = \"red\">";
-        // line 8
-        echo twig_escape_filter($this->env, (isset($context["messageImportant"]) ? $context["messageImportant"] : $this->getContext($context, "messageImportant")), "html", null, true);
-        echo "</font>
-\t</p>
-\t<p>
+\t";
+        // line 7
+        if (((isset($context["messageImportant"]) ? $context["messageImportant"] : $this->getContext($context, "messageImportant")) != "")) {
+            // line 8
+            echo "      <div class=\"alert alert-danger\" role=\"alert\">
+\t\t<strong>Attention ! </strong>";
+            // line 9
+            echo twig_escape_filter($this->env, (isset($context["messageImportant"]) ? $context["messageImportant"] : $this->getContext($context, "messageImportant")), "html", null, true);
+            echo "
+\t</div>
+\t";
+        }
+        // line 12
+        echo "\t<p>
 \t\t<fieldset>
 \t\t\t<legend>Rechercher par identifiant</legend>
 \t\t\t";
-        // line 13
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formRechercheID"]) ? $context["formRechercheID"] : $this->getContext($context, "formRechercheID")), 'form');
+        // line 15
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formRechercheID"]) ? $context["formRechercheID"] : $this->getContext($context, "formRechercheID")), 'form_start', array("name" => "formRechercheID"));
+        echo "
+\t\t\t";
+        // line 16
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["formRechercheID"]) ? $context["formRechercheID"] : $this->getContext($context, "formRechercheID")), 'rest');
+        echo "
+\t\t\t";
+        // line 17
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formRechercheID"]) ? $context["formRechercheID"] : $this->getContext($context, "formRechercheID")), 'form_end');
         echo "
 \t\t</fieldset>
 \t</p>
@@ -71,15 +86,23 @@ class __TwigTemplate_d009ef91ff410b0ab263261e5f5c37facc0417e2776bb4574da2d003a98
 \t\t<fieldset>
 \t\t\t<legend> Rechercher par localisation </legend>
 \t\t\t";
-        // line 19
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formRechercheLocalisation"]) ? $context["formRechercheLocalisation"] : $this->getContext($context, "formRechercheLocalisation")), 'form');
+        // line 23
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formRechercheLocalisation"]) ? $context["formRechercheLocalisation"] : $this->getContext($context, "formRechercheLocalisation")), 'form_start', array("name" => "FormRechercheLocalisation"));
+        echo "
+\t\t\t";
+        // line 24
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["formRechercheLocalisation"]) ? $context["formRechercheLocalisation"] : $this->getContext($context, "formRechercheLocalisation")), 'rest');
+        echo "
+\t\t\t";
+        // line 25
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formRechercheLocalisation"]) ? $context["formRechercheLocalisation"] : $this->getContext($context, "formRechercheLocalisation")), 'form_end');
         echo "
 \t\t</fieldset>
 \t</p>
 <div>
 ";
         
-        $__internal_47f3c11b6732d096b4a103850180758ece4cba89ca0d8a41f832aa902afee456->leave($__internal_47f3c11b6732d096b4a103850180758ece4cba89ca0d8a41f832aa902afee456_prof);
+        $__internal_bbb49d246b9b0f79ff1a17f3db6b633f264c2d7b56274cc4f7f7fbf75b438d52->leave($__internal_bbb49d246b9b0f79ff1a17f3db6b633f264c2d7b56274cc4f7f7fbf75b438d52_prof);
 
     }
 
@@ -95,7 +118,7 @@ class __TwigTemplate_d009ef91ff410b0ab263261e5f5c37facc0417e2776bb4574da2d003a98
 
     public function getDebugInfo()
     {
-        return array (  75 => 19,  66 => 13,  58 => 8,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
+        return array (  98 => 25,  94 => 24,  90 => 23,  81 => 17,  77 => 16,  73 => 15,  68 => 12,  62 => 9,  59 => 8,  57 => 7,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends "LIFOClassifBundle::layoutGeneral.html.twig" %}*/
@@ -104,19 +127,25 @@ class __TwigTemplate_d009ef91ff410b0ab263261e5f5c37facc0417e2776bb4574da2d003a98
 /* */
 /* {% block LIFOClassif_body %}*/
 /* <div class="well">*/
-/* 	<p>*/
-/* 		<font color = "red">{{messageImportant}}</font>*/
-/* 	</p>*/
+/* 	{%  if messageImportant != "" %}*/
+/*       <div class="alert alert-danger" role="alert">*/
+/* 		<strong>Attention ! </strong>{{messageImportant}}*/
+/* 	</div>*/
+/* 	{% endif %}*/
 /* 	<p>*/
 /* 		<fieldset>*/
 /* 			<legend>Rechercher par identifiant</legend>*/
-/* 			{{ form(formRechercheID) }}*/
+/* 			{{ form_start(formRechercheID, {'name':'formRechercheID' })  }}*/
+/* 			{{ form_rest(formRechercheID) }}*/
+/* 			{{ form_end(formRechercheID) }}*/
 /* 		</fieldset>*/
 /* 	</p>*/
 /* 	<p>*/
 /* 		<fieldset>*/
 /* 			<legend> Rechercher par localisation </legend>*/
-/* 			{{ form(formRechercheLocalisation) }}*/
+/* 			{{ form_start(formRechercheLocalisation, {'name':'FormRechercheLocalisation' })  }}*/
+/* 			{{ form_rest(formRechercheLocalisation) }}*/
+/* 			{{ form_end(formRechercheLocalisation) }}*/
 /* 		</fieldset>*/
 /* 	</p>*/
 /* <div>*/

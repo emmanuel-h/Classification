@@ -29,13 +29,13 @@ lifo_classif_admin:
     path:     /admin
     defaults: { _controller: LIFOClassifBundle:Admin:admin}
     
-lifo_classif_admin_suppression:
-    path:     /admin/suppression
-    defaults: { _controller: LIFOClassifBundle:Admin:suppression}
+lifo_classif_parametres_positionDecor:
+    path:     /parametres/positiondecor
+    defaults: { _controller: LIFOClassifBundle:Parametres:positionDecor}
     
-lifo_classif_admin_ajout:
-    path:     /admin/ajout
-    defaults: { _controller: LIFOClassifBundle:Admin:ajout}
+lifo_classif_parametres_typeDecor:
+    path:     /parametres/typedecor
+    defaults: { _controller: LIFOClassifBundle:Parametres:typeDecor}
     
 lifo_classif_admin_utilisateur:
     path:     /admin/utilisateur

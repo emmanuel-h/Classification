@@ -15,46 +15,49 @@ class __TwigTemplate_eff946059a16195d1b2583d1f29284c26b611723910e89b708b24af0236
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b6c5e2c64a1fb3d8a6b6f78529fe8cbce075fd0a30ea6d586d96b52247cfb201 = $this->env->getExtension("native_profiler");
-        $__internal_b6c5e2c64a1fb3d8a6b6f78529fe8cbce075fd0a30ea6d586d96b52247cfb201->enter($__internal_b6c5e2c64a1fb3d8a6b6f78529fe8cbce075fd0a30ea6d586d96b52247cfb201_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:menu.html.twig"));
+        $__internal_37e9e5296e904b30eb1651f660062d79d7db364788cb41aec0cc77cbb340f577 = $this->env->getExtension("native_profiler");
+        $__internal_37e9e5296e904b30eb1651f660062d79d7db364788cb41aec0cc77cbb340f577->enter($__internal_37e9e5296e904b30eb1651f660062d79d7db364788cb41aec0cc77cbb340f577_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:menu.html.twig"));
 
         // line 1
-        echo "<ul class=\"nav nav-pills nav-stacked\">
-  ";
+        echo "<div class=\"list-group\">
+\t";
         // line 2
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["listeTessons"]) ? $context["listeTessons"] : $this->getContext($context, "listeTessons")));
         foreach ($context['_seq'] as $context["_key"] => $context["tesson"]) {
+            echo " <a
+\t\thref=\"";
             // line 3
-            echo "    <li>
-      <a href=\"";
-            // line 4
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("lifo_classif_tesson", array("id" => $this->getAttribute($context["tesson"], "id", array()))), "html", null, true);
-            echo "\">
-        ID : ";
+            echo "\"
+\t\tclass=\"list-group-item\">
+\t\t<h4 class=\"list-group-item-heading\">ID : ";
             // line 5
             echo twig_escape_filter($this->env, $this->getAttribute($context["tesson"], "id", array()), "html", null, true);
-            echo " - num Isolation : ";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["tesson"], "numIsolation", array()), "html", null, true);
-            echo " <br/> - Site : ";
+            echo " - Site :
+\t\t\t";
+            // line 6
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["tesson"], "site", array()), "codeINSEE", array()), "html", null, true);
             echo " ";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["tesson"], "site", array()), "numSiteCommune", array()), "html", null, true);
-            echo " <br/> - US : ";
+            echo "</h4>
+\t\t<p class=\"list-group-item-text\">US : ";
+            // line 7
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["tesson"], "us", array()), "nom", array()), "html", null, true);
-            echo "
-      </a>
-    </li>
-\t<hr style=\"width:200px; color:black; background-color:blue; height:1px;\" /> 
-  ";
+            echo " - num Isolation
+\t\t\t: ";
+            // line 8
+            echo twig_escape_filter($this->env, $this->getAttribute($context["tesson"], "numIsolation", array()), "html", null, true);
+            echo "</p>
+\t</a> ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['tesson'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 10
-        echo "</ul>";
+        echo "</div>";
         
-        $__internal_b6c5e2c64a1fb3d8a6b6f78529fe8cbce075fd0a30ea6d586d96b52247cfb201->leave($__internal_b6c5e2c64a1fb3d8a6b6f78529fe8cbce075fd0a30ea6d586d96b52247cfb201_prof);
+        $__internal_37e9e5296e904b30eb1651f660062d79d7db364788cb41aec0cc77cbb340f577->leave($__internal_37e9e5296e904b30eb1651f660062d79d7db364788cb41aec0cc77cbb340f577_prof);
 
     }
 
@@ -70,16 +73,16 @@ class __TwigTemplate_eff946059a16195d1b2583d1f29284c26b611723910e89b708b24af0236
 
     public function getDebugInfo()
     {
-        return array (  55 => 10,  36 => 5,  32 => 4,  29 => 3,  25 => 2,  22 => 1,);
+        return array (  58 => 10,  50 => 8,  46 => 7,  40 => 6,  36 => 5,  31 => 3,  25 => 2,  22 => 1,);
     }
 }
-/* <ul class="nav nav-pills nav-stacked">*/
-/*   {% for tesson in listeTessons %}*/
-/*     <li>*/
-/*       <a href="{{ path('lifo_classif_tesson', {'id': tesson.id}) }}">*/
-/*         ID : {{ tesson.id }} - num Isolation : {{ tesson.numIsolation }} <br/> - Site : {{tesson.site.codeINSEE}} {{tesson.site.numSiteCommune}} <br/> - US : {{tesson.us.nom}}*/
-/*       </a>*/
-/*     </li>*/
-/* 	<hr style="width:200px; color:black; background-color:blue; height:1px;" /> */
-/*   {% endfor %}*/
-/* </ul>*/
+/* <div class="list-group">*/
+/* 	{% for tesson in listeTessons %} <a*/
+/* 		href="{{ path('lifo_classif_tesson', {'id': tesson.id}) }}"*/
+/* 		class="list-group-item">*/
+/* 		<h4 class="list-group-item-heading">ID : {{ tesson.id }} - Site :*/
+/* 			{{tesson.site.codeINSEE}} {{tesson.site.numSiteCommune}}</h4>*/
+/* 		<p class="list-group-item-text">US : {{tesson.us.nom}} - num Isolation*/
+/* 			: {{ tesson.numIsolation }}</p>*/
+/* 	</a> {% endfor %}*/
+/* </div>*/

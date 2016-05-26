@@ -25,7 +25,7 @@ use ZipArchive;
 
 class PlatformController extends Controller {
 	public function indexAction() {
-		return $this->render ( 'LIFOClassifBundle:Platform:index.html.twig' );
+			return $this->redirectToRoute ( 'lifo_classif_upload' );
 	}
 	
 	/**
@@ -179,13 +179,27 @@ class PlatformController extends Controller {
 	public function rechercheAction(Request $request) {
 		
 		$messageImportant ="";
-		
-		$formRechercheID = $this->createFormBuilder()
+		$formRechercheID = $this->createFormBuilder(array(
+		'name' => 'fomrid',
+        'csrf_protection' => true,
+        'csrf_field_name' => '_token',
+		'attr' => array(
+				'name' => 'FormRechercheID',
+				'id' => 'FormRechercheI'
+				)
+   		))
 					 ->add('identifiant', IntegerType::class)
 					 ->add('Rechercher', SubmitType::class)
 					 ->getForm();
 		
-		$formRechercheLocalisation = $this->createFormBuilder()
+		$formRechercheLocalisation = $this->createFormBuilder(array(
+        'csrf_protection' => true,
+        'csrf_field_name' => '_token',
+		'attr' => array(
+				'name' => 'FormRechercheLocalisation',
+				'id' => 'FormRechercheL'
+				)
+   		))
 					->add('codeInsee', IntegerType::class)
 					->add('numeroCommune', IntegerType::class)
 					->add('us', TextType::class)
@@ -197,9 +211,11 @@ class PlatformController extends Controller {
 		$em = $this->getDoctrine ()->getManager ();
 					
 		if ($request->isMethod ( 'POST' ) && $formRechercheID->handleRequest ( $request )->isValid ()) {
-			$tesson = $em->getRepository('LIFOClassifBundle:Tesson')->findOneById($formRechercheID->getData(0));
+			$tesson = $em->getRepository('LIFOClassifBundle:Tesson')->findOneById($formRechercheID->get('identifiant')->getData());
 			if(is_object($tesson)){
 				return $this->redirectToRoute ( 'lifo_classif_tesson', array ('id' => $tesson->getId ()) );
+			} else {
+				$messageImportant="Pas de tesson correspondant à l'identifiant";
 			}
 		}
 		

@@ -1,10 +1,10 @@
-<ul class="nav nav-pills nav-stacked">
-  {% for tesson in listeTessons %}
-    <li>
-      <a href="{{ path('lifo_classif_tesson', {'id': tesson.id}) }}">
-        ID : {{ tesson.id }} - num Isolation : {{ tesson.numIsolation }} <br/> - Site : {{tesson.site.codeINSEE}} {{tesson.site.numSiteCommune}} <br/> - US : {{tesson.us.nom}}
-      </a>
-    </li>
-	<hr style="width:200px; color:black; background-color:blue; height:1px;" /> 
-  {% endfor %}
-</ul>
+<div class="list-group">
+	{% for tesson in listeTessons %} <a
+		href="{{ path('lifo_classif_tesson', {'id': tesson.id}) }}"
+		class="list-group-item">
+		<h4 class="list-group-item-heading">ID : {{ tesson.id }} - Site :
+			{{tesson.site.codeINSEE}} {{tesson.site.numSiteCommune}}</h4>
+		<p class="list-group-item-text">US : {{tesson.us.nom}} - num Isolation
+			: {{ tesson.numIsolation }}</p>
+	</a> {% endfor %}
+</div>

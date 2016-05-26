@@ -29,7 +29,7 @@ class AdminController extends Controller{
 	/**
 	 * @Security("has_role('ROLE_ADMIN')")
 	 */
-	public function ajoutAction(Request $request){
+	public function typeDecorAction(Request $request){
 		$em = $this->getDoctrine ()->getManager ();
 		$decorAjout = new Decor();
 		$formAjoutDecor = $this->get ( 'form.factory' )->create ( DecorType::class, $decorAjout );
@@ -70,7 +70,7 @@ class AdminController extends Controller{
 	/**
 	 * @Security("has_role('ROLE_ADMIN')")
 	 */
-	public function suppressionAction(Request $request){
+	public function positionDecorAction(Request $request){
 		$em = $this->getDoctrine ()->getManager ();
 		$formSuppression = $this->createFormBuilder()
 			->add('decor', EntityType::class, array(

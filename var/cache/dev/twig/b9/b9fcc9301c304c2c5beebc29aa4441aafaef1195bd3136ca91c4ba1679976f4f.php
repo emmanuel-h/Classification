@@ -22,57 +22,44 @@ class __TwigTemplate_bc85a8408e10c2b4663222f7de80f72f7ddde689141173b4df11892d438
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e6173c75ff81cc90b834febc1dd65e6b66587e19bb44a7fab5e9348eabac155e = $this->env->getExtension("native_profiler");
-        $__internal_e6173c75ff81cc90b834febc1dd65e6b66587e19bb44a7fab5e9348eabac155e->enter($__internal_e6173c75ff81cc90b834febc1dd65e6b66587e19bb44a7fab5e9348eabac155e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle::layoutAdmin.html.twig"));
+        $__internal_cb8e859ac90b55b674c53197c0ab574b1c90831ac47251697bff25c6ac203f1f = $this->env->getExtension("native_profiler");
+        $__internal_cb8e859ac90b55b674c53197c0ab574b1c90831ac47251697bff25c6ac203f1f->enter($__internal_cb8e859ac90b55b674c53197c0ab574b1c90831ac47251697bff25c6ac203f1f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle::layoutAdmin.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_e6173c75ff81cc90b834febc1dd65e6b66587e19bb44a7fab5e9348eabac155e->leave($__internal_e6173c75ff81cc90b834febc1dd65e6b66587e19bb44a7fab5e9348eabac155e_prof);
+        $__internal_cb8e859ac90b55b674c53197c0ab574b1c90831ac47251697bff25c6ac203f1f->leave($__internal_cb8e859ac90b55b674c53197c0ab574b1c90831ac47251697bff25c6ac203f1f_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_054308e48a6e4064cdf30180e9785df4ab27993c8175cd81bae7db99e508c0a6 = $this->env->getExtension("native_profiler");
-        $__internal_054308e48a6e4064cdf30180e9785df4ab27993c8175cd81bae7db99e508c0a6->enter($__internal_054308e48a6e4064cdf30180e9785df4ab27993c8175cd81bae7db99e508c0a6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_6c4534c24e5ffddb4c6b6092294a9c71d0a6931ec4c410639fd16877a1f6b8d8 = $this->env->getExtension("native_profiler");
+        $__internal_6c4534c24e5ffddb4c6b6092294a9c71d0a6931ec4c410639fd16877a1f6b8d8->enter($__internal_6c4534c24e5ffddb4c6b6092294a9c71d0a6931ec4c410639fd16877a1f6b8d8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "\t
-     <p>
-     <a class=\"btn btn-default\" href=\"";
-        // line 6
-        echo $this->env->getExtension('routing')->getPath("lifo_classif_admin_suppression");
-        echo "\">Suppression</a>
-     <a class=\"btn btn-default\" href=\"";
-        // line 7
-        echo $this->env->getExtension('routing')->getPath("lifo_classif_admin_ajout");
-        echo "\">Ajout</a>
-     <a class=\"btn btn-default\" href=\"";
-        // line 8
-        echo $this->env->getExtension('routing')->getPath("lifo_classif_admin_utilisateur");
-        echo "\">Utilisateur</a>
+        echo "    
     \t";
-        // line 9
+        // line 5
         $this->displayBlock('LIFOClassif_body', $context, $blocks);
-        // line 11
+        // line 7
         echo "    \t
     ";
         
-        $__internal_054308e48a6e4064cdf30180e9785df4ab27993c8175cd81bae7db99e508c0a6->leave($__internal_054308e48a6e4064cdf30180e9785df4ab27993c8175cd81bae7db99e508c0a6_prof);
+        $__internal_6c4534c24e5ffddb4c6b6092294a9c71d0a6931ec4c410639fd16877a1f6b8d8->leave($__internal_6c4534c24e5ffddb4c6b6092294a9c71d0a6931ec4c410639fd16877a1f6b8d8_prof);
 
     }
 
-    // line 9
+    // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_689bc6dbb435560250634c57838ee1ceb719f0fec4868e260c6eef8121779bd2 = $this->env->getExtension("native_profiler");
-        $__internal_689bc6dbb435560250634c57838ee1ceb719f0fec4868e260c6eef8121779bd2->enter($__internal_689bc6dbb435560250634c57838ee1ceb719f0fec4868e260c6eef8121779bd2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_ccb7323ed7b9a69535ac50ca3f5850d56b817c4738c223752555c505e91367f6 = $this->env->getExtension("native_profiler");
+        $__internal_ccb7323ed7b9a69535ac50ca3f5850d56b817c4738c223752555c505e91367f6->enter($__internal_ccb7323ed7b9a69535ac50ca3f5850d56b817c4738c223752555c505e91367f6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
-        // line 10
+        // line 6
         echo "    \t";
         
-        $__internal_689bc6dbb435560250634c57838ee1ceb719f0fec4868e260c6eef8121779bd2->leave($__internal_689bc6dbb435560250634c57838ee1ceb719f0fec4868e260c6eef8121779bd2_prof);
+        $__internal_ccb7323ed7b9a69535ac50ca3f5850d56b817c4738c223752555c505e91367f6->leave($__internal_ccb7323ed7b9a69535ac50ca3f5850d56b817c4738c223752555c505e91367f6_prof);
 
     }
 
@@ -88,17 +75,13 @@ class __TwigTemplate_bc85a8408e10c2b4663222f7de80f72f7ddde689141173b4df11892d438
 
     public function getDebugInfo()
     {
-        return array (  73 => 10,  67 => 9,  59 => 11,  57 => 9,  53 => 8,  49 => 7,  45 => 6,  41 => 4,  35 => 3,  11 => 1,);
+        return array (  60 => 6,  54 => 5,  46 => 7,  44 => 5,  41 => 4,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends "::layout.html.twig" %}*/
 /* */
 /*     {% block body %}*/
-/* 	*/
-/*      <p>*/
-/*      <a class="btn btn-default" href="{{ path('lifo_classif_admin_suppression') }}">Suppression</a>*/
-/*      <a class="btn btn-default" href="{{ path('lifo_classif_admin_ajout') }}">Ajout</a>*/
-/*      <a class="btn btn-default" href="{{ path('lifo_classif_admin_utilisateur') }}">Utilisateur</a>*/
+/*     */
 /*     	{% block LIFOClassif_body %}*/
 /*     	{% endblock %}*/
 /*     	*/

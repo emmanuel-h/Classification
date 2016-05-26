@@ -8,13 +8,11 @@
 <meta name="author" content="">
 <link rel="icon" href="../../favicon.ico">
 <title>{% block title %}Classification{% endblock %}</title>
-<!-- Bootstrap core CSS -->
-<link href="/Classification/web/bootstrap/css/bootstrap.min.css"
+<link href=" {{ asset('bootstrap/css/bootstrap.min.css') }}"
 	rel="stylesheet">
-<!-- Bootstrap theme -->
-<link href="/Classification/web/bootstrap/css/bootstrap-theme.min.css"
+<link href=" {{ asset ('bootstrap/css/bootstrap-theme.min.css') }}"
 	rel="stylesheet">
-<link href="Styles/style.css" rel="stylesheet" type="text/css" /> 
+<link href=" {{ asset ('styles/layout.css') }}" rel="stylesheet" />
 </head>
 <body>
 
@@ -22,46 +20,47 @@
 
 		<div class="container">
 			<div class="navbar-header">
-				<header class="row">
-					<button type="button" class="navbar-toggle collapsed"
-						data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-						aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span> <span
-							class="icon-bar"></span> <span class="icon-bar"></span> <span
-							class="icon-bar"></span>
-					</button>
-					<div id="navbar" class="collapse navbar-collapse">
-						<ul class="nav navbar-nav">
-							<li><a href="{{ path('lifo_classif_upload') }}">Upload</a></li>
-							<li><a href="{{ path('lifo_classif_recherche') }}">Recherche</a></li>
-							<li><a href="{{ path('lifo_classif_classification') }}">Classification</a></li>
-							{% if is_granted('ROLE_ADMIN') %}
-							<li><a href="{{ path('lifo_classif_admin') }}">Administration</a></li>
-							{% endif %}
-							<li><a href="{{ path('logout') }}">Déconnexion</a></li>
-						</ul>
-					</div>
-				</header>
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="{{ path('lifo_classif_upload') }}">Upload</a></li>
+						<li><a href="{{ path('lifo_classif_recherche') }}">Recherche</a></li>
+						<li><a href="{{ path('lifo_classif_classification') }}">Classification</a></li>
+						{% if is_granted('ROLE_ARCHEOLOGUE') %}
+							<li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="{{ path('lifo_classif_parametres_typeDecor') }}">Paramètres<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="{{ path('lifo_classif_parametres_typeDecor') }}">Type de décor</a></li>
+									<li><a href="{{ path('lifo_classif_parametres_positionDecor') }}">Position de décor</a></li>
+								</ul>
+							</li>
+						{% endif %}
+						{% if is_granted('ROLE_ADMIN') %}
+						
+						<li><a href="{{ path('lifo_classif_admin') }}">Administration</a></li>
+						{% endif %}
+						<li><a href="{{ path('logout') }}">Déconnexion</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
-	</div>
 
 	<div class="container theme-showcase" role="main">
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
 		<div class="starter-template">
 			<div class="row">
-				<nav id="menu" class="col-lg-3">
-			<div class="chose">
-					{% if app.user %}
-					<h4>Derniers tessons ajoutés</h4>
-					{{ render(controller("LIFOClassifBundle:Platform:menu")) }} {%
-					endif %}
+				<div class="col-lg-3">
+					<div class="chose">
+						{% if app.user %}
+						<h4>Derniers tessons ajoutés</h4>
+						{{ render(controller("LIFOClassifBundle:Platform:menu")) }} {%
+						endif %}
+					</div>
 				</div>
-				</nav>
 
 				<div id="content" class="col-lg-9">{% block body %} {% endblock %}</div>
 			</div>
@@ -74,8 +73,8 @@
 	</div>
 
 	{% block javascripts %}
-	<script src="/Classification/web/bootstrap/js/jquery.js"></script>
-	<script src="/Classification/web/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../bootstrap/js/jquery.js"></script>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
 	{% endblock %}
 </body>
 </html>
