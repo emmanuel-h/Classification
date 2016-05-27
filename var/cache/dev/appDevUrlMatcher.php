@@ -124,9 +124,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_classification')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::classificationAction',  'page' => 1,));
         }
 
-        // lifo_classif_tesson
-        if (0 === strpos($pathinfo, '/tesson') && preg_match('#^/tesson/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_tesson')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::tessonAction',));
+        if (0 === strpos($pathinfo, '/tesson')) {
+            // lifo_classif_tesson
+            if (preg_match('#^/tesson/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_tesson')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::tessonAction',));
+            }
+
+            // lifo_classif_tesson_modifier
+            if (0 === strpos($pathinfo, '/tesson/modifier') && preg_match('#^/tesson/modifier/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_tesson_modifier')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::tessonModifierAction',));
+            }
+
         }
 
         // lifo_classif_admin

@@ -21,7 +21,7 @@
 
 		<div class="container", id="menu_top">
 					<ul class="nav navbar-nav">
-						<li><a href="{{ path('lifo_classif_upload') }}">Upload</a></li>
+						<li><a href="{{ path('lifo_classif_upload') }}">Nouveau</a></li>
 						<li><a href="{{ path('lifo_classif_recherche') }}">Recherche</a></li>
 						<li><a href="{{ path('lifo_classif_classification') }}">Classification</a></li>
 						{% if is_granted('ROLE_ARCHEOLOGUE') %}
@@ -43,6 +43,8 @@
 								</ul>
 							</li>
 						{% endif %}
+						</ul>
+            			<ul class="nav navbar-nav navbar-right">
 						<li><a href="{{ path('logout') }}">Déconnexion</a></li>
 					</ul>
 			</div>

@@ -104,7 +104,7 @@ class TessonType extends AbstractType
 		    	'required'     => false
 		    ))
 		    ->add('tessonMolette', TessonMoletteType::class)
-            ->add('save', SubmitType::class)
+            ->add('enregistrer', SubmitType::class)
         ;
     }
     

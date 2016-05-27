@@ -22,33 +22,33 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f0e0d2ba42a9a1b163e64019308e3f2c959b32f509474795569b331b8a1e398a = $this->env->getExtension("native_profiler");
-        $__internal_f0e0d2ba42a9a1b163e64019308e3f2c959b32f509474795569b331b8a1e398a->enter($__internal_f0e0d2ba42a9a1b163e64019308e3f2c959b32f509474795569b331b8a1e398a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:upload.html.twig"));
+        $__internal_8820feb30b2e2d6f63ed5de42294b2ec240aa602ede6a0bb63425167b89ace9c = $this->env->getExtension("native_profiler");
+        $__internal_8820feb30b2e2d6f63ed5de42294b2ec240aa602ede6a0bb63425167b89ace9c->enter($__internal_8820feb30b2e2d6f63ed5de42294b2ec240aa602ede6a0bb63425167b89ace9c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:upload.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f0e0d2ba42a9a1b163e64019308e3f2c959b32f509474795569b331b8a1e398a->leave($__internal_f0e0d2ba42a9a1b163e64019308e3f2c959b32f509474795569b331b8a1e398a_prof);
+        $__internal_8820feb30b2e2d6f63ed5de42294b2ec240aa602ede6a0bb63425167b89ace9c->leave($__internal_8820feb30b2e2d6f63ed5de42294b2ec240aa602ede6a0bb63425167b89ace9c_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_7a4ceb1a7a8176dc27dd3aa7a7db56f6f337ba274580426265cac041ff0a4ebc = $this->env->getExtension("native_profiler");
-        $__internal_7a4ceb1a7a8176dc27dd3aa7a7db56f6f337ba274580426265cac041ff0a4ebc->enter($__internal_7a4ceb1a7a8176dc27dd3aa7a7db56f6f337ba274580426265cac041ff0a4ebc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_03593f1c773ef8e7610703c498132ffd84991a137322c32086cd47faa2d458c9 = $this->env->getExtension("native_profiler");
+        $__internal_03593f1c773ef8e7610703c498132ffd84991a137322c32086cd47faa2d458c9->enter($__internal_03593f1c773ef8e7610703c498132ffd84991a137322c32086cd47faa2d458c9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Upload";
         
-        $__internal_7a4ceb1a7a8176dc27dd3aa7a7db56f6f337ba274580426265cac041ff0a4ebc->leave($__internal_7a4ceb1a7a8176dc27dd3aa7a7db56f6f337ba274580426265cac041ff0a4ebc_prof);
+        $__internal_03593f1c773ef8e7610703c498132ffd84991a137322c32086cd47faa2d458c9->leave($__internal_03593f1c773ef8e7610703c498132ffd84991a137322c32086cd47faa2d458c9_prof);
 
     }
 
     // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_4e481dc3877bac35709c2f18b2e37500b175c2bd8909bfffafc8313c5b22df78 = $this->env->getExtension("native_profiler");
-        $__internal_4e481dc3877bac35709c2f18b2e37500b175c2bd8909bfffafc8313c5b22df78->enter($__internal_4e481dc3877bac35709c2f18b2e37500b175c2bd8909bfffafc8313c5b22df78_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_ae90a609346da2c9b9440ab9c103f1bc4694abd489f1eacd512deee558e82695 = $this->env->getExtension("native_profiler");
+        $__internal_ae90a609346da2c9b9440ab9c103f1bc4694abd489f1eacd512deee558e82695->enter($__internal_ae90a609346da2c9b9440ab9c103f1bc4694abd489f1eacd512deee558e82695_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 6
         echo "
@@ -335,7 +335,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
   ";
         // line 144
         echo "  ";
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "save", array()), 'widget', array("attr" => array("class" => "btn btn-primary")));
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "enregistrer", array()), 'widget', array("attr" => array("class" => "btn btn-primary")));
         echo "
 
   ";
@@ -357,7 +357,10 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 
 
 
-<script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js\"></script>
+<script src=\" ";
+        // line 160
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bootstrap/js/jquery.min.js"), "html", null, true);
+        echo "\"></script>
 
 <script type=\"text/javascript\">
   \$(document).ready(function() {
@@ -435,7 +438,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 
 ";
         
-        $__internal_4e481dc3877bac35709c2f18b2e37500b175c2bd8909bfffafc8313c5b22df78->leave($__internal_4e481dc3877bac35709c2f18b2e37500b175c2bd8909bfffafc8313c5b22df78_prof);
+        $__internal_ae90a609346da2c9b9440ab9c103f1bc4694abd489f1eacd512deee558e82695->leave($__internal_ae90a609346da2c9b9440ab9c103f1bc4694abd489f1eacd512deee558e82695_prof);
 
     }
 
@@ -451,7 +454,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 
     public function getDebugInfo()
     {
-        return array (  349 => 151,  343 => 148,  337 => 144,  329 => 138,  320 => 132,  313 => 128,  306 => 124,  299 => 120,  292 => 116,  285 => 112,  278 => 108,  271 => 104,  263 => 99,  258 => 97,  254 => 96,  247 => 92,  241 => 89,  236 => 87,  232 => 86,  225 => 82,  219 => 79,  214 => 77,  210 => 76,  203 => 72,  198 => 70,  194 => 69,  187 => 65,  181 => 62,  176 => 60,  172 => 59,  165 => 55,  159 => 52,  154 => 50,  150 => 49,  143 => 45,  138 => 43,  134 => 42,  127 => 38,  122 => 36,  118 => 35,  111 => 31,  106 => 29,  102 => 28,  95 => 24,  90 => 22,  86 => 21,  79 => 17,  74 => 15,  70 => 14,  63 => 11,  58 => 8,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
+        return array (  362 => 160,  349 => 151,  343 => 148,  337 => 144,  329 => 138,  320 => 132,  313 => 128,  306 => 124,  299 => 120,  292 => 116,  285 => 112,  278 => 108,  271 => 104,  263 => 99,  258 => 97,  254 => 96,  247 => 92,  241 => 89,  236 => 87,  232 => 86,  225 => 82,  219 => 79,  214 => 77,  210 => 76,  203 => 72,  198 => 70,  194 => 69,  187 => 65,  181 => 62,  176 => 60,  172 => 59,  165 => 55,  159 => 52,  154 => 50,  150 => 49,  143 => 45,  138 => 43,  134 => 42,  127 => 38,  122 => 36,  118 => 35,  111 => 31,  106 => 29,  102 => 28,  95 => 24,  90 => 22,  86 => 21,  79 => 17,  74 => 15,  70 => 14,  63 => 11,  58 => 8,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends "LIFOClassifBundle::layoutGeneral.html.twig" %}*/
@@ -597,7 +600,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 /*   <br/>*/
 /* */
 /*   {# Pour le bouton, pas de label ni d'erreur, on affiche juste le widget #}*/
-/*   {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}*/
+/*   {{ form_widget(form.enregistrer, {'attr': {'class': 'btn btn-primary'}}) }}*/
 /* */
 /*   {# Génération automatique des champs pas encore écrits.*/
 /*      et tous les champs cachés (type « hidden »). #}*/
@@ -613,7 +616,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 /* */
 /* */
 /* */
-/* <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>*/
+/* <script src=" {{ asset('bootstrap/js/jquery.min.js') }}"></script>*/
 /* */
 /* <script type="text/javascript">*/
 /*   $(document).ready(function() {*/

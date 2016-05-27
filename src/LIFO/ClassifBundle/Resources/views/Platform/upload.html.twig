@@ -141,7 +141,7 @@
   <br/>
 
   {# Pour le bouton, pas de label ni d'erreur, on affiche juste le widget #}
-  {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}
+  {{ form_widget(form.enregistrer, {'attr': {'class': 'btn btn-primary'}}) }}
 
   {# Génération automatique des champs pas encore écrits.
      et tous les champs cachés (type « hidden »). #}
@@ -157,7 +157,7 @@
 
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src=" {{ asset('bootstrap/js/jquery.min.js') }}"></script>
 
 <script type="text/javascript">
   $(document).ready(function() {

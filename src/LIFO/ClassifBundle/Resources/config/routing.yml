@@ -25,6 +25,12 @@ lifo_classif_tesson:
     requirements:
         id: \d+
         
+lifo_classif_tesson_modifier:
+    path:     /tesson/modifier/{id}
+    defaults: { _controller: LIFOClassifBundle:Platform:tessonModifier }
+    requirements:
+        id: \d+
+        
 lifo_classif_admin:
     path:     /admin
     defaults: { _controller: LIFOClassifBundle:Admin:admin}
