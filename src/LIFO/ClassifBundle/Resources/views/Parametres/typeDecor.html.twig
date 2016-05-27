@@ -2,12 +2,14 @@
 {% block LIFOClassif_body %}
 
 <div class="well">
-	<p>
+	<fieldset>
+		<legend>Ajout</legend>
+		{{ form(formAjoutTypeDecor) }}
+	</fieldset>
 	<fieldset>
 		<legend>Suppression</legend>
-		{{ form(formSuppression) }}
+		{{ form(formSuppressionTypeDecor) }}
 	</fieldset>
-	</p>
 </div>
 
 {% endblock %}

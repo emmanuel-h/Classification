@@ -327,30 +327,5 @@ class PlatformController extends Controller {
 		         
 		   return $response;
 	   }
-	} 
-	
-	public function telechargementToutesNumerisationsAction($id){
-
-		$em = $this->getDoctrine ()->getManager ();
-		$tesson = $em->getRepository('LIFOClassifBundle:Tesson')->findOneById($id);
-		
-		$zip = new ZipArchive();
-		
-		if($zip->open('Archive.zip', ZipArchive::OVERWRITE) == TRUE)
-		{
-			foreach($tesson->getNumerisation() as $numerisation)
-			{
-				$zip->addFile($numerisation->getWebPath(), $numerisation->getWebPath());
-			}
-			// On ferme l’archive.
-			$zip->close();
-			 
-			header('Content-Transfer-Encoding: binary'); //Transfert en binaire (fichier).
-			header('Content-Disposition: attachment; filename="Archive.zip"'); //Nom du fichier.
-			header('Content-Length: '.filesize('Archive.zip')); //Taille du fichier.
-			 
-			readfile('Archive.zip');
-		}
-		
 	}
 }

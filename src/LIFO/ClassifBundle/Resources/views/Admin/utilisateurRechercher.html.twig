@@ -1,0 +1,19 @@
+{% extends "LIFOClassifBundle::layoutAdmin.html.twig" %}
+
+{% block LIFOClassif_body %}
+
+<div class="well">
+	<p>
+		{%  if messageImportant != "" %}
+		<div class="alert alert-warning" role="alert">
+			<strong>Attention ! </strong>{{messageImportant}}
+		</div>
+		{%  endif %}
+		<fieldset>
+			<legend>Trouver un utilisateur</legend>
+			{{ form(formSearchUser) }}
+		</fieldset>
+	</p>
+</div>
+
+{% endblock %}

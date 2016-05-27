@@ -4,17 +4,16 @@
 
 <div class="well">
 	<p>
-		<font color = "red">{{messageImportant}}</font>
+		{%  if messageImportant != "" %}
+		<div class="alert alert-warning" role="alert">
+			<strong>Attention ! </strong>{{messageImportant}}
+		</div>
+		{%  endif %}
 		<fieldset>
 			<legend>Ajouter un utilisateur</legend>
 			{{ form(formAddUser) }}
 		</fieldset>
-		<fieldset>
-			<legend>Trouver un utilisateur</legend>
-			{{ form(formSearchUser) }}
-		</fieldset>
 	</p>
-	<a  class="btn btn-primary" href="{{ path('lifo_classif_admin_all_users') }}">Tous les utilisateurs</a>
 </div>
 
 {% endblock %}

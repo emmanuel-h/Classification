@@ -153,32 +153,29 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::utilisateurAction',  '_route' => 'lifo_classif_admin_utilisateur',);
             }
 
+            // lifo_classif_admin_utilisateur_rechercher
+            if ($pathinfo === '/admin/utilisateur/rechercher') {
+                return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::utilisateurRechercherAction',  '_route' => 'lifo_classif_admin_utilisateur_rechercher',);
+            }
+
             if (0 === strpos($pathinfo, '/admin/utilisateur/afficher')) {
-                // lifo_classif_admin_all_users
-                if (0 === strpos($pathinfo, '/admin/utilisateur/afficher/tous') && preg_match('#^/admin/utilisateur/afficher/tous(?:/(?P<page>\\d+))?$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_admin_all_users')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::allUsersAction',  'page' => 1,));
+                // lifo_classif_admin_utilisateur_afficherTous
+                if (0 === strpos($pathinfo, '/admin/utilisateur/afficherTous') && preg_match('#^/admin/utilisateur/afficherTous(?:/(?P<page>\\d+))?$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_admin_utilisateur_afficherTous')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::utilisateurAfficherTousAction',  'page' => 1,));
                 }
 
-                // lifo_classif_admin_afficher_utilisateur
+                // lifo_classif_admin_utilisateur_afficher
                 if (preg_match('#^/admin/utilisateur/afficher/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
-                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_admin_afficher_utilisateur')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::afficherUtilisateurAction',));
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_admin_utilisateur_afficher')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\AdminController::utilisateurAfficherAction',));
                 }
 
             }
 
         }
 
-        if (0 === strpos($pathinfo, '/tesson/telecharger/numerisation')) {
-            // lifo_classif_telechargement_numerisation
-            if (preg_match('#^/tesson/telecharger/numerisation/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_telechargement_numerisation')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::telechargementNumerisationAction',));
-            }
-
-            // lifo_classif_telechargement_toutes_numerisations
-            if (0 === strpos($pathinfo, '/tesson/telecharger/numerisations') && preg_match('#^/tesson/telecharger/numerisations/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_telechargement_toutes_numerisations')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::telechargementToutesNumerisationsAction',));
-            }
-
+        // lifo_classif_telechargement_numerisation
+        if (0 === strpos($pathinfo, '/tesson/telecharger/numerisation') && preg_match('#^/tesson/telecharger/numerisation/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_telechargement_numerisation')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::telechargementNumerisationAction',));
         }
 
         if (0 === strpos($pathinfo, '/log')) {

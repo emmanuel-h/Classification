@@ -41,28 +41,26 @@ lifo_classif_admin_utilisateur:
     path:     /admin/utilisateur
     defaults: { _controller: LIFOClassifBundle:Admin:utilisateur}
     
-lifo_classif_admin_all_users:
-    path:     /admin/utilisateur/afficher/tous/{page}
+lifo_classif_admin_utilisateur_rechercher:
+    path:     /admin/utilisateur/rechercher
+    defaults: { _controller: LIFOClassifBundle:Admin:utilisateurRechercher}
+    
+lifo_classif_admin_utilisateur_afficherTous:
+    path:     /admin/utilisateur/afficherTous/{page}
     defaults:
-        _controller: LIFOClassifBundle:Admin:allUsers
+        _controller: LIFOClassifBundle:Admin:utilisateurAfficherTous
         page: 1
     requirements:
         page: \d+
     
-lifo_classif_admin_afficher_utilisateur:
+lifo_classif_admin_utilisateur_afficher:
     path:     /admin/utilisateur/afficher/{id}
-    defaults: { _controller: LIFOClassifBundle:Admin:afficherUtilisateur}
+    defaults: { _controller: LIFOClassifBundle:Admin:utilisateurAfficher}
     requirements:
         id: \d+
         
 lifo_classif_telechargement_numerisation:
     path:     /tesson/telecharger/numerisation/{id}
     defaults: { _controller: LIFOClassifBundle:Platform:telechargementNumerisation}
-    requirements:
-        id: \d+
-        
-lifo_classif_telechargement_toutes_numerisations:
-    path:     /tesson/telecharger/numerisations/{id}
-    defaults: { _controller: LIFOClassifBundle:Platform:telechargementToutesNumerisations}
     requirements:
         id: \d+

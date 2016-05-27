@@ -21,45 +21,42 @@ class __TwigTemplate_cf209373ace62e421c9220f48e92f5ed5e11ffdbee64d914aea049a1939
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6f376c41219178fc9cf74d648bb88a00faf6765fd09925db1952f4a4bd19be23 = $this->env->getExtension("native_profiler");
-        $__internal_6f376c41219178fc9cf74d648bb88a00faf6765fd09925db1952f4a4bd19be23->enter($__internal_6f376c41219178fc9cf74d648bb88a00faf6765fd09925db1952f4a4bd19be23_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Parametres:positionDecor.html.twig"));
+        $__internal_b91166be58fb6e36048b8de101536cd5af27a0a61aad588b6f1aaf04c0de7d86 = $this->env->getExtension("native_profiler");
+        $__internal_b91166be58fb6e36048b8de101536cd5af27a0a61aad588b6f1aaf04c0de7d86->enter($__internal_b91166be58fb6e36048b8de101536cd5af27a0a61aad588b6f1aaf04c0de7d86_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Parametres:positionDecor.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_6f376c41219178fc9cf74d648bb88a00faf6765fd09925db1952f4a4bd19be23->leave($__internal_6f376c41219178fc9cf74d648bb88a00faf6765fd09925db1952f4a4bd19be23_prof);
+        $__internal_b91166be58fb6e36048b8de101536cd5af27a0a61aad588b6f1aaf04c0de7d86->leave($__internal_b91166be58fb6e36048b8de101536cd5af27a0a61aad588b6f1aaf04c0de7d86_prof);
 
     }
 
-    // line 3
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_cd6f576240f405a1d39cf6c00962b8de0ff513e01d3ccaad00d699533d26abd0 = $this->env->getExtension("native_profiler");
-        $__internal_cd6f576240f405a1d39cf6c00962b8de0ff513e01d3ccaad00d699533d26abd0->enter($__internal_cd6f576240f405a1d39cf6c00962b8de0ff513e01d3ccaad00d699533d26abd0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_70cd93afcd97a37625dc794bd6df3832fd3a887d60b8b94c3082bd94ecae4a41 = $this->env->getExtension("native_profiler");
+        $__internal_70cd93afcd97a37625dc794bd6df3832fd3a887d60b8b94c3082bd94ecae4a41->enter($__internal_70cd93afcd97a37625dc794bd6df3832fd3a887d60b8b94c3082bd94ecae4a41_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
-        // line 4
+        // line 3
         echo "
 <div class=\"well\">
-<p>
-<fieldset>
-<legend>Ajout d'une position de décor</legend>
-";
-        // line 9
+\t<fieldset>
+\t\t<legend>Ajout</legend>
+\t\t";
+        // line 7
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formAjoutDecor"]) ? $context["formAjoutDecor"] : $this->getContext($context, "formAjoutDecor")), 'form');
         echo "
-</fieldset>
-<fieldset>
-<legend>Ajout d'un type de décor</legend>
-";
-        // line 13
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formAjoutTypeDecor"]) ? $context["formAjoutTypeDecor"] : $this->getContext($context, "formAjoutTypeDecor")), 'form');
+\t</fieldset>
+\t<fieldset>
+\t\t<legend>Suppression</legend>
+\t\t";
+        // line 11
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formSuppressionDecor"]) ? $context["formSuppressionDecor"] : $this->getContext($context, "formSuppressionDecor")), 'form');
         echo "
-</fieldset>
-</p>
+\t</fieldset>
 </div>
 
 ";
         
-        $__internal_cd6f576240f405a1d39cf6c00962b8de0ff513e01d3ccaad00d699533d26abd0->leave($__internal_cd6f576240f405a1d39cf6c00962b8de0ff513e01d3ccaad00d699533d26abd0_prof);
+        $__internal_70cd93afcd97a37625dc794bd6df3832fd3a887d60b8b94c3082bd94ecae4a41->leave($__internal_70cd93afcd97a37625dc794bd6df3832fd3a887d60b8b94c3082bd94ecae4a41_prof);
 
     }
 
@@ -75,24 +72,22 @@ class __TwigTemplate_cf209373ace62e421c9220f48e92f5ed5e11ffdbee64d914aea049a1939
 
     public function getDebugInfo()
     {
-        return array (  54 => 13,  47 => 9,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  52 => 11,  45 => 7,  39 => 3,  11 => 1,);
     }
 }
-/* {% extends "LIFOClassifBundle::layoutAdmin.html.twig" %}*/
-/* */
-/* {% block LIFOClassif_body %}*/
+/* {% extends "LIFOClassifBundle::layoutAdmin.html.twig" %} {% block*/
+/* LIFOClassif_body %}*/
 /* */
 /* <div class="well">*/
-/* <p>*/
-/* <fieldset>*/
-/* <legend>Ajout d'une position de décor</legend>*/
-/* {{ form(formAjoutDecor) }}*/
-/* </fieldset>*/
-/* <fieldset>*/
-/* <legend>Ajout d'un type de décor</legend>*/
-/* {{ form(formAjoutTypeDecor) }}*/
-/* </fieldset>*/
-/* </p>*/
+/* 	<fieldset>*/
+/* 		<legend>Ajout</legend>*/
+/* 		{{ form(formAjoutDecor) }}*/
+/* 	</fieldset>*/
+/* 	<fieldset>*/
+/* 		<legend>Suppression</legend>*/
+/* 		{{ form(formSuppressionDecor) }}*/
+/* 	</fieldset>*/
 /* </div>*/
 /* */
 /* {% endblock %}*/
+/* */
