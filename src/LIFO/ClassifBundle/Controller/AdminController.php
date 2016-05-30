@@ -3,13 +3,8 @@ namespace LIFO\ClassifBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
-use LIFO\ClassifBundle\Form\DecorType;
-use LIFO\ClassifBundle\Form\TypeDecorType;
-use LIFO\ClassifBundle\Entity\TypeDecor;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use LIFO\ClassifBundle\Entity\Decor;
 use LIFO\ClassifBundle\Entity\Utilisateur;
 use LIFO\ClassifBundle\Form\UtilisateurType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;

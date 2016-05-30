@@ -21,6 +21,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use LIFO;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class PlatformController extends Controller {
 	public function indexAction() {
@@ -149,11 +151,35 @@ class PlatformController extends Controller {
 	/**
 	 * @Security("has_role('ROLE_USER')")
 	 */
-	public function classificationAction($page) {
+	public function classificationAction(Request $request, $page) {
 
 		$em = $this->getDoctrine()->getManager();
 		$nbTessonsParPage=10;
-		
+
+		$formClassif= $this->createFormBuilder()
+			->add('typeClassification',  EntityType::class, array(
+		        'class'   		=> 'LIFOClassifBundle:TypeClassification',
+		        'choice_label'  => 'nomType',
+		        'multiple'		=> false,
+				'expanded' 		=> false),
+					'Tous', 'tous'
+		    )
+			->add('afficherTessonsClasses', CheckboxType::class)
+			->add('typeNumerisation',  EntityType::class, array(
+		        'class'   		=> 'LIFOClassifBundle:TypeNumerisation',
+		        'choice_label'  => 'nom',
+		        'multiple'		=> false,
+				'expanded' 		=> false,
+				'choice_attr'	=> array(
+					'Tous'		=> 'tous'
+				)
+		    ))
+			->add('Afficher', SubmitType::class)
+			->getForm();
+
+		if ($request->isMethod ( 'POST' ) && $formClassif->handleRequest ( $request )->isValid ()) {
+			
+		}
 		$tessons = $em->getRepository('LIFOClassifBundle:Tesson')
 		->pagination($page, $nbTessonsParPage);
 		
@@ -166,7 +192,8 @@ class PlatformController extends Controller {
 		
 		return $this->render ( 'LIFOClassifBundle:Platform:classification.html.twig', array(
 				'tessons' => $tessons,
-				'pagination' => $pagination
+				'pagination' => $pagination,
+				'formClassif' => $formClassif->createView()
 		));
 	}
 
