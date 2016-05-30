@@ -14,6 +14,11 @@
 	rel="stylesheet">
 <link href=" {{ asset ('styles/layout.css') }}" rel="stylesheet" />
 <link href=" {{ asset ('styles/menu.css') }}" rel="stylesheet" />
+<link href=" {{ asset ('styles/table.css') }}" rel="stylesheet" />
+<link rel="stylesheet" href=" {{ asset ('fancybox/source/jquery.fancybox.css') }}" type="text/css" media="screen" />
+<script type="text/javascript" src=" {{ asset('bootstrap/js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('fancybox/source/jquery.fancybox.pack.js') }}"></script>
+<script src=" {{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
 </head>
 <body>
 
@@ -49,7 +54,7 @@
 					</ul>
 			</div>
 		</div>
-		<br /> <br />
+		<br />
 	<div class="container theme-showcase" role="main">
 			<div class="row">
 				<div class="col-lg-3">
@@ -67,7 +72,5 @@
 		{% block footer %} {% endblock %}
 
 	</div>
-	<script src=" {{ asset('bootstrap/js/jquery.min.js') }}"></script>
-	<script src=" {{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
 </body>
 </html>

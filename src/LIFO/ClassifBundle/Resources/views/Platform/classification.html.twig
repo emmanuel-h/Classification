@@ -4,40 +4,109 @@
 
 {% block LIFOClassif_body %}
 
-{{  form(formClassif) }}
+<div class="well">
+  {{ form_start(formClassif, {'attr': {'class': 'form-horizontal'}}) }}
+
+  {{ form_errors(formClassif) }}
+  <div class="form-group">
+  	<div class="row">
+	    {{ form_label(formClassif.typeClassification, "Classification", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+	    {{ form_errors(formClassif.typeClassification) }}
+	    <div class="col-sm-4">
+	      {{ form_widget(formClassif.typeClassification, {'attr': {'class': 'form-control'}}) }}
+	    </div>
+	    {{ form_label(formClassif.campagne, "Campagne", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+	    {{ form_errors(formClassif.campagne) }}
+	    <div class="col-sm-4">
+	      {{ form_widget(formClassif.campagne, {'attr': {'class': 'form-control'}}) }}
+	    </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="row">
+    {{ form_label(formClassif.typeNumerisation, "Numérisation", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+    {{ form_errors(formClassif.typeNumerisation) }}
+	    <div class="col-sm-4">
+	      {{ form_widget(formClassif.typeNumerisation, {'attr': {'class': 'form-control'}}) }}
+	    </div>
+	    <div class="col-sm-5" align ="right">
+	      {{ form_row(formClassif.afficherTessonsClasses) }}
+	    </div>
+    </div>
+  </div>
+  {{ form_widget(formClassif.afficher, {'attr': {'class': 'btn btn-primary'}}) }}
+  {{ form_rest(formClassif) }}
+  {{ form_end(formClassif) }}
+ </div>
+ 
 {% if tessons is not empty %}
 	<table class="table table-bordered table-striped table-hover">
-	<thead><tr class="warning" align="center"><td width=5%></td><td width=10%><b>ID tesson</b></td><td width=10%><b>Classe</b></td><td width=10%><b>Type classification</b></td></tr></thead>
+	<thead align="middle"><tr class="warning"><td width=5%><b>ID tesson</b></td><td width=10%><b>Proposition</b><td width=10%><b>Classe</b></td><td width=10%><b>Numérisation</b></td></tr></thead>
 	<tbody>
     {% for tesson in tessons %}
 		<tr>
-			<td>
-			<a href="{{ path('lifo_classif_classification') }}">Classifier</a>
-			</td>
-			<td>{{ tesson.id }}</td>
+			<td><a href="{{ path('lifo_classif_tesson', {'id': tesson.id}) }}">{{ tesson.id }}</a></td>
 			{% if tesson.propositionClasse is not empty %}
 				{% for propClasse in tesson.propositionClasse %}
 						<td>{{ propClasse.classe.nomClasse }}</td>
-						{% if propClasse.essaiClassification is not empty %}
-							{% for essaiClassif in propClasse.essaiClassification %}
-								<td>{{ essaiClassif.typeClassification.nomType }}
-							{% endfor %}
-						{% else %}
-							<td>Aucun essai de classification</td>
-						{% endif %}
 				{% endfor %}
 			{% else %}
 				<td>Aucune proposition de classe</td>
-				<td>Aucun essai de classification</td>
+			{% endif %}
+			{%  if tesson.typageEn is not empty %}
+				{%  for typage in tesson.typageEn %}
+					{% if typage.classe is not empty %}
+						<td>{{ typage.classe.nomClasse }} </td>
+					{% else %}
+						<td>Pas de classe</td>
+					{% endif %}
+				{%  endfor %}
+			{% else %}
+				<td>Pas de classe</td>
+			{% endif %}
+			{% if typeNumerisation != "Aucune" %}
+				{% if tesson.numerisation is not empty %}
+					{% set break = false %}
+					{% for numerisation in tesson.numerisation if not break %}
+						{% if numerisation.typeNumerisation.nom == typeNumerisation %}
+							<a class="group" title=" {{ numerisation.alt }}" href="{{ asset(numerisation.webPath) }}">
+							<img src="{{ asset(numerisation.webPath) }}" width="50" height="50" alt="{{ numerisation.alt }}"/>
+							</a>
+							</td>
+							{% set break = true %}
+						{% endif %}
+					{% endfor %}
+				{% else %}
+					<td>Pas de numérisations trouvées pour ce tesson</td>
+				{% endif %}
+			{% else %}
+				{% if tesson.numerisation is not empty %}
+							<td>
+							<a class="group" title=" {{ tesson.numerisation[0].alt }}" href="{{ asset(tesson.numerisation[0].webPath) }}">
+							<img src="{{ asset(tesson.numerisation[0].webPath) }}" width="50" height="50" alt="{{ tesson.numerisation[0].alt }}"/>
+							</a>
+							</td>
+				{% else %}
+					<td>Pas de numérisations trouvées pour ce tesson</td>
+				{% endif %}
 			{% endif %}
 		</tr>
     {% endfor %}
 	</tbody>
 	</table>
 {% else %}
-    <p>Il n'y a aucun tesson sans classification.</p>
+    <div class="alert alert-danger" role="alert">
+		<p>Aucun tesson trouvé avec les paramètres actuels de recherche</p>
+	</div>
 {% endif %}
 
 {% include 'LIFOClassifBundle::pagination.html.twig' %}
+
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$(".group").fancybox();
+		
+	});
+	</script>
 
 {% endblock %}

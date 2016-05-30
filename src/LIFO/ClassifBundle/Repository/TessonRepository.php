@@ -6,6 +6,7 @@ use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Tools\Pagination\Paginator;
 use InvalidArgumentException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use LIFO\ClassifBundle\Entity\Numerisation;
 
 /**
  * TessonRepository
@@ -28,6 +29,59 @@ class TessonRepository extends \Doctrine\ORM\EntityRepository {
 		return $qb->getQuery()->getSingleScalarResult ();
 	}
 	
+	public function paginationAvecParametres($page, $nbMaxParPage, $typeNumerisationChoisi, $typeClassifChoisi, $tessonsClasses){
+
+		if (!is_numeric($page)) {
+			throw new InvalidArgumentException(
+					'La valeur de l\'argument $page est incorrecte (valeur : ' . $page . ').'
+					);
+		}
+		
+		if ($page < 1) {
+			throw new NotFoundHttpException('La page demandÃ©e n\'existe pas');
+		}
+		
+		if (!is_numeric($nbMaxParPage)) {
+			throw new InvalidArgumentException(
+					'La valeur de l\'argument $nbMaxParPage est incorrecte (valeur : ' . $nbMaxParPage . ').'
+					);
+		}
+		
+		
+		$qb = $this->createQueryBuilder('t')
+		->orderBy('t.id', 'ASC');
+		
+		if($typeNumerisationChoisi != "Aucune"){
+			$qb ->leftJoin('t.numerisation', 'n')
+				->leftJoin('n.typeNumerisation', 'tn')
+				->andWhere('tn.nom=:typeNumerisation')
+				->setParameter('typeNumerisation', $typeNumerisationChoisi);
+		}
+		if($typeClassifChoisi != "Aucune"){
+			$qb ->leftJoin('t.typageEn', 'te')
+				->leftJoin('te.typeClassification', 'tc')
+				->andWhere('tc.nomType=:typeClassif')
+				->setParameter('typeClassif', $typeClassifChoisi);
+		}
+		if($tessonsClasses == false){
+			$qb ->leftjoin('t.typageEn', 'e')
+				->andWhere('e.tesson is NULL');
+		}
+		
+		$query = $qb->getQuery();
+		
+		$premierResultat = ($page - 1) * $nbMaxParPage;
+		$query->setFirstResult($premierResultat)->setMaxResults($nbMaxParPage);
+		$paginator = new Paginator($query);
+	
+		if ( ($paginator->count() <= $premierResultat) && $page != 1) {
+			throw new NotFoundHttpException('La page demandÃ©e n\'existe pas.'); // page 404, sauf pour la premiï¿½re page
+		}
+	
+		return $paginator;
+		
+	}
+	
 	public function pagination($page, $nbMaxParPage)
 	{
 		if (!is_numeric($page)) {
@@ -37,7 +91,7 @@ class TessonRepository extends \Doctrine\ORM\EntityRepository {
 		}
 	
 		if ($page < 1) {
-			throw new NotFoundHttpException('La page demandée n\'existe pas');
+			throw new NotFoundHttpException('La page demandÃ©e n\'existe pas');
 		}
 	
 		if (!is_numeric($nbMaxParPage)) {
@@ -58,7 +112,7 @@ class TessonRepository extends \Doctrine\ORM\EntityRepository {
 		$paginator = new Paginator($query);
 	
 		if ( ($paginator->count() <= $premierResultat) && $page != 1) {
-			throw new NotFoundHttpException('La page demandée n\'existe pas.'); // page 404, sauf pour la première page
+			throw new NotFoundHttpException('La page demandï¿½e n\'existe pas.'); // page 404, sauf pour la premiï¿½re page
 		}
 	
 		return $paginator;

@@ -1,0 +1,73 @@
+<?php
+
+/* @Twig/Exception/trace.txt.twig */
+class __TwigTemplate_bd2743f68a70af08786a0205f6d217005712dc93d0d8c3bcf198ae08f77643f1 extends Twig_Template
+{
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->parent = false;
+
+        $this->blocks = array(
+        );
+    }
+
+    protected function doDisplay(array $context, array $blocks = array())
+    {
+        $__internal_a99396a9d31db489990015d53a7e290f3df34c5a0c2b4cb736d70deeece16d02 = $this->env->getExtension("native_profiler");
+        $__internal_a99396a9d31db489990015d53a7e290f3df34c5a0c2b4cb736d70deeece16d02->enter($__internal_a99396a9d31db489990015d53a7e290f3df34c5a0c2b4cb736d70deeece16d02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Twig/Exception/trace.txt.twig"));
+
+        // line 1
+        if ($this->getAttribute((isset($context["trace"]) ? $context["trace"] : $this->getContext($context, "trace")), "function", array())) {
+            // line 2
+            echo "    at ";
+            echo (($this->getAttribute((isset($context["trace"]) ? $context["trace"] : $this->getContext($context, "trace")), "class", array()) . $this->getAttribute((isset($context["trace"]) ? $context["trace"] : $this->getContext($context, "trace")), "type", array())) . $this->getAttribute((isset($context["trace"]) ? $context["trace"] : $this->getContext($context, "trace")), "function", array()));
+            echo "(";
+            echo $this->env->getExtension('code')->formatArgsAsText($this->getAttribute((isset($context["trace"]) ? $context["trace"] : $this->getContext($context, "trace")), "args", array()));
+            echo ")
+";
+        } else {
+            // line 4
+            echo "    at n/a
+";
+        }
+        // line 6
+        if (($this->getAttribute((isset($context["trace"]) ? $context["trace"] : null), "file", array(), "any", true, true) && $this->getAttribute((isset($context["trace"]) ? $context["trace"] : null), "line", array(), "any", true, true))) {
+            // line 7
+            echo "        in ";
+            echo $this->getAttribute((isset($context["trace"]) ? $context["trace"] : $this->getContext($context, "trace")), "file", array());
+            echo " line ";
+            echo $this->getAttribute((isset($context["trace"]) ? $context["trace"] : $this->getContext($context, "trace")), "line", array());
+            echo "
+";
+        }
+        
+        $__internal_a99396a9d31db489990015d53a7e290f3df34c5a0c2b4cb736d70deeece16d02->leave($__internal_a99396a9d31db489990015d53a7e290f3df34c5a0c2b4cb736d70deeece16d02_prof);
+
+    }
+
+    public function getTemplateName()
+    {
+        return "@Twig/Exception/trace.txt.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  38 => 7,  36 => 6,  32 => 4,  24 => 2,  22 => 1,);
+    }
+}
+/* {% if trace.function %}*/
+/*     at {{ trace.class ~ trace.type ~ trace.function }}({{ trace.args|format_args_as_text }})*/
+/* {% else %}*/
+/*     at n/a*/
+/* {% endif %}*/
+/* {% if trace.file is defined and trace.line is defined %}*/
+/*         in {{ trace.file }} line {{ trace.line }}*/
+/* {% endif %}*/
+/* */

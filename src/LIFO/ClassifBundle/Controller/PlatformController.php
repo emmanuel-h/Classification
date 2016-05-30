@@ -23,6 +23,9 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use LIFO\ClassifBundle\LIFOClassifBundle;
+use LIFO\ClassifBundle\Entity\TypeNumerisation;
 
 class PlatformController extends Controller {
 	public function indexAction() {
@@ -152,7 +155,7 @@ class PlatformController extends Controller {
 	 * @Security("has_role('ROLE_USER')")
 	 */
 	public function classificationAction(Request $request, $page) {
-
+		
 		$em = $this->getDoctrine()->getManager();
 		$nbTessonsParPage=10;
 
@@ -161,25 +164,60 @@ class PlatformController extends Controller {
 		        'class'   		=> 'LIFOClassifBundle:TypeClassification',
 		        'choice_label'  => 'nomType',
 		        'multiple'		=> false,
-				'expanded' 		=> false),
-					'Tous', 'tous'
-		    )
-			->add('afficherTessonsClasses', CheckboxType::class)
-			->add('typeNumerisation',  EntityType::class, array(
-		        'class'   		=> 'LIFOClassifBundle:TypeNumerisation',
-		        'choice_label'  => 'nom',
-		        'multiple'		=> false,
 				'expanded' 		=> false,
-				'choice_attr'	=> array(
-					'Tous'		=> 'tous'
-				)
-		    ))
-			->add('Afficher', SubmitType::class)
+				'placeholder'	=> 'Tous',
+				'required'		=> false
+					
+			))
+			->add('typeNumerisation',  EntityType::class, array(
+					'class'   		=> 'LIFOClassifBundle:TypeNumerisation',
+					'choice_label'  => 'nom',
+					'multiple'		=> false,
+					'expanded' 		=> false,
+					'placeholder'	=> 'Tous',
+					'required'		=> false
+			))
+			->add('afficherTessonsClasses', CheckboxType::class, array(
+					'required'		=> false
+			))
+			->add('campagne', ChoiceType::class)
+			->add('afficher', SubmitType::class)
 			->getForm();
-
-		if ($request->isMethod ( 'POST' ) && $formClassif->handleRequest ( $request )->isValid ()) {
 			
+		if ($request->isMethod ( 'POST' ) && $formClassif->handleRequest ( $request )->isValid ()) {
+			$page=1;
+			$tessonsClasses = $formClassif->get('afficherTessonsClasses')->getData();
+			$typeNumerisation = $formClassif->get('typeNumerisation')->getData();
+			if(is_object($typeNumerisation)){
+				$typeNumerisationChoisi = $typeNumerisation->getNom();
+			} else {
+				$typeNumerisationChoisi = "Aucune";
+			}
+			$typeClassif = $formClassif->get('typeClassification')->getData();
+			if(is_object($typeClassif)){
+				$typeClassifChoisi = $typeClassif->getNomType();
+				$tessonsClasses = true;
+			} else {
+				$typeClassifChoisi = "Aucune";
+			}
+			$tessons = $em->getRepository('LIFOClassifBundle:Tesson')
+			->paginationAvecParametres($page, $nbTessonsParPage, $typeNumerisationChoisi, $typeClassifChoisi, $tessonsClasses);
+
+			$pagination = array(
+					'page' => $page,
+					'nbPages' => ceil(count($tessons) / $nbTessonsParPage),
+					'nomRoute' => 'lifo_classif_classification',
+					'paramsRoute' => array()
+			);
+			
+			return $this->render ( 'LIFOClassifBundle:Platform:classification.html.twig', array(
+					'tessons' => $tessons,
+					'pagination' => $pagination,
+					'formClassif' => $formClassif->createView(),
+					'typeNumerisation' => $typeNumerisationChoisi
+			));
 		}
+		
 		$tessons = $em->getRepository('LIFOClassifBundle:Tesson')
 		->pagination($page, $nbTessonsParPage);
 		
@@ -193,7 +231,8 @@ class PlatformController extends Controller {
 		return $this->render ( 'LIFOClassifBundle:Platform:classification.html.twig', array(
 				'tessons' => $tessons,
 				'pagination' => $pagination,
-				'formClassif' => $formClassif->createView()
+				'formClassif' => $formClassif->createView(),
+				'typeNumerisation' => "Aucune"
 		));
 	}
 
