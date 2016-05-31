@@ -113,15 +113,37 @@
 			{%  if tesson.typageEn is not empty %}
 				<td>
 				{%  for typage in tesson.typageEn %}
-					{% if typage.classe is not empty %}
-						{{ typage.classe.nomClasse }}
+					{% if typage.typeClassification is not empty %}
+
+						<select>
+ 						<option value="">Pas de classe</option>
+						{% for classe in listeClasses %}
+							{% if classe == typage.typeClassification.nomType %}
+								<option value="{{ classe }}" selected>{{ classe }}</option>
+							{% else %}
+								<option value="{{ classe }}">{{ classe }}</option>
+							{% endif %}
+						{% endfor %}
+						</select>
 					{% else %}
-						Pas de classe
+						<select>
+ 						<option value="" selected>Pas de classe</option>
+						{% for classe in listeClasses %}
+							<option value="{{ classe }}">{{ classe }}</option>
+						{% endfor %}
+						</select>
 					{% endif %}
 				{%  endfor %}
 				</td>
 			{% else %}
-				<td>Pas de classe</td>
+				<td>
+				<select>
+	 			<option value="" selected>Pas de classe</option>
+				{% for classe in listeClasses %}
+					<option value="{{ classe }}">{{ classe }}</option>
+				{% endfor %}
+				</select>
+				</td>
 			{% endif %}
 			<td width=1%>
 				<a href="{{ path('lifo_classif_tesson', {'id': tesson.id}) }}" id="{{ tesson.id }}" class="btn btn-xs btn-info">+</a>

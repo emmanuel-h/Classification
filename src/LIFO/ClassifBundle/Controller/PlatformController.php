@@ -184,9 +184,18 @@ class PlatformController extends Controller {
 			->add('afficher', SubmitType::class)
 			->getForm();
 			
+		$formChangementClasse = $this->createFormBuilder()
+			->add('classe', TextType::class)
+			->add('id', IntegerType::class)
+			->add('Ok', SubmitType::class)
+			->getForm();
+		
+			
 		if(! $request->isMethod( 'POST' )){
 			if($tessonsClasses==true){
 				$formClassif->get('afficherTessonsClasses')->setData(true);
+			$formChangementClasse->get('classe')->setData("Aucune");
+			$formChangementClasse->get('id')->setData(0);
 			}
 		}
 		
@@ -206,29 +215,16 @@ class PlatformController extends Controller {
 			} else {
 				$typeClassifChoisi = "Aucune";
 			}
-			$tessons = $em->getRepository('LIFOClassifBundle:Tesson')
-			->paginationAvecParametres($page, $nbTessonsParPage, $typeNumerisationChoisi, $typeClassifChoisi, $tessonsClasses);
-
-			$pagination = array(
-					'page' => $page,
-					'nbPages' => ceil(count($tessons) / $nbTessonsParPage),
-					'nomRoute' => 'lifo_classif_classification',
-					'paramsRoute' => array()
-			);
-			
-			return $this->render ( 'LIFOClassifBundle:Platform:classification.html.twig', array(
-					'tessons' => $tessons,
-					'pagination' => $pagination,
-					'formClassif' => $formClassif->createView(),
-					'typeNumerisation' => $typeNumerisationChoisi,
-					'typeClassifChoisi' => $typeClassifChoisi,
-					'tessonsClasses' => $tessonsClasses
-			));
 		}
 
 		$tessons = $em->getRepository('LIFOClassifBundle:Tesson')
 		->paginationAvecParametres($page, $nbTessonsParPage, $typeNumerisationChoisi, $typeClassifChoisi, $tessonsClasses);
 		
+		$classes=$em->getRepository('LIFOClassifBundle:TypeClassification')->findBy([], ['nomType' => 'ASC']);
+		$listeClasses = array();
+		foreach($classes as $classe){
+			$listeClasses[] = $classe->getNomType();
+		}
 		$pagination = array(
 				'page' => $page,
 				'nbPages' => ceil(count($tessons) / $nbTessonsParPage),
@@ -242,7 +238,8 @@ class PlatformController extends Controller {
 				'formClassif' => $formClassif->createView(),
 				'typeNumerisation' => $typeNumerisationChoisi,
 				'typeClassifChoisi' => $typeClassifChoisi,
-				'tessonsClasses' => $tessonsClasses
+				'tessonsClasses' => $tessonsClasses,
+				'listeClasses'	=> $listeClasses
 		));
 	}
 
