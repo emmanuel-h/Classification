@@ -34,10 +34,65 @@
 	    </div>
     </div>
   </div>
-  {{ form_widget(formClassif.afficher, {'attr': {'class': 'btn btn-primary'}}) }}
-  {{ form_rest(formClassif) }}
+  <div class="row">
+  	<div class="col-sm-2">
+	  {{ form_widget(formClassif.afficher, {'attr': {'class': 'btn btn-primary'}}) }}
+	  {{ form_rest(formClassif) }}
+	  </div>
+	  <div class="col-sm-10">
+	      <div class="alert alert-info" align="center" id="parametresClassif">
+	  		<strong>Paramètres de recherche&nbsp;:&nbsp;</strong>Classification&nbsp;:&nbsp;{{ typeClassifChoisi }},&nbsp;Numérisation&nbsp;:&nbsp;{{ typeNumerisation }}
+		</div>
+		</div>
+	</div>
   {{ form_end(formClassif) }}
  </div>
+ 
+ {# La pagination est en haut pour éviter de scroll pour la voir #}
+ 
+<div align="center">
+{% if pagination.nbPages > 0 %}
+    <ul class="pagination">
+        {% if pagination.page > 1 %}
+            <li>
+                <a href="{{ path(pagination.nomRoute, pagination.paramsRoute|merge({'page': 1, 'typeClassifChoisi': typeClassifChoisi, 'typeNumerisationChoisi': typeNumerisation, 'tessonsClasses': tessonsClasses})) }}">
+                    <<
+                </a>
+            </li>
+            <li>
+                <a href="{{ path(pagination.nomRoute,
+                pagination.paramsRoute|merge({'page': pagination.page-1, 'typeClassifChoisi': typeClassifChoisi, 'typeNumerisationChoisi': typeNumerisation, 'tessonsClasses': tessonsClasses})) }}">
+                    <
+                </a>
+            </li>
+        {% endif %}
+
+        {# Affichage de toutes les pages entre p-4 et p+4 sauf si < 1 ou > nbPages #}
+        {% for p in range(max(pagination.page-4, 1), min(pagination.page+4, pagination.nbPages)) %}
+            <li {% if p == pagination.page %}class="active"{% endif %}>
+                <a href="{{ path(pagination.nomRoute, pagination.paramsRoute|merge({'page': p, 'typeClassifChoisi': typeClassifChoisi, 'typeNumerisationChoisi': typeNumerisation, 'tessonsClasses': tessonsClasses})) }}">
+                    {{ p }}
+                </a>
+            </li>
+        {% endfor %}
+
+        {% if pagination.page < pagination.nbPages %}
+            <li>
+                <a href="{{ path(pagination.nomRoute,
+                pagination.paramsRoute|merge({'page': pagination.page+1, 'typeClassifChoisi': typeClassifChoisi, 'typeNumerisationChoisi': typeNumerisation, 'tessonsClasses': tessonsClasses})) }}">
+                    >
+                </a>
+            </li>
+            <li>
+                <a href="{{ path(pagination.nomRoute,
+                pagination.paramsRoute|merge({'page': pagination.nbPages})) }}">
+                    >>
+                </a>
+            </li>
+        {% endif %}
+    </ul>
+{% endif %}
+</div>
  
 {% if tessons is not empty %}
 	<table class="table table-bordered table-striped table-hover">
@@ -106,48 +161,6 @@
     <div class="alert alert-danger" role="alert">
 		<p>Aucun tesson trouvé avec les paramètres actuels de recherche</p>
 	</div>
-{% endif %}
-
-{% if pagination.nbPages > 0 %}
-    <ul class="pagination">
-        {% if pagination.page > 1 %}
-            <li>
-                <a href="{{ path(pagination.nomRoute, pagination.paramsRoute|merge({'page': 1, 'typeClassifChoisi': typeClassifChoisi, 'typeNumerisationChoisi': typeNumerisation, 'tessonsClasses': tessonsClasses})) }}">
-                    <<
-                </a>
-            </li>
-            <li>
-                <a href="{{ path(pagination.nomRoute,
-                pagination.paramsRoute|merge({'page': pagination.page-1, 'typeClassifChoisi': typeClassifChoisi, 'typeNumerisationChoisi': typeNumerisation, 'tessonsClasses': tessonsClasses})) }}">
-                    <
-                </a>
-            </li>
-        {% endif %}
-
-        {# Affichage de toutes les pages entre p-4 et p+4 sauf si < 1 ou > nbPages #}
-        {% for p in range(max(pagination.page-4, 1), min(pagination.page+4, pagination.nbPages)) %}
-            <li {% if p == pagination.page %}class="active"{% endif %}>
-                <a href="{{ path(pagination.nomRoute, pagination.paramsRoute|merge({'page': p, 'typeClassifChoisi': typeClassifChoisi, 'typeNumerisationChoisi': typeNumerisation, 'tessonsClasses': tessonsClasses})) }}">
-                    {{ p }}
-                </a>
-            </li>
-        {% endfor %}
-
-        {% if pagination.page < pagination.nbPages %}
-            <li>
-                <a href="{{ path(pagination.nomRoute,
-                pagination.paramsRoute|merge({'page': pagination.page+1, 'typeClassifChoisi': typeClassifChoisi, 'typeNumerisationChoisi': typeNumerisation, 'tessonsClasses': tessonsClasses})) }}">
-                    >
-                </a>
-            </li>
-            <li>
-                <a href="{{ path(pagination.nomRoute,
-                pagination.paramsRoute|merge({'page': pagination.nbPages})) }}">
-                    >>
-                </a>
-            </li>
-        {% endif %}
-    </ul>
 {% endif %}
 
 	<script type="text/javascript">
