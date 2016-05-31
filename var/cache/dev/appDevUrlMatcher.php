@@ -120,8 +120,8 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // lifo_classif_classification
-        if (0 === strpos($pathinfo, '/classification') && preg_match('#^/classification(?:/(?P<page>\\d+))?$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_classification')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::classificationAction',  'page' => 1,));
+        if (0 === strpos($pathinfo, '/classification') && preg_match('#^/classification(?:/(?P<page>\\d+)(?:/(?P<typeClassifChoisi>[^/]++)(?:/(?P<typeNumerisationChoisi>[^/]++)(?:/(?P<tessonsClasses>[^/]++))?)?)?)?$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_classification')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::classificationAction',  'page' => 1,  'typeClassifChoisi' => 'Aucune',  'typeNumerisationChoisi' => 'Aucune',  'tessonsClasses' => false,));
         }
 
         if (0 === strpos($pathinfo, '/tesson')) {

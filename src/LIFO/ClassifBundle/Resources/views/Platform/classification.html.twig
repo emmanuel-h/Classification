@@ -41,34 +41,42 @@
  
 {% if tessons is not empty %}
 	<table class="table table-bordered table-striped table-hover">
-	<thead align="middle"><tr class="warning"><td width=5%><b>ID tesson</b></td><td width=10%><b>Proposition</b><td width=10%><b>Classe</b></td><td width=10%><b>Numérisation</b></td></tr></thead>
+	<thead align="middle"><tr class="warning"><td width=5%><b>ID tesson</b></td><td width=10%><b>Proposition</b><td width=10% colspan=2><b>Classe</b></td><td width=10%><b>Numérisation</b></td></tr></thead>
 	<tbody>
     {% for tesson in tessons %}
 		<tr>
 			<td><a href="{{ path('lifo_classif_tesson', {'id': tesson.id}) }}">{{ tesson.id }}</a></td>
 			{% if tesson.propositionClasse is not empty %}
+				<td>
 				{% for propClasse in tesson.propositionClasse %}
-						<td>{{ propClasse.classe.nomClasse }}</td>
+						{{ propClasse.classe.nomClasse }}
 				{% endfor %}
+				</td>
 			{% else %}
 				<td>Aucune proposition de classe</td>
 			{% endif %}
 			{%  if tesson.typageEn is not empty %}
+				<td>
 				{%  for typage in tesson.typageEn %}
 					{% if typage.classe is not empty %}
-						<td>{{ typage.classe.nomClasse }} </td>
+						{{ typage.classe.nomClasse }}
 					{% else %}
-						<td>Pas de classe</td>
+						Pas de classe
 					{% endif %}
 				{%  endfor %}
+				</td>
 			{% else %}
 				<td>Pas de classe</td>
 			{% endif %}
+			<td width=1%>
+				<a href="{{ path('lifo_classif_tesson', {'id': tesson.id}) }}" id="{{ tesson.id }}" class="btn btn-xs btn-info">+</a>
+			</td>
 			{% if typeNumerisation != "Aucune" %}
 				{% if tesson.numerisation is not empty %}
 					{% set break = false %}
 					{% for numerisation in tesson.numerisation if not break %}
 						{% if numerisation.typeNumerisation.nom == typeNumerisation %}
+							<td>
 							<a class="group" title=" {{ numerisation.alt }}" href="{{ asset(numerisation.webPath) }}">
 							<img src="{{ asset(numerisation.webPath) }}" width="50" height="50" alt="{{ numerisation.alt }}"/>
 							</a>
@@ -100,7 +108,47 @@
 	</div>
 {% endif %}
 
-{% include 'LIFOClassifBundle::pagination.html.twig' %}
+{% if pagination.nbPages > 0 %}
+    <ul class="pagination">
+        {% if pagination.page > 1 %}
+            <li>
+                <a href="{{ path(pagination.nomRoute, pagination.paramsRoute|merge({'page': 1, 'typeClassifChoisi': typeClassifChoisi, 'typeNumerisationChoisi': typeNumerisation, 'tessonsClasses': tessonsClasses})) }}">
+                    <<
+                </a>
+            </li>
+            <li>
+                <a href="{{ path(pagination.nomRoute,
+                pagination.paramsRoute|merge({'page': pagination.page-1, 'typeClassifChoisi': typeClassifChoisi, 'typeNumerisationChoisi': typeNumerisation, 'tessonsClasses': tessonsClasses})) }}">
+                    <
+                </a>
+            </li>
+        {% endif %}
+
+        {# Affichage de toutes les pages entre p-4 et p+4 sauf si < 1 ou > nbPages #}
+        {% for p in range(max(pagination.page-4, 1), min(pagination.page+4, pagination.nbPages)) %}
+            <li {% if p == pagination.page %}class="active"{% endif %}>
+                <a href="{{ path(pagination.nomRoute, pagination.paramsRoute|merge({'page': p, 'typeClassifChoisi': typeClassifChoisi, 'typeNumerisationChoisi': typeNumerisation, 'tessonsClasses': tessonsClasses})) }}">
+                    {{ p }}
+                </a>
+            </li>
+        {% endfor %}
+
+        {% if pagination.page < pagination.nbPages %}
+            <li>
+                <a href="{{ path(pagination.nomRoute,
+                pagination.paramsRoute|merge({'page': pagination.page+1, 'typeClassifChoisi': typeClassifChoisi, 'typeNumerisationChoisi': typeNumerisation, 'tessonsClasses': tessonsClasses})) }}">
+                    >
+                </a>
+            </li>
+            <li>
+                <a href="{{ path(pagination.nomRoute,
+                pagination.paramsRoute|merge({'page': pagination.nbPages})) }}">
+                    >>
+                </a>
+            </li>
+        {% endif %}
+    </ul>
+{% endif %}
 
 	<script type="text/javascript">
 	$(document).ready(function() {

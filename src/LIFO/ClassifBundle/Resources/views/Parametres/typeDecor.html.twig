@@ -4,11 +4,15 @@
 <div class="well">
 	<fieldset>
 		<legend>Ajout</legend>
-		{{ form(formAjoutTypeDecor) }}
+			{{ form_start(formAjoutTypeDecor, {'name':'formAjoutTypeDecor' })  }}
+			{{ form_rest(formAjoutTypeDecor) }}
+			{{ form_end(formAjoutTypeDecor) }}
 	</fieldset>
 	<fieldset>
 		<legend>Suppression</legend>
-		{{ form(formSuppressionTypeDecor) }}
+			{{ form_start(formSuppressionTypeDecor, {'name':'formSuppressionTypeDecor' })  }}
+			{{ form_rest(formSuppressionTypeDecor) }}
+			{{ form_end(formSuppressionTypeDecor) }}
 	</fieldset>
 </div>
 

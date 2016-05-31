@@ -4,11 +4,15 @@ LIFOClassif_body %}
 <div class="well">
 	<fieldset>
 		<legend>Ajout</legend>
-		{{ form(formAjoutDecor) }}
+			{{ form_start(formAjoutDecor, {'name':'formAjoutDecor' })  }}
+			{{ form_rest(formAjoutDecor) }}
+			{{ form_end(formAjoutDecor) }}
 	</fieldset>
 	<fieldset>
 		<legend>Suppression</legend>
-		{{ form(formSuppressionDecor) }}
+			{{ form_start(formSuppressionDecor, {'name':'formSuppressionDecor' })  }}
+			{{ form_rest(formSuppressionDecor) }}
+			{{ form_end(formSuppressionDecor) }}
 	</fieldset>
 </div>
 

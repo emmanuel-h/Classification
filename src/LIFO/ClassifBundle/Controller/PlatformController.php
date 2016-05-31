@@ -154,10 +154,10 @@ class PlatformController extends Controller {
 	/**
 	 * @Security("has_role('ROLE_USER')")
 	 */
-	public function classificationAction(Request $request, $page) {
+	public function classificationAction(Request $request, $page, $typeClassifChoisi, $typeNumerisationChoisi, $tessonsClasses) {
 		
 		$em = $this->getDoctrine()->getManager();
-		$nbTessonsParPage=10;
+		$nbTessonsParPage=$this->container->getParameter('NB_TESSONS_PAR_PAGE');
 
 		$formClassif= $this->createFormBuilder()
 			->add('typeClassification',  EntityType::class, array(
@@ -184,6 +184,12 @@ class PlatformController extends Controller {
 			->add('afficher', SubmitType::class)
 			->getForm();
 			
+		if(! $request->isMethod( 'POST' )){
+			if($tessonsClasses==true){
+				$formClassif->get('afficherTessonsClasses')->setData(true);
+			}
+		}
+		
 		if ($request->isMethod ( 'POST' ) && $formClassif->handleRequest ( $request )->isValid ()) {
 			$page=1;
 			$tessonsClasses = $formClassif->get('afficherTessonsClasses')->getData();
@@ -214,12 +220,14 @@ class PlatformController extends Controller {
 					'tessons' => $tessons,
 					'pagination' => $pagination,
 					'formClassif' => $formClassif->createView(),
-					'typeNumerisation' => $typeNumerisationChoisi
+					'typeNumerisation' => $typeNumerisationChoisi,
+					'typeClassifChoisi' => $typeClassifChoisi,
+					'tessonsClasses' => $tessonsClasses
 			));
 		}
-		
+
 		$tessons = $em->getRepository('LIFOClassifBundle:Tesson')
-		->pagination($page, $nbTessonsParPage);
+		->paginationAvecParametres($page, $nbTessonsParPage, $typeNumerisationChoisi, $typeClassifChoisi, $tessonsClasses);
 		
 		$pagination = array(
 				'page' => $page,
@@ -232,7 +240,9 @@ class PlatformController extends Controller {
 				'tessons' => $tessons,
 				'pagination' => $pagination,
 				'formClassif' => $formClassif->createView(),
-				'typeNumerisation' => "Aucune"
+				'typeNumerisation' => $typeNumerisationChoisi,
+				'typeClassifChoisi' => $typeClassifChoisi,
+				'tessonsClasses' => $tessonsClasses
 		));
 	}
 

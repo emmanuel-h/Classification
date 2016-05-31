@@ -12,10 +12,13 @@ lifo_classif_recherche:
     defaults: { _controller: LIFOClassifBundle:Platform:recherche }
     
 lifo_classif_classification:
-    path:     /classification/{page}
+    path:     /classification/{page}/{typeClassifChoisi}/{typeNumerisationChoisi}/{tessonsClasses}
     defaults:
         _controller: LIFOClassifBundle:Platform:classification
         page: 1
+        typeClassifChoisi: Aucune
+        typeNumerisationChoisi: Aucune
+        tessonsClasses: false
     requirements:
         page: \d+
     

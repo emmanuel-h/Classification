@@ -22,33 +22,33 @@ class __TwigTemplate_e5befdf423956516b061be7994071b32843bce52dbd1e18137e82d09039
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_179ea364fb5a3376ecab3650b3fab0594f0452f53c6bada51d0d88b8a3d10a0a = $this->env->getExtension("native_profiler");
-        $__internal_179ea364fb5a3376ecab3650b3fab0594f0452f53c6bada51d0d88b8a3d10a0a->enter($__internal_179ea364fb5a3376ecab3650b3fab0594f0452f53c6bada51d0d88b8a3d10a0a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:classification.html.twig"));
+        $__internal_7e3e170253b7e1e943c177490da4cd0ce77e7c2c3a012ba4ff47cc7584ea178c = $this->env->getExtension("native_profiler");
+        $__internal_7e3e170253b7e1e943c177490da4cd0ce77e7c2c3a012ba4ff47cc7584ea178c->enter($__internal_7e3e170253b7e1e943c177490da4cd0ce77e7c2c3a012ba4ff47cc7584ea178c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:classification.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_179ea364fb5a3376ecab3650b3fab0594f0452f53c6bada51d0d88b8a3d10a0a->leave($__internal_179ea364fb5a3376ecab3650b3fab0594f0452f53c6bada51d0d88b8a3d10a0a_prof);
+        $__internal_7e3e170253b7e1e943c177490da4cd0ce77e7c2c3a012ba4ff47cc7584ea178c->leave($__internal_7e3e170253b7e1e943c177490da4cd0ce77e7c2c3a012ba4ff47cc7584ea178c_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_b31d322cea68a8b396495030223905c97c475ad8137cf5d8d3251531d55e69e8 = $this->env->getExtension("native_profiler");
-        $__internal_b31d322cea68a8b396495030223905c97c475ad8137cf5d8d3251531d55e69e8->enter($__internal_b31d322cea68a8b396495030223905c97c475ad8137cf5d8d3251531d55e69e8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_1e5363aa67aaa8a6bd05fef2879ec8513a2c12220bfeb9557cf17291e74cefaa = $this->env->getExtension("native_profiler");
+        $__internal_1e5363aa67aaa8a6bd05fef2879ec8513a2c12220bfeb9557cf17291e74cefaa->enter($__internal_1e5363aa67aaa8a6bd05fef2879ec8513a2c12220bfeb9557cf17291e74cefaa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Classification";
         
-        $__internal_b31d322cea68a8b396495030223905c97c475ad8137cf5d8d3251531d55e69e8->leave($__internal_b31d322cea68a8b396495030223905c97c475ad8137cf5d8d3251531d55e69e8_prof);
+        $__internal_1e5363aa67aaa8a6bd05fef2879ec8513a2c12220bfeb9557cf17291e74cefaa->leave($__internal_1e5363aa67aaa8a6bd05fef2879ec8513a2c12220bfeb9557cf17291e74cefaa_prof);
 
     }
 
     // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_45c525af66453b35080e6f0aca99ea70accc1c29ecf19dc70da945dd62ff5fd7 = $this->env->getExtension("native_profiler");
-        $__internal_45c525af66453b35080e6f0aca99ea70accc1c29ecf19dc70da945dd62ff5fd7->enter($__internal_45c525af66453b35080e6f0aca99ea70accc1c29ecf19dc70da945dd62ff5fd7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_b8f77d96b389fb6480e4dc72fd99c322b76d6b7b8923f02bb6eeb2701950591b = $this->env->getExtension("native_profiler");
+        $__internal_b8f77d96b389fb6480e4dc72fd99c322b76d6b7b8923f02bb6eeb2701950591b->enter($__internal_b8f77d96b389fb6480e4dc72fd99c322b76d6b7b8923f02bb6eeb2701950591b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 6
         echo "
@@ -137,7 +137,7 @@ class __TwigTemplate_e5befdf423956516b061be7994071b32843bce52dbd1e18137e82d09039
         if ( !twig_test_empty((isset($context["tessons"]) ? $context["tessons"] : $this->getContext($context, "tessons")))) {
             // line 43
             echo "\t<table class=\"table table-bordered table-striped table-hover\">
-\t<thead align=\"middle\"><tr class=\"warning\"><td width=5%><b>ID tesson</b></td><td width=10%><b>Proposition</b><td width=10%><b>Classe</b></td><td width=10%><b>Numérisation</b></td></tr></thead>
+\t<thead align=\"middle\"><tr class=\"warning\"><td width=5%><b>ID tesson</b></td><td width=10%><b>Proposition</b><td width=10% colspan=2><b>Classe</b></td><td width=10%><b>Numérisation</b></td></tr></thead>
 \t<tbody>
     ";
             // line 46
@@ -156,86 +156,103 @@ class __TwigTemplate_e5befdf423956516b061be7994071b32843bce52dbd1e18137e82d09039
                 // line 49
                 if ( !twig_test_empty($this->getAttribute($context["tesson"], "propositionClasse", array()))) {
                     // line 50
-                    echo "\t\t\t\t";
+                    echo "\t\t\t\t<td>
+\t\t\t\t";
+                    // line 51
                     $context['_parent'] = $context;
                     $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["tesson"], "propositionClasse", array()));
                     foreach ($context['_seq'] as $context["_key"] => $context["propClasse"]) {
-                        // line 51
-                        echo "\t\t\t\t\t\t<td>";
+                        // line 52
+                        echo "\t\t\t\t\t\t";
                         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["propClasse"], "classe", array()), "nomClasse", array()), "html", null, true);
-                        echo "</td>
+                        echo "
 \t\t\t\t";
                     }
                     $_parent = $context['_parent'];
                     unset($context['_seq'], $context['_iterated'], $context['_key'], $context['propClasse'], $context['_parent'], $context['loop']);
                     $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 53
-                    echo "\t\t\t";
-                } else {
                     // line 54
+                    echo "\t\t\t\t</td>
+\t\t\t";
+                } else {
+                    // line 56
                     echo "\t\t\t\t<td>Aucune proposition de classe</td>
 \t\t\t";
                 }
-                // line 56
+                // line 58
                 echo "\t\t\t";
                 if ( !twig_test_empty($this->getAttribute($context["tesson"], "typageEn", array()))) {
-                    // line 57
-                    echo "\t\t\t\t";
+                    // line 59
+                    echo "\t\t\t\t<td>
+\t\t\t\t";
+                    // line 60
                     $context['_parent'] = $context;
                     $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["tesson"], "typageEn", array()));
                     foreach ($context['_seq'] as $context["_key"] => $context["typage"]) {
-                        // line 58
+                        // line 61
                         echo "\t\t\t\t\t";
                         if ( !twig_test_empty($this->getAttribute($context["typage"], "classe", array()))) {
-                            // line 59
-                            echo "\t\t\t\t\t\t<td>";
+                            // line 62
+                            echo "\t\t\t\t\t\t";
                             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["typage"], "classe", array()), "nomClasse", array()), "html", null, true);
-                            echo " </td>
+                            echo "
 \t\t\t\t\t";
                         } else {
-                            // line 61
-                            echo "\t\t\t\t\t\t<td>Pas de classe</td>
+                            // line 64
+                            echo "\t\t\t\t\t\tPas de classe
 \t\t\t\t\t";
                         }
-                        // line 63
+                        // line 66
                         echo "\t\t\t\t";
                     }
                     $_parent = $context['_parent'];
                     unset($context['_seq'], $context['_iterated'], $context['_key'], $context['typage'], $context['_parent'], $context['loop']);
                     $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 64
-                    echo "\t\t\t";
+                    // line 67
+                    echo "\t\t\t\t</td>
+\t\t\t";
                 } else {
-                    // line 65
+                    // line 69
                     echo "\t\t\t\t<td>Pas de classe</td>
 \t\t\t";
                 }
-                // line 67
-                echo "\t\t\t";
+                // line 71
+                echo "\t\t\t<td width=1%>
+\t\t\t\t<a href=\"";
+                // line 72
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("lifo_classif_tesson", array("id" => $this->getAttribute($context["tesson"], "id", array()))), "html", null, true);
+                echo "\" id=\"";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["tesson"], "id", array()), "html", null, true);
+                echo "\" class=\"btn btn-xs btn-info\">+</a>
+\t\t\t</td>
+\t\t\t";
+                // line 74
                 if (((isset($context["typeNumerisation"]) ? $context["typeNumerisation"] : $this->getContext($context, "typeNumerisation")) != "Aucune")) {
-                    // line 68
+                    // line 75
                     echo "\t\t\t\t";
                     if ( !twig_test_empty($this->getAttribute($context["tesson"], "numerisation", array()))) {
-                        // line 69
+                        // line 76
                         echo "\t\t\t\t\t";
                         $context["break"] = false;
-                        // line 70
+                        // line 77
                         echo "\t\t\t\t\t";
                         $context['_parent'] = $context;
                         $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["tesson"], "numerisation", array()));
                         foreach ($context['_seq'] as $context["_key"] => $context["numerisation"]) {
                             if ( !(isset($context["break"]) ? $context["break"] : $this->getContext($context, "break"))) {
-                                // line 71
+                                // line 78
                                 echo "\t\t\t\t\t\t";
                                 if (($this->getAttribute($this->getAttribute($context["numerisation"], "typeNumerisation", array()), "nom", array()) == (isset($context["typeNumerisation"]) ? $context["typeNumerisation"] : $this->getContext($context, "typeNumerisation")))) {
-                                    // line 72
-                                    echo "\t\t\t\t\t\t\t<a class=\"group\" title=\" ";
+                                    // line 79
+                                    echo "\t\t\t\t\t\t\t<td>
+\t\t\t\t\t\t\t<a class=\"group\" title=\" ";
+                                    // line 80
                                     echo twig_escape_filter($this->env, $this->getAttribute($context["numerisation"], "alt", array()), "html", null, true);
                                     echo "\" href=\"";
                                     echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl($this->getAttribute($context["numerisation"], "webPath", array())), "html", null, true);
                                     echo "\">
 \t\t\t\t\t\t\t<img src=\"";
-                                    // line 73
+                                    // line 81
                                     echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl($this->getAttribute($context["numerisation"], "webPath", array())), "html", null, true);
                                     echo "\" width=\"50\" height=\"50\" alt=\"";
                                     echo twig_escape_filter($this->env, $this->getAttribute($context["numerisation"], "alt", array()), "html", null, true);
@@ -243,41 +260,41 @@ class __TwigTemplate_e5befdf423956516b061be7994071b32843bce52dbd1e18137e82d09039
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t";
-                                    // line 76
+                                    // line 84
                                     $context["break"] = true;
-                                    // line 77
+                                    // line 85
                                     echo "\t\t\t\t\t\t";
                                 }
-                                // line 78
+                                // line 86
                                 echo "\t\t\t\t\t";
                             }
                         }
                         $_parent = $context['_parent'];
                         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['numerisation'], $context['_parent'], $context['loop']);
                         $context = array_intersect_key($context, $_parent) + $_parent;
-                        // line 79
+                        // line 87
                         echo "\t\t\t\t";
                     } else {
-                        // line 80
+                        // line 88
                         echo "\t\t\t\t\t<td>Pas de numérisations trouvées pour ce tesson</td>
 \t\t\t\t";
                     }
-                    // line 82
+                    // line 90
                     echo "\t\t\t";
                 } else {
-                    // line 83
+                    // line 91
                     echo "\t\t\t\t";
                     if ( !twig_test_empty($this->getAttribute($context["tesson"], "numerisation", array()))) {
-                        // line 84
+                        // line 92
                         echo "\t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t<a class=\"group\" title=\" ";
-                        // line 85
+                        // line 93
                         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["tesson"], "numerisation", array()), 0, array(), "array"), "alt", array()), "html", null, true);
                         echo "\" href=\"";
                         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl($this->getAttribute($this->getAttribute($this->getAttribute($context["tesson"], "numerisation", array()), 0, array(), "array"), "webPath", array())), "html", null, true);
                         echo "\">
 \t\t\t\t\t\t\t<img src=\"";
-                        // line 86
+                        // line 94
                         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl($this->getAttribute($this->getAttribute($this->getAttribute($context["tesson"], "numerisation", array()), 0, array(), "array"), "webPath", array())), "html", null, true);
                         echo "\" width=\"50\" height=\"50\" alt=\"";
                         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["tesson"], "numerisation", array()), 0, array(), "array"), "alt", array()), "html", null, true);
@@ -286,37 +303,121 @@ class __TwigTemplate_e5befdf423956516b061be7994071b32843bce52dbd1e18137e82d09039
 \t\t\t\t\t\t\t</td>
 \t\t\t\t";
                     } else {
-                        // line 90
+                        // line 98
                         echo "\t\t\t\t\t<td>Pas de numérisations trouvées pour ce tesson</td>
 \t\t\t\t";
                     }
-                    // line 92
+                    // line 100
                     echo "\t\t\t";
                 }
-                // line 93
+                // line 101
                 echo "\t\t</tr>
     ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['tesson'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 95
+            // line 103
             echo "\t</tbody>
 \t</table>
 ";
         } else {
-            // line 98
+            // line 106
             echo "    <div class=\"alert alert-danger\" role=\"alert\">
 \t\t<p>Aucun tesson trouvé avec les paramètres actuels de recherche</p>
 \t</div>
 ";
         }
-        // line 102
+        // line 110
         echo "
 ";
-        // line 103
-        $this->loadTemplate("LIFOClassifBundle::pagination.html.twig", "LIFOClassifBundle:Platform:classification.html.twig", 103)->display($context);
-        // line 104
+        // line 111
+        if (($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nbPages", array()) > 0)) {
+            // line 112
+            echo "    <ul class=\"pagination\">
+        ";
+            // line 113
+            if (($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "page", array()) > 1)) {
+                // line 114
+                echo "            <li>
+                <a href=\"";
+                // line 115
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nomRoute", array()), twig_array_merge($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "paramsRoute", array()), array("page" => 1, "typeClassifChoisi" => (isset($context["typeClassifChoisi"]) ? $context["typeClassifChoisi"] : $this->getContext($context, "typeClassifChoisi")), "typeNumerisationChoisi" => (isset($context["typeNumerisation"]) ? $context["typeNumerisation"] : $this->getContext($context, "typeNumerisation")), "tessonsClasses" => (isset($context["tessonsClasses"]) ? $context["tessonsClasses"] : $this->getContext($context, "tessonsClasses"))))), "html", null, true);
+                echo "\">
+                    <<
+                </a>
+            </li>
+            <li>
+                <a href=\"";
+                // line 120
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nomRoute", array()), twig_array_merge($this->getAttribute(                // line 121
+(isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "paramsRoute", array()), array("page" => ($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "page", array()) - 1), "typeClassifChoisi" => (isset($context["typeClassifChoisi"]) ? $context["typeClassifChoisi"] : $this->getContext($context, "typeClassifChoisi")), "typeNumerisationChoisi" => (isset($context["typeNumerisation"]) ? $context["typeNumerisation"] : $this->getContext($context, "typeNumerisation")), "tessonsClasses" => (isset($context["tessonsClasses"]) ? $context["tessonsClasses"] : $this->getContext($context, "tessonsClasses"))))), "html", null, true);
+                echo "\">
+                    <
+                </a>
+            </li>
+        ";
+            }
+            // line 126
+            echo "
+        ";
+            // line 128
+            echo "        ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(range(max(($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "page", array()) - 4), 1), min(($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "page", array()) + 4), $this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nbPages", array()))));
+            foreach ($context['_seq'] as $context["_key"] => $context["p"]) {
+                // line 129
+                echo "            <li ";
+                if (($context["p"] == $this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "page", array()))) {
+                    echo "class=\"active\"";
+                }
+                echo ">
+                <a href=\"";
+                // line 130
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nomRoute", array()), twig_array_merge($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "paramsRoute", array()), array("page" => $context["p"], "typeClassifChoisi" => (isset($context["typeClassifChoisi"]) ? $context["typeClassifChoisi"] : $this->getContext($context, "typeClassifChoisi")), "typeNumerisationChoisi" => (isset($context["typeNumerisation"]) ? $context["typeNumerisation"] : $this->getContext($context, "typeNumerisation")), "tessonsClasses" => (isset($context["tessonsClasses"]) ? $context["tessonsClasses"] : $this->getContext($context, "tessonsClasses"))))), "html", null, true);
+                echo "\">
+                    ";
+                // line 131
+                echo twig_escape_filter($this->env, $context["p"], "html", null, true);
+                echo "
+                </a>
+            </li>
+        ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['p'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 135
+            echo "
+        ";
+            // line 136
+            if (($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "page", array()) < $this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nbPages", array()))) {
+                // line 137
+                echo "            <li>
+                <a href=\"";
+                // line 138
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nomRoute", array()), twig_array_merge($this->getAttribute(                // line 139
+(isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "paramsRoute", array()), array("page" => ($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "page", array()) + 1), "typeClassifChoisi" => (isset($context["typeClassifChoisi"]) ? $context["typeClassifChoisi"] : $this->getContext($context, "typeClassifChoisi")), "typeNumerisationChoisi" => (isset($context["typeNumerisation"]) ? $context["typeNumerisation"] : $this->getContext($context, "typeNumerisation")), "tessonsClasses" => (isset($context["tessonsClasses"]) ? $context["tessonsClasses"] : $this->getContext($context, "tessonsClasses"))))), "html", null, true);
+                echo "\">
+                    >
+                </a>
+            </li>
+            <li>
+                <a href=\"";
+                // line 144
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nomRoute", array()), twig_array_merge($this->getAttribute(                // line 145
+(isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "paramsRoute", array()), array("page" => $this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nbPages", array())))), "html", null, true);
+                echo "\">
+                    >>
+                </a>
+            </li>
+        ";
+            }
+            // line 150
+            echo "    </ul>
+";
+        }
+        // line 152
         echo "
 \t<script type=\"text/javascript\">
 \t\$(document).ready(function() {
@@ -327,7 +428,7 @@ class __TwigTemplate_e5befdf423956516b061be7994071b32843bce52dbd1e18137e82d09039
 
 ";
         
-        $__internal_45c525af66453b35080e6f0aca99ea70accc1c29ecf19dc70da945dd62ff5fd7->leave($__internal_45c525af66453b35080e6f0aca99ea70accc1c29ecf19dc70da945dd62ff5fd7_prof);
+        $__internal_b8f77d96b389fb6480e4dc72fd99c322b76d6b7b8923f02bb6eeb2701950591b->leave($__internal_b8f77d96b389fb6480e4dc72fd99c322b76d6b7b8923f02bb6eeb2701950591b_prof);
 
     }
 
@@ -343,7 +444,7 @@ class __TwigTemplate_e5befdf423956516b061be7994071b32843bce52dbd1e18137e82d09039
 
     public function getDebugInfo()
     {
-        return array (  320 => 104,  318 => 103,  315 => 102,  309 => 98,  304 => 95,  297 => 93,  294 => 92,  290 => 90,  281 => 86,  275 => 85,  272 => 84,  269 => 83,  266 => 82,  262 => 80,  259 => 79,  252 => 78,  249 => 77,  247 => 76,  239 => 73,  232 => 72,  229 => 71,  223 => 70,  220 => 69,  217 => 68,  214 => 67,  210 => 65,  207 => 64,  201 => 63,  197 => 61,  191 => 59,  188 => 58,  183 => 57,  180 => 56,  176 => 54,  173 => 53,  164 => 51,  159 => 50,  157 => 49,  151 => 48,  148 => 47,  144 => 46,  139 => 43,  137 => 42,  131 => 39,  127 => 38,  123 => 37,  116 => 33,  110 => 30,  105 => 28,  101 => 27,  92 => 21,  87 => 19,  83 => 18,  78 => 16,  73 => 14,  69 => 13,  63 => 10,  58 => 8,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
+        return array (  421 => 152,  417 => 150,  409 => 145,  408 => 144,  400 => 139,  399 => 138,  396 => 137,  394 => 136,  391 => 135,  381 => 131,  377 => 130,  370 => 129,  365 => 128,  362 => 126,  354 => 121,  353 => 120,  345 => 115,  342 => 114,  340 => 113,  337 => 112,  335 => 111,  332 => 110,  326 => 106,  321 => 103,  314 => 101,  311 => 100,  307 => 98,  298 => 94,  292 => 93,  289 => 92,  286 => 91,  283 => 90,  279 => 88,  276 => 87,  269 => 86,  266 => 85,  264 => 84,  256 => 81,  250 => 80,  247 => 79,  244 => 78,  238 => 77,  235 => 76,  232 => 75,  230 => 74,  223 => 72,  220 => 71,  216 => 69,  212 => 67,  206 => 66,  202 => 64,  196 => 62,  193 => 61,  189 => 60,  186 => 59,  183 => 58,  179 => 56,  175 => 54,  166 => 52,  162 => 51,  159 => 50,  157 => 49,  151 => 48,  148 => 47,  144 => 46,  139 => 43,  137 => 42,  131 => 39,  127 => 38,  123 => 37,  116 => 33,  110 => 30,  105 => 28,  101 => 27,  92 => 21,  87 => 19,  83 => 18,  78 => 16,  73 => 14,  69 => 13,  63 => 10,  58 => 8,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends "LIFOClassifBundle::layoutGeneral.html.twig" %}*/
@@ -389,34 +490,42 @@ class __TwigTemplate_e5befdf423956516b061be7994071b32843bce52dbd1e18137e82d09039
 /*  */
 /* {% if tessons is not empty %}*/
 /* 	<table class="table table-bordered table-striped table-hover">*/
-/* 	<thead align="middle"><tr class="warning"><td width=5%><b>ID tesson</b></td><td width=10%><b>Proposition</b><td width=10%><b>Classe</b></td><td width=10%><b>Numérisation</b></td></tr></thead>*/
+/* 	<thead align="middle"><tr class="warning"><td width=5%><b>ID tesson</b></td><td width=10%><b>Proposition</b><td width=10% colspan=2><b>Classe</b></td><td width=10%><b>Numérisation</b></td></tr></thead>*/
 /* 	<tbody>*/
 /*     {% for tesson in tessons %}*/
 /* 		<tr>*/
 /* 			<td><a href="{{ path('lifo_classif_tesson', {'id': tesson.id}) }}">{{ tesson.id }}</a></td>*/
 /* 			{% if tesson.propositionClasse is not empty %}*/
+/* 				<td>*/
 /* 				{% for propClasse in tesson.propositionClasse %}*/
-/* 						<td>{{ propClasse.classe.nomClasse }}</td>*/
+/* 						{{ propClasse.classe.nomClasse }}*/
 /* 				{% endfor %}*/
+/* 				</td>*/
 /* 			{% else %}*/
 /* 				<td>Aucune proposition de classe</td>*/
 /* 			{% endif %}*/
 /* 			{%  if tesson.typageEn is not empty %}*/
+/* 				<td>*/
 /* 				{%  for typage in tesson.typageEn %}*/
 /* 					{% if typage.classe is not empty %}*/
-/* 						<td>{{ typage.classe.nomClasse }} </td>*/
+/* 						{{ typage.classe.nomClasse }}*/
 /* 					{% else %}*/
-/* 						<td>Pas de classe</td>*/
+/* 						Pas de classe*/
 /* 					{% endif %}*/
 /* 				{%  endfor %}*/
+/* 				</td>*/
 /* 			{% else %}*/
 /* 				<td>Pas de classe</td>*/
 /* 			{% endif %}*/
+/* 			<td width=1%>*/
+/* 				<a href="{{ path('lifo_classif_tesson', {'id': tesson.id}) }}" id="{{ tesson.id }}" class="btn btn-xs btn-info">+</a>*/
+/* 			</td>*/
 /* 			{% if typeNumerisation != "Aucune" %}*/
 /* 				{% if tesson.numerisation is not empty %}*/
 /* 					{% set break = false %}*/
 /* 					{% for numerisation in tesson.numerisation if not break %}*/
 /* 						{% if numerisation.typeNumerisation.nom == typeNumerisation %}*/
+/* 							<td>*/
 /* 							<a class="group" title=" {{ numerisation.alt }}" href="{{ asset(numerisation.webPath) }}">*/
 /* 							<img src="{{ asset(numerisation.webPath) }}" width="50" height="50" alt="{{ numerisation.alt }}"/>*/
 /* 							</a>*/
@@ -448,7 +557,47 @@ class __TwigTemplate_e5befdf423956516b061be7994071b32843bce52dbd1e18137e82d09039
 /* 	</div>*/
 /* {% endif %}*/
 /* */
-/* {% include 'LIFOClassifBundle::pagination.html.twig' %}*/
+/* {% if pagination.nbPages > 0 %}*/
+/*     <ul class="pagination">*/
+/*         {% if pagination.page > 1 %}*/
+/*             <li>*/
+/*                 <a href="{{ path(pagination.nomRoute, pagination.paramsRoute|merge({'page': 1, 'typeClassifChoisi': typeClassifChoisi, 'typeNumerisationChoisi': typeNumerisation, 'tessonsClasses': tessonsClasses})) }}">*/
+/*                     <<*/
+/*                 </a>*/
+/*             </li>*/
+/*             <li>*/
+/*                 <a href="{{ path(pagination.nomRoute,*/
+/*                 pagination.paramsRoute|merge({'page': pagination.page-1, 'typeClassifChoisi': typeClassifChoisi, 'typeNumerisationChoisi': typeNumerisation, 'tessonsClasses': tessonsClasses})) }}">*/
+/*                     <*/
+/*                 </a>*/
+/*             </li>*/
+/*         {% endif %}*/
+/* */
+/*         {# Affichage de toutes les pages entre p-4 et p+4 sauf si < 1 ou > nbPages #}*/
+/*         {% for p in range(max(pagination.page-4, 1), min(pagination.page+4, pagination.nbPages)) %}*/
+/*             <li {% if p == pagination.page %}class="active"{% endif %}>*/
+/*                 <a href="{{ path(pagination.nomRoute, pagination.paramsRoute|merge({'page': p, 'typeClassifChoisi': typeClassifChoisi, 'typeNumerisationChoisi': typeNumerisation, 'tessonsClasses': tessonsClasses})) }}">*/
+/*                     {{ p }}*/
+/*                 </a>*/
+/*             </li>*/
+/*         {% endfor %}*/
+/* */
+/*         {% if pagination.page < pagination.nbPages %}*/
+/*             <li>*/
+/*                 <a href="{{ path(pagination.nomRoute,*/
+/*                 pagination.paramsRoute|merge({'page': pagination.page+1, 'typeClassifChoisi': typeClassifChoisi, 'typeNumerisationChoisi': typeNumerisation, 'tessonsClasses': tessonsClasses})) }}">*/
+/*                     >*/
+/*                 </a>*/
+/*             </li>*/
+/*             <li>*/
+/*                 <a href="{{ path(pagination.nomRoute,*/
+/*                 pagination.paramsRoute|merge({'page': pagination.nbPages})) }}">*/
+/*                     >>*/
+/*                 </a>*/
+/*             </li>*/
+/*         {% endif %}*/
+/*     </ul>*/
+/* {% endif %}*/
 /* */
 /* 	<script type="text/javascript">*/
 /* 	$(document).ready(function() {*/
