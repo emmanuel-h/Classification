@@ -21,7 +21,12 @@ lifo_classif_classification:
         tessonsClasses: false
     requirements:
         page: \d+
-    
+        
+lifo_classif_classification_modifier:
+    path:    /classification/modifier
+    defaults:
+        _controller: LIFOClassifBundle:Platform:classeModifier
+
 lifo_classif_tesson:
     path:     /tesson/{id}
     defaults: { _controller: LIFOClassifBundle:Platform:tesson }

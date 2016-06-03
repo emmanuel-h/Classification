@@ -26,6 +26,7 @@ use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use LIFO\ClassifBundle\LIFOClassifBundle;
 use LIFO\ClassifBundle\Entity\TypeNumerisation;
+use LIFO\ClassifBundle\Entity\TypageEn;
 
 class PlatformController extends Controller {
 	public function indexAction() {
@@ -151,6 +152,28 @@ class PlatformController extends Controller {
 		) );
 	}
 
+	public function classeModifierAction(Request $request) {
+		$em = $this->getDoctrine()->getManager();
+		$tesson=$em->getRepository('LIFOClassifBundle:Tesson')->findOneById($request->request->get('selID'));
+		$tessonClasse=$em->getRepository('LIFOClassifBundle:Classe')->findOneByNomType($request->request->get('classe'));
+		if(is_object($tesson) && is_object($tessonClasse)){
+			$typages=$tesson->getTypageEn();
+			foreach($typages as $typage){
+				$em->remove($typage);
+			}
+			$newTypage = new TypageEn();
+			$newTypage->setClasse($tessonClasse);
+			$newTypage->setTesson($tesson);
+			$tesson->addTypageEn($newTypage);
+			$em->persist($newTypage);
+			$em->persist($tesson);
+			$em->flush();
+		}
+		
+		return new Response("OK");
+	}
+	
+	
 	/**
 	 * @Security("has_role('ROLE_USER')")
 	 */
@@ -220,10 +243,10 @@ class PlatformController extends Controller {
 		$tessons = $em->getRepository('LIFOClassifBundle:Tesson')
 		->paginationAvecParametres($page, $nbTessonsParPage, $typeNumerisationChoisi, $typeClassifChoisi, $tessonsClasses);
 		
-		$classes=$em->getRepository('LIFOClassifBundle:TypeClassification')->findBy([], ['nomType' => 'ASC']);
+		$classes=$em->getRepository('LIFOClassifBundle:Classe')->findBy([], ['nomClasse' => 'ASC']);
 		$listeClasses = array();
 		foreach($classes as $classe){
-			$listeClasses[] = $classe->getNomType();
+			$listeClasses[] = $classe->getNomClasse();
 		}
 		$pagination = array(
 				'page' => $page,

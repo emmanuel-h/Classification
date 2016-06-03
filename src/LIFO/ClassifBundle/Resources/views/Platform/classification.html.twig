@@ -95,9 +95,12 @@
 </div>
  
 {% if tessons is not empty %}
+
+
 	<table class="table table-bordered table-striped table-hover">
-	<thead align="middle"><tr class="warning"><td width=5%><b>ID tesson</b></td><td width=10%><b>Proposition</b><td width=10% colspan=2><b>Classe</b></td><td width=10%><b>Numérisation</b></td></tr></thead>
+	<thead align="middle"><tr class="warning"><td width=5%><b>ID tesson</b></td><td width=10%><b>Proposition</b><td width=10%><b>Classe</b></td><td width=10%><b>Numérisation</b></td></tr></thead>
 	<tbody>
+	
     {% for tesson in tessons %}
 		<tr>
 			<td><a href="{{ path('lifo_classif_tesson', {'id': tesson.id}) }}">{{ tesson.id }}</a></td>
@@ -110,43 +113,33 @@
 			{% else %}
 				<td>Aucune proposition de classe</td>
 			{% endif %}
-			{%  if tesson.typageEn is not empty %}
 				<td>
+				<select name="{{ tesson.id }}" onchange='modifierClasse(this)' class="form-control">
+			{%  if tesson.typageEn is not empty %}
 				{%  for typage in tesson.typageEn %}
-					{% if typage.typeClassification is not empty %}
-
-						<select>
+					{% if typage.classe is not empty %}
  						<option value="">Pas de classe</option>
 						{% for classe in listeClasses %}
-							{% if classe == typage.typeClassification.nomType %}
+							{% if classe == typage.classe.nomClasse %}
 								<option value="{{ classe }}" selected>{{ classe }}</option>
 							{% else %}
 								<option value="{{ classe }}">{{ classe }}</option>
 							{% endif %}
 						{% endfor %}
-						</select>
 					{% else %}
-						<select>
  						<option value="" selected>Pas de classe</option>
 						{% for classe in listeClasses %}
 							<option value="{{ classe }}">{{ classe }}</option>
 						{% endfor %}
-						</select>
 					{% endif %}
 				{%  endfor %}
-				</td>
 			{% else %}
-				<td>
-				<select>
 	 			<option value="" selected>Pas de classe</option>
 				{% for classe in listeClasses %}
 					<option value="{{ classe }}">{{ classe }}</option>
 				{% endfor %}
-				</select>
-				</td>
 			{% endif %}
-			<td width=1%>
-				<a href="{{ path('lifo_classif_tesson', {'id': tesson.id}) }}" id="{{ tesson.id }}" class="btn btn-xs btn-info">+</a>
+				</select>
 			</td>
 			{% if typeNumerisation != "Aucune" %}
 				{% if tesson.numerisation is not empty %}
@@ -190,6 +183,10 @@
 		$(".group").fancybox();
 		
 	});
+	
+	function modifierClasse(sel){
+		$.post("{{ path('lifo_classif_classification_modifier') }}", {selID:sel.name, classe:sel.value});
+	};
 	</script>
 
 {% endblock %}
