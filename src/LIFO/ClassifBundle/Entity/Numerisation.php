@@ -175,8 +175,8 @@ class Numerisation {
 				unlink ( $oldFile );
 			}
 		}
-		$this->file->move ( $this->getUploadRootDir (), // Le répertoire de destination
-							"t" . $this->tesson->getId () . "-n" . $this->id . '.' . $this->extension ); // Le nom du fichier à créer, ici « id.extension »
+		$this->file->move ( $this->getUploadRootDir (), // Le rï¿½pertoire de destination
+							"t" . $this->tesson->getId () . "-n" . $this->id . '.' . $this->extension ); // Le nom du fichier ï¿½ crï¿½er, ici ï¿½ id.extension ï¿½
 
 	}
 	
@@ -199,7 +199,7 @@ class Numerisation {
 		return 'uploads/numerisations';
 	}
 	protected function getUploadRootDir() {
-		return __DIR__ . '/../../../../web/' . $this->getUploadDir ();
+		return __DIR__ . $this->container->getParameter('PICTURES_SAVED_PATH') . $this->getUploadDir ();
 	}
 	
 	/**

@@ -100,7 +100,6 @@ class PlatformController extends Controller {
 					->add('Rechercher', SubmitType::class)
 					->getForm();
 
-
 		$em = $this->getDoctrine ()->getManager ();
 					
 		if ($request->isMethod ( 'POST' ) && $formRechercheID->handleRequest ( $request )->isValid ()) {
@@ -136,33 +135,36 @@ class PlatformController extends Controller {
 		$ns="";
 		$u="";
 		$ni="";
+		$criteres = array();
 		if($request->query->get('codeInsee') != NULL){
 			$ci=$request->query->get('codeInsee');
+			$criteres['codeInsee']=$ci;
 		}
 		if($request->query->get('numeroSite') != NULL){
 			$ns=$request->query->get('numeroSite');
+			$criteres['numeroSite']=$ns;
 		}
 		if($request->query->get('us') != NULL){
 			$u=$request->query->get('us');
+			$criteres['us']=$u;
 		}
 		if($request->query->get('numeroIsolation') != NULL){
 			$ni=$request->query->get('numeroIsolation');
+			$criteres['numeroIsolation']=$ni;
 		}
+		
 		$tessons=$em->getRepository('LIFOClassifBundle:Tesson')->findWithSpecificCriteria($ci, $ns, $u, $ni, $page, $nbTessonsParPage);
 		$pagination = array(
 				'page'			=> $page,
 				'nbPages'		=> ceil(count($tessons) / $nbTessonsParPage),
 				'nomRoute'		=> 'lifo_classif_recherche_afficher',
-				'paramsRoute'	=> array(
-					'codeInsee'			=> $request->query->get('codeInsee'),
-					'numeroSite'		=> $request->query->get('numeroSite'),
-					'us'				=> $request->query->get('us'),
-					'numeroIsolation'	=> $request->query->get('numeroIsolation')
-				));
+				'paramsRoute'	=> $criteres
+				);
 		
 		return $this->render ( 'LIFOClassifBundle:Platform:afficherTessonsRecherche.html.twig', array(
 				'tessons'		=> $tessons,
-				'pagination'	=> $pagination
+				'pagination'	=> $pagination,
+				'criteres'		=> $criteres
 		));
 	}
 
@@ -294,6 +296,7 @@ class PlatformController extends Controller {
 	public function tessonAction($id) {
 		$em = $this->getDoctrine ()->getManager ();
 		$tesson = $em->getRepository('LIFOClassifBundle:Tesson')->findOneById($id);
+		
 		return $this->render ( 'LIFOClassifBundle:Platform:tesson.html.twig', array(
 					'tesson' => $tesson));
 	}

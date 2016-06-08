@@ -4,6 +4,20 @@
 
 {% block LIFOClassif_body %}
 
+ <div class="alert alert-info" align="center" id="parametresClassif">
+	<strong>Paramètres de recherche&nbsp;:&nbsp;</strong>
+	{% if criteres is empty %}
+		Aucun
+	{% else %}
+		{% for nom, critere in criteres %}
+		{{ nom }}&nbsp;:&nbsp;{{ critere }}
+		{% endfor %}
+	{% endif %}
+	
+	
+</div>
+
+
 <table class="table table-bordered table-striped table-hover">
 	<thead align="middle"><tr class="warning"><td width=5%><b>ID tesson</b></td><td width=10%><b>Site</b><td width=10%><b>US</b></td><td width=10%><b>Numéro d'isolation</b></td></tr></thead>
 	<tbody>

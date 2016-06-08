@@ -138,13 +138,13 @@ class TessonRepository extends \Doctrine\ORM\EntityRepository {
 		$qb = $this->createQueryBuilder('t')
 		->orderBy('t.id', 'ASC');
 		if($codeInsee != ""){
-			$qb->leftJoin('t.site', 's')
-			->andWhere('s.codeINSEE=:codeInsee')
+			$qb->leftJoin('t.site', 's1')
+			->andWhere('s1.codeINSEE=:codeInsee')
 			->setParameter('codeInsee', $codeInsee);
 		}
 		if($numSite != ""){
-			$qb->leftJoin('t.site', 's')
-			->andWhere('s.numSiteCommune=:numSite')
+			$qb->leftJoin('t.site', 's2')
+			->andWhere('s2.numSiteCommune=:numSite')
 			->setParameter('numSite', $numSite);
 		}
 		if($us != ""){

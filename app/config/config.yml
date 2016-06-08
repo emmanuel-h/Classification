@@ -9,6 +9,7 @@ imports:
 parameters:
     locale: en
     NB_TESSONS_PAR_PAGE: 10
+    PICTURES_SAVED_PATH: '/../../../../web/'
 
 framework:
     #esi:             ~
