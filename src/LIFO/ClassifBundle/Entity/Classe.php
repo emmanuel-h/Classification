@@ -24,7 +24,7 @@ class Classe
     /**
      * @var string
      *
-     * @ORM\Column(name="nomClasse", type="string", length=255)
+     * @ORM\Column(name="nomClasse", type="string", length=255, unique=true)
      */
     private $nomClasse;
 
@@ -35,6 +35,10 @@ class Classe
      */
     private $description;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\TypeClassification")
+     */
+    private  $typeClassification;
 
     /**
      * Get id
@@ -92,5 +96,29 @@ class Classe
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Set typeClassification
+     *
+     * @param \LIFO\ClassifBundle\Entity\TypeClassification $typeClassification
+     *
+     * @return Classe
+     */
+    public function setTypeClassification(\LIFO\ClassifBundle\Entity\TypeClassification $typeClassification = null)
+    {
+        $this->typeClassification = $typeClassification;
+
+        return $this;
+    }
+
+    /**
+     * Get typeClassification
+     *
+     * @return \LIFO\ClassifBundle\Entity\TypeClassification
+     */
+    public function getTypeClassification()
+    {
+        return $this->typeClassification;
     }
 }

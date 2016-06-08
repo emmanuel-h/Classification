@@ -35,6 +35,10 @@ class Classe
      */
     private $description;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="LIFO\ClassifBundle\Entity\TypeClassification")
+     */
+    private  $typeClassification;
 
     /**
      * Get id

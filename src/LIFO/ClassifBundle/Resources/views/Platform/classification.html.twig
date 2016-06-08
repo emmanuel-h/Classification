@@ -49,51 +49,9 @@
  </div>
  
  {# La pagination est en haut pour éviter de scroll pour la voir #}
- 
-<div align="center">
-{% if pagination.nbPages > 0 %}
-    <ul class="pagination">
-        {% if pagination.page > 1 %}
-            <li>
-                <a href="{{ path(pagination.nomRoute, pagination.paramsRoute|merge({'page': 1, 'typeClassifChoisi': typeClassifChoisi, 'typeNumerisationChoisi': typeNumerisation, 'tessonsClasses': tessonsClasses})) }}">
-                    <<
-                </a>
-            </li>
-            <li>
-                <a href="{{ path(pagination.nomRoute,
-                pagination.paramsRoute|merge({'page': pagination.page-1, 'typeClassifChoisi': typeClassifChoisi, 'typeNumerisationChoisi': typeNumerisation, 'tessonsClasses': tessonsClasses})) }}">
-                    <
-                </a>
-            </li>
-        {% endif %}
 
-        {# Affichage de toutes les pages entre p-4 et p+4 sauf si < 1 ou > nbPages #}
-        {% for p in range(max(pagination.page-4, 1), min(pagination.page+4, pagination.nbPages)) %}
-            <li {% if p == pagination.page %}class="active"{% endif %}>
-                <a href="{{ path(pagination.nomRoute, pagination.paramsRoute|merge({'page': p, 'typeClassifChoisi': typeClassifChoisi, 'typeNumerisationChoisi': typeNumerisation, 'tessonsClasses': tessonsClasses})) }}">
-                    {{ p }}
-                </a>
-            </li>
-        {% endfor %}
+{% include 'LIFOClassifBundle::pagination.html.twig' %}
 
-        {% if pagination.page < pagination.nbPages %}
-            <li>
-                <a href="{{ path(pagination.nomRoute,
-                pagination.paramsRoute|merge({'page': pagination.page+1, 'typeClassifChoisi': typeClassifChoisi, 'typeNumerisationChoisi': typeNumerisation, 'tessonsClasses': tessonsClasses})) }}">
-                    >
-                </a>
-            </li>
-            <li>
-                <a href="{{ path(pagination.nomRoute,
-                pagination.paramsRoute|merge({'page': pagination.nbPages})) }}">
-                    >>
-                </a>
-            </li>
-        {% endif %}
-    </ul>
-{% endif %}
-</div>
- 
 {% if tessons is not empty %}
 
 
@@ -113,32 +71,40 @@
 			{% else %}
 				<td>Aucune proposition de classe</td>
 			{% endif %}
-				<td>
-				<select name="{{ tesson.id }}" onchange='modifierClasse(this)' class="form-control">
+			<td>
+			<select name="{{ tesson.id }}" onchange='modifierClasse(this)' class="form-control">
+			{% set type = 0 %}
 			{%  if tesson.typageEn is not empty %}
 				{%  for typage in tesson.typageEn %}
 					{% if typage.classe is not empty %}
+						{% set type = 1 %}
  						<option value="">Pas de classe</option>
-						{% for classe in listeClasses %}
-							{% if classe == typage.classe.nomClasse %}
-								<option value="{{ classe }}" selected>{{ classe }}</option>
-							{% else %}
-								<option value="{{ classe }}">{{ classe }}</option>
-							{% endif %}
-						{% endfor %}
-					{% else %}
+ 					{% else %}
  						<option value="" selected>Pas de classe</option>
-						{% for classe in listeClasses %}
-							<option value="{{ classe }}">{{ classe }}</option>
-						{% endfor %}
-					{% endif %}
-				{%  endfor %}
-			{% else %}
-	 			<option value="" selected>Pas de classe</option>
-				{% for classe in listeClasses %}
-					<option value="{{ classe }}">{{ classe }}</option>
-				{% endfor %}
-			{% endif %}
+ 					{% endif %}
+ 				{% endfor %}
+ 			{% else %}
+ 			<option value="" selected>Pas de classe</option>
+ 			{% endif %}
+ 			{% set typeClasseCourant = "" %}
+			{% for classe in listeClasses %}
+				{% if typeClasseCourant != classe.typeClassification.nomType %}
+  					</optgroup>
+  					<optgroup label="{{ classe.typeClassification.nomType }}">
+				{% endif %}
+				{% set typeClasseCourant = classe.typeClassification.nomType %}
+				{% if type == 1 %}
+					{%  for typage in tesson.typageEn %}
+						{% if classe.nomClasse == typage.classe.nomClasse %}
+							<option value="{{ classe.nomClasse }}" selected>{{ classe.nomClasse }}</option>
+						{% else %}
+							<option value="{{ classe.nomClasse }}">{{ classe.nomClasse }}</option>
+						{% endif %}
+					{% endfor %}
+				{% else %}
+					<option value="{{ classe.nomClasse }}">{{ classe.nomClasse }}</option>
+				{% endif %}
+			{% endfor %}
 				</select>
 			</td>
 			{% if typeNumerisation != "Aucune" %}

@@ -69,7 +69,7 @@ class PlatformController extends Controller {
 		
 		$messageImportant ="";
 		$formRechercheID = $this->createFormBuilder(array(
-		'name' => 'fomrid',
+		'name' => 'formid',
         'csrf_protection' => true,
         'csrf_field_name' => '_token',
 		'attr' => array(
@@ -89,10 +89,14 @@ class PlatformController extends Controller {
 				'id' => 'FormRechercheL'
 				)
    		))
-					->add('codeInsee', IntegerType::class)
-					->add('numeroCommune', IntegerType::class)
-					->add('us', TextType::class)
-					->add('numeroIsolation', IntegerType::class)
+					->add('codeInsee', IntegerType::class,array(
+							'required' => false))
+					->add('numeroSite', IntegerType::class,array(
+							'required' => false))
+					->add('us', TextType::class,array(
+							'required' => false))
+					->add('numeroIsolation', IntegerType::class,array(
+							'required' => false))
 					->add('Rechercher', SubmitType::class)
 					->getForm();
 
@@ -109,41 +113,13 @@ class PlatformController extends Controller {
 		}
 		
 		if ($request->isMethod ( 'POST' ) && $formRechercheLocalisation->handleRequest ( $request )->isValid ()) {
+			return $this->redirectToRoute ( 'lifo_classif_recherche_afficher', (array(
+					'codeInsee'			=> $formRechercheLocalisation->get('codeInsee')->getData(),
+					'numeroSite'		=> $formRechercheLocalisation->get('numeroSite')->getData(),
+					'us'				=> $formRechercheLocalisation->get('us')->getData(),
+					'numeroIsolation'	=> $formRechercheLocalisation->get('numeroIsolation')->getData()
+			)) );
 			
-			//On vérifie que le site existe
-			$codeInsee=$formRechercheLocalisation->get('codeInsee')->getData();
-			$numSiteCommune=$formRechercheLocalisation->get('numeroCommune')->getData();
-			$site = $em->getRepository ( 'LIFOClassifBundle:Site' )->findOneBy ( array (
-					'codeINSEE' => $codeInsee,
-					'numSiteCommune' => $numSiteCommune
-			) );
-			if ( is_object ( $site )) {
-				
-				//Puis que l'US lui est bien associé
-				$us = $em->getRepository ( 'LIFOClassifBundle:US' )->findOneBy ( array (
-						'nom' => $formRechercheLocalisation->get('us')->getData(),
-						'site' => $site
-				) );
-				if ( is_object ( $us )) {
-					
-					//Puis que le numero d'isolation donné amène effectivement à un tesson
-					$numIsolation = $formRechercheLocalisation->get('numeroIsolation')->getData();
-					$t = $em->getRepository ( 'LIFOClassifBundle:Tesson' )->findOneBy ( array (
-							'us' => $us,
-							'site' => $site,
-							'numIsolation' => $numIsolation
-					) );
-					if(is_object($t)){
-						return $this->redirectToRoute ( 'lifo_classif_tesson', array ('id' => $tesson->getId ()) );
-					} else {
-						$messageImportant = "Pas de numero d'isolation correspondant";
-					}
-				} else {
-					$messageImportant = "Pas d'US correspondant";
-				}
-			} else {
-				$messageImportant = "Pas de site correspondant";
-			}
 		}
 		return $this->render ( 'LIFOClassifBundle:Platform:recherche.html.twig', array (
 				'formRechercheID' => $formRechercheID->createView (),
@@ -151,11 +127,49 @@ class PlatformController extends Controller {
 				'messageImportant' => $messageImportant
 		) );
 	}
+	
+	public function rechercheAfficherAction(Request $request, $page){
+		$em = $this->getDoctrine()->getManager();
+
+		$nbTessonsParPage=$this->container->getParameter('NB_TESSONS_PAR_PAGE');
+		$ci="";
+		$ns="";
+		$u="";
+		$ni="";
+		if($request->query->get('codeInsee') != NULL){
+			$ci=$request->query->get('codeInsee');
+		}
+		if($request->query->get('numeroSite') != NULL){
+			$ns=$request->query->get('numeroSite');
+		}
+		if($request->query->get('us') != NULL){
+			$u=$request->query->get('us');
+		}
+		if($request->query->get('numeroIsolation') != NULL){
+			$ni=$request->query->get('numeroIsolation');
+		}
+		$tessons=$em->getRepository('LIFOClassifBundle:Tesson')->findWithSpecificCriteria($ci, $ns, $u, $ni, $page, $nbTessonsParPage);
+		$pagination = array(
+				'page'			=> $page,
+				'nbPages'		=> ceil(count($tessons) / $nbTessonsParPage),
+				'nomRoute'		=> 'lifo_classif_recherche_afficher',
+				'paramsRoute'	=> array(
+					'codeInsee'			=> $request->query->get('codeInsee'),
+					'numeroSite'		=> $request->query->get('numeroSite'),
+					'us'				=> $request->query->get('us'),
+					'numeroIsolation'	=> $request->query->get('numeroIsolation')
+				));
+		
+		return $this->render ( 'LIFOClassifBundle:Platform:afficherTessonsRecherche.html.twig', array(
+				'tessons'		=> $tessons,
+				'pagination'	=> $pagination
+		));
+	}
 
 	public function classeModifierAction(Request $request) {
 		$em = $this->getDoctrine()->getManager();
 		$tesson=$em->getRepository('LIFOClassifBundle:Tesson')->findOneById($request->request->get('selID'));
-		$tessonClasse=$em->getRepository('LIFOClassifBundle:Classe')->findOneByNomType($request->request->get('classe'));
+		$tessonClasse=$em->getRepository('LIFOClassifBundle:Classe')->findOneByNomClasse($request->request->get('classe'));
 		if(is_object($tesson) && is_object($tessonClasse)){
 			$typages=$tesson->getTypageEn();
 			foreach($typages as $typage){
@@ -164,6 +178,7 @@ class PlatformController extends Controller {
 			$newTypage = new TypageEn();
 			$newTypage->setClasse($tessonClasse);
 			$newTypage->setTesson($tesson);
+			$newTypage->setTypeClassification($tessonClasse->getTypeClassification());
 			$tesson->addTypageEn($newTypage);
 			$em->persist($newTypage);
 			$em->persist($tesson);
@@ -177,7 +192,7 @@ class PlatformController extends Controller {
 	/**
 	 * @Security("has_role('ROLE_USER')")
 	 */
-	public function classificationAction(Request $request, $page, $typeClassifChoisi, $typeNumerisationChoisi, $tessonsClasses) {
+	public function classificationAction(Request $request, $page) {
 		
 		$em = $this->getDoctrine()->getManager();
 		$nbTessonsParPage=$this->container->getParameter('NB_TESSONS_PAR_PAGE');
@@ -206,19 +221,26 @@ class PlatformController extends Controller {
 			->add('campagne', ChoiceType::class)
 			->add('afficher', SubmitType::class)
 			->getForm();
-			
-		$formChangementClasse = $this->createFormBuilder()
-			->add('classe', TextType::class)
-			->add('id', IntegerType::class)
-			->add('Ok', SubmitType::class)
-			->getForm();
+
+		if($request->query->get('typeClassifChoisi') != NULL){
+			$typeClassifChoisi=$request->query->get('typeClassifChoisi');
+		} else {
+			$typeClassifChoisi="Aucune";
+		}
+		if($request->query->get('typeNumerisationChoisi') != NULL){
+			$typeNumerisationChoisi=$request->query->get('typeNumerisationChoisi');
+		} else {
+			$typeNumerisationChoisi="Aucune";
+		}
+		if($request->query->get('tessonClasses') != NULL){
+			$tessonsClasses=$request->query->get('tessonsClasses');
+		} else {
+			$tessonsClasses=false;
+		}
 		
-			
 		if(! $request->isMethod( 'POST' )){
 			if($tessonsClasses==true){
 				$formClassif->get('afficherTessonsClasses')->setData(true);
-			$formChangementClasse->get('classe')->setData("Aucune");
-			$formChangementClasse->get('id')->setData(0);
 			}
 		}
 		
@@ -242,18 +264,18 @@ class PlatformController extends Controller {
 
 		$tessons = $em->getRepository('LIFOClassifBundle:Tesson')
 		->paginationAvecParametres($page, $nbTessonsParPage, $typeNumerisationChoisi, $typeClassifChoisi, $tessonsClasses);
-		
-		$classes=$em->getRepository('LIFOClassifBundle:Classe')->findBy([], ['nomClasse' => 'ASC']);
-		$listeClasses = array();
-		foreach($classes as $classe){
-			$listeClasses[] = $classe->getNomClasse();
-		}
+
+		$typeClassif = $formClassif->get('typeClassification')->getData();
+		$listeClasses=$em->getRepository('LIFOClassifBundle:Classe')->findBy([], ['typeClassification' => 'ASC']);
 		$pagination = array(
 				'page' => $page,
 				'nbPages' => ceil(count($tessons) / $nbTessonsParPage),
 				'nomRoute' => 'lifo_classif_classification',
-				'paramsRoute' => array()
-		);
+				'paramsRoute' => array(
+						'typeNumerisationChoisi'	=> $typeNumerisationChoisi, 
+						'typeClassifChoisi'			=> $typeClassifChoisi,
+						'tessonsClasses'			=> $tessonsClasses
+				));
 		
 		return $this->render ( 'LIFOClassifBundle:Platform:classification.html.twig', array(
 				'tessons' => $tessons,

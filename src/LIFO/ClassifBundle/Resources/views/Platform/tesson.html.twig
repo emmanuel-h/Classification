@@ -25,6 +25,12 @@
 	<table class="table table-bordered table-striped table-hover">
 		<thead><tr><td colspan = "2" class="warning" align="center"><b>Dimensions</b></td></tr></thead>
 		<tbody>
+			<tr><td>Caractère moyen</td><td>
+			{% if tesson.largeur != 0 and tesson.longueur != 0 and tesson.nombreMotifsVerticaux != 0 and tesson.nombreMotifsHorizontaux != 0 %}
+				{{ (tesson.longueur+tesson.largeur)/(tesson.nombreMotifsVerticaux + tesson.nombreMotifsHorizontaux) }}
+			{% else %}
+				0
+			{% endif %}</td>
 			<tr><td>Largeur</td><td>{{tesson.ordreLargeur}}&nbsp;{{tesson.largeur}}</td></tr>
 			<tr><td>Longueur</td><td>{{tesson.ordreLongueur}}&nbsp;{{tesson.longueur}}</td></tr>
 			<tr><td>Nombre de motifs verticaux</td><td>{{tesson.ordreMotifsVerticaux}}&nbsp;{{tesson.nombreMotifsVerticaux}}</td></tr>
@@ -38,7 +44,7 @@
 		<thead><tr><td colspan = "2" class="warning" align="center"><b>Localisation</b></td></tr></thead>
 		<tbody>
 			<tr><td>Code INSEE</td><td>{{tesson.site.codeINSEE}}</td></tr>
-			<tr><td>Numéro de Commune</td><td>{{tesson.site.numSiteCommune}}</td></tr>
+			<tr><td>Numéro de site</td><td>{{tesson.site.numSiteCommune}}</td></tr>
 			<tr><td>Zone</td><td>{{tesson.zone.numero|default('Aucune')}}</td></tr>
 			<tr><td>US</td><td>{{tesson.us.nom}}</td></tr>
 			<tr><td>Numéro d'isolation</td><td>{{tesson.numIsolation}}</td></tr>

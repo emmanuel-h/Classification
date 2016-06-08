@@ -75,7 +75,7 @@ class TessonRepository extends \Doctrine\ORM\EntityRepository {
 		$paginator = new Paginator($query);
 	
 		if ( ($paginator->count() <= $premierResultat) && $page != 1) {
-			throw new NotFoundHttpException('La page demandée n\'existe pas.'); // page 404, sauf pour la premi�re page
+			throw new NotFoundHttpException('La page demandée n\'existe pas.'); // page 404, sauf pour la première page
 		}
 	
 		return $paginator;
@@ -112,7 +112,59 @@ class TessonRepository extends \Doctrine\ORM\EntityRepository {
 		$paginator = new Paginator($query);
 	
 		if ( ($paginator->count() <= $premierResultat) && $page != 1) {
-			throw new NotFoundHttpException('La page demand�e n\'existe pas.'); // page 404, sauf pour la premi�re page
+			throw new NotFoundHttpException('La page demandée n\'existe pas.'); // page 404, sauf pour la premi�re page
+		}
+	
+		return $paginator;
+	}
+	
+	public function findWithSpecificCriteria($codeInsee, $numSite, $us, $numIsolation, $page, $nbMaxParPage){
+		if (!is_numeric($page)) {
+			throw new InvalidArgumentException(
+					'La valeur de l\'argument $page est incorrecte (valeur : ' . $page . ').'
+					);
+		}
+		
+		if ($page < 1) {
+			throw new NotFoundHttpException('La page demandée n\'existe pas');
+		}
+		
+		if (!is_numeric($nbMaxParPage)) {
+			throw new InvalidArgumentException(
+					'La valeur de l\'argument $nbMaxParPage est incorrecte (valeur : ' . $nbMaxParPage . ').'
+					);
+		}
+
+		$qb = $this->createQueryBuilder('t')
+		->orderBy('t.id', 'ASC');
+		if($codeInsee != ""){
+			$qb->leftJoin('t.site', 's')
+			->andWhere('s.codeINSEE=:codeInsee')
+			->setParameter('codeInsee', $codeInsee);
+		}
+		if($numSite != ""){
+			$qb->leftJoin('t.site', 's')
+			->andWhere('s.numSiteCommune=:numSite')
+			->setParameter('numSite', $numSite);
+		}
+		if($us != ""){
+			$qb->leftJoin('t.us', 'u')
+			->andWhere('u.nom=:us')
+			->setParameter('us', $us);
+		}
+		if($numIsolation != ""){
+			$qb->andWhere('t.numIsolation=:numIsolation')
+			->setParameter('numIsolation', $numIsolation);
+		}
+		
+		$query = $qb->getQuery();
+		
+		$premierResultat = ($page - 1) * $nbMaxParPage;
+		$query->setFirstResult($premierResultat)->setMaxResults($nbMaxParPage);
+		$paginator = new Paginator($query);
+	
+		if ( ($paginator->count() <= $premierResultat) && $page != 1) {
+			throw new NotFoundHttpException('La page demandée n\'existe pas.'); // page 404, sauf pour la première page
 		}
 	
 		return $paginator;

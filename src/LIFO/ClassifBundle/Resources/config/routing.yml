@@ -11,14 +11,19 @@ lifo_classif_recherche:
     path:     /recherche
     defaults: { _controller: LIFOClassifBundle:Platform:recherche }
     
+lifo_classif_recherche_afficher:
+    path:     /recherche/afficher/{page}
+    defaults:
+        _controller: LIFOClassifBundle:Platform:rechercheAfficher
+        page: 1
+    requirements:
+        page: \d+
+    
 lifo_classif_classification:
-    path:     /classification/{page}/{typeClassifChoisi}/{typeNumerisationChoisi}/{tessonsClasses}
+    path:     /classification/{page}
     defaults:
         _controller: LIFOClassifBundle:Platform:classification
         page: 1
-        typeClassifChoisi: Aucune
-        typeNumerisationChoisi: Aucune
-        tessonsClasses: false
     requirements:
         page: \d+
         
