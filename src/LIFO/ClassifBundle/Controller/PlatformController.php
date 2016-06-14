@@ -27,6 +27,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use LIFO\ClassifBundle\LIFOClassifBundle;
 use LIFO\ClassifBundle\Entity\TypeNumerisation;
 use LIFO\ClassifBundle\Entity\TypageEn;
+use LIFO\ClassifBundle\Entity\Zone;
 
 class PlatformController extends Controller {
 	public function indexAction() {
@@ -294,6 +295,19 @@ class PlatformController extends Controller {
 	 * @Security("has_role('ROLE_USER')")
 	 */
 	public function tessonAction($id) {
+		
+
+		/*require_once('odtphp/src/Odf.php');
+		$odf = new odf("odtphp-exemple1.odt", array('ZIP_PROXY' => 'PhpZipProxy'));
+		
+		$odf->setVars('titre', 'Mon titre dynamique');
+		$odf->setVars('texte', "Mon texte,\n\n\nAvec plusieurs lignes...");
+		
+		// Ajouter une image:
+		$odf->setImage('image', 'web-d.jpg');
+		
+		$odf->exportAsAttachedFile("Exemple ODTPHP");*/
+		
 		$em = $this->getDoctrine ()->getManager ();
 		$tesson = $em->getRepository('LIFOClassifBundle:Tesson')->findOneById($id);
 		
@@ -348,7 +362,7 @@ class PlatformController extends Controller {
 			}
 			$em->persist ( $site );
 			$tesson->setSite ( $site );
-				
+
 			$us = $em->getRepository ( 'LIFOClassifBundle:US' )->findOneBy ( array (
 					'nom' => $tesson->getUs ()->getNom (),
 					'site' => $tesson->getSite ()
@@ -360,6 +374,18 @@ class PlatformController extends Controller {
 				$em->persist ( $us );
 			}
 			$tesson->setUs ( $us );
+			
+			$zone = $em->getRepository ( 'LIFOClassifBundle:Zone' )->findOneBy ( array (
+					'numero' => $tesson->getZone ()->getNumero (),
+					'site' => $tesson->getSite ()
+			) );
+			if (! is_object ( $zone )) {
+				$zone = new Zone ();
+				$zone->setNumero ( $tesson->getZone ()->getNumero () );
+				$zone->setSite ( $site );
+				$em->persist ( $zone );
+			}
+			$tesson->setZone ( $zone );
 				
 			if($tesson->getSequence() != NULL){
 				if($tesson->getSequence()->getNumeroSequence() != ""){

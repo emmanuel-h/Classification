@@ -9,136 +9,322 @@
 
   {# Les erreurs générales du formulaire. #}
   {{ form_errors(form) }}
-
-  <div class="form-group">
-    {{ form_label(form.anneeDecouverte, "Année de la découverte", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
-    {{ form_errors(form.anneeDecouverte) }}
-    <div class="col-sm-10">
-      {{ form_widget(form.anneeDecouverte, {'attr': {'class': 'form-control'}}) }}
-    </div>
-  </div>
-  <div class="form-group">
-    {{ form_label(form.developpe, "Développé", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
-    {{ form_errors(form.developpe) }}
-    <div class="col-sm-10">
-      {{ form_widget(form.developpe, {'attr': {'class': 'form-control'}}) }}
-    </div>
-  </div>
-  <div class="form-group">
-    {{ form_label(form.lotIndividu, "lot/Individu", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
-    {{ form_errors(form.lotIndividu) }}
-    <div class="col-sm-10">
-      {{ form_widget(form.lotIndividu, {'attr': {'class': 'form-control'}}) }}
-    </div>
-  </div>
-  <div class="form-group">
-    {{ form_label(form.numTombe, "Numéro de tombe", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
-    {{ form_errors(form.numTombe) }}
-    <div class="col-sm-10">
-      {{ form_widget(form.numTombe, {'attr': {'class': 'form-control'}}) }}
-    </div>
-  </div>
-  <div class="form-group">
-    {{ form_label(form.fait, "Fait", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
-    {{ form_errors(form.fait) }}
-    <div class="col-sm-10">
-      {{ form_widget(form.fait, {'attr': {'class': 'form-control'}}) }}
-    </div>
-  </div>
-  <div class="form-group">
-    {{ form_label(form.largeur, "Largeur", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
-    {{ form_errors(form.largeur) }}
-    <div class="col-sm-1">
-      {{ form_widget(form.ordreLargeur, {'attr': {'class': 'form-control'}}) }}
-	  </div>
-    <div class="col-sm-9">
-      {{ form_widget(form.largeur, {'attr': {'class': 'form-control'}}) }}
-    </div>
-  </div>
-  <div class="form-group">
-    {{ form_label(form.longueur, "Longueur", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
-    {{ form_errors(form.longueur) }}
-    <div class="col-sm-1">
-      {{ form_widget(form.ordreLongueur, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="col-sm-9">
-      {{ form_widget(form.longueur, {'attr': {'class': 'form-control'}}) }}
-    </div>
-  </div>
-  <div class="form-group">
-    {{ form_label(form.commentaire, "Commentaire", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
-    {{ form_errors(form.commentaire) }}
-    <div class="col-sm-10">
-      {{ form_widget(form.commentaire, {'attr': {'class': 'form-control'}}) }}
-    </div>
-  </div>
-  <div class="form-group">
-    {{ form_label(form.nombreMotifsVerticaux, "Nombre de motifs verticaux", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
-    {{ form_errors(form.nombreMotifsVerticaux) }}
-    <div class="col-sm-1">
-      {{ form_widget(form.ordreMotifsVerticaux, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="col-sm-9">
-      {{ form_widget(form.nombreMotifsVerticaux, {'attr': {'class': 'form-control'}}) }}
-    </div>
-  </div>
-  <div class="form-group">
-    {{ form_label(form.nombreMotifsHorizontaux, "Nombre de motifs horizontaux", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
-    {{ form_errors(form.nombreMotifsHorizontaux) }}
-    <div class="col-sm-1">
-      {{ form_widget(form.ordreMotifsHorizontaux, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="col-sm-9">
-      {{ form_widget(form.nombreMotifsHorizontaux, {'attr': {'class': 'form-control'}}) }}
-    </div>
-  </div>
-  <div class="form-group">
-    {{ form_label(form.numIsolation, "Numéro d'isolation", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
-    {{ form_errors(form.numIsolation) }}
-    <div class="col-sm-10">
-      {{ form_widget(form.numIsolation, {'attr': {'class': 'form-control'}}) }}
-    </div>
-  </div>
   <fieldset>
-  <legend></legend>
-  {{ form_row(form.site) }}
+    <legend>&nbsp;&nbsp;Description</legend>
+    <div class="form-group">
+  	  <div class="col-sm-6">
+	    <b>&nbsp;Année de la découverte</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">
+        {{ form_errors(form.anneeDecouverte) }}
+   	  </div>
+ 	  <div class="col-sm-6">
+	    <b>&nbsp;Développé</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">
+    	{{ form_errors(form.developpe) }}
+  	  </div>
+      <div class="col-sm-6">
+        {{ form_widget(form.anneeDecouverte, {'attr': {'class': 'form-control'}}) }}
+      </div>
+      <div class="col-sm-6">
+        {{ form_widget(form.developpe, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
+    <div class="form-group">
+  	  <div class="col-sm-6">
+	    <b>&nbsp;Lot/Individu</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">
+        {{ form_errors(form.lotIndividu) }}
+   	  </div>
+ 	  <div class="col-sm-6">
+	    <b>&nbsp;Numéro de tombe</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">
+    	{{ form_errors(form.numTombe) }}
+  	  </div>
+      <div class="col-sm-6">
+        {{ form_widget(form.lotIndividu, {'attr': {'class': 'form-control'}}) }}
+      </div>
+      <div class="col-sm-6">
+        {{ form_widget(form.numTombe, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
+    <div class="form-group">
+  	  <div class="col-sm-6">
+	    <b>&nbsp;Fait</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">
+        {{ form_errors(form.fait) }}
+   	  </div>
+ 	  <div class="col-sm-6">
+	    <b>&nbsp;Commentaire</b>
+    	{{ form_errors(form.commentaire) }}
+  	  </div>
+      <div class="col-sm-6">
+        {{ form_widget(form.fait, {'attr': {'class': 'form-control'}}) }}
+      </div>
+      <div class="col-sm-6">
+        {{ form_widget(form.commentaire, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
   </fieldset>
   <fieldset>
-  <legend></legend>
-  {{ form_row(form.US) }}
+  	<legend>&nbsp;&nbsp;Dimensions</legend>
+  	<div class="form-group">
+  	  <div class="col-sm-6">
+	    <b>&nbsp;Largeur</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">
+        {{ form_errors(form.largeur) }}
+   	  </div>
+ 	  <div class="col-sm-6">
+	    <b>&nbsp;Longueur</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">
+    	{{ form_errors(form.longueur) }}
+  	  </div>
+  	  <div class="col-sm-1">
+  	  	{{ form_widget(form.ordreLargeur) }}
+  	  </div>
+      <div class="col-sm-5">
+        {{ form_widget(form.largeur, {'attr': {'class': 'form-control'}}) }}
+      </div>
+  	  <div class="col-sm-1">
+  	  	{{ form_widget(form.ordreLongueur) }}
+  	  </div>
+      <div class="col-sm-5">
+        {{ form_widget(form.longueur, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
+  	<div class="form-group">
+  	  <div class="col-sm-6">
+	    <b>&nbsp;Nombre de motifs verticaux</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">
+        {{ form_errors(form.nombreMotifsVerticaux) }}
+   	  </div>
+ 	  <div class="col-sm-6">
+	    <b>&nbsp;Nombre de motifs horizontaux</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">
+    	{{ form_errors(form.nombreMotifsHorizontaux) }}
+  	  </div>
+  	  <div class="col-sm-1">
+  	  	{{ form_widget(form.ordreMotifsVerticaux) }}
+  	  </div>
+      <div class="col-sm-5">
+        {{ form_widget(form.nombreMotifsVerticaux, {'attr': {'class': 'form-control'}}) }}
+      </div>
+  	  <div class="col-sm-1">
+  	  	{{ form_widget(form.ordreMotifsHorizontaux) }}
+  	  </div>
+      <div class="col-sm-5">
+        {{ form_widget(form.nombreMotifsHorizontaux, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
   </fieldset>
   <fieldset>
-  <legend></legend>
-  {{ form_row(form.sequence) }}
+  	<legend>&nbsp;&nbsp;Localisation</legend>
+    <div class="form-group">
+  	  <div class="col-sm-4">
+	    <b>&nbsp;Code INSEE</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">
+        {{ form_errors(form.site.codeINSEE) }}
+   	  </div>
+ 	  <div class="col-sm-4">
+	    <b>&nbsp;Numéro de site</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">
+    	{{ form_errors(form.site.numSiteCommune) }}
+  	  </div>
+ 	  <div class="col-sm-4">
+	    <b>&nbsp;Zone</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">
+    	{{ form_errors(form.zone.numero) }}
+  	  </div>
+      <div class="col-sm-4">
+        {{ form_widget(form.site.codeINSEE, {'attr': {'class': 'form-control'}}) }}
+      </div>
+      <div class="col-sm-4">
+        {{ form_widget(form.site.numSiteCommune, {'attr': {'class': 'form-control'}}) }}
+      </div>
+      <div class="col-sm-4">
+        {{ form_widget(form.zone.numero, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
+    <div class="form-group">
+  	  <div class="col-sm-4">
+	    <b>&nbsp;Nom de l'US</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">
+        {{ form_errors(form.US.nom) }}
+   	  </div>
+ 	  <div class="col-sm-4">
+	    <b>&nbsp;Description de l'US</b>
+    	{{ form_errors(form.US.description) }}
+  	  </div>
+ 	  <div class="col-sm-4">
+	    <b>&nbsp;Numéro d'isolation</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">
+    	{{ form_errors(form.numIsolation) }}
+  	  </div>
+      <div class="col-sm-4">
+        {{ form_widget(form.US.nom, {'attr': {'class': 'form-control'}}) }}
+      </div>
+      <div class="col-sm-4">
+        {{ form_widget(form.US.description, {'attr': {'class': 'form-control'}}) }}
+      </div>
+      <div class="col-sm-4">
+        {{ form_widget(form.numIsolation, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
   </fieldset>
   <fieldset>
-  <legend></legend>
-  {{ form_row(form.periode) }}
+  	<legend>Datation</legend>
+    <div class="form-group">
+      <div class="col-sm-2">
+      	<b>&nbsp;Période</b>
+      </div>
+  	  <div class="col-sm-4">
+	    <b>&nbsp;Numéro</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">
+        {{ form_errors(form.periode.numeroPeriode) }}
+   	  </div>
+ 	  <div class="col-sm-6">
+	    <b>&nbsp;Description</b>
+    	{{ form_errors(form.periode.description) }}
+  	  </div>
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-4">
+        {{ form_widget(form.periode.numeroPeriode, {'attr': {'class': 'form-control'}}) }}
+      </div>
+      <div class="col-sm-6">
+        {{ form_widget(form.periode.description, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-2">
+      	<b>&nbsp;Phase</b>
+      </div>
+  	  <div class="col-sm-4">
+	    <b>&nbsp;Numéro</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">
+        {{ form_errors(form.phase.numeroPhase) }}
+   	  </div>
+ 	  <div class="col-sm-6">
+	    <b>&nbsp;Description</b>
+    	{{ form_errors(form.phase.description) }}
+  	  </div>
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-4">
+        {{ form_widget(form.phase.numeroPhase, {'attr': {'class': 'form-control'}}) }}
+      </div>
+      <div class="col-sm-6">
+        {{ form_widget(form.phase.description, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-2">
+      	<b>&nbsp;Séquence</b>
+      </div>
+  	  <div class="col-sm-4">
+	    <b>&nbsp;Numéro</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">
+        {{ form_errors(form.sequence.numeroSequence) }}
+   	  </div>
+ 	  <div class="col-sm-6">
+	    <b>&nbsp;Description</b>
+    	{{ form_errors(form.sequence.description) }}
+  	  </div>
+      <div class="col-sm-2">
+      </div>
+      <div class="col-sm-4">
+        {{ form_widget(form.sequence.numeroSequence, {'attr': {'class': 'form-control'}}) }}
+      </div>
+      <div class="col-sm-6">
+        {{ form_widget(form.sequence.description, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
   </fieldset>
   <fieldset>
-  <legend></legend>
-  {{ form_row(form.phase) }}
+  	<legend>Décor</legend>
+  	<div class="form-group">
+  	  <div class="col-sm-6">
+	    <b>&nbsp;Position&nbsp;&nbsp;</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')">
+        {{ form_errors(form.decor) }}
+   	  </div>
+ 	  <div class="col-sm-6">
+	    <b>&nbsp;Type&nbsp;&nbsp;</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')"	>
+    	{{ form_errors(form.typeDecor) }}
+  	  </div>
+      <div class="col-sm-6">
+        {{ form_widget(form.decor) }}
+      </div>
+      <div class="col-sm-6">
+        {{ form_widget(form.typeDecor) }}
+      </div>
+    </div>
   </fieldset>
   <fieldset>
-  <legend></legend>
-  {{ form_row(form.decor) }}
+  	<legend>Molette</legend>
+  	<div class="form-group">
+  	  <div class="col-sm-6">
+	    <b>&nbsp;Nom</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align="right">
+        {{ form_errors(form.tessonMolette.molette.nom) }}
+   	  </div>
+ 	  <div class="col-sm-6">
+	    <b>&nbsp;Description</b>
+    	{{ form_errors(form.tessonMolette.molette.description) }}
+ 	  </div>
+      <div class="col-sm-6">
+        {{ form_widget(form.tessonMolette.molette.nom) }}
+      </div>
+      <div class="col-sm-6">
+        {{ form_widget(form.tessonMolette.molette.description) }}
+      </div>
+    </div>
+  	<div class="form-group">
+  	  <div class="col-sm-6">
+	    <b>&nbsp;Égal ou équivalent&nbsp;&nbsp;</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')">
+        {{ form_errors(form.tessonMolette.egal) }}
+   	  </div>
+ 	  <div class="col-sm-6">
+	    <b>&nbsp;Référence&nbsp;&nbsp;</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')">
+    	{{ form_errors(form.tessonMolette.molette.reference) }}
+ 	  </div>
+      <div class="col-sm-6">
+        {{ form_widget(form.tessonMolette.egal) }}
+      </div>
+      <div class="col-sm-6">
+        {{ form_widget(form.tessonMolette.molette.reference) }}
+      </div>
+    </div>
   </fieldset>
+  
   <fieldset>
-  <legend></legend>
-  {{ form_row(form.typeDecor) }}
+    <legend>Numérisations</legend>
+    {% if form.numerisation is not empty %}
+  	<div class="form-group">
+  	  <div class="col-sm-6">
+	    <b>&nbsp;Fichier&nbsp;&nbsp;</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')">
+        {{ form_errors(form.numerisation.file) }}
+   	  </div>
+ 	  <div class="col-sm-6">
+	    <b>&nbsp;Type&nbsp;&nbsp;</b>
+		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')">
+    	{{ form_errors(form.numerisation.typeNumerisation) }}
+ 	  </div>
+      <div class="col-sm-6">
+        {{ form_widget(form.numerisation.file) }}
+      </div>
+      <div class="col-sm-6">
+        {{ form_widget(form.tessonMolette.numerisation.typeNumerisation) }}
+      </div>
+  	<a href="#" id="add_numerisation" class="btn btn-default">Ajouter une numérisation</a>
+    </div>
+    {% endif %}
   </fieldset>
-  <fieldset>
-  <legend></legend>
-	{{ form_row(form.numerisation)	}}
-  <a href="#" id="add_numerisation" class="btn btn-default">Ajouter une numérisation</a>
-</fieldset>
-<br/>
-  <fieldset>
-  <legend></legend>
-  {{ form_row(form.tessonMolette) }}
-  </fieldset>
-  <br/>
-  <br/>
+  <br />
+  <br />
 
   {# Pour le bouton, pas de label ni d'erreur, on affiche juste le widget #}
   {{ form_widget(form.enregistrer, {'attr': {'class': 'btn btn-primary'}}) }}
@@ -160,6 +346,8 @@
 <script src=" {{ asset('bootstrap/js/jquery.min.js') }}"></script>
 
 <script type="text/javascript">
+
+
   $(document).ready(function() {
     // On récupère la balise <div> en question qui contient l'attribut « data-prototype » qui nous intéresse.
     var $container = $('div#tesson_numerisation');
