@@ -100,6 +100,19 @@ class PlatformController extends Controller {
 							'required' => false))
 					->add('Rechercher', SubmitType::class)
 					->getForm();
+		
+		$formRechercheParticularites = $this->createFormBuilder()
+					->add('annee', IntegerType::class, array(
+							'required' => false))
+					->add('developpe', ChoiceType::class, array(
+						    'choices'  => array(
+							        'Complet' => "Complet",
+							        'Incomplet' => "Incomplet",
+							        'Restitué' => "Restitué",
+						    		'Aucun'		=> NULL
+						    )))
+					->add('Rechercher', SubmitType::class)
+					->getForm();
 
 		$em = $this->getDoctrine ()->getManager ();
 					
@@ -117,13 +130,27 @@ class PlatformController extends Controller {
 					'codeInsee'			=> $formRechercheLocalisation->get('codeInsee')->getData(),
 					'numeroSite'		=> $formRechercheLocalisation->get('numeroSite')->getData(),
 					'us'				=> $formRechercheLocalisation->get('us')->getData(),
-					'numeroIsolation'	=> $formRechercheLocalisation->get('numeroIsolation')->getData()
+					'numeroIsolation'	=> $formRechercheLocalisation->get('numeroIsolation')->getData(),
+					'annee'				=> $formRechercheParticularites->get('annee')->getData(),
+					'developpe'			=> $formRechercheParticularites->get('developpe')->getData()
+			)) );
+		}
+		
+		if ($request->isMethod ( 'POST' ) && $formRechercheParticularites->handleRequest ( $request )->isValid ()) {
+			return $this->redirectToRoute ( 'lifo_classif_recherche_afficher', (array(
+					'codeInsee'			=> $formRechercheLocalisation->get('codeInsee')->getData(),
+					'numeroSite'		=> $formRechercheLocalisation->get('numeroSite')->getData(),
+					'us'				=> $formRechercheLocalisation->get('us')->getData(),
+					'numeroIsolation'	=> $formRechercheLocalisation->get('numeroIsolation')->getData(),
+					'annee'				=> $formRechercheParticularites->get('annee')->getData(),
+					'developpe'			=> $formRechercheParticularites->get('developpe')->getData()
 			)) );
 			
 		}
 		return $this->render ( 'LIFOClassifBundle:Platform:recherche.html.twig', array (
 				'formRechercheID' => $formRechercheID->createView (),
 				'formRechercheLocalisation' => $formRechercheLocalisation->createView (),
+				'formRechercheParticularites' => $formRechercheParticularites->createView (),
 				'messageImportant' => $messageImportant
 		) );
 	}
@@ -132,29 +159,39 @@ class PlatformController extends Controller {
 		$em = $this->getDoctrine()->getManager();
 
 		$nbTessonsParPage=$this->container->getParameter('NB_TESSONS_PAR_PAGE');
-		$ci="";
-		$ns="";
-		$u="";
-		$ni="";
 		$criteres = array();
 		if($request->query->get('codeInsee') != NULL){
-			$ci=$request->query->get('codeInsee');
-			$criteres['codeInsee']=$ci;
+			$criteres['codeINSEE']=$request->query->get('codeINSEE');
+		} else {
+			$criteres['codeINSEE']="";
 		}
 		if($request->query->get('numeroSite') != NULL){
-			$ns=$request->query->get('numeroSite');
-			$criteres['numeroSite']=$ns;
+			$criteres['numeroSite']=$request->query->get('numeroSite');
+		} else {
+			$criteres['numeroSite']="";
 		}
 		if($request->query->get('us') != NULL){
-			$u=$request->query->get('us');
-			$criteres['us']=$u;
+			$criteres['us']=$request->query->get('us');
+		} else {
+			$criteres['us']="";
 		}
 		if($request->query->get('numeroIsolation') != NULL){
-			$ni=$request->query->get('numeroIsolation');
-			$criteres['numeroIsolation']=$ni;
+			$criteres['numeroIsolation']=$request->query->get('numeroIsolation');
+		} else {
+			$criteres['numeroIsolation']="";
+		}
+		if($request->query->get('annee') != NULL){
+			$criteres['annee']=$request->query->get('annee');
+		} else {
+			$criteres['annee']="";
+		}
+		if($request->query->get('developpe') != NULL){
+			$criteres['developpe']=$request->query->get('developpe');
+		} else {
+			$criteres['developpe']="";
 		}
 		
-		$tessons=$em->getRepository('LIFOClassifBundle:Tesson')->findWithSpecificCriteria($ci, $ns, $u, $ni, $page, $nbTessonsParPage);
+		$tessons=$em->getRepository('LIFOClassifBundle:Tesson')->findWithSpecificCriteria($criteres, $page, $nbTessonsParPage);
 		$pagination = array(
 				'page'			=> $page,
 				'nbPages'		=> ceil(count($tessons) / $nbTessonsParPage),
@@ -501,5 +538,9 @@ class PlatformController extends Controller {
 				'messageImportant' => $messageImportant
 		) );
 		
+	}
+	
+	public function numerisationsAction (){
+		return new Response( "");
 	}
 }

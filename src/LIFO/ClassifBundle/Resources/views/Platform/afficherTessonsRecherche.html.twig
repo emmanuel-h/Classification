@@ -10,7 +10,9 @@
 		Aucun
 	{% else %}
 		{% for nom, critere in criteres %}
-		{{ nom }}&nbsp;:&nbsp;{{ critere }}
+			{% if critere is not empty %}
+				-&nbsp{{ nom }}&nbsp;:&nbsp;{{ critere }}
+			{% endif %}
 		{% endfor %}
 	{% endif %}
 	

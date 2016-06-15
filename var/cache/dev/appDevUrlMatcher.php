@@ -109,6 +109,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::indexAction',  '_route' => 'lifo_classif',);
         }
 
+        // lifo_classif_numerisations
+        if ($pathinfo === '/numerisations') {
+            return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::numerisationsAction',  '_route' => 'lifo_classif_numerisations',);
+        }
+
         // lifo_classif_upload
         if ($pathinfo === '/upload') {
             return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::uploadAction',  '_route' => 'lifo_classif_upload',);

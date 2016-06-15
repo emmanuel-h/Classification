@@ -118,7 +118,7 @@ class TessonRepository extends \Doctrine\ORM\EntityRepository {
 		return $paginator;
 	}
 	
-	public function findWithSpecificCriteria($codeInsee, $numSite, $us, $numIsolation, $page, $nbMaxParPage){
+	public function findWithSpecificCriteria($criteres, $page, $nbMaxParPage){
 		if (!is_numeric($page)) {
 			throw new InvalidArgumentException(
 					'La valeur de l\'argument $page est incorrecte (valeur : ' . $page . ').'
@@ -137,24 +137,32 @@ class TessonRepository extends \Doctrine\ORM\EntityRepository {
 
 		$qb = $this->createQueryBuilder('t')
 		->orderBy('t.id', 'ASC');
-		if($codeInsee != ""){
+		if($criteres['codeINSEE'] != ""){
 			$qb->leftJoin('t.site', 's1')
 			->andWhere('s1.codeINSEE=:codeInsee')
-			->setParameter('codeInsee', $codeInsee);
+			->setParameter('codeInsee', $criteres['codeINSEE']);
 		}
-		if($numSite != ""){
+		if($criteres['numeroSite'] != ""){
 			$qb->leftJoin('t.site', 's2')
 			->andWhere('s2.numSiteCommune=:numSite')
-			->setParameter('numSite', $numSite);
+			->setParameter('numSite', $criteres['numeroSite']);
 		}
-		if($us != ""){
+		if($criteres['us'] != ""){
 			$qb->leftJoin('t.us', 'u')
 			->andWhere('u.nom=:us')
-			->setParameter('us', $us);
+			->setParameter('us', $criteres['us']);
 		}
-		if($numIsolation != ""){
+		if($criteres['numeroIsolation'] != ""){
 			$qb->andWhere('t.numIsolation=:numIsolation')
-			->setParameter('numIsolation', $numIsolation);
+			->setParameter('numIsolation', $criteres['numeroIsolation']);
+		}
+		if($criteres['annee'] != ""){
+			$qb->andWhere('t.annee=:annee')
+			->setParameter('annee', $criteres['annee']);
+		}
+		if($criteres['developpe'] != ""){
+			$qb->andWhere('t.developpe=:developpe')
+			->setParameter('developpe', $criteres['developpe']);
 		}
 		
 		$query = $qb->getQuery();
