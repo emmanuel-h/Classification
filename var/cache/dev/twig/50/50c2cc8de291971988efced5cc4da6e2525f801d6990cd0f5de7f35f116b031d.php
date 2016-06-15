@@ -22,33 +22,33 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_37557cb2b90ef6ebd8def97a6297ed68f650c305cc33bdcb9a48a9ffaadbde9d = $this->env->getExtension("native_profiler");
-        $__internal_37557cb2b90ef6ebd8def97a6297ed68f650c305cc33bdcb9a48a9ffaadbde9d->enter($__internal_37557cb2b90ef6ebd8def97a6297ed68f650c305cc33bdcb9a48a9ffaadbde9d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/upload.html.twig"));
+        $__internal_f7e5ce6ad52c0821109a33b88a06d9d7148c5e9797aad68d9bff731ba7daad12 = $this->env->getExtension("native_profiler");
+        $__internal_f7e5ce6ad52c0821109a33b88a06d9d7148c5e9797aad68d9bff731ba7daad12->enter($__internal_f7e5ce6ad52c0821109a33b88a06d9d7148c5e9797aad68d9bff731ba7daad12_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/upload.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_37557cb2b90ef6ebd8def97a6297ed68f650c305cc33bdcb9a48a9ffaadbde9d->leave($__internal_37557cb2b90ef6ebd8def97a6297ed68f650c305cc33bdcb9a48a9ffaadbde9d_prof);
+        $__internal_f7e5ce6ad52c0821109a33b88a06d9d7148c5e9797aad68d9bff731ba7daad12->leave($__internal_f7e5ce6ad52c0821109a33b88a06d9d7148c5e9797aad68d9bff731ba7daad12_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_96768f61c7d36c5e2d065a66329ae80db0a7bd39656606c491b23a63951aaf6a = $this->env->getExtension("native_profiler");
-        $__internal_96768f61c7d36c5e2d065a66329ae80db0a7bd39656606c491b23a63951aaf6a->enter($__internal_96768f61c7d36c5e2d065a66329ae80db0a7bd39656606c491b23a63951aaf6a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_c6c59991e7458370f7705caeb60c388eabfd08ee41b95a3b8cac0c8d4617f6f1 = $this->env->getExtension("native_profiler");
+        $__internal_c6c59991e7458370f7705caeb60c388eabfd08ee41b95a3b8cac0c8d4617f6f1->enter($__internal_c6c59991e7458370f7705caeb60c388eabfd08ee41b95a3b8cac0c8d4617f6f1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Upload";
         
-        $__internal_96768f61c7d36c5e2d065a66329ae80db0a7bd39656606c491b23a63951aaf6a->leave($__internal_96768f61c7d36c5e2d065a66329ae80db0a7bd39656606c491b23a63951aaf6a_prof);
+        $__internal_c6c59991e7458370f7705caeb60c388eabfd08ee41b95a3b8cac0c8d4617f6f1->leave($__internal_c6c59991e7458370f7705caeb60c388eabfd08ee41b95a3b8cac0c8d4617f6f1_prof);
 
     }
 
     // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_6dcdb589aa667d6abc4f905d28e0f6c435ad61af80ff1f5a7291b55b583652e8 = $this->env->getExtension("native_profiler");
-        $__internal_6dcdb589aa667d6abc4f905d28e0f6c435ad61af80ff1f5a7291b55b583652e8->enter($__internal_6dcdb589aa667d6abc4f905d28e0f6c435ad61af80ff1f5a7291b55b583652e8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_3b43f0271afc245bfaa947b22ee4e0fc52cf5897aaf8a860ebe12222de2584bd = $this->env->getExtension("native_profiler");
+        $__internal_3b43f0271afc245bfaa947b22ee4e0fc52cf5897aaf8a860ebe12222de2584bd->enter($__internal_3b43f0271afc245bfaa947b22ee4e0fc52cf5897aaf8a860ebe12222de2584bd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 6
         echo "
@@ -71,7 +71,7 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 \t\t<img src= \"";
         // line 17
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\" align = \"right\">
+        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Année durant laquelle le tesson a été découvert')\" align = \"right\">
         ";
         // line 18
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "anneeDecouverte", array()), 'errors');
@@ -79,25 +79,21 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
    \t  </div>
  \t  <div class=\"col-sm-6\">
 \t    <b>&nbsp;Développé</b>
-\t\t<img src= \"";
-        // line 22
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\" align = \"right\">
     \t";
-        // line 23
+        // line 22
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "developpe", array()), 'errors');
         echo "
   \t  </div>
       <div class=\"col-sm-6\">
         ";
-        // line 26
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "anneeDecouverte", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 25
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "anneeDecouverte", array()), 'widget');
         echo "
       </div>
       <div class=\"col-sm-6\">
         ";
-        // line 29
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "developpe", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 28
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "developpe", array()), 'widget');
         echo "
       </div>
     </div>
@@ -105,35 +101,35 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
   \t  <div class=\"col-sm-6\">
 \t    <b>&nbsp;Lot/Individu</b>
 \t\t<img src= \"";
-        // line 35
+        // line 34
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\" align = \"right\">
+        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Y a-t-il un ou plusieurs tessons recevant ce même décor ?')\" align = \"right\">
         ";
-        // line 36
+        // line 35
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "lotIndividu", array()), 'errors');
         echo "
    \t  </div>
  \t  <div class=\"col-sm-6\">
 \t    <b>&nbsp;Numéro de tombe</b>
 \t\t<img src= \"";
-        // line 40
+        // line 39
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\" align = \"right\">
+        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'A renseigner s\\'il a été trouvé dans une sépulture')\" align = \"right\">
     \t";
-        // line 41
+        // line 40
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "numTombe", array()), 'errors');
         echo "
   \t  </div>
       <div class=\"col-sm-6\">
         ";
-        // line 44
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "lotIndividu", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 43
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "lotIndividu", array()), 'widget');
         echo "
       </div>
       <div class=\"col-sm-6\">
         ";
-        // line 47
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "numTombe", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 46
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "numTombe", array()), 'widget');
         echo "
       </div>
     </div>
@@ -141,31 +137,31 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
   \t  <div class=\"col-sm-6\">
 \t    <b>&nbsp;Fait</b>
 \t\t<img src= \"";
-        // line 53
+        // line 52
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\" align = \"right\">
+        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Numéro de structure où le tesson a été trouvé,<br />regroupant un ensemble chrono-stratigraphique')\" align = \"right\">
         ";
-        // line 54
+        // line 53
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "fait", array()), 'errors');
         echo "
    \t  </div>
  \t  <div class=\"col-sm-6\">
 \t    <b>&nbsp;Commentaire</b>
     \t";
-        // line 58
+        // line 57
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "commentaire", array()), 'errors');
         echo "
   \t  </div>
       <div class=\"col-sm-6\">
         ";
-        // line 61
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "fait", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 60
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "fait", array()), 'widget');
         echo "
       </div>
       <div class=\"col-sm-6\">
         ";
-        // line 64
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "commentaire", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 63
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "commentaire", array()), 'widget');
         echo "
       </div>
     </div>
@@ -176,95 +172,87 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
   \t  <div class=\"col-sm-6\">
 \t    <b>&nbsp;Largeur</b>
 \t\t<img src= \"";
-        // line 73
+        // line 72
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\" align = \"right\">
+        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Hauteur en centimètres du décor')\" align = \"right\">
         ";
-        // line 74
+        // line 73
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "largeur", array()), 'errors');
         echo "
    \t  </div>
  \t  <div class=\"col-sm-6\">
 \t    <b>&nbsp;Longueur</b>
 \t\t<img src= \"";
-        // line 78
+        // line 77
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\" align = \"right\">
+        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Longueur en centimètres du décor')\" align = \"right\">
     \t";
-        // line 79
+        // line 78
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "longueur", array()), 'errors');
         echo "
   \t  </div>
   \t  <div class=\"col-sm-1\">
   \t  \t";
-        // line 82
+        // line 81
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ordreLargeur", array()), 'widget');
         echo "
   \t  </div>
       <div class=\"col-sm-5\">
         ";
-        // line 85
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "largeur", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 84
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "largeur", array()), 'widget');
         echo "
       </div>
   \t  <div class=\"col-sm-1\">
   \t  \t";
-        // line 88
+        // line 87
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ordreLongueur", array()), 'widget');
         echo "
   \t  </div>
       <div class=\"col-sm-5\">
         ";
-        // line 91
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "longueur", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 90
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "longueur", array()), 'widget');
         echo "
       </div>
     </div>
   \t<div class=\"form-group\">
   \t  <div class=\"col-sm-6\">
 \t    <b>&nbsp;Nombre de motifs verticaux</b>
-\t\t<img src= \"";
-        // line 97
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\" align = \"right\">
         ";
-        // line 98
+        // line 96
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nombreMotifsVerticaux", array()), 'errors');
         echo "
    \t  </div>
  \t  <div class=\"col-sm-6\">
 \t    <b>&nbsp;Nombre de motifs horizontaux</b>
-\t\t<img src= \"";
-        // line 102
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\" align = \"right\">
     \t";
-        // line 103
+        // line 100
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nombreMotifsHorizontaux", array()), 'errors');
         echo "
   \t  </div>
   \t  <div class=\"col-sm-1\">
   \t  \t";
-        // line 106
+        // line 103
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ordreMotifsVerticaux", array()), 'widget');
         echo "
   \t  </div>
       <div class=\"col-sm-5\">
         ";
-        // line 109
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nombreMotifsVerticaux", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 106
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nombreMotifsVerticaux", array()), 'widget');
         echo "
       </div>
   \t  <div class=\"col-sm-1\">
   \t  \t";
-        // line 112
+        // line 109
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "ordreMotifsHorizontaux", array()), 'widget');
         echo "
   \t  </div>
       <div class=\"col-sm-5\">
         ";
-        // line 115
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nombreMotifsHorizontaux", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 112
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nombreMotifsHorizontaux", array()), 'widget');
         echo "
       </div>
     </div>
@@ -275,52 +263,52 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
   \t  <div class=\"col-sm-4\">
 \t    <b>&nbsp;Code INSEE</b>
 \t\t<img src= \"";
-        // line 124
+        // line 121
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\" align = \"right\">
+        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Code INSEE à 5 chiffres de la commune')\" align = \"right\">
         ";
-        // line 125
+        // line 122
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "site", array()), "codeINSEE", array()), 'errors');
         echo "
    \t  </div>
  \t  <div class=\"col-sm-4\">
 \t    <b>&nbsp;Numéro de site</b>
 \t\t<img src= \"";
-        // line 129
+        // line 126
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\" align = \"right\">
+        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Numéro du site fouillé de la commune')\" align = \"right\">
     \t";
-        // line 130
+        // line 127
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "site", array()), "numSiteCommune", array()), 'errors');
         echo "
   \t  </div>
  \t  <div class=\"col-sm-4\">
 \t    <b>&nbsp;Zone</b>
 \t\t<img src= \"";
-        // line 134
+        // line 131
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\" align = \"right\">
+        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Zone du site fouillée')\" align = \"right\">
     \t";
-        // line 135
+        // line 132
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "zone", array()), "numero", array()), 'errors');
         echo "
   \t  </div>
       <div class=\"col-sm-4\">
         ";
+        // line 135
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "site", array()), "codeINSEE", array()), 'widget');
+        echo "
+      </div>
+      <div class=\"col-sm-4\">
+        ";
         // line 138
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "site", array()), "codeINSEE", array()), 'widget', array("attr" => array("class" => "form-control")));
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "site", array()), "numSiteCommune", array()), 'widget');
         echo "
       </div>
       <div class=\"col-sm-4\">
         ";
         // line 141
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "site", array()), "numSiteCommune", array()), 'widget', array("attr" => array("class" => "form-control")));
-        echo "
-      </div>
-      <div class=\"col-sm-4\">
-        ";
-        // line 144
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "zone", array()), "numero", array()), 'widget', array("attr" => array("class" => "form-control")));
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "zone", array()), "numero", array()), 'widget');
         echo "
       </div>
     </div>
@@ -328,73 +316,69 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
   \t  <div class=\"col-sm-4\">
 \t    <b>&nbsp;Nom de l'US</b>
 \t\t<img src= \"";
-        // line 150
+        // line 147
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\" align = \"right\">
+        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Unité stratigraphique')\" align = \"right\">
         ";
-        // line 151
+        // line 148
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "US", array()), "nom", array()), 'errors');
         echo "
    \t  </div>
  \t  <div class=\"col-sm-4\">
 \t    <b>&nbsp;Description de l'US</b>
     \t";
-        // line 155
+        // line 152
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "US", array()), "description", array()), 'errors');
         echo "
   \t  </div>
  \t  <div class=\"col-sm-4\">
 \t    <b>&nbsp;Numéro d'isolation</b>
 \t\t<img src= \"";
-        // line 159
+        // line 156
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\" align = \"right\">
+        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Permet l\\'unicité d\\'un tesson<br />une fois couplé à un site et un us')\" align = \"right\">
     \t";
-        // line 160
+        // line 157
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "numIsolation", array()), 'errors');
         echo "
   \t  </div>
       <div class=\"col-sm-4\">
         ";
+        // line 160
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "US", array()), "nom", array()), 'widget');
+        echo "
+      </div>
+      <div class=\"col-sm-4\">
+        ";
         // line 163
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "US", array()), "nom", array()), 'widget', array("attr" => array("class" => "form-control")));
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "US", array()), "description", array()), 'widget');
         echo "
       </div>
       <div class=\"col-sm-4\">
         ";
         // line 166
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "US", array()), "description", array()), 'widget', array("attr" => array("class" => "form-control")));
-        echo "
-      </div>
-      <div class=\"col-sm-4\">
-        ";
-        // line 169
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "numIsolation", array()), 'widget', array("attr" => array("class" => "form-control")));
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "numIsolation", array()), 'widget');
         echo "
       </div>
     </div>
   </fieldset>
   <fieldset>
-  \t<legend>Datation</legend>
+  \t<legend>&nbsp;&nbsp;Datation</legend>
     <div class=\"form-group\">
       <div class=\"col-sm-2\">
       \t<b>&nbsp;Période</b>
       </div>
   \t  <div class=\"col-sm-4\">
 \t    <b>&nbsp;Numéro</b>
-\t\t<img src= \"";
-        // line 181
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\" align = \"right\">
         ";
-        // line 182
+        // line 178
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "periode", array()), "numeroPeriode", array()), 'errors');
         echo "
    \t  </div>
  \t  <div class=\"col-sm-6\">
 \t    <b>&nbsp;Description</b>
     \t";
-        // line 186
+        // line 182
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "periode", array()), "description", array()), 'errors');
         echo "
   \t  </div>
@@ -402,14 +386,14 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
       </div>
       <div class=\"col-sm-4\">
         ";
-        // line 191
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "periode", array()), "numeroPeriode", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 187
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "periode", array()), "numeroPeriode", array()), 'widget');
         echo "
       </div>
       <div class=\"col-sm-6\">
         ";
-        // line 194
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "periode", array()), "description", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 190
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "periode", array()), "description", array()), 'widget');
         echo "
       </div>
     </div>
@@ -419,19 +403,15 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
       </div>
   \t  <div class=\"col-sm-4\">
 \t    <b>&nbsp;Numéro</b>
-\t\t<img src= \"";
-        // line 203
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\" align = \"right\">
         ";
-        // line 204
+        // line 199
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "phase", array()), "numeroPhase", array()), 'errors');
         echo "
    \t  </div>
  \t  <div class=\"col-sm-6\">
 \t    <b>&nbsp;Description</b>
     \t";
-        // line 208
+        // line 203
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "phase", array()), "description", array()), 'errors');
         echo "
   \t  </div>
@@ -439,14 +419,14 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
       </div>
       <div class=\"col-sm-4\">
         ";
-        // line 213
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "phase", array()), "numeroPhase", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 208
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "phase", array()), "numeroPhase", array()), 'widget');
         echo "
       </div>
       <div class=\"col-sm-6\">
         ";
-        // line 216
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "phase", array()), "description", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 211
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "phase", array()), "description", array()), 'widget');
         echo "
       </div>
     </div>
@@ -456,19 +436,15 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
       </div>
   \t  <div class=\"col-sm-4\">
 \t    <b>&nbsp;Numéro</b>
-\t\t<img src= \"";
-        // line 225
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\" align = \"right\">
         ";
-        // line 226
+        // line 220
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "sequence", array()), "numeroSequence", array()), 'errors');
         echo "
    \t  </div>
  \t  <div class=\"col-sm-6\">
 \t    <b>&nbsp;Description</b>
     \t";
-        // line 230
+        // line 224
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "sequence", array()), "description", array()), 'errors');
         echo "
   \t  </div>
@@ -476,87 +452,79 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
       </div>
       <div class=\"col-sm-4\">
         ";
-        // line 235
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "sequence", array()), "numeroSequence", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 229
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "sequence", array()), "numeroSequence", array()), 'widget');
         echo "
       </div>
       <div class=\"col-sm-6\">
         ";
-        // line 238
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "sequence", array()), "description", array()), 'widget', array("attr" => array("class" => "form-control")));
+        // line 232
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "sequence", array()), "description", array()), 'widget');
         echo "
       </div>
     </div>
   </fieldset>
   <fieldset>
-  \t<legend>Décor</legend>
+  \t<legend>&nbsp;&nbsp;Décor</legend>
   \t<div class=\"form-group\">
   \t  <div class=\"col-sm-6\">
 \t    <b>&nbsp;Position&nbsp;&nbsp;</b>
-\t\t<img src= \"";
-        // line 247
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\">
         ";
-        // line 248
+        // line 241
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "decor", array()), 'errors');
         echo "
    \t  </div>
  \t  <div class=\"col-sm-6\">
 \t    <b>&nbsp;Type&nbsp;&nbsp;</b>
-\t\t<img src= \"";
-        // line 252
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\"\t>
     \t";
-        // line 253
+        // line 245
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "typeDecor", array()), 'errors');
         echo "
   \t  </div>
       <div class=\"col-sm-6\">
         ";
-        // line 256
+        // line 248
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "decor", array()), 'widget');
         echo "
       </div>
       <div class=\"col-sm-6\">
         ";
-        // line 259
+        // line 251
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "typeDecor", array()), 'widget');
         echo "
       </div>
     </div>
   </fieldset>
   <fieldset>
-  \t<legend>Molette</legend>
+  \t<legend>&nbsp;&nbsp;Molette</legend>
   \t<div class=\"form-group\">
   \t  <div class=\"col-sm-6\">
 \t    <b>&nbsp;Nom</b>
 \t\t<img src= \"";
-        // line 268
+        // line 260
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\" align=\"right\">
+        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Code alphanumérique de la molette')\" align=\"right\">
         ";
-        // line 269
+        // line 261
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "tessonMolette", array()), "molette", array()), "nom", array()), 'errors');
         echo "
    \t  </div>
  \t  <div class=\"col-sm-6\">
 \t    <b>&nbsp;Description</b>
     \t";
-        // line 273
+        // line 265
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "tessonMolette", array()), "molette", array()), "description", array()), 'errors');
         echo "
  \t  </div>
       <div class=\"col-sm-6\">
         ";
-        // line 276
+        // line 268
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "tessonMolette", array()), "molette", array()), "nom", array()), 'widget');
         echo "
       </div>
       <div class=\"col-sm-6\">
         ";
-        // line 279
+        // line 271
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "tessonMolette", array()), "molette", array()), "description", array()), 'widget');
         echo "
       </div>
@@ -565,34 +533,34 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
   \t  <div class=\"col-sm-6\">
 \t    <b>&nbsp;Égal ou équivalent&nbsp;&nbsp;</b>
 \t\t<img src= \"";
-        // line 285
+        // line 277
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\">
+        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'<b>egal</b> est une correspondance sur le répertoire<br />tandis qu\\'<b>equi</b> s\\'en rapproche seulement')\">
         ";
-        // line 286
+        // line 278
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "tessonMolette", array()), "egal", array()), 'errors');
         echo "
    \t  </div>
  \t  <div class=\"col-sm-6\">
 \t    <b>&nbsp;Référence&nbsp;&nbsp;</b>
 \t\t<img src= \"";
-        // line 290
+        // line 282
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\">
+        echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Matrice complète ou réputée comme telle<br />qui servira de référence pour l\\'appariement')\">
     \t";
-        // line 291
+        // line 283
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "tessonMolette", array()), "molette", array()), "reference", array()), 'errors');
         echo "
  \t  </div>
       <div class=\"col-sm-6\">
         ";
-        // line 294
+        // line 286
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "tessonMolette", array()), "egal", array()), 'widget');
         echo "
       </div>
       <div class=\"col-sm-6\">
         ";
-        // line 297
+        // line 289
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "tessonMolette", array()), "molette", array()), "reference", array()), 'widget');
         echo "
       </div>
@@ -600,69 +568,29 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
   </fieldset>
   
   <fieldset>
-    <legend>Numérisations</legend>
-    ";
-        // line 304
-        if ( !twig_test_empty($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "numerisation", array()))) {
-            // line 305
-            echo "  \t<div class=\"form-group\">
-  \t  <div class=\"col-sm-6\">
-\t    <b>&nbsp;Fichier&nbsp;&nbsp;</b>
-\t\t<img src= \"";
-            // line 308
-            echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-            echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\">
-        ";
-            // line 309
-            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "numerisation", array()), "file", array()), 'errors');
-            echo "
-   \t  </div>
- \t  <div class=\"col-sm-6\">
-\t    <b>&nbsp;Type&nbsp;&nbsp;</b>
-\t\t<img src= \"";
-            // line 313
-            echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
-            echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'bite')\">
-    \t";
-            // line 314
-            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "numerisation", array()), "typeNumerisation", array()), 'errors');
-            echo "
- \t  </div>
-      <div class=\"col-sm-6\">
-        ";
-            // line 317
-            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "numerisation", array()), "file", array()), 'widget');
-            echo "
-      </div>
-      <div class=\"col-sm-6\">
-        ";
-            // line 320
-            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "tessonMolette", array()), "numerisation", array()), "typeNumerisation", array()), 'widget');
-            echo "
-      </div>
-  \t<a href=\"#\" id=\"add_numerisation\" class=\"btn btn-default\">Ajouter une numérisation</a>
-    </div>
-    ";
-        }
-        // line 325
-        echo "  </fieldset>
+    <legend>&nbsp;&nbsp;Numérisations</legend>
+\t";
+        // line 296
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "numerisation", array()), 'row');
+        echo "
+  </fieldset>
   <br />
   <br />
 
   ";
-        // line 330
+        // line 302
         echo "  ";
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "enregistrer", array()), 'widget', array("attr" => array("class" => "btn btn-primary")));
         echo "
 
   ";
-        // line 334
+        // line 306
         echo "  ";
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
 
   ";
-        // line 337
+        // line 309
         echo "  ";
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
@@ -675,7 +603,7 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 
 
 <script src=\" ";
-        // line 346
+        // line 318
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bootstrap/js/jquery.min.js"), "html", null, true);
         echo "\"></script>
 
@@ -757,7 +685,7 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 
 ";
         
-        $__internal_6dcdb589aa667d6abc4f905d28e0f6c435ad61af80ff1f5a7291b55b583652e8->leave($__internal_6dcdb589aa667d6abc4f905d28e0f6c435ad61af80ff1f5a7291b55b583652e8_prof);
+        $__internal_3b43f0271afc245bfaa947b22ee4e0fc52cf5897aaf8a860ebe12222de2584bd->leave($__internal_3b43f0271afc245bfaa947b22ee4e0fc52cf5897aaf8a860ebe12222de2584bd_prof);
 
     }
 
@@ -773,7 +701,7 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 
     public function getDebugInfo()
     {
-        return array (  679 => 346,  666 => 337,  660 => 334,  654 => 330,  648 => 325,  640 => 320,  634 => 317,  628 => 314,  624 => 313,  617 => 309,  613 => 308,  608 => 305,  606 => 304,  596 => 297,  590 => 294,  584 => 291,  580 => 290,  573 => 286,  569 => 285,  560 => 279,  554 => 276,  548 => 273,  541 => 269,  537 => 268,  525 => 259,  519 => 256,  513 => 253,  509 => 252,  502 => 248,  498 => 247,  486 => 238,  480 => 235,  472 => 230,  465 => 226,  461 => 225,  449 => 216,  443 => 213,  435 => 208,  428 => 204,  424 => 203,  412 => 194,  406 => 191,  398 => 186,  391 => 182,  387 => 181,  372 => 169,  366 => 166,  360 => 163,  354 => 160,  350 => 159,  343 => 155,  336 => 151,  332 => 150,  323 => 144,  317 => 141,  311 => 138,  305 => 135,  301 => 134,  294 => 130,  290 => 129,  283 => 125,  279 => 124,  267 => 115,  261 => 112,  255 => 109,  249 => 106,  243 => 103,  239 => 102,  232 => 98,  228 => 97,  219 => 91,  213 => 88,  207 => 85,  201 => 82,  195 => 79,  191 => 78,  184 => 74,  180 => 73,  168 => 64,  162 => 61,  156 => 58,  149 => 54,  145 => 53,  136 => 47,  130 => 44,  124 => 41,  120 => 40,  113 => 36,  109 => 35,  100 => 29,  94 => 26,  88 => 23,  84 => 22,  77 => 18,  73 => 17,  63 => 11,  58 => 8,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
+        return array (  607 => 318,  594 => 309,  588 => 306,  582 => 302,  574 => 296,  564 => 289,  558 => 286,  552 => 283,  548 => 282,  541 => 278,  537 => 277,  528 => 271,  522 => 268,  516 => 265,  509 => 261,  505 => 260,  493 => 251,  487 => 248,  481 => 245,  474 => 241,  462 => 232,  456 => 229,  448 => 224,  441 => 220,  429 => 211,  423 => 208,  415 => 203,  408 => 199,  396 => 190,  390 => 187,  382 => 182,  375 => 178,  360 => 166,  354 => 163,  348 => 160,  342 => 157,  338 => 156,  331 => 152,  324 => 148,  320 => 147,  311 => 141,  305 => 138,  299 => 135,  293 => 132,  289 => 131,  282 => 127,  278 => 126,  271 => 122,  267 => 121,  255 => 112,  249 => 109,  243 => 106,  237 => 103,  231 => 100,  224 => 96,  215 => 90,  209 => 87,  203 => 84,  197 => 81,  191 => 78,  187 => 77,  180 => 73,  176 => 72,  164 => 63,  158 => 60,  152 => 57,  145 => 53,  141 => 52,  132 => 46,  126 => 43,  120 => 40,  116 => 39,  109 => 35,  105 => 34,  96 => 28,  90 => 25,  84 => 22,  77 => 18,  73 => 17,  63 => 11,  58 => 8,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends "LIFOClassifBundle::layoutGeneral.html.twig" %}*/
@@ -792,43 +720,42 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 /*     <div class="form-group">*/
 /*   	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Année de la découverte</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Année durant laquelle le tesson a été découvert')" align = "right">*/
 /*         {{ form_errors(form.anneeDecouverte) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Développé</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">*/
 /*     	{{ form_errors(form.developpe) }}*/
 /*   	  </div>*/
 /*       <div class="col-sm-6">*/
-/*         {{ form_widget(form.anneeDecouverte, {'attr': {'class': 'form-control'}}) }}*/
+/*         {{ form_widget(form.anneeDecouverte) }}*/
 /*       </div>*/
 /*       <div class="col-sm-6">*/
-/*         {{ form_widget(form.developpe, {'attr': {'class': 'form-control'}}) }}*/
+/*         {{ form_widget(form.developpe) }}*/
 /*       </div>*/
 /*     </div>*/
 /*     <div class="form-group">*/
 /*   	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Lot/Individu</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Y a-t-il un ou plusieurs tessons recevant ce même décor ?')" align = "right">*/
 /*         {{ form_errors(form.lotIndividu) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Numéro de tombe</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'A renseigner s\'il a été trouvé dans une sépulture')" align = "right">*/
 /*     	{{ form_errors(form.numTombe) }}*/
 /*   	  </div>*/
 /*       <div class="col-sm-6">*/
-/*         {{ form_widget(form.lotIndividu, {'attr': {'class': 'form-control'}}) }}*/
+/*         {{ form_widget(form.lotIndividu) }}*/
 /*       </div>*/
 /*       <div class="col-sm-6">*/
-/*         {{ form_widget(form.numTombe, {'attr': {'class': 'form-control'}}) }}*/
+/*         {{ form_widget(form.numTombe) }}*/
 /*       </div>*/
 /*     </div>*/
 /*     <div class="form-group">*/
 /*   	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Fait</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Numéro de structure où le tesson a été trouvé,<br />regroupant un ensemble chrono-stratigraphique')" align = "right">*/
 /*         {{ form_errors(form.fait) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-6">*/
@@ -836,10 +763,10 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 /*     	{{ form_errors(form.commentaire) }}*/
 /*   	  </div>*/
 /*       <div class="col-sm-6">*/
-/*         {{ form_widget(form.fait, {'attr': {'class': 'form-control'}}) }}*/
+/*         {{ form_widget(form.fait) }}*/
 /*       </div>*/
 /*       <div class="col-sm-6">*/
-/*         {{ form_widget(form.commentaire, {'attr': {'class': 'form-control'}}) }}*/
+/*         {{ form_widget(form.commentaire) }}*/
 /*       </div>*/
 /*     </div>*/
 /*   </fieldset>*/
@@ -848,49 +775,47 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 /*   	<div class="form-group">*/
 /*   	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Largeur</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Hauteur en centimètres du décor')" align = "right">*/
 /*         {{ form_errors(form.largeur) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Longueur</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Longueur en centimètres du décor')" align = "right">*/
 /*     	{{ form_errors(form.longueur) }}*/
 /*   	  </div>*/
 /*   	  <div class="col-sm-1">*/
 /*   	  	{{ form_widget(form.ordreLargeur) }}*/
 /*   	  </div>*/
 /*       <div class="col-sm-5">*/
-/*         {{ form_widget(form.largeur, {'attr': {'class': 'form-control'}}) }}*/
+/*         {{ form_widget(form.largeur) }}*/
 /*       </div>*/
 /*   	  <div class="col-sm-1">*/
 /*   	  	{{ form_widget(form.ordreLongueur) }}*/
 /*   	  </div>*/
 /*       <div class="col-sm-5">*/
-/*         {{ form_widget(form.longueur, {'attr': {'class': 'form-control'}}) }}*/
+/*         {{ form_widget(form.longueur) }}*/
 /*       </div>*/
 /*     </div>*/
 /*   	<div class="form-group">*/
 /*   	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Nombre de motifs verticaux</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">*/
 /*         {{ form_errors(form.nombreMotifsVerticaux) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Nombre de motifs horizontaux</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">*/
 /*     	{{ form_errors(form.nombreMotifsHorizontaux) }}*/
 /*   	  </div>*/
 /*   	  <div class="col-sm-1">*/
 /*   	  	{{ form_widget(form.ordreMotifsVerticaux) }}*/
 /*   	  </div>*/
 /*       <div class="col-sm-5">*/
-/*         {{ form_widget(form.nombreMotifsVerticaux, {'attr': {'class': 'form-control'}}) }}*/
+/*         {{ form_widget(form.nombreMotifsVerticaux) }}*/
 /*       </div>*/
 /*   	  <div class="col-sm-1">*/
 /*   	  	{{ form_widget(form.ordreMotifsHorizontaux) }}*/
 /*   	  </div>*/
 /*       <div class="col-sm-5">*/
-/*         {{ form_widget(form.nombreMotifsHorizontaux, {'attr': {'class': 'form-control'}}) }}*/
+/*         {{ form_widget(form.nombreMotifsHorizontaux) }}*/
 /*       </div>*/
 /*     </div>*/
 /*   </fieldset>*/
@@ -899,33 +824,33 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 /*     <div class="form-group">*/
 /*   	  <div class="col-sm-4">*/
 /* 	    <b>&nbsp;Code INSEE</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Code INSEE à 5 chiffres de la commune')" align = "right">*/
 /*         {{ form_errors(form.site.codeINSEE) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-4">*/
 /* 	    <b>&nbsp;Numéro de site</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Numéro du site fouillé de la commune')" align = "right">*/
 /*     	{{ form_errors(form.site.numSiteCommune) }}*/
 /*   	  </div>*/
 /*  	  <div class="col-sm-4">*/
 /* 	    <b>&nbsp;Zone</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Zone du site fouillée')" align = "right">*/
 /*     	{{ form_errors(form.zone.numero) }}*/
 /*   	  </div>*/
 /*       <div class="col-sm-4">*/
-/*         {{ form_widget(form.site.codeINSEE, {'attr': {'class': 'form-control'}}) }}*/
+/*         {{ form_widget(form.site.codeINSEE) }}*/
 /*       </div>*/
 /*       <div class="col-sm-4">*/
-/*         {{ form_widget(form.site.numSiteCommune, {'attr': {'class': 'form-control'}}) }}*/
+/*         {{ form_widget(form.site.numSiteCommune) }}*/
 /*       </div>*/
 /*       <div class="col-sm-4">*/
-/*         {{ form_widget(form.zone.numero, {'attr': {'class': 'form-control'}}) }}*/
+/*         {{ form_widget(form.zone.numero) }}*/
 /*       </div>*/
 /*     </div>*/
 /*     <div class="form-group">*/
 /*   	  <div class="col-sm-4">*/
 /* 	    <b>&nbsp;Nom de l'US</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Unité stratigraphique')" align = "right">*/
 /*         {{ form_errors(form.US.nom) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-4">*/
@@ -934,29 +859,28 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 /*   	  </div>*/
 /*  	  <div class="col-sm-4">*/
 /* 	    <b>&nbsp;Numéro d'isolation</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Permet l\'unicité d\'un tesson<br />une fois couplé à un site et un us')" align = "right">*/
 /*     	{{ form_errors(form.numIsolation) }}*/
 /*   	  </div>*/
 /*       <div class="col-sm-4">*/
-/*         {{ form_widget(form.US.nom, {'attr': {'class': 'form-control'}}) }}*/
+/*         {{ form_widget(form.US.nom) }}*/
 /*       </div>*/
 /*       <div class="col-sm-4">*/
-/*         {{ form_widget(form.US.description, {'attr': {'class': 'form-control'}}) }}*/
+/*         {{ form_widget(form.US.description) }}*/
 /*       </div>*/
 /*       <div class="col-sm-4">*/
-/*         {{ form_widget(form.numIsolation, {'attr': {'class': 'form-control'}}) }}*/
+/*         {{ form_widget(form.numIsolation) }}*/
 /*       </div>*/
 /*     </div>*/
 /*   </fieldset>*/
 /*   <fieldset>*/
-/*   	<legend>Datation</legend>*/
+/*   	<legend>&nbsp;&nbsp;Datation</legend>*/
 /*     <div class="form-group">*/
 /*       <div class="col-sm-2">*/
 /*       	<b>&nbsp;Période</b>*/
 /*       </div>*/
 /*   	  <div class="col-sm-4">*/
 /* 	    <b>&nbsp;Numéro</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">*/
 /*         {{ form_errors(form.periode.numeroPeriode) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-6">*/
@@ -966,10 +890,10 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 /*       <div class="col-sm-2">*/
 /*       </div>*/
 /*       <div class="col-sm-4">*/
-/*         {{ form_widget(form.periode.numeroPeriode, {'attr': {'class': 'form-control'}}) }}*/
+/*         {{ form_widget(form.periode.numeroPeriode) }}*/
 /*       </div>*/
 /*       <div class="col-sm-6">*/
-/*         {{ form_widget(form.periode.description, {'attr': {'class': 'form-control'}}) }}*/
+/*         {{ form_widget(form.periode.description) }}*/
 /*       </div>*/
 /*     </div>*/
 /*     <div class="form-group">*/
@@ -978,7 +902,6 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 /*       </div>*/
 /*   	  <div class="col-sm-4">*/
 /* 	    <b>&nbsp;Numéro</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">*/
 /*         {{ form_errors(form.phase.numeroPhase) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-6">*/
@@ -988,10 +911,10 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 /*       <div class="col-sm-2">*/
 /*       </div>*/
 /*       <div class="col-sm-4">*/
-/*         {{ form_widget(form.phase.numeroPhase, {'attr': {'class': 'form-control'}}) }}*/
+/*         {{ form_widget(form.phase.numeroPhase) }}*/
 /*       </div>*/
 /*       <div class="col-sm-6">*/
-/*         {{ form_widget(form.phase.description, {'attr': {'class': 'form-control'}}) }}*/
+/*         {{ form_widget(form.phase.description) }}*/
 /*       </div>*/
 /*     </div>*/
 /*     <div class="form-group">*/
@@ -1000,7 +923,6 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 /*       </div>*/
 /*   	  <div class="col-sm-4">*/
 /* 	    <b>&nbsp;Numéro</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align = "right">*/
 /*         {{ form_errors(form.sequence.numeroSequence) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-6">*/
@@ -1010,24 +932,22 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 /*       <div class="col-sm-2">*/
 /*       </div>*/
 /*       <div class="col-sm-4">*/
-/*         {{ form_widget(form.sequence.numeroSequence, {'attr': {'class': 'form-control'}}) }}*/
+/*         {{ form_widget(form.sequence.numeroSequence) }}*/
 /*       </div>*/
 /*       <div class="col-sm-6">*/
-/*         {{ form_widget(form.sequence.description, {'attr': {'class': 'form-control'}}) }}*/
+/*         {{ form_widget(form.sequence.description) }}*/
 /*       </div>*/
 /*     </div>*/
 /*   </fieldset>*/
 /*   <fieldset>*/
-/*   	<legend>Décor</legend>*/
+/*   	<legend>&nbsp;&nbsp;Décor</legend>*/
 /*   	<div class="form-group">*/
 /*   	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Position&nbsp;&nbsp;</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')">*/
 /*         {{ form_errors(form.decor) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Type&nbsp;&nbsp;</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')"	>*/
 /*     	{{ form_errors(form.typeDecor) }}*/
 /*   	  </div>*/
 /*       <div class="col-sm-6">*/
@@ -1039,11 +959,11 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 /*     </div>*/
 /*   </fieldset>*/
 /*   <fieldset>*/
-/*   	<legend>Molette</legend>*/
+/*   	<legend>&nbsp;&nbsp;Molette</legend>*/
 /*   	<div class="form-group">*/
 /*   	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Nom</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')" align="right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Code alphanumérique de la molette')" align="right">*/
 /*         {{ form_errors(form.tessonMolette.molette.nom) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-6">*/
@@ -1060,12 +980,12 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 /*   	<div class="form-group">*/
 /*   	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Égal ou équivalent&nbsp;&nbsp;</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'<b>egal</b> est une correspondance sur le répertoire<br />tandis qu\'<b>equi</b> s\'en rapproche seulement')">*/
 /*         {{ form_errors(form.tessonMolette.egal) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Référence&nbsp;&nbsp;</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Matrice complète ou réputée comme telle<br />qui servira de référence pour l\'appariement')">*/
 /*     	{{ form_errors(form.tessonMolette.molette.reference) }}*/
 /*  	  </div>*/
 /*       <div class="col-sm-6">*/
@@ -1078,28 +998,8 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 /*   </fieldset>*/
 /*   */
 /*   <fieldset>*/
-/*     <legend>Numérisations</legend>*/
-/*     {% if form.numerisation is not empty %}*/
-/*   	<div class="form-group">*/
-/*   	  <div class="col-sm-6">*/
-/* 	    <b>&nbsp;Fichier&nbsp;&nbsp;</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')">*/
-/*         {{ form_errors(form.numerisation.file) }}*/
-/*    	  </div>*/
-/*  	  <div class="col-sm-6">*/
-/* 	    <b>&nbsp;Type&nbsp;&nbsp;</b>*/
-/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'bite')">*/
-/*     	{{ form_errors(form.numerisation.typeNumerisation) }}*/
-/*  	  </div>*/
-/*       <div class="col-sm-6">*/
-/*         {{ form_widget(form.numerisation.file) }}*/
-/*       </div>*/
-/*       <div class="col-sm-6">*/
-/*         {{ form_widget(form.tessonMolette.numerisation.typeNumerisation) }}*/
-/*       </div>*/
-/*   	<a href="#" id="add_numerisation" class="btn btn-default">Ajouter une numérisation</a>*/
-/*     </div>*/
-/*     {% endif %}*/
+/*     <legend>&nbsp;&nbsp;Numérisations</legend>*/
+/* 	{{ form_row(form.numerisation) }}*/
 /*   </fieldset>*/
 /*   <br />*/
 /*   <br />*/
