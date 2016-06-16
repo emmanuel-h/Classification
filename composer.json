@@ -29,7 +29,6 @@
         "incenteev/composer-parameter-handler": "^2.0",
 	    "incenteev/composer-parameter-handler": "~2.0",
         "doctrine/doctrine-fixtures-bundle": "~2.2",
-		"itbz/fpdf": "1.7.2",
 		"spipu/html2pdf": "4.6.0"
     },
     "require-dev": {

@@ -178,13 +178,6 @@ class ComposerStaticInit4897844512118399c60a7b2cb62b353a
     );
 
     public static $prefixesPsr0 = array (
-        'f' => 
-        array (
-            'fpdf' => 
-            array (
-                0 => __DIR__ . '/..' . '/itbz/fpdf/src',
-            ),
-        ),
         'T' => 
         array (
             'Twig_' => 

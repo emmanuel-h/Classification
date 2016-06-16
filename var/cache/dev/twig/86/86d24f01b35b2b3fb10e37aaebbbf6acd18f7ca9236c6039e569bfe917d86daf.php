@@ -15,8 +15,8 @@ class __TwigTemplate_eff946059a16195d1b2583d1f29284c26b611723910e89b708b24af0236
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ddff56d005454c0cd896a1e8882e7a6c9766723781516c5029c5d317d2d57114 = $this->env->getExtension("native_profiler");
-        $__internal_ddff56d005454c0cd896a1e8882e7a6c9766723781516c5029c5d317d2d57114->enter($__internal_ddff56d005454c0cd896a1e8882e7a6c9766723781516c5029c5d317d2d57114_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:menu.html.twig"));
+        $__internal_8aa119df1df68887baf27197c842c447259074382df8a757763af3d9a4788d1c = $this->env->getExtension("native_profiler");
+        $__internal_8aa119df1df68887baf27197c842c447259074382df8a757763af3d9a4788d1c->enter($__internal_8aa119df1df68887baf27197c842c447259074382df8a757763af3d9a4788d1c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:menu.html.twig"));
 
         // line 1
         echo "<div class=\"list-group\">
@@ -57,7 +57,7 @@ class __TwigTemplate_eff946059a16195d1b2583d1f29284c26b611723910e89b708b24af0236
         // line 10
         echo "</div>";
         
-        $__internal_ddff56d005454c0cd896a1e8882e7a6c9766723781516c5029c5d317d2d57114->leave($__internal_ddff56d005454c0cd896a1e8882e7a6c9766723781516c5029c5d317d2d57114_prof);
+        $__internal_8aa119df1df68887baf27197c842c447259074382df8a757763af3d9a4788d1c->leave($__internal_8aa119df1df68887baf27197c842c447259074382df8a757763af3d9a4788d1c_prof);
 
     }
 

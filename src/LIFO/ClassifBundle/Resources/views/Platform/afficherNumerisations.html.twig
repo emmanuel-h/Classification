@@ -1,0 +1,24 @@
+{% extends "LIFOClassifBundle::layoutGeneral.html.twig" %}
+
+{% block title %}{{ parent() }} - Numérisations{% endblock %}
+
+{% block LIFOClassif_body %}
+
+
+<table class="table table-bordered table-striped table-hover">
+	<thead align="middle"><tr class="warning"><td width=5%><b>ID tesson</b></td><td width=10%><b>Site</b><td width=10%><b>US</b></td><td width=10%><b>Numéro d'isolation</b></td></tr></thead>
+	<tbody>
+	{% for tesson in tessons %}
+		<tr>
+			<td><a href="{{ path('lifo_classif_tesson', {'id': tesson.id}) }}">{{ tesson.id }}</a></td>
+			<td>{{ tesson.site.codeINSEE}}&nbsp;{{ tesson.site.numSiteCommune }}</td>
+			<td>{{ tesson.us.nom }}</td>
+			<td>{{ tesson.numIsolation }}</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>
+
+{% include 'LIFOClassifBundle::pagination.html.twig' %}
+
+{% endblock %}

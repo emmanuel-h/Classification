@@ -110,8 +110,8 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // lifo_classif_numerisations
-        if ($pathinfo === '/numerisations') {
-            return array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::numerisationsAction',  '_route' => 'lifo_classif_numerisations',);
+        if (0 === strpos($pathinfo, '/numerisations') && preg_match('#^/numerisations(?:/(?P<page>\\d+))?$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_numerisations')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::numerisationsAction',  'page' => 1,));
         }
 
         // lifo_classif_upload

@@ -527,8 +527,46 @@ class PlatformController extends Controller {
 		
 	}
 	
-	public function numerisationsAction (){
-		return new Response( "");
+	public function numerisationsAction (Request $request, $page){
+		$formNumerisations= $this->createFormBuilder()
+			->add('typeNumerisation',  EntityType::class, array(
+					'class'   		=> 'LIFOClassifBundle:TypeNumerisation',
+					'choice_label'  => 'nom',
+					'multiple'		=> false,
+					'expanded' 		=> false,
+					'placeholder'	=> 'Tous',
+					'required'		=> false
+			))
+			->add('afficher', SubmitType::class)
+			->getForm();
+		$em = $this->getDoctrine()->getManager();
+		$nbTessonsParPage=$this->container->getParameter('NB_TESSONS_PAR_PAGE');
+
+		if($request->query->get('typeNumerisation') != NULL){
+			$typeNumerisation=$request->query->get('typeNumerisation');
+		} else {
+			$typeNumerisation=$this->getParameter("TYPE_NUMERISATION_A_AFFICHER");
+		}
+		
+		if ($request->isMethod ( 'POST' ) && $formNumerisations->handleRequest ( $request )->isValid ()) {
+			$typeNumerisation = $formNumerisations->get('typeNumerisation')->getData()->getNom();
+		}
+		
+		$tessons = $em->getRepository('LIFOClassifBundle:Tesson')
+		->paginationNumerisations($page, $nbTessonsParPage, $typeNumerisation);
+		
+		$pagination = array(
+				'page' => $page,
+				'nbPages' => ceil(count($tessons) / $nbTessonsParPage),
+				'nomRoute' => 'lifo_classif_numerisations',
+				'paramsRoute' => array(
+						'typeNumerisation'	=> $typeNumerisation
+				));
+		return $this->render ( 'LIFOClassifBundle:Platform:afficherNumerisations.html.twig', array (
+				'form'			=> $formNumerisations->createView (),
+				'tessons'		=> $tessons,
+				'pagination'	=> $pagination
+		) );
 	}
 	
 	public function tessonExporterAction($id){

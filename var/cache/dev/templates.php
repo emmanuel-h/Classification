@@ -88,6 +88,7 @@
   'LIFOClassifBundle::pagination.html.twig' => 'C:\\wamp64\\www\\Classification\\src\\LIFO\\ClassifBundle/Resources/views/pagination.html.twig',
   'LIFOClassifBundle:Parametres:positionDecor.html.twig' => 'C:\\wamp64\\www\\Classification\\src\\LIFO\\ClassifBundle/Resources/views/Parametres/positionDecor.html.twig',
   'LIFOClassifBundle:Parametres:typeDecor.html.twig' => 'C:\\wamp64\\www\\Classification\\src\\LIFO\\ClassifBundle/Resources/views/Parametres/typeDecor.html.twig',
+  'LIFOClassifBundle:Platform:afficherNumerisations.html.twig' => 'C:\\wamp64\\www\\Classification\\src\\LIFO\\ClassifBundle/Resources/views/Platform/afficherNumerisations.html.twig',
   'LIFOClassifBundle:Platform:afficherTessonsRecherche.html.twig' => 'C:\\wamp64\\www\\Classification\\src\\LIFO\\ClassifBundle/Resources/views/Platform/afficherTessonsRecherche.html.twig',
   'LIFOClassifBundle:Platform:classification.html.twig' => 'C:\\wamp64\\www\\Classification\\src\\LIFO\\ClassifBundle/Resources/views/Platform/classification.html.twig',
   'LIFOClassifBundle:Platform:index.html.twig' => 'C:\\wamp64\\www\\Classification\\src\\LIFO\\ClassifBundle/Resources/views/Platform/index.html.twig',

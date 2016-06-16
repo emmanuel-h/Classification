@@ -4,9 +4,12 @@ lifo_classif:
         _controller: LIFOClassifBundle:Platform:index
     
 lifo_classif_numerisations:
-    path:     /numerisations
+    path:     /numerisations/{page}
     defaults:
         _controller: LIFOClassifBundle:Platform:numerisations
+        page: 1
+    requirements:
+        page: \d+
     
 lifo_classif_upload:
     path:     /upload

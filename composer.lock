@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c93f9f821e929adc6de9b08c79c51ff7",
-    "content-hash": "2278846687d4ead96b4b490818df13b9",
+    "hash": "d0b000c7be8eb284c055c422fd870cf4",
+    "content-hash": "fd6f03f4c54cb64f541a07df347c2462",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -938,37 +938,6 @@
                 "parameters management"
             ],
             "time": "2015-11-10 17:04:01"
-        },
-        {
-            "name": "itbz/fpdf",
-            "version": "1.7.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/hanneskod/fpdf.git",
-                "reference": "06d02a7bf227a62d37691a4e7e9c3a35efcb41c3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/hanneskod/fpdf/zipball/06d02a7bf227a62d37691a4e7e9c3a35efcb41c3",
-                "reference": "06d02a7bf227a62d37691a4e7e9c3a35efcb41c3",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "fpdf": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "no usage restriction"
-            ],
-            "description": "Unofficial PSR-0 compliant version of the FPDF library",
-            "homepage": "http://www.fpdf.org/",
-            "time": "2013-12-27 14:18:15"
         },
         {
             "name": "jdorn/sql-formatter",
