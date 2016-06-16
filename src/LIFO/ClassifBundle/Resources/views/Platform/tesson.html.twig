@@ -4,6 +4,7 @@
 
 {% block LIFOClassif_body %}
 
+	<a class="btn btn-primary" href="{{ path('lifo_classif_tesson_exporter', {'id': tesson.id}) }}">Exporter</a>
 	<a class="btn btn-primary" href="{{ path('lifo_classif_tesson_modifier', {'id': tesson.id}) }}">Modifier</a>
 	<br /><br/>
 	<table class="table table-bordered table-striped table-hover">

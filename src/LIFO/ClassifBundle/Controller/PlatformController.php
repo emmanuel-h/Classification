@@ -332,19 +332,6 @@ class PlatformController extends Controller {
 	 * @Security("has_role('ROLE_USER')")
 	 */
 	public function tessonAction($id) {
-		
-
-		/*require_once('odtphp/src/Odf.php');
-		$odf = new odf("odtphp-exemple1.odt", array('ZIP_PROXY' => 'PhpZipProxy'));
-		
-		$odf->setVars('titre', 'Mon titre dynamique');
-		$odf->setVars('texte', "Mon texte,\n\n\nAvec plusieurs lignes...");
-		
-		// Ajouter une image:
-		$odf->setImage('image', 'web-d.jpg');
-		
-		$odf->exportAsAttachedFile("Exemple ODTPHP");*/
-		
 		$em = $this->getDoctrine ()->getManager ();
 		$tesson = $em->getRepository('LIFOClassifBundle:Tesson')->findOneById($id);
 		
@@ -542,5 +529,30 @@ class PlatformController extends Controller {
 	
 	public function numerisationsAction (){
 		return new Response( "");
+	}
+	
+	public function tessonExporterAction($id){
+
+		$em = $this->getDoctrine ()->getManager ();
+		$tesson = $em->getRepository('LIFOClassifBundle:Tesson')->find($id);
+		
+		ob_start();
+		$html = $this->renderView('LIFOClassifBundle:Platform:tessonpdf.html.twig', array('tesson' => $tesson));
+		ob_get_clean();
+		$html2pdf = new \HTML2PDF('P','A4','fr');
+		$html2pdf->pdf->SetDisplayMode('real');
+		$html2pdf->writeHTML($html);
+		$html2pdf->pdf->setTitle('Tesson ');
+		$fichier = $html2pdf->Output('Synthese_tesson_'.$tesson->getId().'.pdf', false);
+		
+		$response = new Response();
+		$response->clearHttpHeaders();
+		$response->setContent(file_get_contents($fichier));
+		$response->headers->set('Content-Type', 'application/force-download');
+		$response->headers->set('Content-disposition', 'filename='. $fichier);
+		
+		return $response;
+		
+		
 	}
 }

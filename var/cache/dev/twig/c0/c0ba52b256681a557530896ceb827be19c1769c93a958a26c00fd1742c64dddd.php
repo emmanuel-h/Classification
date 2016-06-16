@@ -23,20 +23,20 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2b3d75b259e11651eb2c81e3bd518269e3214dd2c8a9cf1895cfc7c628a3473b = $this->env->getExtension("native_profiler");
-        $__internal_2b3d75b259e11651eb2c81e3bd518269e3214dd2c8a9cf1895cfc7c628a3473b->enter($__internal_2b3d75b259e11651eb2c81e3bd518269e3214dd2c8a9cf1895cfc7c628a3473b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DoctrineBundle:Collector:db.html.twig"));
+        $__internal_3c5027fa0b72a145b4ab6b09c2fd8cbb2d66fbd25fd91ff73e0135a9433c2376 = $this->env->getExtension("native_profiler");
+        $__internal_3c5027fa0b72a145b4ab6b09c2fd8cbb2d66fbd25fd91ff73e0135a9433c2376->enter($__internal_3c5027fa0b72a145b4ab6b09c2fd8cbb2d66fbd25fd91ff73e0135a9433c2376_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DoctrineBundle:Collector:db.html.twig"));
 
         $this->getParent($context)->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_2b3d75b259e11651eb2c81e3bd518269e3214dd2c8a9cf1895cfc7c628a3473b->leave($__internal_2b3d75b259e11651eb2c81e3bd518269e3214dd2c8a9cf1895cfc7c628a3473b_prof);
+        $__internal_3c5027fa0b72a145b4ab6b09c2fd8cbb2d66fbd25fd91ff73e0135a9433c2376->leave($__internal_3c5027fa0b72a145b4ab6b09c2fd8cbb2d66fbd25fd91ff73e0135a9433c2376_prof);
 
     }
 
     // line 3
     public function block_toolbar($context, array $blocks = array())
     {
-        $__internal_604acf5f334d37b536b6aa77b98fb0f2ccf66f8f3ae1fc34d15755247a8c7844 = $this->env->getExtension("native_profiler");
-        $__internal_604acf5f334d37b536b6aa77b98fb0f2ccf66f8f3ae1fc34d15755247a8c7844->enter($__internal_604acf5f334d37b536b6aa77b98fb0f2ccf66f8f3ae1fc34d15755247a8c7844_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "toolbar"));
+        $__internal_8e0dc02d078bbd48f5576fd3025fdedf6db100b822f001bd5062acb2e9acb5e0 = $this->env->getExtension("native_profiler");
+        $__internal_8e0dc02d078bbd48f5576fd3025fdedf6db100b822f001bd5062acb2e9acb5e0->enter($__internal_8e0dc02d078bbd48f5576fd3025fdedf6db100b822f001bd5062acb2e9acb5e0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "toolbar"));
 
         // line 4
         echo "    ";
@@ -138,8 +138,10 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
             // line 42
             echo "            <div class=\"sf-toolbar-info-piece\">
                 <b>Database Queries</b>
-                <span class=\"sf-toolbar-status\">";
+                <span class=\"sf-toolbar-status ";
             // line 44
+            echo ((($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "querycount", array()) > 50)) ? ("sf-toolbar-status-yellow") : (""));
+            echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "querycount", array()), "html", null, true);
             echo "</span>
             </div>
@@ -210,15 +212,15 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
     ";
         }
         
-        $__internal_604acf5f334d37b536b6aa77b98fb0f2ccf66f8f3ae1fc34d15755247a8c7844->leave($__internal_604acf5f334d37b536b6aa77b98fb0f2ccf66f8f3ae1fc34d15755247a8c7844_prof);
+        $__internal_8e0dc02d078bbd48f5576fd3025fdedf6db100b822f001bd5062acb2e9acb5e0->leave($__internal_8e0dc02d078bbd48f5576fd3025fdedf6db100b822f001bd5062acb2e9acb5e0_prof);
 
     }
 
     // line 80
     public function block_menu($context, array $blocks = array())
     {
-        $__internal_418d11cd295d334b88f1d736036f75bfbc97eaabc21b506d1c49b99d6db796ba = $this->env->getExtension("native_profiler");
-        $__internal_418d11cd295d334b88f1d736036f75bfbc97eaabc21b506d1c49b99d6db796ba->enter($__internal_418d11cd295d334b88f1d736036f75bfbc97eaabc21b506d1c49b99d6db796ba_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "menu"));
+        $__internal_a6a771a6c332226614d42d98670b472bedbdf75582335de4136c5579bf1db626 = $this->env->getExtension("native_profiler");
+        $__internal_a6a771a6c332226614d42d98670b472bedbdf75582335de4136c5579bf1db626->enter($__internal_a6a771a6c332226614d42d98670b472bedbdf75582335de4136c5579bf1db626_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "menu"));
 
         // line 81
         echo "    ";
@@ -278,15 +280,15 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
     ";
         }
         
-        $__internal_418d11cd295d334b88f1d736036f75bfbc97eaabc21b506d1c49b99d6db796ba->leave($__internal_418d11cd295d334b88f1d736036f75bfbc97eaabc21b506d1c49b99d6db796ba_prof);
+        $__internal_a6a771a6c332226614d42d98670b472bedbdf75582335de4136c5579bf1db626->leave($__internal_a6a771a6c332226614d42d98670b472bedbdf75582335de4136c5579bf1db626_prof);
 
     }
 
     // line 109
     public function block_panel($context, array $blocks = array())
     {
-        $__internal_1729046654bb3d038b1f82d95bc66eb8d8fd079ac86b2e405f6522dfa9eeda27 = $this->env->getExtension("native_profiler");
-        $__internal_1729046654bb3d038b1f82d95bc66eb8d8fd079ac86b2e405f6522dfa9eeda27->enter($__internal_1729046654bb3d038b1f82d95bc66eb8d8fd079ac86b2e405f6522dfa9eeda27_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "panel"));
+        $__internal_d0fb89e3d5f0cad96b073c9c40b1301a64ac776a65608f5354fa8004c14929f6 = $this->env->getExtension("native_profiler");
+        $__internal_d0fb89e3d5f0cad96b073c9c40b1301a64ac776a65608f5354fa8004c14929f6->enter($__internal_d0fb89e3d5f0cad96b073c9c40b1301a64ac776a65608f5354fa8004c14929f6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "panel"));
 
         // line 110
         echo "    ";
@@ -313,15 +315,15 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
     ";
         }
         
-        $__internal_1729046654bb3d038b1f82d95bc66eb8d8fd079ac86b2e405f6522dfa9eeda27->leave($__internal_1729046654bb3d038b1f82d95bc66eb8d8fd079ac86b2e405f6522dfa9eeda27_prof);
+        $__internal_d0fb89e3d5f0cad96b073c9c40b1301a64ac776a65608f5354fa8004c14929f6->leave($__internal_d0fb89e3d5f0cad96b073c9c40b1301a64ac776a65608f5354fa8004c14929f6_prof);
 
     }
 
     // line 124
     public function block_queries($context, array $blocks = array())
     {
-        $__internal_8460b7b2c7ff401d211f7c9cd464524306a0ac427031961d88f269fcd9910e6e = $this->env->getExtension("native_profiler");
-        $__internal_8460b7b2c7ff401d211f7c9cd464524306a0ac427031961d88f269fcd9910e6e->enter($__internal_8460b7b2c7ff401d211f7c9cd464524306a0ac427031961d88f269fcd9910e6e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "queries"));
+        $__internal_8a230a7ab30548cf53db9d1f68fbfd85be0b6ffd44b323e94d33087fb52dd865 = $this->env->getExtension("native_profiler");
+        $__internal_8a230a7ab30548cf53db9d1f68fbfd85be0b6ffd44b323e94d33087fb52dd865->enter($__internal_8a230a7ab30548cf53db9d1f68fbfd85be0b6ffd44b323e94d33087fb52dd865_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "queries"));
 
         // line 125
         echo "    ";
@@ -346,10 +348,74 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
         }
         // line 142
         echo "
+    ";
+        // line 143
+        if (((isset($context["profiler_markup_version"]) ? $context["profiler_markup_version"] : $this->getContext($context, "profiler_markup_version")) > 1)) {
+            // line 144
+            echo "        <h2>Query Metrics</h2>
+    
+        <div class=\"metrics\">
+            <div class=\"metric\">
+                <span class=\"value\">";
+            // line 148
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "querycount", array()), "html", null, true);
+            echo "</span>
+                <span class=\"label\">Database Queries</span>
+            </div>
+    
+            <div class=\"metric\">
+                <span class=\"value\">";
+            // line 153
+            echo twig_escape_filter($this->env, sprintf("%0.2f", ($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "time", array()) * 1000)), "html", null, true);
+            echo " ms</span>
+                <span class=\"label\">Query time</span>
+            </div>
+    
+            <div class=\"metric\">
+                <span class=\"value\">";
+            // line 158
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "invalidEntityCount", array()), "html", null, true);
+            echo "</span>
+                <span class=\"label\">Invalid entities</span>
+            </div>
+    
+            ";
+            // line 162
+            if ($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "cacheEnabled", array())) {
+                // line 163
+                echo "                <div class=\"metric\">
+                \t<span class=\"value\">";
+                // line 164
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "cacheHitsCount", array()), "html", null, true);
+                echo "</span>
+                \t<span class=\"label\">Cache hits</span>
+                </div>
+                <div class=\"metric\">
+                \t<span class=\"value\">";
+                // line 168
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "cacheMissesCount", array()), "html", null, true);
+                echo "</span>
+                \t<span class=\"label\">Cache misses</span>
+                </div>
+                <div class=\"metric\">
+                \t<span class=\"value\">";
+                // line 172
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "cachePutsCount", array()), "html", null, true);
+                echo "</span>
+                \t<span class=\"label\">Cache puts</span>
+                </div>
+            ";
+            }
+            // line 176
+            echo "        </div>
+    ";
+        }
+        // line 178
+        echo "
     <h2>Queries</h2>
 
     ";
-        // line 145
+        // line 181
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "queries", array()));
         $context['loop'] = array(
@@ -366,47 +432,47 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["connection"] => $context["queries"]) {
-            // line 146
+            // line 182
             echo "        ";
             if ((twig_length_filter($this->env, $this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "connections", array())) > 1)) {
-                // line 147
+                // line 183
                 echo "            <h3>";
                 echo twig_escape_filter($this->env, $context["connection"], "html", null, true);
                 echo " <small>connection</small></h3>
         ";
             }
-            // line 149
+            // line 185
             echo "
         ";
-            // line 150
+            // line 186
             if (twig_test_empty($context["queries"])) {
-                // line 151
+                // line 187
                 echo "            <div class=\"empty\">
                 <p>No database queries were performed.</p>
             </div>
         ";
             } else {
-                // line 155
+                // line 191
                 echo "            <table class=\"alt queries-table\">
                 <thead>
                 <tr>
                     <th class=\"nowrap\" onclick=\"javascript:sortTable(this, 0, 'queries-";
-                // line 158
+                // line 194
                 echo twig_escape_filter($this->env, $this->getAttribute($context["loop"], "index", array()), "html", null, true);
                 echo "')\" data-sort-direction=\"-1\" style=\"cursor: pointer;\">#<span class=\"text-muted\">&#9650;</span></th>
                     <th class=\"nowrap\" onclick=\"javascript:sortTable(this, 1, 'queries-";
-                // line 159
+                // line 195
                 echo twig_escape_filter($this->env, $this->getAttribute($context["loop"], "index", array()), "html", null, true);
                 echo "')\" style=\"cursor: pointer;\">Time<span></span></th>
                     <th style=\"width: 100%;\">Info</th>
                 </tr>
                 </thead>
                 <tbody id=\"queries-";
-                // line 163
+                // line 199
                 echo twig_escape_filter($this->env, $this->getAttribute($context["loop"], "index", array()), "html", null, true);
                 echo "\">
                     ";
-                // line 164
+                // line 200
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable($context["queries"]);
                 $context['loop'] = array(
@@ -423,36 +489,36 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
                     $context['loop']['last'] = 1 === $length;
                 }
                 foreach ($context['_seq'] as $context["i"] => $context["query"]) {
-                    // line 165
+                    // line 201
                     echo "                        <tr id=\"queryNo-";
                     echo twig_escape_filter($this->env, $context["i"], "html", null, true);
                     echo "-";
                     echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["loop"], "parent", array()), "loop", array()), "index", array()), "html", null, true);
                     echo "\">
-                            <td>";
-                    // line 166
+                            <td class=\"nowrap\">";
+                    // line 202
                     echo twig_escape_filter($this->env, $this->getAttribute($context["loop"], "index", array()), "html", null, true);
                     echo "</td>
                             <td class=\"nowrap\">";
-                    // line 167
+                    // line 203
                     echo twig_escape_filter($this->env, sprintf("%0.2f", ($this->getAttribute($context["query"], "executionMS", array()) * 1000)), "html", null, true);
                     echo "&nbsp;ms</td>
                             <td>
                                 ";
-                    // line 169
+                    // line 205
                     echo $this->env->getExtension('doctrine_extension')->formatQuery($this->getAttribute($context["query"], "sql", array()), true);
                     echo "
 
                                 <div>
                                     <strong class=\"font-normal text-small\">Parameters</strong>: ";
-                    // line 172
+                    // line 208
                     echo twig_escape_filter($this->env, $this->env->getExtension('yaml')->encode($this->getAttribute($context["query"], "params", array())), "html", null, true);
                     echo "
                                 </div>
 
                                 <div class=\"text-small font-normal\">
                                     <a href=\"#\" ";
-                    // line 176
+                    // line 212
                     echo ((((isset($context["profiler_markup_version"]) ? $context["profiler_markup_version"] : $this->getContext($context, "profiler_markup_version")) == 1)) ? ("onclick=\"return toggleRunnableQuery(this);\"") : (""));
                     echo " class=\"sf-toggle link-inverse\" data-toggle-selector=\"#formatted-query-";
                     echo twig_escape_filter($this->env, $context["i"], "html", null, true);
@@ -463,7 +529,7 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
                                     &nbsp;&nbsp;
 
                                     <a href=\"#\" ";
-                    // line 180
+                    // line 216
                     echo ((((isset($context["profiler_markup_version"]) ? $context["profiler_markup_version"] : $this->getContext($context, "profiler_markup_version")) == 1)) ? ("onclick=\"return toggleRunnableQuery(this);\"") : (""));
                     echo " class=\"sf-toggle link-inverse\" data-toggle-selector=\"#original-query-";
                     echo twig_escape_filter($this->env, $context["i"], "html", null, true);
@@ -472,12 +538,12 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
                     echo "\" data-toggle-alt-content=\"Hide runnable query\">View runnable query</a>
 
                                     ";
-                    // line 182
+                    // line 218
                     if ($this->getAttribute($context["query"], "explainable", array())) {
-                        // line 183
+                        // line 219
                         echo "                                        &nbsp;&nbsp;
                                         <a class=\"link-inverse\" href=\"";
-                        // line 184
+                        // line 220
                         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("_profiler", array("panel" => "db", "token" => (isset($context["token"]) ? $context["token"] : $this->getContext($context, "token")), "page" => "explain", "connection" => $context["connection"], "query" => $context["i"])), "html", null, true);
                         echo "\" onclick=\"return explain(this);\" data-target-id=\"explain-";
                         echo twig_escape_filter($this->env, $context["i"], "html", null, true);
@@ -486,37 +552,37 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
                         echo "\">Explain query</a>
                                     ";
                     }
-                    // line 186
+                    // line 222
                     echo "                                </div>
 
                                 <div id=\"formatted-query-";
-                    // line 188
+                    // line 224
                     echo twig_escape_filter($this->env, $context["i"], "html", null, true);
                     echo "-";
                     echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["loop"], "parent", array()), "loop", array()), "index", array()), "html", null, true);
                     echo "\" class=\"sql-runnable hidden\">
                                     ";
-                    // line 189
+                    // line 225
                     echo $this->env->getExtension('doctrine_extension')->formatQuery($this->getAttribute($context["query"], "sql", array()));
                     echo "
                                 </div>
 
                                 <div id=\"original-query-";
-                    // line 192
+                    // line 228
                     echo twig_escape_filter($this->env, $context["i"], "html", null, true);
                     echo "-";
                     echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["loop"], "parent", array()), "loop", array()), "index", array()), "html", null, true);
                     echo "\" class=\"sql-runnable hidden\">
                                     ";
-                    // line 193
+                    // line 229
                     echo $this->env->getExtension('doctrine_extension')->formatQuery($this->env->getExtension('doctrine_extension')->replaceQueryParameters(($this->getAttribute($context["query"], "sql", array()) . ";"), $this->getAttribute($context["query"], "params", array())), true);
                     echo "
                                 </div>
 
                                 ";
-                    // line 196
+                    // line 232
                     if ($this->getAttribute($context["query"], "explainable", array())) {
-                        // line 197
+                        // line 233
                         echo "                                    <div id=\"explain-";
                         echo twig_escape_filter($this->env, $context["i"], "html", null, true);
                         echo "-";
@@ -524,7 +590,7 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
                         echo "\"></div>
                                 ";
                     }
-                    // line 199
+                    // line 235
                     echo "                            </td>
                         </tr>
                     ";
@@ -540,12 +606,12 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['i'], $context['query'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 202
+                // line 238
                 echo "                </tbody>
             </table>
         ";
             }
-            // line 205
+            // line 241
             echo "    ";
             ++$context['loop']['index0'];
             ++$context['loop']['index'];
@@ -559,80 +625,80 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['connection'], $context['queries'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 206
+        // line 242
         echo "
     <h2>Database Connections</h2>
 
     ";
-        // line 209
+        // line 245
         if ( !$this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "connections", array())) {
-            // line 210
+            // line 246
             echo "        <div class=\"empty\">
             <p>There are no configured database connections.</p>
         </div>
     ";
         } else {
-            // line 214
+            // line 250
             echo "        ";
             echo twig_include($this->env, $context, "@WebProfiler/Profiler/table.html.twig", array("data" => $this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "connections", array()), "labels" => array(0 => "Name", 1 => "Service")), false);
             echo "
     ";
         }
-        // line 216
+        // line 252
         echo "
     <h2>Entity Managers</h2>
 
     ";
-        // line 219
+        // line 255
         if ( !$this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "managers", array())) {
-            // line 220
+            // line 256
             echo "        <div class=\"empty\">
             <p>There are no configured entity managers.</p>
         </div>
     ";
         } else {
-            // line 224
+            // line 260
             echo "        ";
             echo twig_include($this->env, $context, "@WebProfiler/Profiler/table.html.twig", array("data" => $this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "managers", array()), "labels" => array(0 => "Name", 1 => "Service")), false);
             echo "
     ";
         }
-        // line 226
+        // line 262
         echo "
     <h2>Second Level Cache</h2>
 
     ";
-        // line 229
+        // line 265
         if ( !$this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "cacheEnabled", array())) {
-            // line 230
+            // line 266
             echo "        <div class=\"empty\">
             <p>Second Level Cache is not enabled.</p>
         </div>
     ";
         } else {
-            // line 234
+            // line 270
             echo "        ";
             if ( !$this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "cacheCounts", array())) {
-                // line 235
+                // line 271
                 echo "            <div class=\"empty\">
                 <p>Second level cache information is not available.</p>
             </div>
         ";
             } else {
-                // line 239
+                // line 275
                 echo "            ";
                 if (((isset($context["profiler_markup_version"]) ? $context["profiler_markup_version"] : $this->getContext($context, "profiler_markup_version")) == 1)) {
-                    // line 240
+                    // line 276
                     echo "                ";
                     echo twig_include($this->env, $context, "@WebProfiler/Profiler/table.html.twig", array("data" => $this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "cacheCounts", array())), false);
                     echo "
             ";
                 } else {
-                    // line 242
+                    // line 278
                     echo "                <div class=\"metrics\">
                     <div class=\"metric\">
                         <span class=\"value\">";
-                    // line 244
+                    // line 280
                     echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "cacheCounts", array()), "hits", array()), "html", null, true);
                     echo "</span>
                         <span class=\"label\">Hits</span>
@@ -640,7 +706,7 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
 
                     <div class=\"metric\">
                         <span class=\"value\">";
-                    // line 249
+                    // line 285
                     echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "cacheCounts", array()), "misses", array()), "html", null, true);
                     echo "</span>
                         <span class=\"label\">Misses</span>
@@ -648,7 +714,7 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
 
                     <div class=\"metric\">
                         <span class=\"value\">";
-                    // line 254
+                    // line 290
                     echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "cacheCounts", array()), "puts", array()), "html", null, true);
                     echo "</span>
                         <span class=\"label\">Puts</span>
@@ -656,81 +722,81 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
                 </div>
             ";
                 }
-                // line 259
+                // line 295
                 echo "
             ";
-                // line 260
+                // line 296
                 if ($this->getAttribute($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "cacheRegions", array()), "hits", array())) {
-                    // line 261
+                    // line 297
                     echo "                <h3>Number of cache hits</h3>
                 ";
-                    // line 262
+                    // line 298
                     echo twig_include($this->env, $context, "@WebProfiler/Profiler/table.html.twig", array("data" => $this->getAttribute($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "cacheRegions", array()), "hits", array())), false);
                     echo "
             ";
                 }
-                // line 264
+                // line 300
                 echo "
             ";
-                // line 265
+                // line 301
                 if ($this->getAttribute($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "cacheRegions", array()), "misses", array())) {
-                    // line 266
+                    // line 302
                     echo "                <h3>Number of cache misses</h3>
                 ";
-                    // line 267
+                    // line 303
                     echo twig_include($this->env, $context, "@WebProfiler/Profiler/table.html.twig", array("data" => $this->getAttribute($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "cacheRegions", array()), "misses", array())), false);
                     echo "
             ";
                 }
-                // line 269
+                // line 305
                 echo "
             ";
-                // line 270
+                // line 306
                 if ($this->getAttribute($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "cacheRegions", array()), "puts", array())) {
-                    // line 271
+                    // line 307
                     echo "                <h3>Number of cache puts</h3>
                 ";
-                    // line 272
+                    // line 308
                     echo twig_include($this->env, $context, "@WebProfiler/Profiler/table.html.twig", array("data" => $this->getAttribute($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "cacheRegions", array()), "puts", array())), false);
                     echo "
             ";
                 }
-                // line 274
+                // line 310
                 echo "        ";
             }
-            // line 275
+            // line 311
             echo "    ";
         }
-        // line 276
+        // line 312
         echo "
     <h2>Entities Mapping</h2>
 
     ";
-        // line 279
+        // line 315
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "entities", array()));
         foreach ($context['_seq'] as $context["manager"] => $context["classes"]) {
-            // line 280
+            // line 316
             echo "        ";
             if ((twig_length_filter($this->env, $this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "managers", array())) > 1)) {
-                // line 281
+                // line 317
                 echo "            <h3>";
                 echo twig_escape_filter($this->env, $context["manager"], "html", null, true);
                 echo " <small>entity manager</small></h3>
         ";
             }
-            // line 283
+            // line 319
             echo "
         ";
-            // line 284
+            // line 320
             if (twig_test_empty($context["classes"])) {
-                // line 285
+                // line 321
                 echo "            <div class=\"empty\">
                 <p>No loaded entities.</p>
             </div>
         ";
             } else {
-                // line 289
+                // line 325
                 echo "            <table>
                 <thead>
                 <tr>
@@ -740,33 +806,33 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
                 </thead>
                 <tbody>
                 ";
-                // line 297
+                // line 333
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable($context["classes"]);
                 foreach ($context['_seq'] as $context["_key"] => $context["class"]) {
-                    // line 298
+                    // line 334
                     echo "                    ";
                     $context["contains_errors"] = ($this->getAttribute($this->getAttribute((isset($context["collector"]) ? $context["collector"] : null), "mappingErrors", array(), "any", false, true), $context["manager"], array(), "array", true, true) && $this->getAttribute($this->getAttribute($this->getAttribute((isset($context["collector"]) ? $context["collector"] : null), "mappingErrors", array(), "any", false, true), $context["manager"], array(), "array", false, true), $context["class"], array(), "array", true, true));
-                    // line 299
+                    // line 335
                     echo "                    <tr class=\"";
                     echo (((isset($context["contains_errors"]) ? $context["contains_errors"] : $this->getContext($context, "contains_errors"))) ? ("status-error") : (""));
                     echo "\">
                         <td>";
-                    // line 300
+                    // line 336
                     echo twig_escape_filter($this->env, $context["class"], "html", null, true);
                     echo "</td>
                         <td class=\"font-normal\">
                             ";
-                    // line 302
+                    // line 338
                     if ((isset($context["contains_errors"]) ? $context["contains_errors"] : $this->getContext($context, "contains_errors"))) {
-                        // line 303
+                        // line 339
                         echo "                                <ul>
                                     ";
-                        // line 304
+                        // line 340
                         $context['_parent'] = $context;
                         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "mappingErrors", array()), $context["manager"], array(), "array"), $context["class"], array(), "array"));
                         foreach ($context['_seq'] as $context["_key"] => $context["error"]) {
-                            // line 305
+                            // line 341
                             echo "                                        <li>";
                             echo twig_escape_filter($this->env, $context["error"], "html", null, true);
                             echo "</li>
@@ -775,15 +841,15 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
                         $_parent = $context['_parent'];
                         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['error'], $context['_parent'], $context['loop']);
                         $context = array_intersect_key($context, $_parent) + $_parent;
-                        // line 307
+                        // line 343
                         echo "                                </ul>
                             ";
                     } else {
-                        // line 309
+                        // line 345
                         echo "                                No errors.
                             ";
                     }
-                    // line 311
+                    // line 347
                     echo "                        </td>
                     </tr>
                 ";
@@ -791,18 +857,18 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['class'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 314
+                // line 350
                 echo "                </tbody>
             </table>
         ";
             }
-            // line 317
+            // line 353
             echo "    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['manager'], $context['classes'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 318
+        // line 354
         echo "
     <script type=\"text/javascript\">//<![CDATA[
         function explain(link) {
@@ -862,9 +928,9 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
         }
 
         ";
-        // line 376
+        // line 412
         if (((isset($context["profiler_markup_version"]) ? $context["profiler_markup_version"] : $this->getContext($context, "profiler_markup_version")) == 1)) {
-            // line 377
+            // line 413
             echo "            function toggleRunnableQuery(target) {
                 var targetSelector = target.getAttribute('data-toggle-selector');
                 var targetDataAltContent = target.getAttribute('data-toggle-alt-content');
@@ -883,12 +949,12 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
             }
         ";
         }
-        // line 394
+        // line 430
         echo "
         //]]></script>
 ";
         
-        $__internal_8460b7b2c7ff401d211f7c9cd464524306a0ac427031961d88f269fcd9910e6e->leave($__internal_8460b7b2c7ff401d211f7c9cd464524306a0ac427031961d88f269fcd9910e6e_prof);
+        $__internal_8a230a7ab30548cf53db9d1f68fbfd85be0b6ffd44b323e94d33087fb52dd865->leave($__internal_8a230a7ab30548cf53db9d1f68fbfd85be0b6ffd44b323e94d33087fb52dd865_prof);
 
     }
 
@@ -904,7 +970,7 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
 
     public function getDebugInfo()
     {
-        return array (  887 => 394,  868 => 377,  866 => 376,  806 => 318,  800 => 317,  795 => 314,  787 => 311,  783 => 309,  779 => 307,  770 => 305,  766 => 304,  763 => 303,  761 => 302,  756 => 300,  751 => 299,  748 => 298,  744 => 297,  734 => 289,  728 => 285,  726 => 284,  723 => 283,  717 => 281,  714 => 280,  710 => 279,  705 => 276,  702 => 275,  699 => 274,  694 => 272,  691 => 271,  689 => 270,  686 => 269,  681 => 267,  678 => 266,  676 => 265,  673 => 264,  668 => 262,  665 => 261,  663 => 260,  660 => 259,  652 => 254,  644 => 249,  636 => 244,  632 => 242,  626 => 240,  623 => 239,  617 => 235,  614 => 234,  608 => 230,  606 => 229,  601 => 226,  595 => 224,  589 => 220,  587 => 219,  582 => 216,  576 => 214,  570 => 210,  568 => 209,  563 => 206,  549 => 205,  544 => 202,  528 => 199,  520 => 197,  518 => 196,  512 => 193,  506 => 192,  500 => 189,  494 => 188,  490 => 186,  481 => 184,  478 => 183,  476 => 182,  467 => 180,  456 => 176,  449 => 172,  443 => 169,  438 => 167,  434 => 166,  427 => 165,  410 => 164,  406 => 163,  399 => 159,  395 => 158,  390 => 155,  384 => 151,  382 => 150,  379 => 149,  373 => 147,  370 => 146,  353 => 145,  348 => 142,  330 => 126,  327 => 125,  321 => 124,  310 => 120,  306 => 118,  304 => 117,  303 => 116,  302 => 114,  300 => 113,  298 => 112,  295 => 111,  292 => 110,  286 => 109,  276 => 104,  270 => 101,  267 => 100,  265 => 99,  260 => 97,  254 => 96,  251 => 95,  243 => 90,  239 => 89,  232 => 84,  230 => 83,  227 => 82,  224 => 81,  218 => 80,  207 => 75,  204 => 74,  201 => 73,  194 => 68,  186 => 65,  177 => 61,  170 => 57,  166 => 55,  164 => 54,  157 => 52,  150 => 48,  143 => 44,  139 => 42,  137 => 41,  134 => 40,  131 => 39,  127 => 37,  120 => 33,  113 => 30,  106 => 27,  104 => 26,  99 => 24,  96 => 23,  94 => 22,  91 => 21,  87 => 19,  81 => 17,  78 => 16,  72 => 14,  70 => 13,  62 => 12,  58 => 10,  55 => 9,  53 => 8,  50 => 7,  48 => 6,  45 => 5,  42 => 4,  36 => 3,  21 => 1,);
+        return array (  953 => 430,  934 => 413,  932 => 412,  872 => 354,  866 => 353,  861 => 350,  853 => 347,  849 => 345,  845 => 343,  836 => 341,  832 => 340,  829 => 339,  827 => 338,  822 => 336,  817 => 335,  814 => 334,  810 => 333,  800 => 325,  794 => 321,  792 => 320,  789 => 319,  783 => 317,  780 => 316,  776 => 315,  771 => 312,  768 => 311,  765 => 310,  760 => 308,  757 => 307,  755 => 306,  752 => 305,  747 => 303,  744 => 302,  742 => 301,  739 => 300,  734 => 298,  731 => 297,  729 => 296,  726 => 295,  718 => 290,  710 => 285,  702 => 280,  698 => 278,  692 => 276,  689 => 275,  683 => 271,  680 => 270,  674 => 266,  672 => 265,  667 => 262,  661 => 260,  655 => 256,  653 => 255,  648 => 252,  642 => 250,  636 => 246,  634 => 245,  629 => 242,  615 => 241,  610 => 238,  594 => 235,  586 => 233,  584 => 232,  578 => 229,  572 => 228,  566 => 225,  560 => 224,  556 => 222,  547 => 220,  544 => 219,  542 => 218,  533 => 216,  522 => 212,  515 => 208,  509 => 205,  504 => 203,  500 => 202,  493 => 201,  476 => 200,  472 => 199,  465 => 195,  461 => 194,  456 => 191,  450 => 187,  448 => 186,  445 => 185,  439 => 183,  436 => 182,  419 => 181,  414 => 178,  410 => 176,  403 => 172,  396 => 168,  389 => 164,  386 => 163,  384 => 162,  377 => 158,  369 => 153,  361 => 148,  355 => 144,  353 => 143,  350 => 142,  332 => 126,  329 => 125,  323 => 124,  312 => 120,  308 => 118,  306 => 117,  305 => 116,  304 => 114,  302 => 113,  300 => 112,  297 => 111,  294 => 110,  288 => 109,  278 => 104,  272 => 101,  269 => 100,  267 => 99,  262 => 97,  256 => 96,  253 => 95,  245 => 90,  241 => 89,  234 => 84,  232 => 83,  229 => 82,  226 => 81,  220 => 80,  209 => 75,  206 => 74,  203 => 73,  196 => 68,  188 => 65,  179 => 61,  172 => 57,  168 => 55,  166 => 54,  159 => 52,  152 => 48,  143 => 44,  139 => 42,  137 => 41,  134 => 40,  131 => 39,  127 => 37,  120 => 33,  113 => 30,  106 => 27,  104 => 26,  99 => 24,  96 => 23,  94 => 22,  91 => 21,  87 => 19,  81 => 17,  78 => 16,  72 => 14,  70 => 13,  62 => 12,  58 => 10,  55 => 9,  53 => 8,  50 => 7,  48 => 6,  45 => 5,  42 => 4,  36 => 3,  21 => 1,);
     }
 }
 /* {% extends app.request.isXmlHttpRequest ? '@WebProfiler/Profiler/ajax_layout.html.twig' : '@WebProfiler/Profiler/layout.html.twig' %}*/
@@ -950,7 +1016,7 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
 /*         {% set text %}*/
 /*             <div class="sf-toolbar-info-piece">*/
 /*                 <b>Database Queries</b>*/
-/*                 <span class="sf-toolbar-status">{{ collector.querycount }}</span>*/
+/*                 <span class="sf-toolbar-status {{ collector.querycount > 50 ? 'sf-toolbar-status-yellow' : '' }}">{{ collector.querycount }}</span>*/
 /*             </div>*/
 /*             <div class="sf-toolbar-info-piece">*/
 /*                 <b>Query time</b>*/
@@ -1049,6 +1115,42 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
 /*         </style>*/
 /*     {% endif %}*/
 /* */
+/*     {% if profiler_markup_version > 1 %}*/
+/*         <h2>Query Metrics</h2>*/
+/*     */
+/*         <div class="metrics">*/
+/*             <div class="metric">*/
+/*                 <span class="value">{{ collector.querycount }}</span>*/
+/*                 <span class="label">Database Queries</span>*/
+/*             </div>*/
+/*     */
+/*             <div class="metric">*/
+/*                 <span class="value">{{ '%0.2f'|format(collector.time * 1000) }} ms</span>*/
+/*                 <span class="label">Query time</span>*/
+/*             </div>*/
+/*     */
+/*             <div class="metric">*/
+/*                 <span class="value">{{ collector.invalidEntityCount }}</span>*/
+/*                 <span class="label">Invalid entities</span>*/
+/*             </div>*/
+/*     */
+/*             {% if collector.cacheEnabled %}*/
+/*                 <div class="metric">*/
+/*                 	<span class="value">{{ collector.cacheHitsCount }}</span>*/
+/*                 	<span class="label">Cache hits</span>*/
+/*                 </div>*/
+/*                 <div class="metric">*/
+/*                 	<span class="value">{{ collector.cacheMissesCount }}</span>*/
+/*                 	<span class="label">Cache misses</span>*/
+/*                 </div>*/
+/*                 <div class="metric">*/
+/*                 	<span class="value">{{ collector.cachePutsCount }}</span>*/
+/*                 	<span class="label">Cache puts</span>*/
+/*                 </div>*/
+/*             {% endif %}*/
+/*         </div>*/
+/*     {% endif %}*/
+/* */
 /*     <h2>Queries</h2>*/
 /* */
 /*     {% for connection, queries in collector.queries %}*/
@@ -1072,7 +1174,7 @@ class __TwigTemplate_03fb7947b883ff0265189421941234a1f126ba4ec32bfffb9c0cbe7b1b6
 /*                 <tbody id="queries-{{ loop.index }}">*/
 /*                     {% for i, query in queries %}*/
 /*                         <tr id="queryNo-{{ i }}-{{ loop.parent.loop.index }}">*/
-/*                             <td>{{ loop.index }}</td>*/
+/*                             <td class="nowrap">{{ loop.index }}</td>*/
 /*                             <td class="nowrap">{{ '%0.2f'|format(query.executionMS * 1000) }}&nbsp;ms</td>*/
 /*                             <td>*/
 /*                                 {{ query.sql|doctrine_pretty_query(highlight_only = true) }}*/

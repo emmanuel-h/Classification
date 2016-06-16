@@ -94,6 +94,7 @@
   'LIFOClassifBundle:Platform:menu.html.twig' => 'C:\\wamp64\\www\\Classification\\src\\LIFO\\ClassifBundle/Resources/views/Platform/menu.html.twig',
   'LIFOClassifBundle:Platform:recherche.html.twig' => 'C:\\wamp64\\www\\Classification\\src\\LIFO\\ClassifBundle/Resources/views/Platform/recherche.html.twig',
   'LIFOClassifBundle:Platform:tesson.html.twig' => 'C:\\wamp64\\www\\Classification\\src\\LIFO\\ClassifBundle/Resources/views/Platform/tesson.html.twig',
+  'LIFOClassifBundle:Platform:tessonpdf.html.twig' => 'C:\\wamp64\\www\\Classification\\src\\LIFO\\ClassifBundle/Resources/views/Platform/tessonpdf.html.twig',
   'LIFOClassifBundle:Platform:upload.html.twig' => 'C:\\wamp64\\www\\Classification\\src\\LIFO\\ClassifBundle/Resources/views/Platform/upload.html.twig',
   'LIFOClassifBundle:Security:login.html.twig' => 'C:\\wamp64\\www\\Classification\\src\\LIFO\\ClassifBundle/Resources/views/Security/login.html.twig',
   'DebugBundle:Profiler:dump.html.twig' => 'C:\\wamp64\\www\\Classification\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\DebugBundle/Resources/views/Profiler/dump.html.twig',

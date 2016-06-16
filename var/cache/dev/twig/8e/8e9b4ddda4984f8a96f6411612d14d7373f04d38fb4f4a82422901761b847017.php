@@ -22,38 +22,42 @@ class __TwigTemplate_5463be7e231f3b60aea970dd7720349d055558f68c39c80db5cc1614f7d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_71f6bf711667048789b9dd9f2df7fda7798a00f2ce97be186e0be3400ff7ff0d = $this->env->getExtension("native_profiler");
-        $__internal_71f6bf711667048789b9dd9f2df7fda7798a00f2ce97be186e0be3400ff7ff0d->enter($__internal_71f6bf711667048789b9dd9f2df7fda7798a00f2ce97be186e0be3400ff7ff0d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/tesson.html.twig"));
+        $__internal_0cf78a7a1a36398dd51e5e1ae4b228cc92e8ab4bed663ac05eec13e5ea09c2fe = $this->env->getExtension("native_profiler");
+        $__internal_0cf78a7a1a36398dd51e5e1ae4b228cc92e8ab4bed663ac05eec13e5ea09c2fe->enter($__internal_0cf78a7a1a36398dd51e5e1ae4b228cc92e8ab4bed663ac05eec13e5ea09c2fe_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/tesson.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_71f6bf711667048789b9dd9f2df7fda7798a00f2ce97be186e0be3400ff7ff0d->leave($__internal_71f6bf711667048789b9dd9f2df7fda7798a00f2ce97be186e0be3400ff7ff0d_prof);
+        $__internal_0cf78a7a1a36398dd51e5e1ae4b228cc92e8ab4bed663ac05eec13e5ea09c2fe->leave($__internal_0cf78a7a1a36398dd51e5e1ae4b228cc92e8ab4bed663ac05eec13e5ea09c2fe_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_c9935e22143e1bc2967dbcaafc620768665b1d21b72389129e524c9978ed9529 = $this->env->getExtension("native_profiler");
-        $__internal_c9935e22143e1bc2967dbcaafc620768665b1d21b72389129e524c9978ed9529->enter($__internal_c9935e22143e1bc2967dbcaafc620768665b1d21b72389129e524c9978ed9529_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_0f0d690679bd501e175774b605a0e8c88cd03cb89a22ff72c1fd6839a3d77534 = $this->env->getExtension("native_profiler");
+        $__internal_0f0d690679bd501e175774b605a0e8c88cd03cb89a22ff72c1fd6839a3d77534->enter($__internal_0f0d690679bd501e175774b605a0e8c88cd03cb89a22ff72c1fd6839a3d77534_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Tesson";
         
-        $__internal_c9935e22143e1bc2967dbcaafc620768665b1d21b72389129e524c9978ed9529->leave($__internal_c9935e22143e1bc2967dbcaafc620768665b1d21b72389129e524c9978ed9529_prof);
+        $__internal_0f0d690679bd501e175774b605a0e8c88cd03cb89a22ff72c1fd6839a3d77534->leave($__internal_0f0d690679bd501e175774b605a0e8c88cd03cb89a22ff72c1fd6839a3d77534_prof);
 
     }
 
     // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_7703ad55d60dc26bcd1f5bde4914045fdbbe4725617fba0e17888ab8e56c1344 = $this->env->getExtension("native_profiler");
-        $__internal_7703ad55d60dc26bcd1f5bde4914045fdbbe4725617fba0e17888ab8e56c1344->enter($__internal_7703ad55d60dc26bcd1f5bde4914045fdbbe4725617fba0e17888ab8e56c1344_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_2bc49716e0585d1dd0465384b878a7b205b4d61a5cff48c427bddd96afece70e = $this->env->getExtension("native_profiler");
+        $__internal_2bc49716e0585d1dd0465384b878a7b205b4d61a5cff48c427bddd96afece70e->enter($__internal_2bc49716e0585d1dd0465384b878a7b205b4d61a5cff48c427bddd96afece70e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 6
         echo "
 \t<a class=\"btn btn-primary\" href=\"";
         // line 7
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("lifo_classif_tesson_exporter", array("id" => $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "id", array()))), "html", null, true);
+        echo "\">Exporter</a>
+\t<a class=\"btn btn-primary\" href=\"";
+        // line 8
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("lifo_classif_tesson_modifier", array("id" => $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "id", array()))), "html", null, true);
         echo "\">Modifier</a>
 \t<br /><br/>
@@ -61,35 +65,35 @@ class __TwigTemplate_5463be7e231f3b60aea970dd7720349d055558f68c39c80db5cc1614f7d
 \t\t<thead><tr><td colspan = \"2\" class=\"warning\" align=\"center\"><b>Description du tesson</b></td></tr></thead>
 \t\t<tbody>
 \t\t\t<tr><td>Identifiant</td><td>";
-        // line 12
+        // line 13
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "id", array()), "html", null, true);
         echo "</td></tr>
 \t\t\t<tr><td>Année de découverte</td><td>";
-        // line 13
+        // line 14
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "anneeDecouverte", array()), "html", null, true);
         echo "</td></tr>
 \t\t\t<tr><td>Developpé</td><td>";
-        // line 14
+        // line 15
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "developpe", array()), "html", null, true);
         echo "</td></tr>
 \t\t\t<tr><td>Lot / Individu</td><td>";
-        // line 15
+        // line 16
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "lotIndividu", array()), "html", null, true);
         echo "</td></tr>
 \t\t\t<tr><td>Numéro de tombe</td><td>";
-        // line 16
+        // line 17
         echo twig_escape_filter($this->env, (($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : null), "numTombe", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : null), "numTombe", array()), "Aucun")) : ("Aucun")), "html", null, true);
         echo "</td></tr>
 \t\t\t<tr><td>Fait</td><td>";
-        // line 17
+        // line 18
         echo twig_escape_filter($this->env, (($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : null), "fait", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : null), "fait", array()), "Aucun")) : ("Aucun")), "html", null, true);
         echo "</td></tr>
 \t\t\t<tr><td>Commentaire</td><td>";
-        // line 18
+        // line 19
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "commentaire", array()), "html", null, true);
         echo "</td></tr>
 \t\t\t<tr><td>Date d'enregistrement</td><td>";
-        // line 19
+        // line 20
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "dateEnregistrement", array()), "Y-m-d"), "html", null, true);
         echo "</td></tr>
 \t\t</tbody>
@@ -102,40 +106,40 @@ class __TwigTemplate_5463be7e231f3b60aea970dd7720349d055558f68c39c80db5cc1614f7d
 \t\t<tbody>
 \t\t\t<tr><td>Caractère moyen</td><td>
 \t\t\t";
-        // line 29
+        // line 30
         if ((((($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "largeur", array()) != 0) && ($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "longueur", array()) != 0)) && ($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "nombreMotifsVerticaux", array()) != 0)) && ($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "nombreMotifsHorizontaux", array()) != 0))) {
-            // line 30
+            // line 31
             echo "\t\t\t\t";
             echo twig_escape_filter($this->env, (($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "longueur", array()) + $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "largeur", array())) / ($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "nombreMotifsVerticaux", array()) + $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "nombreMotifsHorizontaux", array()))), "html", null, true);
             echo "
 \t\t\t";
         } else {
-            // line 32
+            // line 33
             echo "\t\t\t\t0
 \t\t\t";
         }
-        // line 33
+        // line 34
         echo "</td>
 \t\t\t<tr><td>Largeur</td><td>";
-        // line 34
+        // line 35
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "ordreLargeur", array()), "html", null, true);
         echo "&nbsp;";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "largeur", array()), "html", null, true);
         echo "</td></tr>
 \t\t\t<tr><td>Longueur</td><td>";
-        // line 35
+        // line 36
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "ordreLongueur", array()), "html", null, true);
         echo "&nbsp;";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "longueur", array()), "html", null, true);
         echo "</td></tr>
 \t\t\t<tr><td>Nombre de motifs verticaux</td><td>";
-        // line 36
+        // line 37
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "ordreMotifsVerticaux", array()), "html", null, true);
         echo "&nbsp;";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "nombreMotifsVerticaux", array()), "html", null, true);
         echo "</td></tr>
 \t\t\t<tr><td>Nombre de motifs horizontaux</td><td>";
-        // line 37
+        // line 38
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "ordreMotifsHorizontaux", array()), "html", null, true);
         echo "&nbsp;";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "nombreMotifsHorizontaux", array()), "html", null, true);
@@ -149,23 +153,23 @@ class __TwigTemplate_5463be7e231f3b60aea970dd7720349d055558f68c39c80db5cc1614f7d
 \t\t<thead><tr><td colspan = \"2\" class=\"warning\" align=\"center\"><b>Localisation</b></td></tr></thead>
 \t\t<tbody>
 \t\t\t<tr><td>Code INSEE</td><td>";
-        // line 46
+        // line 47
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "site", array()), "codeINSEE", array()), "html", null, true);
         echo "</td></tr>
 \t\t\t<tr><td>Numéro de site</td><td>";
-        // line 47
+        // line 48
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "site", array()), "numSiteCommune", array()), "html", null, true);
         echo "</td></tr>
 \t\t\t<tr><td>Zone</td><td>";
-        // line 48
+        // line 49
         echo twig_escape_filter($this->env, (($this->getAttribute($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : null), "zone", array(), "any", false, true), "numero", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : null), "zone", array(), "any", false, true), "numero", array()), "Aucune")) : ("Aucune")), "html", null, true);
         echo "</td></tr>
 \t\t\t<tr><td>US</td><td>";
-        // line 49
+        // line 50
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "us", array()), "nom", array()), "html", null, true);
         echo "</td></tr>
 \t\t\t<tr><td>Numéro d'isolation</td><td>";
-        // line 50
+        // line 51
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "numIsolation", array()), "html", null, true);
         echo "</td></tr>
 \t\t</tbody>
@@ -177,15 +181,15 @@ class __TwigTemplate_5463be7e231f3b60aea970dd7720349d055558f68c39c80db5cc1614f7d
 \t\t<thead><tr><td colspan = \"2\" class=\"warning\" align=\"center\"><b>Datation</b></td></tr></thead>
 \t\t<tbody>
 \t\t\t<tr><td>Période</td><td>";
-        // line 59
+        // line 60
         echo twig_escape_filter($this->env, (($this->getAttribute($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : null), "periode", array(), "any", false, true), "numeroPeriode", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : null), "periode", array(), "any", false, true), "numeroPeriode", array()), "Non renseigné")) : ("Non renseigné")), "html", null, true);
         echo "</td></tr>
 \t\t\t<tr><td>Phase</td><td>";
-        // line 60
+        // line 61
         echo twig_escape_filter($this->env, (($this->getAttribute($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : null), "phase", array(), "any", false, true), "numeroPhase", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : null), "phase", array(), "any", false, true), "numeroPhase", array()), "Non renseigné")) : ("Non renseigné")), "html", null, true);
         echo "</td></tr>
 \t\t\t<tr><td>Séquence</td><td>";
-        // line 61
+        // line 62
         echo twig_escape_filter($this->env, (($this->getAttribute($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : null), "sequence", array(), "any", false, true), "numeroSequence", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : null), "sequence", array(), "any", false, true), "numeroSequence", array()), "Non renseigné")) : ("Non renseigné")), "html", null, true);
         echo "</td></tr>
 \t\t</tbody>
@@ -198,11 +202,11 @@ class __TwigTemplate_5463be7e231f3b60aea970dd7720349d055558f68c39c80db5cc1614f7d
 \t\t<tbody>
 \t\t\t<tr><td>Position</td><td>
 \t\t\t";
-        // line 71
+        // line 72
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "decor", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["position"]) {
-            // line 72
+            // line 73
             echo "\t\t\t\t";
             echo twig_escape_filter($this->env, $this->getAttribute($context["position"], "position", array()), "html", null, true);
             echo "
@@ -211,18 +215,18 @@ class __TwigTemplate_5463be7e231f3b60aea970dd7720349d055558f68c39c80db5cc1614f7d
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['position'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 74
+        // line 75
         echo "\t\t\t</td></tr>
 \t\t\t<tr><td>Type</td><td>
 \t\t\t";
-        // line 76
+        // line 77
         if ( !twig_test_empty($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "typeDecor", array()))) {
-            // line 77
+            // line 78
             echo "\t\t\t\t";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "typeDecor", array()));
             foreach ($context['_seq'] as $context["_key"] => $context["type"]) {
-                // line 78
+                // line 79
                 echo "\t\t\t\t\t";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["type"], "nom", array()), "html", null, true);
                 echo "
@@ -231,14 +235,14 @@ class __TwigTemplate_5463be7e231f3b60aea970dd7720349d055558f68c39c80db5cc1614f7d
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['type'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 80
+            // line 81
             echo "\t\t\t";
         } else {
-            // line 81
+            // line 82
             echo "\t\t\t\tNon renseigné
 \t\t\t";
         }
-        // line 83
+        // line 84
         echo "\t\t\t</td></tr>
 \t\t</tbody>
 \t</table>
@@ -249,25 +253,25 @@ class __TwigTemplate_5463be7e231f3b60aea970dd7720349d055558f68c39c80db5cc1614f7d
 \t\t<tbody>
 \t\t\t<tr><td>Type de numérisation</td><td>Numérisation</td></tr>
 \t\t\t";
-        // line 92
+        // line 93
         if ( !twig_test_empty($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "numerisation", array()))) {
-            // line 93
+            // line 94
             echo "\t\t\t\t";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "numerisation", array()));
             foreach ($context['_seq'] as $context["_key"] => $context["numerisation"]) {
-                // line 94
+                // line 95
                 echo "\t\t\t\t\t<tr><td>";
                 echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["numerisation"], "typeNumerisation", array()), "nom", array()), "html", null, true);
                 echo "</td>
 \t\t\t\t\t\t<td> <a class=\"group\" title=\" ";
-                // line 95
+                // line 96
                 echo twig_escape_filter($this->env, $this->getAttribute($context["numerisation"], "alt", array()), "html", null, true);
                 echo "\" href=\"";
                 echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl($this->getAttribute($context["numerisation"], "webPath", array())), "html", null, true);
                 echo "\">
 \t\t\t\t\t\t<img src=\"";
-                // line 96
+                // line 97
                 echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl($this->getAttribute($context["numerisation"], "webPath", array())), "html", null, true);
                 echo "\" width=\"400\" alt=\"";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["numerisation"], "alt", array()), "html", null, true);
@@ -275,7 +279,7 @@ class __TwigTemplate_5463be7e231f3b60aea970dd7720349d055558f68c39c80db5cc1614f7d
 \t\t\t\t\t\t</a>
 \t\t\t\t\t\t
 \t\t\t\t\t\t<a href=\"";
-                // line 99
+                // line 100
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("lifo_classif_telechargement_numerisation", array("id" => $this->getAttribute($context["numerisation"], "id", array()))), "html", null, true);
                 echo "\">Télécharger l'image</a></td>
 \t\t\t\t\t</tr>
@@ -284,14 +288,14 @@ class __TwigTemplate_5463be7e231f3b60aea970dd7720349d055558f68c39c80db5cc1614f7d
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['numerisation'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 102
+            // line 103
             echo "\t\t\t";
         } else {
-            // line 103
+            // line 104
             echo "\t\t\t<tr><td colspan=\"2\" align=\"center\">Pas de numérisations trouvées pour ce tesson</td></tr>
 \t\t\t";
         }
-        // line 105
+        // line 106
         echo "\t\t</tbody>
 \t</table>
 \t
@@ -303,7 +307,7 @@ class __TwigTemplate_5463be7e231f3b60aea970dd7720349d055558f68c39c80db5cc1614f7d
 \t</script>
 ";
         
-        $__internal_7703ad55d60dc26bcd1f5bde4914045fdbbe4725617fba0e17888ab8e56c1344->leave($__internal_7703ad55d60dc26bcd1f5bde4914045fdbbe4725617fba0e17888ab8e56c1344_prof);
+        $__internal_2bc49716e0585d1dd0465384b878a7b205b4d61a5cff48c427bddd96afece70e->leave($__internal_2bc49716e0585d1dd0465384b878a7b205b4d61a5cff48c427bddd96afece70e_prof);
 
     }
 
@@ -319,7 +323,7 @@ class __TwigTemplate_5463be7e231f3b60aea970dd7720349d055558f68c39c80db5cc1614f7d
 
     public function getDebugInfo()
     {
-        return array (  295 => 105,  291 => 103,  288 => 102,  279 => 99,  271 => 96,  265 => 95,  260 => 94,  255 => 93,  253 => 92,  242 => 83,  238 => 81,  235 => 80,  226 => 78,  221 => 77,  219 => 76,  215 => 74,  206 => 72,  202 => 71,  189 => 61,  185 => 60,  181 => 59,  169 => 50,  165 => 49,  161 => 48,  157 => 47,  153 => 46,  139 => 37,  133 => 36,  127 => 35,  121 => 34,  118 => 33,  114 => 32,  108 => 30,  106 => 29,  93 => 19,  89 => 18,  85 => 17,  81 => 16,  77 => 15,  73 => 14,  69 => 13,  65 => 12,  57 => 7,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
+        return array (  299 => 106,  295 => 104,  292 => 103,  283 => 100,  275 => 97,  269 => 96,  264 => 95,  259 => 94,  257 => 93,  246 => 84,  242 => 82,  239 => 81,  230 => 79,  225 => 78,  223 => 77,  219 => 75,  210 => 73,  206 => 72,  193 => 62,  189 => 61,  185 => 60,  173 => 51,  169 => 50,  165 => 49,  161 => 48,  157 => 47,  143 => 38,  137 => 37,  131 => 36,  125 => 35,  122 => 34,  118 => 33,  112 => 31,  110 => 30,  97 => 20,  93 => 19,  89 => 18,  85 => 17,  81 => 16,  77 => 15,  73 => 14,  69 => 13,  61 => 8,  57 => 7,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends "LIFOClassifBundle::layoutGeneral.html.twig" %}*/
@@ -328,6 +332,7 @@ class __TwigTemplate_5463be7e231f3b60aea970dd7720349d055558f68c39c80db5cc1614f7d
 /* */
 /* {% block LIFOClassif_body %}*/
 /* */
+/* 	<a class="btn btn-primary" href="{{ path('lifo_classif_tesson_exporter', {'id': tesson.id}) }}">Exporter</a>*/
 /* 	<a class="btn btn-primary" href="{{ path('lifo_classif_tesson_modifier', {'id': tesson.id}) }}">Modifier</a>*/
 /* 	<br /><br/>*/
 /* 	<table class="table table-bordered table-striped table-hover">*/

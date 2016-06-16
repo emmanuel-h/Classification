@@ -53,6 +53,13 @@ lifo_classif_tesson_modifier:
     requirements:
         id: \d+
         
+lifo_classif_tesson_exporter:
+    path:     /tesson/exporter/{id}
+    defaults:
+        _controller: LIFOClassifBundle:Platform:tessonExporter
+    requirements:
+        id: \d+
+        
 lifo_classif_admin:
     path:     /admin
     defaults:

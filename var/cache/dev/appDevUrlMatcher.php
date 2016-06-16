@@ -156,6 +156,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_tesson_modifier')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::tessonModifierAction',));
             }
 
+            // lifo_classif_tesson_exporter
+            if (0 === strpos($pathinfo, '/tesson/exporter') && preg_match('#^/tesson/exporter/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'lifo_classif_tesson_exporter')), array (  '_controller' => 'LIFO\\ClassifBundle\\Controller\\PlatformController::tessonExporterAction',));
+            }
+
         }
 
         // lifo_classif_admin
