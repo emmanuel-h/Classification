@@ -140,10 +140,11 @@ class TessonRepository extends \Doctrine\ORM\EntityRepository {
 		->leftJoin('t.numerisation', 'n')
 		->leftJoin('n.typeNumerisation', 'tn')
 		->where('tn.nom<>:typeNumerisation')
+		->andWhere('n.typeNumerisation is null')
 		->orWhere('n.tesson is null')
 		->setParameter('typeNumerisation', $typeNumerisation)
 		->orderBy('t.id', 'ASC');
-	
+
 		$query = $qb->getQuery();
 	
 		$premierResultat = ($page - 1) * $nbMaxParPage;
@@ -176,10 +177,10 @@ class TessonRepository extends \Doctrine\ORM\EntityRepository {
 
 		$qb = $this->createQueryBuilder('t')
 		->orderBy('t.id', 'ASC');
-		if($criteres['codeINSEE'] != ""){
+		if($criteres['codeInsee'] != ""){
 			$qb->leftJoin('t.site', 's1')
 			->andWhere('s1.codeINSEE=:codeInsee')
-			->setParameter('codeInsee', $criteres['codeINSEE']);
+			->setParameter('codeInsee', $criteres['codeInsee']);
 		}
 		if($criteres['numeroSite'] != ""){
 			$qb->leftJoin('t.site', 's2')

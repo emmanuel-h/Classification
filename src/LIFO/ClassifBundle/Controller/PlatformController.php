@@ -161,9 +161,9 @@ class PlatformController extends Controller {
 		$nbTessonsParPage=$this->container->getParameter('NB_TESSONS_PAR_PAGE');
 		$criteres = array();
 		if($request->query->get('codeInsee') != NULL){
-			$criteres['codeINSEE']=$request->query->get('codeINSEE');
+			$criteres['codeInsee']=$request->query->get('codeInsee');
 		} else {
-			$criteres['codeINSEE']="";
+			$criteres['codeInsee']="";
 		}
 		if($request->query->get('numeroSite') != NULL){
 			$criteres['numeroSite']=$request->query->get('numeroSite');
@@ -272,16 +272,14 @@ class PlatformController extends Controller {
 		} else {
 			$typeNumerisationChoisi="Aucune";
 		}
-		if($request->query->get('tessonClasses') != NULL){
+		if($request->query->get('tessonsClasses') != NULL){
 			$tessonsClasses=$request->query->get('tessonsClasses');
 		} else {
 			$tessonsClasses=false;
 		}
 		
-		if(! $request->isMethod( 'POST' )){
-			if($tessonsClasses==true){
-				$formClassif->get('afficherTessonsClasses')->setData(true);
-			}
+		if($tessonsClasses==true){
+			$formClassif->get('afficherTessonsClasses')->setData(true);
 		}
 		
 		if ($request->isMethod ( 'POST' ) && $formClassif->handleRequest ( $request )->isValid ()) {

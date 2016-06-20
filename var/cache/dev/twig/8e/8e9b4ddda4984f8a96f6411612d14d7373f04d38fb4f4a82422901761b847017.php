@@ -22,33 +22,33 @@ class __TwigTemplate_5463be7e231f3b60aea970dd7720349d055558f68c39c80db5cc1614f7d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0a43715fdd43e4c8aaca92828fcaaeb475023826dcfe3999b46a4502b01b83c4 = $this->env->getExtension("native_profiler");
-        $__internal_0a43715fdd43e4c8aaca92828fcaaeb475023826dcfe3999b46a4502b01b83c4->enter($__internal_0a43715fdd43e4c8aaca92828fcaaeb475023826dcfe3999b46a4502b01b83c4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/tesson.html.twig"));
+        $__internal_d6c077960a6dfe9e86569f231aa2da186c48475e3cb831db2bc2304b1b39a010 = $this->env->getExtension("native_profiler");
+        $__internal_d6c077960a6dfe9e86569f231aa2da186c48475e3cb831db2bc2304b1b39a010->enter($__internal_d6c077960a6dfe9e86569f231aa2da186c48475e3cb831db2bc2304b1b39a010_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/tesson.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_0a43715fdd43e4c8aaca92828fcaaeb475023826dcfe3999b46a4502b01b83c4->leave($__internal_0a43715fdd43e4c8aaca92828fcaaeb475023826dcfe3999b46a4502b01b83c4_prof);
+        $__internal_d6c077960a6dfe9e86569f231aa2da186c48475e3cb831db2bc2304b1b39a010->leave($__internal_d6c077960a6dfe9e86569f231aa2da186c48475e3cb831db2bc2304b1b39a010_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_39d54e764a32408dcf700fb4371141f685a47592edad47cd1ccb2897f15d9c1f = $this->env->getExtension("native_profiler");
-        $__internal_39d54e764a32408dcf700fb4371141f685a47592edad47cd1ccb2897f15d9c1f->enter($__internal_39d54e764a32408dcf700fb4371141f685a47592edad47cd1ccb2897f15d9c1f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_a331550113bbe6872f132ed1ea089383ad83321b088dde2f17a85938572ff066 = $this->env->getExtension("native_profiler");
+        $__internal_a331550113bbe6872f132ed1ea089383ad83321b088dde2f17a85938572ff066->enter($__internal_a331550113bbe6872f132ed1ea089383ad83321b088dde2f17a85938572ff066_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Tesson";
         
-        $__internal_39d54e764a32408dcf700fb4371141f685a47592edad47cd1ccb2897f15d9c1f->leave($__internal_39d54e764a32408dcf700fb4371141f685a47592edad47cd1ccb2897f15d9c1f_prof);
+        $__internal_a331550113bbe6872f132ed1ea089383ad83321b088dde2f17a85938572ff066->leave($__internal_a331550113bbe6872f132ed1ea089383ad83321b088dde2f17a85938572ff066_prof);
 
     }
 
     // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_5269c8bef9e76763e2a145eca54dd0e26f55dc655858f2bd9b791b76a8b5b927 = $this->env->getExtension("native_profiler");
-        $__internal_5269c8bef9e76763e2a145eca54dd0e26f55dc655858f2bd9b791b76a8b5b927->enter($__internal_5269c8bef9e76763e2a145eca54dd0e26f55dc655858f2bd9b791b76a8b5b927_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_da7fcb6063194628a435d34c9c9de27743f8c51a6e705e88cd1c3afbd946b727 = $this->env->getExtension("native_profiler");
+        $__internal_da7fcb6063194628a435d34c9c9de27743f8c51a6e705e88cd1c3afbd946b727->enter($__internal_da7fcb6063194628a435d34c9c9de27743f8c51a6e705e88cd1c3afbd946b727_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 6
         echo "
@@ -110,7 +110,7 @@ class __TwigTemplate_5463be7e231f3b60aea970dd7720349d055558f68c39c80db5cc1614f7d
         if ((((($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "largeur", array()) != 0) && ($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "longueur", array()) != 0)) && ($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "nombreMotifsVerticaux", array()) != 0)) && ($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "nombreMotifsHorizontaux", array()) != 0))) {
             // line 31
             echo "\t\t\t\t";
-            echo twig_escape_filter($this->env, (($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "longueur", array()) + $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "largeur", array())) / ($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "nombreMotifsVerticaux", array()) + $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "nombreMotifsHorizontaux", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, (($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "longueur", array()) * $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "largeur", array())) / ($this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "nombreMotifsVerticaux", array()) * $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "nombreMotifsHorizontaux", array()))), "html", null, true);
             echo "
 \t\t\t";
         } else {
@@ -307,7 +307,7 @@ class __TwigTemplate_5463be7e231f3b60aea970dd7720349d055558f68c39c80db5cc1614f7d
 \t</script>
 ";
         
-        $__internal_5269c8bef9e76763e2a145eca54dd0e26f55dc655858f2bd9b791b76a8b5b927->leave($__internal_5269c8bef9e76763e2a145eca54dd0e26f55dc655858f2bd9b791b76a8b5b927_prof);
+        $__internal_da7fcb6063194628a435d34c9c9de27743f8c51a6e705e88cd1c3afbd946b727->leave($__internal_da7fcb6063194628a435d34c9c9de27743f8c51a6e705e88cd1c3afbd946b727_prof);
 
     }
 
@@ -356,7 +356,7 @@ class __TwigTemplate_5463be7e231f3b60aea970dd7720349d055558f68c39c80db5cc1614f7d
 /* 		<tbody>*/
 /* 			<tr><td>Caractère moyen</td><td>*/
 /* 			{% if tesson.largeur != 0 and tesson.longueur != 0 and tesson.nombreMotifsVerticaux != 0 and tesson.nombreMotifsHorizontaux != 0 %}*/
-/* 				{{ (tesson.longueur+tesson.largeur)/(tesson.nombreMotifsVerticaux + tesson.nombreMotifsHorizontaux) }}*/
+/* 				{{ (tesson.longueur*tesson.largeur)/(tesson.nombreMotifsVerticaux*tesson.nombreMotifsHorizontaux) }}*/
 /* 			{% else %}*/
 /* 				0*/
 /* 			{% endif %}</td>*/

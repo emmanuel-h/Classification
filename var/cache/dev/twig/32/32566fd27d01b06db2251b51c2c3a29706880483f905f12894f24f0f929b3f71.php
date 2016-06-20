@@ -15,8 +15,8 @@ class __TwigTemplate_57db78bf2bcd462aba790be9967fd57f8873865ca77b09ce0d3646b278f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_defb28b9687a342ad6c9c8e57e7744e2c53f7c5fbae717d23b283b7bda4465dd = $this->env->getExtension("native_profiler");
-        $__internal_defb28b9687a342ad6c9c8e57e7744e2c53f7c5fbae717d23b283b7bda4465dd->enter($__internal_defb28b9687a342ad6c9c8e57e7744e2c53f7c5fbae717d23b283b7bda4465dd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/menu.html.twig"));
+        $__internal_60190cbc452fcad27bffed7fe94fd8d6e3fcd624525d61f3218a54ef629f20b1 = $this->env->getExtension("native_profiler");
+        $__internal_60190cbc452fcad27bffed7fe94fd8d6e3fcd624525d61f3218a54ef629f20b1->enter($__internal_60190cbc452fcad27bffed7fe94fd8d6e3fcd624525d61f3218a54ef629f20b1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/menu.html.twig"));
 
         // line 1
         echo "<div class=\"list-group\">
@@ -55,9 +55,18 @@ class __TwigTemplate_57db78bf2bcd462aba790be9967fd57f8873865ca77b09ce0d3646b278f
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['tesson'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 10
-        echo "</div>";
+        echo "</div>
+
+
+
+
+
+
+
+
+";
         
-        $__internal_defb28b9687a342ad6c9c8e57e7744e2c53f7c5fbae717d23b283b7bda4465dd->leave($__internal_defb28b9687a342ad6c9c8e57e7744e2c53f7c5fbae717d23b283b7bda4465dd_prof);
+        $__internal_60190cbc452fcad27bffed7fe94fd8d6e3fcd624525d61f3218a54ef629f20b1->leave($__internal_60190cbc452fcad27bffed7fe94fd8d6e3fcd624525d61f3218a54ef629f20b1_prof);
 
     }
 
@@ -86,3 +95,12 @@ class __TwigTemplate_57db78bf2bcd462aba790be9967fd57f8873865ca77b09ce0d3646b278f
 /* 			: {{ tesson.numIsolation }}</p>*/
 /* 	</a> {% endfor %}*/
 /* </div>*/
+/* */
+/* */
+/* */
+/* */
+/* */
+/* */
+/* */
+/* */
+/* */

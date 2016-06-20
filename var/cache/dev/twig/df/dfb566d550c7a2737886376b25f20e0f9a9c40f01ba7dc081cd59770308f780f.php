@@ -15,8 +15,8 @@ class __TwigTemplate_40e5d7438b0ae04051cb9597ed426ff6523a70945b0afb5fa534846f5d8
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_202866f7f16b2de2769646c335db43664c57850c2c07de9e0b37506b3645af65 = $this->env->getExtension("native_profiler");
-        $__internal_202866f7f16b2de2769646c335db43664c57850c2c07de9e0b37506b3645af65->enter($__internal_202866f7f16b2de2769646c335db43664c57850c2c07de9e0b37506b3645af65_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/choice_widget_expanded.html.php"));
+        $__internal_505def7c50da38479a6bba51bcc7e0545eb447926693205f5a47ee6aa03f3c90 = $this->env->getExtension("native_profiler");
+        $__internal_505def7c50da38479a6bba51bcc7e0545eb447926693205f5a47ee6aa03f3c90->enter($__internal_505def7c50da38479a6bba51bcc7e0545eb447926693205f5a47ee6aa03f3c90_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/choice_widget_expanded.html.php"));
 
         // line 1
         echo "<div <?php echo \$view['form']->block(\$form, 'widget_container_attributes') ?>>
@@ -27,7 +27,7 @@ class __TwigTemplate_40e5d7438b0ae04051cb9597ed426ff6523a70945b0afb5fa534846f5d8
 </div>
 ";
         
-        $__internal_202866f7f16b2de2769646c335db43664c57850c2c07de9e0b37506b3645af65->leave($__internal_202866f7f16b2de2769646c335db43664c57850c2c07de9e0b37506b3645af65_prof);
+        $__internal_505def7c50da38479a6bba51bcc7e0545eb447926693205f5a47ee6aa03f3c90->leave($__internal_505def7c50da38479a6bba51bcc7e0545eb447926693205f5a47ee6aa03f3c90_prof);
 
     }
 

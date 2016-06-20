@@ -28,7 +28,7 @@
 		<tbody>
 			<tr><td>Caractère moyen</td><td>
 			{% if tesson.largeur != 0 and tesson.longueur != 0 and tesson.nombreMotifsVerticaux != 0 and tesson.nombreMotifsHorizontaux != 0 %}
-				{{ (tesson.longueur+tesson.largeur)/(tesson.nombreMotifsVerticaux + tesson.nombreMotifsHorizontaux) }}
+				{{ (tesson.longueur*tesson.largeur)/(tesson.nombreMotifsVerticaux*tesson.nombreMotifsHorizontaux) }}
 			{% else %}
 				0
 			{% endif %}</td>
