@@ -1,19 +1,29 @@
 {% extends "LIFOClassifBundle::layoutAdmin.html.twig" %}
 
 {% block LIFOClassif_body %}
-
-<div class="well">
-	<p>
-		{%  if messageImportant != "" %}
-		<div class="alert alert-warning" role="alert">
-			<strong>Attention ! </strong>{{messageImportant}}
-		</div>
-		{%  endif %}
-		<fieldset>
-			<legend>Trouver un utilisateur</legend>
-			{{ form(formSearchUser) }}
-		</fieldset>
-	</p>
+{% if messageImportant != "" %}
+  <div class="alert alert-danger" align="center" id="parametresClassif">
+  {{messageImportant}}
+  </div>
+{% endif %}
+<div class="well">{{
+ form_start(formSearchUser, {'attr': {'class': 'form-horizontal'}}) }}
+  {{ form_errors(formSearchUser) }}
+  <fieldset>
+  	<legend>&nbsp;&nbsp;Trouver un utilisateur</legend>
+  	<div class="form-group">
+  	  <div class="col-sm-4">
+	    <b>&nbsp;Nom d'utilisateur&nbsp;&nbsp;</b>
+   	  </div>
+ 	  <div class="col-sm-8">
+    	{{ form_errors(formSearchUser.username) }}
+    	{{ form_widget(formSearchUser.username) }}
+  	  </div>
+    </div>
+  </fieldset>
+  {{ form_widget(formSearchUser.rechercher, {'attr': {'class': 'btn btn-primary'}}) }}
+  {{ form_rest(formSearchUser) }}
+  {{ form_end(formSearchUser) }}
 </div>
 
 {% endblock %}

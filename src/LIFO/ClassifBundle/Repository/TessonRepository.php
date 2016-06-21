@@ -7,6 +7,9 @@ use Doctrine\ORM\Tools\Pagination\Paginator;
 use InvalidArgumentException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use LIFO\ClassifBundle\Entity\Numerisation;
+use Doctrine\DBAL\Schema\View;
+use Doctrine\ORM\Query\ResultSetMappingBuilder;
+use Doctrine\ORM\Query\ResultSetMapping;
 
 /**
  * TessonRepository
@@ -118,44 +121,27 @@ class TessonRepository extends \Doctrine\ORM\EntityRepository {
 		return $paginator;
 	}
 	
-	public function paginationNumerisations($page, $nbMaxParPage, $typeNumerisation)
+	public function paginationNumerisations($typeNumerisation, $debut, $nbTessons)
 	{
-		if (!is_numeric($page)) {
-			throw new InvalidArgumentException(
-					'La valeur de l\'argument $page est incorrecte (valeur : ' . $page . ').'
-					);
-		}
-	
-		if ($page < 1) {
-			throw new NotFoundHttpException('La page demandée n\'existe pas');
-		}
-	
-		if (!is_numeric($nbMaxParPage)) {
-			throw new InvalidArgumentException(
-					'La valeur de l\'argument $nbMaxParPage est incorrecte (valeur : ' . $nbMaxParPage . ').'
-					);
-		}
-	
-		$qb = $this->createQueryBuilder('t')
-		->leftJoin('t.numerisation', 'n')
-		->leftJoin('n.typeNumerisation', 'tn')
-		->where('tn.nom<>:typeNumerisation')
-		->andWhere('n.typeNumerisation is null')
-		->orWhere('n.tesson is null')
-		->setParameter('typeNumerisation', $typeNumerisation)
-		->orderBy('t.id', 'ASC');
-
-		$query = $qb->getQuery();
-	
-		$premierResultat = ($page - 1) * $nbMaxParPage;
-		$query->setFirstResult($premierResultat)->setMaxResults($nbMaxParPage);
-		$paginator = new Paginator($query);
-	
-		if ( ($paginator->count() <= $premierResultat) && $page != 1) {
-			throw new NotFoundHttpException('La page demandée n\'existe pas.'); // page 404, sauf pour la premi�re page
-		}
-	
-		return $paginator;
+		$rsm=new ResultSetMapping();
+		$rsm->addEntityResult('LIFO\ClassifBundle\Entity\Tesson','t');
+		$rsm->addFieldResult('t', 'id', 'id');
+		$rsm->addFieldResult('t', 'numIsolation', 'numIsolation');
+		$rsm->addJoinedEntityResult('LIFO\ClassifBundle\Entity\US','u_s','t','us');
+		$rsm->addFieldResult('u_s', 'nom', 'nom');
+		$rsm->addJoinedEntityResult('LIFO\ClassifBundle\Entity\Site','site','t','site');
+		$rsm->addFieldResult('site', 'numSiteCommune', 'numSiteCommune');
+		$rsm->addFieldResult('site', 'codeINSEE', 'codeINSEE');
+		
+		$sql='SELECT t.id, t.numIsolation, u_s.nom AS nom, site.numSiteCommune AS numSiteCommune, site.codeINSEE AS codeINSEE '.
+		'FROM tesson t JOIN u_s ON t.us_id=u_s.id JOIN site ON t.site_id=site.id '.
+		'WHERE t.id NOT IN (SELECT t1.id FROM tesson t1 JOIN numerisation n ON t1.id=n.tesson_id JOIN type_numerisation tn ON n.type_numerisation_id=tn.id WHERE tn.nom=:typeNumerisation) '.
+		'ORDER BY t.id ASC LIMIT :nbTessons OFFSET :debut';
+		$query=$this->_em->createNativeQuery($sql, $rsm);
+		$query->setParameter('typeNumerisation', $typeNumerisation);
+		$query->setParameter('debut', $debut);
+		$query->setParameter('nbTessons', $nbTessons);
+		return $query->getScalarResult();
 	}
 	
 	public function findWithSpecificCriteria($criteres, $page, $nbMaxParPage){

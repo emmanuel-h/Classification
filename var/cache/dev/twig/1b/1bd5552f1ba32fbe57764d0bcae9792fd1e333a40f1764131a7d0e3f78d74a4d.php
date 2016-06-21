@@ -21,51 +21,120 @@ class __TwigTemplate_979a2cf9ad469f202f46f21ee155fe863274654c4bc9252a5e1c4d81624
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_fd1d0199153d0e442af3309a9732d0878b4af75e286de08d0fc49ec089710a76 = $this->env->getExtension("native_profiler");
-        $__internal_fd1d0199153d0e442af3309a9732d0878b4af75e286de08d0fc49ec089710a76->enter($__internal_fd1d0199153d0e442af3309a9732d0878b4af75e286de08d0fc49ec089710a76_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Admin:utilisateur.html.twig"));
+        $__internal_915ec8c09ef89b2a8bdccca7ccb892459e6e2d8776d19e3f9b6665d7474ce255 = $this->env->getExtension("native_profiler");
+        $__internal_915ec8c09ef89b2a8bdccca7ccb892459e6e2d8776d19e3f9b6665d7474ce255->enter($__internal_915ec8c09ef89b2a8bdccca7ccb892459e6e2d8776d19e3f9b6665d7474ce255_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Admin:utilisateur.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_fd1d0199153d0e442af3309a9732d0878b4af75e286de08d0fc49ec089710a76->leave($__internal_fd1d0199153d0e442af3309a9732d0878b4af75e286de08d0fc49ec089710a76_prof);
+        $__internal_915ec8c09ef89b2a8bdccca7ccb892459e6e2d8776d19e3f9b6665d7474ce255->leave($__internal_915ec8c09ef89b2a8bdccca7ccb892459e6e2d8776d19e3f9b6665d7474ce255_prof);
 
     }
 
     // line 3
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_5d79153170a8b07989f66a04f72500806f07653245f0544daf228a2561b676fd = $this->env->getExtension("native_profiler");
-        $__internal_5d79153170a8b07989f66a04f72500806f07653245f0544daf228a2561b676fd->enter($__internal_5d79153170a8b07989f66a04f72500806f07653245f0544daf228a2561b676fd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_36a3d00c4ef436187bfdef887c894efb640b686b36c81b1df63d733135902169 = $this->env->getExtension("native_profiler");
+        $__internal_36a3d00c4ef436187bfdef887c894efb640b686b36c81b1df63d733135902169->enter($__internal_36a3d00c4ef436187bfdef887c894efb640b686b36c81b1df63d733135902169_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 4
         echo "
 <div class=\"well\">
-\t<p>
-\t\t";
-        // line 7
+";
+        // line 6
         if (((isset($context["messageImportant"]) ? $context["messageImportant"] : $this->getContext($context, "messageImportant")) != "")) {
+            // line 7
+            echo "  <div class=\"alert alert-warning\" role=\"alert\">
+\t<strong>Attention ! </strong>";
             // line 8
-            echo "\t\t<div class=\"alert alert-warning\" role=\"alert\">
-\t\t\t<strong>Attention ! </strong>";
-            // line 9
             echo twig_escape_filter($this->env, (isset($context["messageImportant"]) ? $context["messageImportant"] : $this->getContext($context, "messageImportant")), "html", null, true);
             echo "
-\t\t</div>
-\t\t";
+  </div>
+";
         }
-        // line 12
-        echo "\t\t<fieldset>
-\t\t\t<legend>Ajouter un utilisateur</legend>
-\t\t\t";
-        // line 14
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formAddUser"]) ? $context["formAddUser"] : $this->getContext($context, "formAddUser")), 'form');
+        // line 11
+        echo "  ";
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formAddUser"]) ? $context["formAddUser"] : $this->getContext($context, "formAddUser")), 'form_start', array("attr" => array("class" => "form-horizontal")));
         echo "
-\t\t</fieldset>
-\t</p>
+  ";
+        // line 12
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["formAddUser"]) ? $context["formAddUser"] : $this->getContext($context, "formAddUser")), 'errors');
+        echo "
+  <fieldset>
+  \t<legend>&nbsp;&nbsp;Ajouter un utilisateur</legend>
+  \t<div class=\"form-group\">
+  \t  <div class=\"col-sm-6\">
+\t    <b>&nbsp;Nom d'utilisateur&nbsp;&nbsp;</b>
+        ";
+        // line 18
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formAddUser"]) ? $context["formAddUser"] : $this->getContext($context, "formAddUser")), "utilisateur", array()), "username", array()), 'errors');
+        echo "
+   \t  </div>
+ \t  <div class=\"col-sm-6\">
+\t    <b>&nbsp;Role&nbsp;&nbsp;</b>
+    \t";
+        // line 22
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formAddUser"]) ? $context["formAddUser"] : $this->getContext($context, "formAddUser")), "role", array()), 'errors');
+        echo "
+  \t  </div>
+      <div class=\"col-sm-6\">
+        ";
+        // line 25
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formAddUser"]) ? $context["formAddUser"] : $this->getContext($context, "formAddUser")), "utilisateur", array()), "username", array()), 'widget');
+        echo "
+      </div>
+      <div class=\"col-sm-6\">
+        ";
+        // line 28
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formAddUser"]) ? $context["formAddUser"] : $this->getContext($context, "formAddUser")), "role", array()), 'widget');
+        echo "
+      </div>
+    </div>
+  \t<div class=\"form-group\">
+      <div class=\"col-sm-6\">
+\t    <b>&nbsp;Mot de passe&nbsp;&nbsp;</b>
+      </div>
+      <div class=\"col-sm-6\">
+\t    <b>&nbsp;Répéter le mot de passe&nbsp;&nbsp;</b>
+      </div>
+      <div class=\"col-sm-6\">
+        ";
+        // line 39
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["formAddUser"]) ? $context["formAddUser"] : $this->getContext($context, "formAddUser")), "utilisateur", array()), "password", array()), "first", array()), 'errors');
+        echo "
+        ";
+        // line 40
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["formAddUser"]) ? $context["formAddUser"] : $this->getContext($context, "formAddUser")), "utilisateur", array()), "password", array()), "first", array()), 'widget');
+        echo "
+      </div>
+      <div class=\"col-sm-6\">
+        ";
+        // line 43
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["formAddUser"]) ? $context["formAddUser"] : $this->getContext($context, "formAddUser")), "utilisateur", array()), "password", array()), "second", array()), 'errors');
+        echo "
+        ";
+        // line 44
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["formAddUser"]) ? $context["formAddUser"] : $this->getContext($context, "formAddUser")), "utilisateur", array()), "password", array()), "second", array()), 'widget');
+        echo "
+      </div>
+    </div>
+  </fieldset>
+  ";
+        // line 48
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formAddUser"]) ? $context["formAddUser"] : $this->getContext($context, "formAddUser")), "valider", array()), 'widget', array("attr" => array("class" => "btn btn-primary")));
+        echo "
+  ";
+        // line 49
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["formAddUser"]) ? $context["formAddUser"] : $this->getContext($context, "formAddUser")), 'rest');
+        echo "
+  ";
+        // line 50
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formAddUser"]) ? $context["formAddUser"] : $this->getContext($context, "formAddUser")), 'form_end');
+        echo "
 </div>
 
 ";
         
-        $__internal_5d79153170a8b07989f66a04f72500806f07653245f0544daf228a2561b676fd->leave($__internal_5d79153170a8b07989f66a04f72500806f07653245f0544daf228a2561b676fd_prof);
+        $__internal_36a3d00c4ef436187bfdef887c894efb640b686b36c81b1df63d733135902169->leave($__internal_36a3d00c4ef436187bfdef887c894efb640b686b36c81b1df63d733135902169_prof);
 
     }
 
@@ -81,7 +150,7 @@ class __TwigTemplate_979a2cf9ad469f202f46f21ee155fe863274654c4bc9252a5e1c4d81624
 
     public function getDebugInfo()
     {
-        return array (  60 => 14,  56 => 12,  50 => 9,  47 => 8,  45 => 7,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  131 => 50,  127 => 49,  123 => 48,  116 => 44,  112 => 43,  106 => 40,  102 => 39,  88 => 28,  82 => 25,  76 => 22,  69 => 18,  60 => 12,  55 => 11,  49 => 8,  46 => 7,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "LIFOClassifBundle::layoutAdmin.html.twig" %}*/
@@ -89,17 +158,51 @@ class __TwigTemplate_979a2cf9ad469f202f46f21ee155fe863274654c4bc9252a5e1c4d81624
 /* {% block LIFOClassif_body %}*/
 /* */
 /* <div class="well">*/
-/* 	<p>*/
-/* 		{%  if messageImportant != "" %}*/
-/* 		<div class="alert alert-warning" role="alert">*/
-/* 			<strong>Attention ! </strong>{{messageImportant}}*/
-/* 		</div>*/
-/* 		{%  endif %}*/
-/* 		<fieldset>*/
-/* 			<legend>Ajouter un utilisateur</legend>*/
-/* 			{{ form(formAddUser) }}*/
-/* 		</fieldset>*/
-/* 	</p>*/
+/* {%  if messageImportant != "" %}*/
+/*   <div class="alert alert-warning" role="alert">*/
+/* 	<strong>Attention ! </strong>{{messageImportant}}*/
+/*   </div>*/
+/* {%  endif %}*/
+/*   {{ form_start(formAddUser, {'attr': {'class': 'form-horizontal'}}) }}*/
+/*   {{ form_errors(formAddUser) }}*/
+/*   <fieldset>*/
+/*   	<legend>&nbsp;&nbsp;Ajouter un utilisateur</legend>*/
+/*   	<div class="form-group">*/
+/*   	  <div class="col-sm-6">*/
+/* 	    <b>&nbsp;Nom d'utilisateur&nbsp;&nbsp;</b>*/
+/*         {{ form_errors(formAddUser.utilisateur.username) }}*/
+/*    	  </div>*/
+/*  	  <div class="col-sm-6">*/
+/* 	    <b>&nbsp;Role&nbsp;&nbsp;</b>*/
+/*     	{{ form_errors(formAddUser.role) }}*/
+/*   	  </div>*/
+/*       <div class="col-sm-6">*/
+/*         {{ form_widget(formAddUser.utilisateur.username) }}*/
+/*       </div>*/
+/*       <div class="col-sm-6">*/
+/*         {{ form_widget(formAddUser.role) }}*/
+/*       </div>*/
+/*     </div>*/
+/*   	<div class="form-group">*/
+/*       <div class="col-sm-6">*/
+/* 	    <b>&nbsp;Mot de passe&nbsp;&nbsp;</b>*/
+/*       </div>*/
+/*       <div class="col-sm-6">*/
+/* 	    <b>&nbsp;Répéter le mot de passe&nbsp;&nbsp;</b>*/
+/*       </div>*/
+/*       <div class="col-sm-6">*/
+/*         {{ form_errors(formAddUser.utilisateur.password.first) }}*/
+/*         {{ form_widget(formAddUser.utilisateur.password.first) }}*/
+/*       </div>*/
+/*       <div class="col-sm-6">*/
+/*         {{ form_errors(formAddUser.utilisateur.password.second) }}*/
+/*         {{ form_widget(formAddUser.utilisateur.password.second) }}*/
+/*       </div>*/
+/*     </div>*/
+/*   </fieldset>*/
+/*   {{ form_widget(formAddUser.valider, {'attr': {'class': 'btn btn-primary'}}) }}*/
+/*   {{ form_rest(formAddUser) }}*/
+/*   {{ form_end(formAddUser) }}*/
 /* </div>*/
 /* */
 /* {% endblock %}*/

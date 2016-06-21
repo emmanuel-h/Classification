@@ -1,17 +1,49 @@
 {% extends "LIFOClassifBundle::layoutAdmin.html.twig" %}
 
 {% block LIFOClassif_body %}
-
+<h1> Utilisateur&nbsp;{{ user.username }}</h1>
+{%  if messageImportant != "" %}
+  <div class="alert alert-danger" align="center" id="parametresClassif">
+  {{messageImportant}}
+  </div>
+{% endif %}
 <div class="well">
-	<font color = "red">{{messageImportant}}</font>
-	<p>
-		<fieldset>
-			<legend>{{user.username}}</legend>
-			Role actuel : 
-			{{ user.rolesToString }}
-			{{ form(formModifierRole) }}
-		</fieldset>
-	</p>
+  {{ form_start(formModifierUser, {'attr': {'class': 'form-horizontal'}}) }}
+  {{ form_errors(formModifierUser) }}
+  <fieldset>
+  	<legend>&nbsp;&nbsp;Rôle</legend>
+  	<div class="form-group">
+  	  <div class="col-sm-6">
+	    <b>&nbsp;Rôle actuel&nbsp;&nbsp;</b>
+   	  </div>
+ 	  <div class="col-sm-6">
+	    <b>&nbsp;Nouveau rôle&nbsp;&nbsp;</b>
+    	{{ form_errors(formModifierUser.nouveauRole) }}
+  	  </div>
+      <div class="col-sm-6">
+        {{ user.rolesToString }}
+      </div>
+      <div class="col-sm-6">
+        {{ form_widget(formModifierUser.nouveauRole) }}
+      </div>
+    </div>
+  </fieldset>
+  <fieldset>
+  	<legend>&nbsp;&nbsp;Mot de passe</legend>
+  	<div class="form-group">
+      <div class="col-sm-6">
+        {{ form_errors(formModifierUser.changePasswd.first) }}
+        {{ form_widget(formModifierUser.changePasswd.first) }}
+      </div>
+      <div class="col-sm-6">
+        {{ form_errors(formModifierUser.changePasswd.second) }}
+        {{ form_widget(formModifierUser.changePasswd.second) }}
+      </div>
+    </div>
+  </fieldset>
+  {{ form_widget(formModifierUser.valider, {'attr': {'class': 'btn btn-primary'}}) }}
+  {{ form_rest(formModifierUser) }}
+  {{ form_end(formModifierUser) }}
 </div>
 <a class="btn btn-primary" href="#null" onclick="javascript:history.back();">Page précédente</a>
 

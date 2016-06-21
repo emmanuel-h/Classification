@@ -175,14 +175,20 @@ class Utilisateur implements UserInterface, EquatableInterface
     }
     
     public function getRolesToString(){
-    	$str="";
+    	$roles="";
     	foreach($this->roles as $role){
-    		if($str == ""){
-    			$str = $str . " " . strtolower(substr($role, 5));
-    		} else {
-    			$str = $str . " / " . strtolower(substr($role, 5));
-    		}
+    		$roles = $roles.$role;
     	}
-    	return $str;
+    	$pos=strpos($roles, "ADMIN");
+    	if($pos === false){
+    		$pos=strpos($roles, "ARCHEOLOGUE");
+    		if($pos === false){
+    			return "Utilisateur normal";
+    		} else {
+    			return "Archéologue";
+    		}
+    	} else {
+    		return "Administrateur";
+    	}
     }
 }

@@ -21,51 +21,117 @@ class __TwigTemplate_5348cc77dfc9a0e56b61b1f66eeba8febb2f9ab3973e13a67e564e549a2
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c8990ffd74d3483a9d6d1b946988e3f37fbf7bbf12bcaa72db0a66b8b19ed2ef = $this->env->getExtension("native_profiler");
-        $__internal_c8990ffd74d3483a9d6d1b946988e3f37fbf7bbf12bcaa72db0a66b8b19ed2ef->enter($__internal_c8990ffd74d3483a9d6d1b946988e3f37fbf7bbf12bcaa72db0a66b8b19ed2ef_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Admin/utilisateurAfficher.html.twig"));
+        $__internal_22310740b06212cbed43386e0e740c26d8c3a0040eca79169620bed5164371b0 = $this->env->getExtension("native_profiler");
+        $__internal_22310740b06212cbed43386e0e740c26d8c3a0040eca79169620bed5164371b0->enter($__internal_22310740b06212cbed43386e0e740c26d8c3a0040eca79169620bed5164371b0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Admin/utilisateurAfficher.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c8990ffd74d3483a9d6d1b946988e3f37fbf7bbf12bcaa72db0a66b8b19ed2ef->leave($__internal_c8990ffd74d3483a9d6d1b946988e3f37fbf7bbf12bcaa72db0a66b8b19ed2ef_prof);
+        $__internal_22310740b06212cbed43386e0e740c26d8c3a0040eca79169620bed5164371b0->leave($__internal_22310740b06212cbed43386e0e740c26d8c3a0040eca79169620bed5164371b0_prof);
 
     }
 
     // line 3
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_2adc4316d61ee2c4fa801e610ad6c567828687178bce18be714dde569287a93e = $this->env->getExtension("native_profiler");
-        $__internal_2adc4316d61ee2c4fa801e610ad6c567828687178bce18be714dde569287a93e->enter($__internal_2adc4316d61ee2c4fa801e610ad6c567828687178bce18be714dde569287a93e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_bddb7ea29a000230c2f39555b1c23bb286b5842162936acdee8f713f6cc7a155 = $this->env->getExtension("native_profiler");
+        $__internal_bddb7ea29a000230c2f39555b1c23bb286b5842162936acdee8f713f6cc7a155->enter($__internal_bddb7ea29a000230c2f39555b1c23bb286b5842162936acdee8f713f6cc7a155_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 4
-        echo "
-<div class=\"well\">
-\t<font color = \"red\">";
-        // line 6
-        echo twig_escape_filter($this->env, (isset($context["messageImportant"]) ? $context["messageImportant"] : $this->getContext($context, "messageImportant")), "html", null, true);
-        echo "</font>
-\t<p>
-\t\t<fieldset>
-\t\t\t<legend>";
-        // line 9
+        echo "<h1> Utilisateur&nbsp;";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "username", array()), "html", null, true);
-        echo "</legend>
-\t\t\tRole actuel : 
-\t\t\t";
+        echo "</h1>
+";
+        // line 5
+        if (((isset($context["messageImportant"]) ? $context["messageImportant"] : $this->getContext($context, "messageImportant")) != "")) {
+            // line 6
+            echo "  <div class=\"alert alert-danger\" align=\"center\" id=\"parametresClassif\">
+  ";
+            // line 7
+            echo twig_escape_filter($this->env, (isset($context["messageImportant"]) ? $context["messageImportant"] : $this->getContext($context, "messageImportant")), "html", null, true);
+            echo "
+  </div>
+";
+        }
+        // line 10
+        echo "<div class=\"well\">
+  ";
         // line 11
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formModifierUser"]) ? $context["formModifierUser"] : $this->getContext($context, "formModifierUser")), 'form_start', array("attr" => array("class" => "form-horizontal")));
+        echo "
+  ";
+        // line 12
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["formModifierUser"]) ? $context["formModifierUser"] : $this->getContext($context, "formModifierUser")), 'errors');
+        echo "
+  <fieldset>
+  \t<legend>&nbsp;&nbsp;Rôle</legend>
+  \t<div class=\"form-group\">
+  \t  <div class=\"col-sm-6\">
+\t    <b>&nbsp;Rôle actuel&nbsp;&nbsp;</b>
+   \t  </div>
+ \t  <div class=\"col-sm-6\">
+\t    <b>&nbsp;Nouveau rôle&nbsp;&nbsp;</b>
+    \t";
+        // line 21
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formModifierUser"]) ? $context["formModifierUser"] : $this->getContext($context, "formModifierUser")), "nouveauRole", array()), 'errors');
+        echo "
+  \t  </div>
+      <div class=\"col-sm-6\">
+        ";
+        // line 24
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : $this->getContext($context, "user")), "rolesToString", array()), "html", null, true);
         echo "
-\t\t\t";
-        // line 12
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formModifierRole"]) ? $context["formModifierRole"] : $this->getContext($context, "formModifierRole")), 'form');
+      </div>
+      <div class=\"col-sm-6\">
+        ";
+        // line 27
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formModifierUser"]) ? $context["formModifierUser"] : $this->getContext($context, "formModifierUser")), "nouveauRole", array()), 'widget');
         echo "
-\t\t</fieldset>
-\t</p>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset>
+  \t<legend>&nbsp;&nbsp;Mot de passe</legend>
+  \t<div class=\"form-group\">
+      <div class=\"col-sm-6\">
+        ";
+        // line 35
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formModifierUser"]) ? $context["formModifierUser"] : $this->getContext($context, "formModifierUser")), "changePasswd", array()), "first", array()), 'errors');
+        echo "
+        ";
+        // line 36
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formModifierUser"]) ? $context["formModifierUser"] : $this->getContext($context, "formModifierUser")), "changePasswd", array()), "first", array()), 'widget');
+        echo "
+      </div>
+      <div class=\"col-sm-6\">
+        ";
+        // line 39
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formModifierUser"]) ? $context["formModifierUser"] : $this->getContext($context, "formModifierUser")), "changePasswd", array()), "second", array()), 'errors');
+        echo "
+        ";
+        // line 40
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["formModifierUser"]) ? $context["formModifierUser"] : $this->getContext($context, "formModifierUser")), "changePasswd", array()), "second", array()), 'widget');
+        echo "
+      </div>
+    </div>
+  </fieldset>
+  ";
+        // line 44
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formModifierUser"]) ? $context["formModifierUser"] : $this->getContext($context, "formModifierUser")), "valider", array()), 'widget', array("attr" => array("class" => "btn btn-primary")));
+        echo "
+  ";
+        // line 45
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["formModifierUser"]) ? $context["formModifierUser"] : $this->getContext($context, "formModifierUser")), 'rest');
+        echo "
+  ";
+        // line 46
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formModifierUser"]) ? $context["formModifierUser"] : $this->getContext($context, "formModifierUser")), 'form_end');
+        echo "
 </div>
 <a class=\"btn btn-primary\" href=\"#null\" onclick=\"javascript:history.back();\">Page précédente</a>
 
 ";
         
-        $__internal_2adc4316d61ee2c4fa801e610ad6c567828687178bce18be714dde569287a93e->leave($__internal_2adc4316d61ee2c4fa801e610ad6c567828687178bce18be714dde569287a93e_prof);
+        $__internal_bddb7ea29a000230c2f39555b1c23bb286b5842162936acdee8f713f6cc7a155->leave($__internal_bddb7ea29a000230c2f39555b1c23bb286b5842162936acdee8f713f6cc7a155_prof);
 
     }
 
@@ -81,23 +147,55 @@ class __TwigTemplate_5348cc77dfc9a0e56b61b1f66eeba8febb2f9ab3973e13a67e564e549a2
 
     public function getDebugInfo()
     {
-        return array (  59 => 12,  55 => 11,  50 => 9,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  127 => 46,  123 => 45,  119 => 44,  112 => 40,  108 => 39,  102 => 36,  98 => 35,  87 => 27,  81 => 24,  75 => 21,  63 => 12,  59 => 11,  56 => 10,  50 => 7,  47 => 6,  45 => 5,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends "LIFOClassifBundle::layoutAdmin.html.twig" %}*/
 /* */
 /* {% block LIFOClassif_body %}*/
-/* */
+/* <h1> Utilisateur&nbsp;{{ user.username }}</h1>*/
+/* {%  if messageImportant != "" %}*/
+/*   <div class="alert alert-danger" align="center" id="parametresClassif">*/
+/*   {{messageImportant}}*/
+/*   </div>*/
+/* {% endif %}*/
 /* <div class="well">*/
-/* 	<font color = "red">{{messageImportant}}</font>*/
-/* 	<p>*/
-/* 		<fieldset>*/
-/* 			<legend>{{user.username}}</legend>*/
-/* 			Role actuel : */
-/* 			{{ user.rolesToString }}*/
-/* 			{{ form(formModifierRole) }}*/
-/* 		</fieldset>*/
-/* 	</p>*/
+/*   {{ form_start(formModifierUser, {'attr': {'class': 'form-horizontal'}}) }}*/
+/*   {{ form_errors(formModifierUser) }}*/
+/*   <fieldset>*/
+/*   	<legend>&nbsp;&nbsp;Rôle</legend>*/
+/*   	<div class="form-group">*/
+/*   	  <div class="col-sm-6">*/
+/* 	    <b>&nbsp;Rôle actuel&nbsp;&nbsp;</b>*/
+/*    	  </div>*/
+/*  	  <div class="col-sm-6">*/
+/* 	    <b>&nbsp;Nouveau rôle&nbsp;&nbsp;</b>*/
+/*     	{{ form_errors(formModifierUser.nouveauRole) }}*/
+/*   	  </div>*/
+/*       <div class="col-sm-6">*/
+/*         {{ user.rolesToString }}*/
+/*       </div>*/
+/*       <div class="col-sm-6">*/
+/*         {{ form_widget(formModifierUser.nouveauRole) }}*/
+/*       </div>*/
+/*     </div>*/
+/*   </fieldset>*/
+/*   <fieldset>*/
+/*   	<legend>&nbsp;&nbsp;Mot de passe</legend>*/
+/*   	<div class="form-group">*/
+/*       <div class="col-sm-6">*/
+/*         {{ form_errors(formModifierUser.changePasswd.first) }}*/
+/*         {{ form_widget(formModifierUser.changePasswd.first) }}*/
+/*       </div>*/
+/*       <div class="col-sm-6">*/
+/*         {{ form_errors(formModifierUser.changePasswd.second) }}*/
+/*         {{ form_widget(formModifierUser.changePasswd.second) }}*/
+/*       </div>*/
+/*     </div>*/
+/*   </fieldset>*/
+/*   {{ form_widget(formModifierUser.valider, {'attr': {'class': 'btn btn-primary'}}) }}*/
+/*   {{ form_rest(formModifierUser) }}*/
+/*   {{ form_end(formModifierUser) }}*/
 /* </div>*/
 /* <a class="btn btn-primary" href="#null" onclick="javascript:history.back();">Page précédente</a>*/
 /* */

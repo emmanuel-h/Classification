@@ -9,6 +9,8 @@ use LIFO\ClassifBundle\Entity\Utilisateur;
 use LIFO\ClassifBundle\Form\UtilisateurType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 
 class AdminController extends Controller{
 	
@@ -27,8 +29,8 @@ class AdminController extends Controller{
 	public function utilisateurAction(Request $request){
 		$em = $this->getDoctrine ()->getManager ();
 		$formAddUser = $this->createFormBuilder()
-			->add('Utilisateur', UtilisateurType::class)
-			->add('Role', ChoiceType::class, array(
+			->add('utilisateur', UtilisateurType::class)
+			->add('role', ChoiceType::class, array(
             		'choices'  => array(
             				'Utilisateur Normal' => "User",
             				'Archéologue' => "Archéologue",
@@ -76,12 +78,12 @@ class AdminController extends Controller{
 		$em = $this->getDoctrine ()->getManager ();
 
 		$formSearchUser = $this->createFormBuilder()
-		->add('Username', TextType::class)
-		->add('Rechercher', SubmitType::class)
+		->add('username', TextType::class)
+		->add('rechercher', SubmitType::class)
 		->getForm();
 
 		if ($request->isMethod ( 'POST' ) && $formSearchUser->handleRequest ( $request )->isValid ()) {
-			$username = $formSearchUser->get('Username')->getData();
+			$username = $formSearchUser->get('username')->getData();
 			$verifyUser = $em->getRepository('LIFOClassifBundle:Utilisateur')->findOneByUsername($username);
 			if(! is_object($verifyUser)){
 				return $this->render ( 'LIFOClassifBundle:Admin:utilisateurRechercher.html.twig', array (
@@ -127,39 +129,50 @@ class AdminController extends Controller{
 	public function utilisateurAfficherAction(Request $request, $id){
 		$em = $this->getDoctrine ()->getManager ();
 		$user = $em->getRepository('LIFOClassifBundle:Utilisateur')->findOneById($id);
-		$formModifierRole = $this->createFormBuilder()
+		$formModifierUser = $this->createFormBuilder()
 			->add('nouveauRole', ChoiceType::class, array(
-            		'choices'  => array(
-            				'Utilisateur Normal' => "User",
-            				'Archéologue' => "Archéologue",
-            				'Administrateur' => "Administrateur")))
+            		'choices' 			=> array(
+            				'Utilisateur Normal'	=> "User",
+            				'Archéologue'			=> "Archeologue",
+            				'Administrateur'		=> "Administrateur"),
+					'required'			=> false
+            ))
+            ->add('changePasswd', RepeatedType::class, array(
+            		'type'		=> PasswordType::class,
+            		'invalid_message'	=> 'Les deux mots de passe ne correspondent pas',
+            		'required'			=> false
+            ))
             -> add('valider', SubmitType::class)
             -> getForm();
 			
-		if ($request->isMethod ( 'POST' ) && $formModifierRole->handleRequest ( $request )->isValid ()) {
+		if ($request->isMethod ( 'POST' ) && $formModifierUser->handleRequest ( $request )->isValid ()) {
 
-			$role = $formModifierRole->get('nouveauRole')->getData();
+			$role = $formModifierUser->get('nouveauRole')->getData();
 			if("User" == $role){
 				$user->setRoles(array('ROLE_USER'));
 			}
-			if("Archéologue" == $role){
+			if("Archeologue" == $role){
 				$user->setRoles(array('ROLE_USER', 'ROLE_ARCHEOLOGUE'));
 			}
 			if("Administrateur" == $role){
 				$user->setRoles(array('ROLE_USER','ROLE_ADMIN'));
 			}
+			if(NULL != $formModifierUser->get('changePasswd')->getData()){
+				$options = ['cost' => 12,];
+				$user->setPassword(password_hash($formModifierUser->get('changePasswd')->getData(), PASSWORD_BCRYPT, $options));
+			}
 			$em->persist($user);
 			$em->flush($user);
 			return $this->render ( 'LIFOClassifBundle:Admin:utilisateurAfficher.html.twig', array (
 				'user' => $user,
-				'formModifierRole' => $formModifierRole->createView(),
+				'formModifierUser' => $formModifierUser->createView(),
 				'messageImportant' => "Changements enregistrés"
 			) );
 		}
 
 		return $this->render ( 'LIFOClassifBundle:Admin:utilisateurAfficher.html.twig', array (
 				'user' => $user,
-				'formModifierRole' => $formModifierRole->createView(),
+				'formModifierUser' => $formModifierUser->createView(),
 				'messageImportant' => ""
 		) );
 	    
