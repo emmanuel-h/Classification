@@ -99,7 +99,7 @@ class TessonType extends AbstractType
 				'expanded' 		=> true
 		    ))
 		    ->add('numerisation', CollectionType::class, array(
-		        'entry_type'   =>NumerisationType::class,
+		        'entry_type'   => NumerisationType::class,
 		        'allow_add'    => true,
 		        'allow_delete' => true,
 		    	'required'     => false

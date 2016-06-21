@@ -38,7 +38,8 @@ class PlatformController extends Controller {
      * @Security("has_role('ROLE_USER')")
      */
 	public function uploadAction(Request $request) {
-		
+
+		$em = $this->getDoctrine()->getManager();
 		$tesson = new Tesson ();
 		$tesson->setUS ( new US () );
 		$tesson->setSite ( new Site () );
@@ -46,6 +47,12 @@ class PlatformController extends Controller {
 		$tesson->setPhase ( new Phase () );
 		$tesson->setSequence ( new Sequence () );
 		$tesson->getUS ()->setSite ( $tesson->getSite () );
+		$listeTypeNumerisation = $em->getRepository('LIFOClassifBundle:TypeNumerisation')->findAll();
+		foreach ($listeTypeNumerisation as $typeNumerisation){
+			$numerisation = new Numerisation();
+			$numerisation->setTypeNumerisation($typeNumerisation);
+			$tesson->addNumerisation($numerisation);
+		}
 		$utilisateur = $this->getUser();
 		
 		$tesson->setEnregistrePar ( $utilisateur );
