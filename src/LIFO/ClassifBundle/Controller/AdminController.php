@@ -18,9 +18,7 @@ class AdminController extends Controller{
 	 * @Security("has_role('ROLE_ADMIN')")
 	 */
 	public function adminAction(Request $request){
-
-		return $this->redirectToRoute('lifo_classif_admin_utilisateur_afficherTous');
-	    
+		return $this->redirect($this->getParameter("base_url"). $this->generateUrl( 'lifo_classif_admin_utilisateur_afficherTous' ));
 	}
 
 	/**
@@ -63,7 +61,7 @@ class AdminController extends Controller{
 				$user->setSalt('');
 				$em->persist($user);
 				$em->flush($user);
-				return $this->redirectToRoute ( 'lifo_classif_admin_utilisateur');
+				return $this->redirect($this->getParameter("base_url"). $this->generateUrl( 'lifo_classif_admin_utilisateur' ));
 			}
 		}
 		
@@ -90,7 +88,7 @@ class AdminController extends Controller{
 						'formSearchUser' => $formSearchUser->createView (),
 						'messageImportant' => "Nom d'utilisateur inconnu"));
 			} else {
-				return $this->redirectToRoute ( 'lifo_classif_admin_utilisateur_afficher', array ('id' => $verifyUser->getId ()) );
+		return $this->redirect($this->getParameter("base_url"). $this->generateUrl( 'lifo_classif_admin_utilisateur_afficher', array ('id' => $verifyUser->getId ()) ));
 			}
 		}
 		

@@ -10,7 +10,8 @@ parameters:
     locale: en
     NB_TESSONS_PAR_PAGE: 10
     PICTURES_SAVED_PATH: '/../../../../web/'
-    TYPE_NUMERISATION_A_AFFICHER: 'Carte des profondeurs' 
+    TYPE_NUMERISATION_A_AFFICHER: 'Carte des profondeurs'
+    base_url: ""
 
 framework:
     #esi:             ~

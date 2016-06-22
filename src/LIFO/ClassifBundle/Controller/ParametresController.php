@@ -41,7 +41,7 @@ class ParametresController extends Controller{
 				}
 				$em->flush();
 			}
-			return $this->redirectToRoute ( 'lifo_classif_parametres_typeDecor');
+		return $this->redirect($this->getParameter("base_url"). $this->generateUrl( 'lifo_classif_parametres_typeDecor' ));
 		}
 		
 		if ($request->isMethod ( 'POST' ) && $formSuppressionTypeDecor->handleRequest ( $request )->isValid ()) {
@@ -52,8 +52,7 @@ class ParametresController extends Controller{
 				}
 			}
 			$em->flush ();
-				
-			return $this->redirectToRoute ( 'lifo_classif_parametres_typeDecor');
+			return $this->redirect($this->getParameter("base_url"). $this->generateUrl( 'lifo_classif_parametres_typeDecor' ));
 		}
 			
 		return $this->render ( 'LIFOClassifBundle:Parametres:typeDecor.html.twig', array (
@@ -92,8 +91,8 @@ class ParametresController extends Controller{
 				}
 			}
 			$em->flush ();
-				
-			return $this->redirectToRoute ( 'lifo_classif_parametres_positionDecor');
+
+			return $this->redirect($this->getParameter("base_url"). $this->generateUrl( 'lifo_classif_parametres_positionDecor' ));
 		}
 		
 		if ($request->isMethod ( 'POST' ) && $formAjoutDecor->handleRequest ( $request )->isValid ()) {
@@ -104,7 +103,7 @@ class ParametresController extends Controller{
 				}
 				$em->flush();
 			}
-			return $this->redirectToRoute ( 'lifo_classif_parametres_positionDecor');
+			return $this->redirect($this->getParameter("base_url"). $this->generateUrl( 'lifo_classif_parametres_positionDecor' ));
 		}
 			
 		return $this->render ( 'LIFOClassifBundle:Parametres:positionDecor.html.twig', array (

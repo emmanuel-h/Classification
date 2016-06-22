@@ -32,7 +32,7 @@ use Doctrine\ORM\Tools\Pagination\Paginator;
 
 class PlatformController extends Controller {
 	public function indexAction() {
-			return $this->redirectToRoute ( 'lifo_classif_upload' );
+		return $this->redirect($this->getParameter("base_url"). $this->generateUrl( 'lifo_classif_upload' ));
 	}
 	
 	/**
@@ -63,7 +63,7 @@ class PlatformController extends Controller {
 			$this->verifierFormTesson($tesson);
 			
 			$request->getSession ()->getFlashBag ()->add ( 'notice', 'Tesson enregistré' );
-			return $this->redirectToRoute ( 'lifo_classif_tesson', array ('id' => $tesson->getId ()) );
+			return $this->redirect($this->getParameter("base_url"). $this->generateUrl( 'lifo_classif_tesson', array ('id' => $tesson->getId ())));
 		}
 		
 		return $this->render ( 'LIFOClassifBundle:Platform:upload.html.twig', array (
@@ -127,32 +127,31 @@ class PlatformController extends Controller {
 		if ($request->isMethod ( 'POST' ) && $formRechercheID->handleRequest ( $request )->isValid ()) {
 			$tesson = $em->getRepository('LIFOClassifBundle:Tesson')->findOneById($formRechercheID->get('identifiant')->getData());
 			if(is_object($tesson)){
-				return $this->redirectToRoute ( 'lifo_classif_tesson', array ('id' => $tesson->getId ()) );
+			return $this->redirect($this->getParameter("base_url"). $this->generateUrl( 'lifo_classif_tesson', array ('id' => $tesson->getId ())));
 			} else {
 				$messageImportant="Pas de tesson correspondant à l'identifiant";
 			}
 		}
 		
 		if ($request->isMethod ( 'POST' ) && $formRechercheLocalisation->handleRequest ( $request )->isValid ()) {
-			return $this->redirectToRoute ( 'lifo_classif_recherche_afficher', (array(
+			
+			return $this->redirect($this->getParameter("base_url"). $this->generateUrl( 'lifo_classif_recherche_afficher', array(
 					'codeInsee'			=> $formRechercheLocalisation->get('codeInsee')->getData(),
 					'numeroSite'		=> $formRechercheLocalisation->get('numeroSite')->getData(),
 					'us'				=> $formRechercheLocalisation->get('us')->getData(),
 					'numeroIsolation'	=> $formRechercheLocalisation->get('numeroIsolation')->getData(),
 					'annee'				=> $formRechercheParticularites->get('annee')->getData(),
-					'developpe'			=> $formRechercheParticularites->get('developpe')->getData()
-			)) );
+					'developpe'			=> $formRechercheParticularites->get('developpe')->getData())));
 		}
 		
 		if ($request->isMethod ( 'POST' ) && $formRechercheParticularites->handleRequest ( $request )->isValid ()) {
-			return $this->redirectToRoute ( 'lifo_classif_recherche_afficher', (array(
+			return $this->redirect($this->getParameter("base_url"). $this->generateUrl( 'lifo_classif_recherche_afficher', array(
 					'codeInsee'			=> $formRechercheLocalisation->get('codeInsee')->getData(),
 					'numeroSite'		=> $formRechercheLocalisation->get('numeroSite')->getData(),
 					'us'				=> $formRechercheLocalisation->get('us')->getData(),
 					'numeroIsolation'	=> $formRechercheLocalisation->get('numeroIsolation')->getData(),
 					'annee'				=> $formRechercheParticularites->get('annee')->getData(),
-					'developpe'			=> $formRechercheParticularites->get('developpe')->getData()
-			)) );
+					'developpe'			=> $formRechercheParticularites->get('developpe')->getData())));
 			
 		}
 		return $this->render ( 'LIFOClassifBundle:Platform:recherche.html.twig', array (
@@ -524,7 +523,7 @@ class PlatformController extends Controller {
 		}
 		if ($request->isMethod ( 'POST' ) && $formTessonModifie->handleRequest ( $request )->isValid ()) {
 			$this->verifierFormTesson($tesson);
-			return $this->redirectToRoute ( 'lifo_classif_tesson', array ('id' => $tesson->getId ()) );
+			return $this->redirect($this->getParameter("base_url"). $this->generateUrl( 'lifo_classif_tesson', array ('id' => $tesson->getId ())));
 		}
 		return $this->render ( 'LIFOClassifBundle:Platform:upload.html.twig', array (
 				'form' => $formTessonModifie->createView (),
@@ -573,7 +572,7 @@ class PlatformController extends Controller {
 				'typeNumerisation'	=> $typeNumerisation,
 				'tessons'			=> $tessons,
 				'page'				=> $page,
-				'nbPages'			=> $nbPages
+				'nbPages'			=> ceil($nbPages)
 		) );
 	}
 	

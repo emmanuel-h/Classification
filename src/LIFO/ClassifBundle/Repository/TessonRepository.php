@@ -122,21 +122,14 @@ class TessonRepository extends \Doctrine\ORM\EntityRepository {
 	public function paginationNumerisationsTotalPages($typeNumerisation){
 
 		$rsm=new ResultSetMapping();
-		$rsm->addEntityResult('LIFO\ClassifBundle\Entity\Tesson','t');
-		$rsm->addFieldResult('t', 'id', 'id');
-// 		$rsm->addFieldResult('t', 'numIsolation', 'numIsolation');
-// 		$rsm->addJoinedEntityResult('LIFO\ClassifBundle\Entity\US','u_s','t','us');
-// 		$rsm->addFieldResult('u_s', 'nom', 'nom');
-// 		$rsm->addJoinedEntityResult('LIFO\ClassifBundle\Entity\Site','site','t','site');
-// 		$rsm->addFieldResult('site', 'numSiteCommune', 'numSiteCommune');
-// 		$rsm->addFieldResult('site', 'codeINSEE', 'codeINSEE');
+		$rsm->addScalarResult('nb_tessons', 'nbt');
 		
-		$sql=	'SELECT COUNT(t.id) AS nb_tessons FROM tesson t'
-// 				'tesson t JOIN u_s ON t.us_id=u_s.id JOIN site ON t.site_id=site.id '.
-// 				'WHERE t.id NOT IN (SELECT t1.id FROM tesson t1 JOIN numerisation n ON t1.id=n.tesson_id JOIN type_numerisation tn ON n.type_numerisation_id=tn.id WHERE tn.nom=:typeNumerisation)'
+		$sql=	'SELECT COUNT(DISTINCT t.id) AS nb_tessons FROM '.
+				'tesson t JOIN u_s ON t.us_id=u_s.id JOIN site ON t.site_id=site.id '.
+				'WHERE t.id NOT IN (SELECT t1.id FROM tesson t1 JOIN numerisation n ON t1.id=n.tesson_id JOIN type_numerisation tn ON n.type_numerisation_id=tn.id WHERE tn.nom=:typeNumerisation)'
 				;
 		$query=$this->_em->createNativeQuery($sql, $rsm);
-// 		$query->setParameter('typeNumerisation', $typeNumerisation);
+		$query->setParameter('typeNumerisation', $typeNumerisation);
 		return $query->getSingleScalarResult();
 	}
 	

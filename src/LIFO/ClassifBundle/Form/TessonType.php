@@ -77,7 +77,8 @@ class TessonType extends AbstractType
 			    		'>' => ">"
 			    )))
 			->add('US', USType::class)
-			->add('zone', ZoneType::class)
+			->add('zone', ZoneType::class, array(
+					'required'	=> false))
 			->add('site', SiteType::class)
 			->add('numIsolation', IntegerType::class)
 			->add('periode', PeriodeType::class, array(
