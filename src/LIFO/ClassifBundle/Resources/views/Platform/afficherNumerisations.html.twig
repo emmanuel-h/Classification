@@ -8,14 +8,16 @@
   {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
   {{ form_errors(form) }}
   <fieldset>
-  	<legend>&nbsp;&nbsp;Décor</legend>
+  	<legend>&nbsp;&nbsp;Type de numérisations</legend>
   	<div class="form-group">
-  	  <div class="col-sm-3">
-	    <b>&nbsp;Type de numérisation&nbsp;&nbsp;</b>
+  	  <div class="col-sm-4">
+    	{{ form_widget(form.typeNumerisation) }}
         {{ form_errors(form.typeNumerisation) }}
    	  </div>
- 	  <div class="col-sm-4">
-    	{{ form_widget(form.typeNumerisation) }}
+      <div class="col-sm-8">
+        <div class="alert alert-info" role="alert">
+		  <strong>Actuellement : </strong>{{ typeNumerisation }}
+	    </div>
       </div>
     </div>
   </fieldset>
@@ -36,7 +38,9 @@
 		</tr>
 	{% endfor %}
 </table>
+<p> Nombre de pages : {{ nbPages }}</p>
 
+{#
 <ul class="pagination">
         
                             <li class="active">
@@ -75,6 +79,44 @@
                 </a>
             </li>
             </ul>
+#}
+{% if nbPages > 0 %}
+    <ul class="pagination">
+        {% if page > 1 %}
+            <li>
+                <a href="{{ base_url ~path('lifo_classif_numerisations', {'page': 1}) }}">
+                    <<
+                </a>
+            </li>
+            <li>
+                <a href="{{ base_url ~path('lifo_classif_numerisations', {'page': page-1}) }}">
+                    <
+                </a>
+            </li>
+        {% endif %}
 
+        {# Affichage de toutes les pages entre p-4 et p+4 sauf si < 1 ou > nbPages #}
+        {% for p in range(max(page-4, 1), min(page+4, nbPages)) %}
+            <li {% if p == page %}class="active"{% endif %}>
+                <a href="{{ base_url ~path('lifo_classif_numerisations', {'page': p}) }}">
+                    {{ p }}
+                </a>
+            </li>
+        {% endfor %}
+
+        {% if page < nbPages %}
+            <li>
+                <a href="{{ base_url ~path('lifo_classif_numerisations', {'page': page+1}) }}">
+                    >
+                </a>
+            </li>
+            <li>
+                <a href="{{ base_url ~path('lifo_classif_numerisations', {'page': nbPages}) }}">
+                    >>
+                </a>
+            </li>
+        {% endif %}
+    </ul>
+{% endif %}
 
 {% endblock %}

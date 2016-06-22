@@ -540,7 +540,7 @@ class PlatformController extends Controller {
 					'choice_label'  => 'nom',
 					'multiple'		=> false,
 					'expanded' 		=> false,
-					'placeholder'	=> 'Tous',
+					'placeholder'	=> 'Sélectionner',
 					'required'		=> false
 			))
 			->add('afficher', SubmitType::class)
@@ -559,11 +559,21 @@ class PlatformController extends Controller {
 		}
 
 		$nbTessonsParPage=$this->container->getParameter('NB_TESSONS_PAR_PAGE');
+		
+		$nbPages = $em->getRepository('LIFOClassifBundle:Tesson')->paginationNumerisationsTotalPages($typeNumerisation);
+		$nbPages = $nbPages/$nbTessonsParPage;
+		/*if($page == 1){
+			$nbPages = $em->getRepository('LIFOClassifBundle:Tesson')->paginationNumerisationsTotalPages($typeNumerisation);
+		} else {
+			$nbPages = $typeNumerisation=$request->query->get('nbPages');
+		}*/
 		$tessons=$em->getRepository('LIFOClassifBundle:Tesson')->paginationNumerisations($typeNumerisation, ($page - 1) * $nbTessonsParPage, $nbTessonsParPage);
 		return $this->render ( 'LIFOClassifBundle:Platform:afficherNumerisations.html.twig', array (
-				'form'			=> $formNumerisations->createView (),
-				'tessons'		=> $tessons,
-				'page'			=> $page
+				'form'				=> $formNumerisations->createView (),
+				'typeNumerisation'	=> $typeNumerisation,
+				'tessons'			=> $tessons,
+				'page'				=> $page,
+				'nbPages'			=> $nbPages
 		) );
 	}
 	

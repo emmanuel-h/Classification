@@ -22,33 +22,33 @@ class __TwigTemplate_868de066f650fe35ea9a1deeb0f88335ee49e79c8d9735dd8a71db65bc9
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1503972f3942b7eef2fdd927e656893ffca5c59c710fee9e06dc9f5abb51e456 = $this->env->getExtension("native_profiler");
-        $__internal_1503972f3942b7eef2fdd927e656893ffca5c59c710fee9e06dc9f5abb51e456->enter($__internal_1503972f3942b7eef2fdd927e656893ffca5c59c710fee9e06dc9f5abb51e456_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/afficherNumerisations.html.twig"));
+        $__internal_744f1e631e73ad81582404aea46611067a7c026c388ea262d3ede853f7b2eb06 = $this->env->getExtension("native_profiler");
+        $__internal_744f1e631e73ad81582404aea46611067a7c026c388ea262d3ede853f7b2eb06->enter($__internal_744f1e631e73ad81582404aea46611067a7c026c388ea262d3ede853f7b2eb06_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/afficherNumerisations.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_1503972f3942b7eef2fdd927e656893ffca5c59c710fee9e06dc9f5abb51e456->leave($__internal_1503972f3942b7eef2fdd927e656893ffca5c59c710fee9e06dc9f5abb51e456_prof);
+        $__internal_744f1e631e73ad81582404aea46611067a7c026c388ea262d3ede853f7b2eb06->leave($__internal_744f1e631e73ad81582404aea46611067a7c026c388ea262d3ede853f7b2eb06_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_2c23c539273330c91cae6ef9545ff543734854279f15a3f09c7a90d2d0be0a9f = $this->env->getExtension("native_profiler");
-        $__internal_2c23c539273330c91cae6ef9545ff543734854279f15a3f09c7a90d2d0be0a9f->enter($__internal_2c23c539273330c91cae6ef9545ff543734854279f15a3f09c7a90d2d0be0a9f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_0d4999beed81a9d44d1cdfcdeba5c87c1258e432bb4c38464baff37a70801dfc = $this->env->getExtension("native_profiler");
+        $__internal_0d4999beed81a9d44d1cdfcdeba5c87c1258e432bb4c38464baff37a70801dfc->enter($__internal_0d4999beed81a9d44d1cdfcdeba5c87c1258e432bb4c38464baff37a70801dfc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Numérisations";
         
-        $__internal_2c23c539273330c91cae6ef9545ff543734854279f15a3f09c7a90d2d0be0a9f->leave($__internal_2c23c539273330c91cae6ef9545ff543734854279f15a3f09c7a90d2d0be0a9f_prof);
+        $__internal_0d4999beed81a9d44d1cdfcdeba5c87c1258e432bb4c38464baff37a70801dfc->leave($__internal_0d4999beed81a9d44d1cdfcdeba5c87c1258e432bb4c38464baff37a70801dfc_prof);
 
     }
 
     // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_6d5bbc7f9a47ff92e049ab9a525ac8195f79d55699b3f93cba748d79097840b9 = $this->env->getExtension("native_profiler");
-        $__internal_6d5bbc7f9a47ff92e049ab9a525ac8195f79d55699b3f93cba748d79097840b9->enter($__internal_6d5bbc7f9a47ff92e049ab9a525ac8195f79d55699b3f93cba748d79097840b9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_a3286aaa92d1121d97f06d8ece8e6a8a8084d70a27636ea227c408c212e1c6e4 = $this->env->getExtension("native_profiler");
+        $__internal_a3286aaa92d1121d97f06d8ece8e6a8a8084d70a27636ea227c408c212e1c6e4->enter($__internal_a3286aaa92d1121d97f06d8ece8e6a8a8084d70a27636ea227c408c212e1c6e4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 6
         echo "
@@ -62,33 +62,38 @@ class __TwigTemplate_868de066f650fe35ea9a1deeb0f88335ee49e79c8d9735dd8a71db65bc9
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'errors');
         echo "
   <fieldset>
-  \t<legend>&nbsp;&nbsp;Décor</legend>
+  \t<legend>&nbsp;&nbsp;Type de numérisations</legend>
   \t<div class=\"form-group\">
-  \t  <div class=\"col-sm-3\">
-\t    <b>&nbsp;Type de numérisation&nbsp;&nbsp;</b>
+  \t  <div class=\"col-sm-4\">
+    \t";
+        // line 14
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "typeNumerisation", array()), 'widget');
+        echo "
         ";
         // line 15
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "typeNumerisation", array()), 'errors');
         echo "
    \t  </div>
- \t  <div class=\"col-sm-4\">
-    \t";
-        // line 18
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "typeNumerisation", array()), 'widget');
+      <div class=\"col-sm-8\">
+        <div class=\"alert alert-info\" role=\"alert\">
+\t\t  <strong>Actuellement : </strong>";
+        // line 19
+        echo twig_escape_filter($this->env, (isset($context["typeNumerisation"]) ? $context["typeNumerisation"] : $this->getContext($context, "typeNumerisation")), "html", null, true);
         echo "
+\t    </div>
       </div>
     </div>
   </fieldset>
   ";
-        // line 22
+        // line 24
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "afficher", array()), 'widget', array("attr" => array("class" => "btn btn-primary")));
         echo "
   ";
-        // line 23
+        // line 25
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
   ";
-        // line 24
+        // line 26
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 </div>
@@ -97,30 +102,30 @@ class __TwigTemplate_868de066f650fe35ea9a1deeb0f88335ee49e79c8d9735dd8a71db65bc9
 \t<thead align=\"middle\"><tr class=\"warning\"><td width=5%><b>ID tesson</b></td><td width=10%><b>Site</b><td width=10%><b>US</b></td><td width=10%><b>Numéro d'isolation</b></td></tr></thead>
 \t<tbody>
 \t ";
-        // line 30
+        // line 32
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["tessons"]) ? $context["tessons"] : $this->getContext($context, "tessons")));
         foreach ($context['_seq'] as $context["_key"] => $context["tesson"]) {
-            // line 31
+            // line 33
             echo "\t\t<tr>
 \t\t\t<td><a href=\"";
-            // line 32
+            // line 34
             echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_tesson", array("id" => $this->getAttribute($context["tesson"], "t_id", array())))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["tesson"], "t_id", array()), "html", null, true);
             echo "</a></td>
 \t\t\t<td>";
-            // line 33
+            // line 35
             echo twig_escape_filter($this->env, (($this->getAttribute($context["tesson"], "site_codeINSEE", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute($context["tesson"], "site_codeINSEE", array()), "NO")) : ("NO")), "html", null, true);
             echo "&nbsp;";
             echo twig_escape_filter($this->env, (($this->getAttribute($context["tesson"], "site_numSiteCommune", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute($context["tesson"], "site_numSiteCommune", array()), "NO")) : ("NO")), "html", null, true);
             echo "</td>
 \t\t\t<td>";
-            // line 34
+            // line 36
             echo twig_escape_filter($this->env, (($this->getAttribute($context["tesson"], "u_s_nom", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute($context["tesson"], "u_s_nom", array()), "NO")) : ("NO")), "html", null, true);
             echo "</td>
 \t\t\t<td>";
-            // line 35
+            // line 37
             echo twig_escape_filter($this->env, $this->getAttribute($context["tesson"], "t_numIsolation", array()), "html", null, true);
             echo "</td>
 \t\t</tr>
@@ -129,82 +134,102 @@ class __TwigTemplate_868de066f650fe35ea9a1deeb0f88335ee49e79c8d9735dd8a71db65bc9
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['tesson'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 38
+        // line 40
         echo "</table>
+<p> Nombre de pages : ";
+        // line 41
+        echo twig_escape_filter($this->env, (isset($context["nbPages"]) ? $context["nbPages"] : $this->getContext($context, "nbPages")), "html", null, true);
+        echo "</p>
 
-<ul class=\"pagination\">
-        
-                            <li class=\"active\">
-                <a href=\" ";
-        // line 43
-        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_numerisations", array("page" => (isset($context["page"]) ? $context["page"] : $this->getContext($context, "page"))))), "html", null, true);
-        echo "\">
-                \t";
-        // line 44
-        echo twig_escape_filter($this->env, (isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")), "html", null, true);
-        echo "
+";
+        // line 83
+        if (((isset($context["nbPages"]) ? $context["nbPages"] : $this->getContext($context, "nbPages")) > 0)) {
+            // line 84
+            echo "    <ul class=\"pagination\">
+        ";
+            // line 85
+            if (((isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")) > 1)) {
+                // line 86
+                echo "            <li>
+                <a href=\"";
+                // line 87
+                echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_numerisations", array("page" => 1))), "html", null, true);
+                echo "\">
+                    <<
                 </a>
             </li>
-               <li>
-                <a href=\" ";
-        // line 48
-        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_numerisations", array("page" => ((isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")) + 1)))), "html", null, true);
-        echo "\">
-                \t";
-        // line 49
-        echo twig_escape_filter($this->env, ((isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")) + 1), "html", null, true);
-        echo "
+            <li>
+                <a href=\"";
+                // line 92
+                echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_numerisations", array("page" => ((isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")) - 1)))), "html", null, true);
+                echo "\">
+                    <
                 </a>
             </li>
-               <li>
-                <a href=\" ";
-        // line 53
-        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_numerisations", array("page" => ((isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")) + 2)))), "html", null, true);
-        echo "\">
-                \t";
-        // line 54
-        echo twig_escape_filter($this->env, ((isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")) + 2), "html", null, true);
-        echo "
+        ";
+            }
+            // line 97
+            echo "
+        ";
+            // line 99
+            echo "        ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(range(max(((isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")) - 4), 1), min(((isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")) + 4), (isset($context["nbPages"]) ? $context["nbPages"] : $this->getContext($context, "nbPages")))));
+            foreach ($context['_seq'] as $context["_key"] => $context["p"]) {
+                // line 100
+                echo "            <li ";
+                if (($context["p"] == (isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")))) {
+                    echo "class=\"active\"";
+                }
+                echo ">
+                <a href=\"";
+                // line 101
+                echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_numerisations", array("page" => $context["p"]))), "html", null, true);
+                echo "\">
+                    ";
+                // line 102
+                echo twig_escape_filter($this->env, $context["p"], "html", null, true);
+                echo "
                 </a>
             </li>
-               <li>
-                <a href=\" ";
-        // line 58
-        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_numerisations", array("page" => ((isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")) + 3)))), "html", null, true);
-        echo "\">
-                \t";
-        // line 59
-        echo twig_escape_filter($this->env, ((isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")) + 3), "html", null, true);
-        echo "
-                </a>
-            </li>
-               <li>
-                <a href=\" ";
-        // line 63
-        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_numerisations", array("page" => ((isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")) + 4)))), "html", null, true);
-        echo "\">
-                \t";
-        // line 64
-        echo twig_escape_filter($this->env, ((isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")) + 4), "html", null, true);
-        echo "
-                </a>
-            </li>
-                    <li>
-                <a href=\"/Classification/web/app_dev.php/classification/2?typeNumerisationChoisi=Aucune&amp;typeClassifChoisi=Aucune&amp;tessonsClasses=0\">
+        ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['p'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 106
+            echo "
+        ";
+            // line 107
+            if (((isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")) < (isset($context["nbPages"]) ? $context["nbPages"] : $this->getContext($context, "nbPages")))) {
+                // line 108
+                echo "            <li>
+                <a href=\"";
+                // line 109
+                echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_numerisations", array("page" => ((isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")) + 1)))), "html", null, true);
+                echo "\">
                     >
                 </a>
             </li>
             <li>
-                <a href=\"/Classification/web/app_dev.php/classification/137?typeNumerisationChoisi=Aucune&amp;typeClassifChoisi=Aucune&amp;tessonsClasses=0\">
+                <a href=\"";
+                // line 114
+                echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_numerisations", array("page" => (isset($context["nbPages"]) ? $context["nbPages"] : $this->getContext($context, "nbPages"))))), "html", null, true);
+                echo "\">
                     >>
                 </a>
             </li>
-            </ul>
-
-
+        ";
+            }
+            // line 119
+            echo "    </ul>
+";
+        }
+        // line 121
+        echo "
 ";
         
-        $__internal_6d5bbc7f9a47ff92e049ab9a525ac8195f79d55699b3f93cba748d79097840b9->leave($__internal_6d5bbc7f9a47ff92e049ab9a525ac8195f79d55699b3f93cba748d79097840b9_prof);
+        $__internal_a3286aaa92d1121d97f06d8ece8e6a8a8084d70a27636ea227c408c212e1c6e4->leave($__internal_a3286aaa92d1121d97f06d8ece8e6a8a8084d70a27636ea227c408c212e1c6e4_prof);
 
     }
 
@@ -220,7 +245,7 @@ class __TwigTemplate_868de066f650fe35ea9a1deeb0f88335ee49e79c8d9735dd8a71db65bc9
 
     public function getDebugInfo()
     {
-        return array (  188 => 64,  184 => 63,  177 => 59,  173 => 58,  166 => 54,  162 => 53,  155 => 49,  151 => 48,  144 => 44,  140 => 43,  133 => 38,  124 => 35,  120 => 34,  114 => 33,  108 => 32,  105 => 31,  101 => 30,  92 => 24,  88 => 23,  84 => 22,  77 => 18,  71 => 15,  62 => 9,  58 => 8,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
+        return array (  229 => 121,  225 => 119,  217 => 114,  209 => 109,  206 => 108,  204 => 107,  201 => 106,  191 => 102,  187 => 101,  180 => 100,  175 => 99,  172 => 97,  164 => 92,  156 => 87,  153 => 86,  151 => 85,  148 => 84,  146 => 83,  141 => 41,  138 => 40,  129 => 37,  125 => 36,  119 => 35,  113 => 34,  110 => 33,  106 => 32,  97 => 26,  93 => 25,  89 => 24,  81 => 19,  74 => 15,  70 => 14,  62 => 9,  58 => 8,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends "LIFOClassifBundle::layoutGeneral.html.twig" %}*/
@@ -233,14 +258,16 @@ class __TwigTemplate_868de066f650fe35ea9a1deeb0f88335ee49e79c8d9735dd8a71db65bc9
 /*   {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}*/
 /*   {{ form_errors(form) }}*/
 /*   <fieldset>*/
-/*   	<legend>&nbsp;&nbsp;Décor</legend>*/
+/*   	<legend>&nbsp;&nbsp;Type de numérisations</legend>*/
 /*   	<div class="form-group">*/
-/*   	  <div class="col-sm-3">*/
-/* 	    <b>&nbsp;Type de numérisation&nbsp;&nbsp;</b>*/
+/*   	  <div class="col-sm-4">*/
+/*     	{{ form_widget(form.typeNumerisation) }}*/
 /*         {{ form_errors(form.typeNumerisation) }}*/
 /*    	  </div>*/
-/*  	  <div class="col-sm-4">*/
-/*     	{{ form_widget(form.typeNumerisation) }}*/
+/*       <div class="col-sm-8">*/
+/*         <div class="alert alert-info" role="alert">*/
+/* 		  <strong>Actuellement : </strong>{{ typeNumerisation }}*/
+/* 	    </div>*/
 /*       </div>*/
 /*     </div>*/
 /*   </fieldset>*/
@@ -261,7 +288,9 @@ class __TwigTemplate_868de066f650fe35ea9a1deeb0f88335ee49e79c8d9735dd8a71db65bc9
 /* 		</tr>*/
 /* 	{% endfor %}*/
 /* </table>*/
+/* <p> Nombre de pages : {{ nbPages }}</p>*/
 /* */
+/* {#*/
 /* <ul class="pagination">*/
 /*         */
 /*                             <li class="active">*/
@@ -300,6 +329,44 @@ class __TwigTemplate_868de066f650fe35ea9a1deeb0f88335ee49e79c8d9735dd8a71db65bc9
 /*                 </a>*/
 /*             </li>*/
 /*             </ul>*/
+/* #}*/
+/* {% if nbPages > 0 %}*/
+/*     <ul class="pagination">*/
+/*         {% if page > 1 %}*/
+/*             <li>*/
+/*                 <a href="{{ base_url ~path('lifo_classif_numerisations', {'page': 1}) }}">*/
+/*                     <<*/
+/*                 </a>*/
+/*             </li>*/
+/*             <li>*/
+/*                 <a href="{{ base_url ~path('lifo_classif_numerisations', {'page': page-1}) }}">*/
+/*                     <*/
+/*                 </a>*/
+/*             </li>*/
+/*         {% endif %}*/
 /* */
+/*         {# Affichage de toutes les pages entre p-4 et p+4 sauf si < 1 ou > nbPages #}*/
+/*         {% for p in range(max(page-4, 1), min(page+4, nbPages)) %}*/
+/*             <li {% if p == page %}class="active"{% endif %}>*/
+/*                 <a href="{{ base_url ~path('lifo_classif_numerisations', {'page': p}) }}">*/
+/*                     {{ p }}*/
+/*                 </a>*/
+/*             </li>*/
+/*         {% endfor %}*/
+/* */
+/*         {% if page < nbPages %}*/
+/*             <li>*/
+/*                 <a href="{{ base_url ~path('lifo_classif_numerisations', {'page': page+1}) }}">*/
+/*                     >*/
+/*                 </a>*/
+/*             </li>*/
+/*             <li>*/
+/*                 <a href="{{ base_url ~path('lifo_classif_numerisations', {'page': nbPages}) }}">*/
+/*                     >>*/
+/*                 </a>*/
+/*             </li>*/
+/*         {% endif %}*/
+/*     </ul>*/
+/* {% endif %}*/
 /* */
 /* {% endblock %}*/

@@ -15,8 +15,8 @@ class __TwigTemplate_e2f9d315c11abcd3c8a504c5916de60e1d107e99fced29239c6d93409ba
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_81254f99deb2b67222b39b07408dfd493ece797c0cc3d384c0174a2d98e1535c = $this->env->getExtension("native_profiler");
-        $__internal_81254f99deb2b67222b39b07408dfd493ece797c0cc3d384c0174a2d98e1535c->enter($__internal_81254f99deb2b67222b39b07408dfd493ece797c0cc3d384c0174a2d98e1535c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Icon/logger.svg"));
+        $__internal_8532e241e8f34985f550075553bc935e142ed63202f9f2fef168476043b6f63a = $this->env->getExtension("native_profiler");
+        $__internal_8532e241e8f34985f550075553bc935e142ed63202f9f2fef168476043b6f63a->enter($__internal_8532e241e8f34985f550075553bc935e142ed63202f9f2fef168476043b6f63a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Icon/logger.svg"));
 
         // line 1
         echo "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" enable-background=\"new 0 0 24 24\" xml:space=\"preserve\">
@@ -28,7 +28,7 @@ class __TwigTemplate_e2f9d315c11abcd3c8a504c5916de60e1d107e99fced29239c6d93409ba
 </svg>
 ";
         
-        $__internal_81254f99deb2b67222b39b07408dfd493ece797c0cc3d384c0174a2d98e1535c->leave($__internal_81254f99deb2b67222b39b07408dfd493ece797c0cc3d384c0174a2d98e1535c_prof);
+        $__internal_8532e241e8f34985f550075553bc935e142ed63202f9f2fef168476043b6f63a->leave($__internal_8532e241e8f34985f550075553bc935e142ed63202f9f2fef168476043b6f63a_prof);
 
     }
 
