@@ -4,8 +4,8 @@
 
 {% block LIFOClassif_body %}
 
-	<a class="btn btn-primary" href="{{ path('lifo_classif_tesson_exporter', {'id': tesson.id}) }}">Exporter</a>
-	<a class="btn btn-primary" href="{{ path('lifo_classif_tesson_modifier', {'id': tesson.id}) }}">Modifier</a>
+	<a class="btn btn-primary" href="{{ base_url ~path('lifo_classif_tesson_exporter', {'id': tesson.id}) }}">Exporter</a>
+	<a class="btn btn-primary" href="{{ base_url ~path('lifo_classif_tesson_modifier', {'id': tesson.id}) }}">Modifier</a>
 	<br /><br/>
 	<table class="table table-bordered table-striped table-hover">
 		<thead><tr><td colspan = "2" class="warning" align="center"><b>Description du tesson</b></td></tr></thead>
@@ -97,7 +97,7 @@
 						<img src="{{ asset(numerisation.webPath) }}" width="400" alt="{{ numerisation.alt }}"/>
 						</a>
 						
-						<a href="{{ path('lifo_classif_telechargement_numerisation', {'id': numerisation.id}) }}">Télécharger l'image</a></td>
+						<a href="{{ base_url ~path('lifo_classif_telechargement_numerisation', {'id': numerisation.id}) }}">Télécharger l'image</a></td>
 					</tr>
 				{% endfor %}
 			{% else %}

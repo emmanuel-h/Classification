@@ -14,7 +14,7 @@
     <div class="form-group">
   	  <div class="col-sm-6">
 	    <b>&nbsp;Année de la découverte</b>
-		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Année durant laquelle le tesson a été découvert')" align = "right">
+		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Année durant laquelle le tesson a été découvert')" align = "right">
         {{ form_errors(form.anneeDecouverte) }}
    	  </div>
  	  <div class="col-sm-6">
@@ -31,12 +31,12 @@
     <div class="form-group">
   	  <div class="col-sm-6">
 	    <b>&nbsp;Lot/Individu</b>
-		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Y a-t-il un ou plusieurs tessons recevant ce même décor ?')" align = "right">
+		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Y a-t-il un ou plusieurs tessons recevant ce même décor ?')" align = "right">
         {{ form_errors(form.lotIndividu) }}
    	  </div>
  	  <div class="col-sm-6">
 	    <b>&nbsp;Numéro de tombe</b>
-		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'A renseigner s\'il a été trouvé dans une sépulture')" align = "right">
+		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'A renseigner s\'il a été trouvé dans une sépulture')" align = "right">
     	{{ form_errors(form.numTombe) }}
   	  </div>
       <div class="col-sm-6">
@@ -49,7 +49,7 @@
     <div class="form-group">
   	  <div class="col-sm-6">
 	    <b>&nbsp;Fait</b>
-		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Numéro de structure où le tesson a été trouvé,<br />regroupant un ensemble chrono-stratigraphique')" align = "right">
+		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Numéro de structure où le tesson a été trouvé,<br />regroupant un ensemble chrono-stratigraphique')" align = "right">
         {{ form_errors(form.fait) }}
    	  </div>
  	  <div class="col-sm-6">
@@ -69,12 +69,12 @@
   	<div class="form-group">
   	  <div class="col-sm-6">
 	    <b>&nbsp;Largeur</b>
-		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Hauteur en centimètres du décor')" align = "right">
+		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Hauteur en centimètres du décor')" align = "right">
         {{ form_errors(form.largeur) }}
    	  </div>
  	  <div class="col-sm-6">
 	    <b>&nbsp;Longueur</b>
-		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Longueur en centimètres du décor')" align = "right">
+		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Longueur en centimètres du décor')" align = "right">
     	{{ form_errors(form.longueur) }}
   	  </div>
   	  <div class="col-sm-1">
@@ -118,17 +118,17 @@
     <div class="form-group">
   	  <div class="col-sm-4">
 	    <b>&nbsp;Code INSEE</b>
-		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Code INSEE à 5 chiffres de la commune')" align = "right">
+		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Code INSEE à 5 chiffres de la commune')" align = "right">
         {{ form_errors(form.site.codeINSEE) }}
    	  </div>
  	  <div class="col-sm-4">
 	    <b>&nbsp;Numéro de site</b>
-		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Numéro du site fouillé de la commune')" align = "right">
+		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Numéro du site fouillé de la commune')" align = "right">
     	{{ form_errors(form.site.numSiteCommune) }}
   	  </div>
  	  <div class="col-sm-4">
 	    <b>&nbsp;Zone</b>
-		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Zone du site fouillée')" align = "right">
+		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Zone du site fouillée')" align = "right">
     	{{ form_errors(form.zone.numero) }}
   	  </div>
       <div class="col-sm-4">
@@ -144,7 +144,7 @@
     <div class="form-group">
   	  <div class="col-sm-4">
 	    <b>&nbsp;Nom de l'US</b>
-		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Unité stratigraphique')" align = "right">
+		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Unité stratigraphique')" align = "right">
         {{ form_errors(form.US.nom) }}
    	  </div>
  	  <div class="col-sm-4">
@@ -153,7 +153,7 @@
   	  </div>
  	  <div class="col-sm-4">
 	    <b>&nbsp;Numéro d'isolation</b>
-		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Permet l\'unicité d\'un tesson<br />une fois couplé à un site et un us')" align = "right">
+		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Permet l\'unicité d\'un tesson<br />une fois couplé à un site et un us')" align = "right">
     	{{ form_errors(form.numIsolation) }}
   	  </div>
       <div class="col-sm-4">
@@ -257,7 +257,7 @@
   	<div class="form-group">
   	  <div class="col-sm-6">
 	    <b>&nbsp;Nom</b>
-		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Code alphanumérique de la molette')" align="right">
+		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Code alphanumérique de la molette')" align="right">
         {{ form_errors(form.tessonMolette.molette.nom) }}
    	  </div>
  	  <div class="col-sm-6">
@@ -274,12 +274,12 @@
   	<div class="form-group">
   	  <div class="col-sm-6">
 	    <b>&nbsp;Égal ou équivalent&nbsp;&nbsp;</b>
-		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'<b>egal</b> est une correspondance sur le répertoire<br />tandis qu\'<b>equi</b> s\'en rapproche seulement')">
+		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'<b>egal</b> est une correspondance sur le répertoire<br />tandis qu\'<b>equi</b> s\'en rapproche seulement')">
         {{ form_errors(form.tessonMolette.egal) }}
    	  </div>
  	  <div class="col-sm-6">
 	    <b>&nbsp;Référence&nbsp;&nbsp;</b>
-		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Matrice complète ou réputée comme telle<br />qui servira de référence pour l\'appariement')">
+		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Matrice complète ou réputée comme telle<br />qui servira de référence pour l\'appariement')">
     	{{ form_errors(form.tessonMolette.molette.reference) }}
  	  </div>
       <div class="col-sm-6">

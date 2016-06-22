@@ -15,8 +15,8 @@ class __TwigTemplate_1b1d5f0ad33cd2c894f45dca99b2308a62f38d977c6837924b3e6b39fa0
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5fcd81b15895a9efe681839c414d2a2d1848e9f8353dd84efbcb032c1dd0367e = $this->env->getExtension("native_profiler");
-        $__internal_5fcd81b15895a9efe681839c414d2a2d1848e9f8353dd84efbcb032c1dd0367e->enter($__internal_5fcd81b15895a9efe681839c414d2a2d1848e9f8353dd84efbcb032c1dd0367e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/pagination.html.twig"));
+        $__internal_4d799fccf8b0cfe5e48886a68ecbdd1ea88f144f60cdd2ec4c5da851bcc1b355 = $this->env->getExtension("native_profiler");
+        $__internal_4d799fccf8b0cfe5e48886a68ecbdd1ea88f144f60cdd2ec4c5da851bcc1b355->enter($__internal_4d799fccf8b0cfe5e48886a68ecbdd1ea88f144f60cdd2ec4c5da851bcc1b355_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/pagination.html.twig"));
 
         // line 1
         if (($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nbPages", array()) > 0)) {
@@ -29,7 +29,7 @@ class __TwigTemplate_1b1d5f0ad33cd2c894f45dca99b2308a62f38d977c6837924b3e6b39fa0
                 echo "            <li>
                 <a href=\"";
                 // line 5
-                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nomRoute", array()), twig_array_merge($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "paramsRoute", array()), array("page" => 1))), "html", null, true);
+                echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nomRoute", array()), twig_array_merge($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "paramsRoute", array()), array("page" => 1)))), "html", null, true);
                 echo "\">
                     <<
                 </a>
@@ -37,8 +37,8 @@ class __TwigTemplate_1b1d5f0ad33cd2c894f45dca99b2308a62f38d977c6837924b3e6b39fa0
             <li>
                 <a href=\"";
                 // line 10
-                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nomRoute", array()), twig_array_merge($this->getAttribute(                // line 11
-(isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "paramsRoute", array()), array("page" => ($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "page", array()) - 1)))), "html", null, true);
+                echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nomRoute", array()), twig_array_merge($this->getAttribute(                // line 11
+(isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "paramsRoute", array()), array("page" => ($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "page", array()) - 1))))), "html", null, true);
                 echo "\">
                     <
                 </a>
@@ -61,7 +61,7 @@ class __TwigTemplate_1b1d5f0ad33cd2c894f45dca99b2308a62f38d977c6837924b3e6b39fa0
                 echo ">
                 <a href=\"";
                 // line 20
-                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nomRoute", array()), twig_array_merge($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "paramsRoute", array()), array("page" => $context["p"]))), "html", null, true);
+                echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nomRoute", array()), twig_array_merge($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "paramsRoute", array()), array("page" => $context["p"])))), "html", null, true);
                 echo "\">
                     ";
                 // line 21
@@ -83,8 +83,8 @@ class __TwigTemplate_1b1d5f0ad33cd2c894f45dca99b2308a62f38d977c6837924b3e6b39fa0
                 echo "            <li>
                 <a href=\"";
                 // line 28
-                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nomRoute", array()), twig_array_merge($this->getAttribute(                // line 29
-(isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "paramsRoute", array()), array("page" => ($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "page", array()) + 1)))), "html", null, true);
+                echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nomRoute", array()), twig_array_merge($this->getAttribute(                // line 29
+(isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "paramsRoute", array()), array("page" => ($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "page", array()) + 1))))), "html", null, true);
                 echo "\">
                     >
                 </a>
@@ -92,8 +92,8 @@ class __TwigTemplate_1b1d5f0ad33cd2c894f45dca99b2308a62f38d977c6837924b3e6b39fa0
             <li>
                 <a href=\"";
                 // line 34
-                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nomRoute", array()), twig_array_merge($this->getAttribute(                // line 35
-(isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "paramsRoute", array()), array("page" => $this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nbPages", array())))), "html", null, true);
+                echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nomRoute", array()), twig_array_merge($this->getAttribute(                // line 35
+(isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "paramsRoute", array()), array("page" => $this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")), "nbPages", array()))))), "html", null, true);
                 echo "\">
                     >>
                 </a>
@@ -105,7 +105,7 @@ class __TwigTemplate_1b1d5f0ad33cd2c894f45dca99b2308a62f38d977c6837924b3e6b39fa0
 ";
         }
         
-        $__internal_5fcd81b15895a9efe681839c414d2a2d1848e9f8353dd84efbcb032c1dd0367e->leave($__internal_5fcd81b15895a9efe681839c414d2a2d1848e9f8353dd84efbcb032c1dd0367e_prof);
+        $__internal_4d799fccf8b0cfe5e48886a68ecbdd1ea88f144f60cdd2ec4c5da851bcc1b355->leave($__internal_4d799fccf8b0cfe5e48886a68ecbdd1ea88f144f60cdd2ec4c5da851bcc1b355_prof);
 
     }
 
@@ -128,12 +128,12 @@ class __TwigTemplate_1b1d5f0ad33cd2c894f45dca99b2308a62f38d977c6837924b3e6b39fa0
 /*     <ul class="pagination">*/
 /*         {% if pagination.page > 1 %}*/
 /*             <li>*/
-/*                 <a href="{{ path(pagination.nomRoute, pagination.paramsRoute|merge({'page': 1})) }}">*/
+/*                 <a href="{{ base_url ~path(pagination.nomRoute, pagination.paramsRoute|merge({'page': 1})) }}">*/
 /*                     <<*/
 /*                 </a>*/
 /*             </li>*/
 /*             <li>*/
-/*                 <a href="{{ path(pagination.nomRoute,*/
+/*                 <a href="{{ base_url ~path(pagination.nomRoute,*/
 /*                 pagination.paramsRoute|merge({'page': pagination.page-1})) }}">*/
 /*                     <*/
 /*                 </a>*/
@@ -143,7 +143,7 @@ class __TwigTemplate_1b1d5f0ad33cd2c894f45dca99b2308a62f38d977c6837924b3e6b39fa0
 /*         {# Affichage de toutes les pages entre p-4 et p+4 sauf si < 1 ou > nbPages #}*/
 /*         {% for p in range(max(pagination.page-4, 1), min(pagination.page+4, pagination.nbPages)) %}*/
 /*             <li {% if p == pagination.page %}class="active"{% endif %}>*/
-/*                 <a href="{{ path(pagination.nomRoute, pagination.paramsRoute|merge({'page': p})) }}">*/
+/*                 <a href="{{ base_url ~path(pagination.nomRoute, pagination.paramsRoute|merge({'page': p})) }}">*/
 /*                     {{ p }}*/
 /*                 </a>*/
 /*             </li>*/
@@ -151,13 +151,13 @@ class __TwigTemplate_1b1d5f0ad33cd2c894f45dca99b2308a62f38d977c6837924b3e6b39fa0
 /* */
 /*         {% if pagination.page < pagination.nbPages %}*/
 /*             <li>*/
-/*                 <a href="{{ path(pagination.nomRoute,*/
+/*                 <a href="{{ base_url ~path(pagination.nomRoute,*/
 /*                 pagination.paramsRoute|merge({'page': pagination.page+1})) }}">*/
 /*                     >*/
 /*                 </a>*/
 /*             </li>*/
 /*             <li>*/
-/*                 <a href="{{ path(pagination.nomRoute,*/
+/*                 <a href="{{ base_url ~path(pagination.nomRoute,*/
 /*                 pagination.paramsRoute|merge({'page': pagination.nbPages})) }}">*/
 /*                     >>*/
 /*                 </a>*/

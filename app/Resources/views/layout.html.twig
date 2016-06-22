@@ -8,18 +8,18 @@
 <meta name="author" content="">
 <link rel="icon" href="../../favicon.ico">
 <title>{% block title %}Classification{% endblock %}</title>
-<link href=" {{ asset('bootstrap/css/bootstrap.min.css') }}"
+<link href=" {{ base_url~asset('bootstrap/css/bootstrap.min.css') }}"
 	rel="stylesheet">
-<link href=" {{ asset ('bootstrap/css/bootstrap-theme.min.css') }}"
+<link href=" {{ base_url ~asset ('bootstrap/css/bootstrap-theme.min.css') }}"
 	rel="stylesheet">
-<link href=" {{ asset ('styles/layout.css') }}" rel="stylesheet" />
-<link href=" {{ asset ('styles/menu.css') }}" rel="stylesheet" />
-<link href=" {{ asset ('styles/table.css') }}" rel="stylesheet" />
-<link rel="stylesheet" href=" {{ asset ('fancybox/source/jquery.fancybox.css') }}" type="text/css" media="screen" />
-<script type="text/javascript" src=" {{ asset('bootstrap/js/jquery.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('fancybox/source/jquery.fancybox.pack.js') }}"></script>
-<script src=" {{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
-<script src=" {{ asset('bootstrap/js/foToolTip.js') }}"></script>
+<link href=" {{ base_url ~asset ('styles/layout.css') }}" rel="stylesheet" />
+<link href=" {{ base_url ~asset ('styles/menu.css') }}" rel="stylesheet" />
+<link href=" {{ base_url ~asset ('styles/table.css') }}" rel="stylesheet" />
+<link rel="stylesheet" href=" {{ base_url ~asset ('fancybox/source/jquery.fancybox.css') }}" type="text/css" media="screen" />
+<script type="text/javascript" src=" {{ base_url ~asset('bootstrap/js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ base_url ~asset('fancybox/source/jquery.fancybox.pack.js') }}"></script>
+<script src=" {{ base_url ~asset('bootstrap/js/bootstrap.min.js') }}"></script>
+<script src=" {{ base_url ~asset('bootstrap/js/foToolTip.js') }}"></script>
 </head>
 <body>
 
@@ -27,15 +27,15 @@
 
 		<div class="container" id="menu_top">
 					<ul class="nav navbar-nav">
-						<li><a href="{{ path('lifo_classif_upload') }}">Nouveau</a></li>
-						<li><a href="{{ path('lifo_classif_recherche') }}">Recherche</a></li>
-						<li><a href="{{ path('lifo_classif_classification') }}">Classification</a></li>
-						<li><a href="{{ path('lifo_classif_numerisations') }}">Numérisations</a></li>
+						<li><a href="{{ base_url ~path('lifo_classif_upload') }}">Nouveau</a></li>
+						<li><a href="{{ base_url ~path('lifo_classif_recherche') }}">Recherche</a></li>
+						<li><a href="{{ base_url ~path('lifo_classif_classification') }}">Classification</a></li>
+						<li><a href="{{ base_url ~path('lifo_classif_numerisations') }}">Numérisations</a></li>
 						{% if is_granted('ROLE_ARCHEOLOGUE') %}
 							<li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="{{ path('lifo_classif_parametres_typeDecor') }}">Paramètres<b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li><a href="{{ path('lifo_classif_parametres_typeDecor') }}">Type de décor</a></li>
-									<li><a href="{{ path('lifo_classif_parametres_positionDecor') }}">Position de décor</a></li>
+									<li><a href="{{ base_url ~path('lifo_classif_parametres_typeDecor') }}">Type de décor</a></li>
+									<li><a href="{{ base_url ~path('lifo_classif_parametres_positionDecor') }}">Position de décor</a></li>
 								</ul>
 							</li>
 						{% endif %}
@@ -44,15 +44,15 @@
 								<ul class="dropdown-menu">
 					                <li role="separator" class="divider"></li>
 					                <li class="dropdown-header">Utilisateur</li>
-									<li><a href="{{ path('lifo_classif_admin_utilisateur_afficherTous') }}">Afficher la liste</a></li>
-									<li><a href="{{ path('lifo_classif_admin_utilisateur') }}">Ajouter</a></li>
-									<li><a href="{{ path('lifo_classif_admin_utilisateur_rechercher') }}">Rechercher</a></li>
+									<li><a href="{{ base_url ~path('lifo_classif_admin_utilisateur_afficherTous') }}">Afficher la liste</a></li>
+									<li><a href="{{ base_url ~path('lifo_classif_admin_utilisateur') }}">Ajouter</a></li>
+									<li><a href="{{ base_url ~path('lifo_classif_admin_utilisateur_rechercher') }}">Rechercher</a></li>
 								</ul>
 							</li>
 						{% endif %}
 						</ul>
             			<ul class="nav navbar-nav navbar-right">
-						<li><a href="{{ path('logout') }}">Déconnexion</a></li>
+						<li><a href="{{ base_url ~path('logout') }}">Déconnexion</a></li>
 					</ul>
 			</div>
 		</div>

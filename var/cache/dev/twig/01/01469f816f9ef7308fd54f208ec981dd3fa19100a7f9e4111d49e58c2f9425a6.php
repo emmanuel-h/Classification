@@ -15,8 +15,8 @@ class __TwigTemplate_cc209a980d5ec969f75d752fbf3846ef146b84dc96a9151baa6c59c1962
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_71e2d680cc9da48c77f2fc69e5db9068005e910f42542b764bd2586b8e5107d3 = $this->env->getExtension("native_profiler");
-        $__internal_71e2d680cc9da48c77f2fc69e5db9068005e910f42542b764bd2586b8e5107d3->enter($__internal_71e2d680cc9da48c77f2fc69e5db9068005e910f42542b764bd2586b8e5107d3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Security:login.html.twig"));
+        $__internal_37508b9a8a5b8a87dccecd1faf3de1b237a739a87aef303651d8664938f5545c = $this->env->getExtension("native_profiler");
+        $__internal_37508b9a8a5b8a87dccecd1faf3de1b237a739a87aef303651d8664938f5545c->enter($__internal_37508b9a8a5b8a87dccecd1faf3de1b237a739a87aef303651d8664938f5545c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Security:login.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -32,7 +32,6 @@ class __TwigTemplate_cc209a980d5ec969f75d752fbf3846ef146b84dc96a9151baa6c59c1962
 
     <title>Authentification</title>
 
-    <!-- Bootstrap core CSS -->
 \t<link href=\"../bootstrap/css/bootstrap.min.css\"
 \trel=\"stylesheet\">
 \t
@@ -45,8 +44,8 @@ class __TwigTemplate_cc209a980d5ec969f75d752fbf3846ef146b84dc96a9151baa6c59c1962
     <div class=\"container\">
 
       <form class=\"form-signin\" action=\"";
-        // line 26
-        echo $this->env->getExtension('routing')->getPath("login_check");
+        // line 25
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("login_check")), "html", null, true);
         echo "\" method=\"post\">
         <h2 class=\"form-signin-heading\">S'authentifier</h2>
         <label for=\"username\" class=\"sr-only\">Nom d'utilisateur</label>
@@ -56,13 +55,13 @@ class __TwigTemplate_cc209a980d5ec969f75d752fbf3846ef146b84dc96a9151baa6c59c1962
         <button class=\"btn btn-lg btn-primary btn-block\" type=\"submit\">Connexion</button>
       </form>
 
-    </div> <!-- /container -->
+    </div>
 
   </body>
 </html>
 ";
         
-        $__internal_71e2d680cc9da48c77f2fc69e5db9068005e910f42542b764bd2586b8e5107d3->leave($__internal_71e2d680cc9da48c77f2fc69e5db9068005e910f42542b764bd2586b8e5107d3_prof);
+        $__internal_37508b9a8a5b8a87dccecd1faf3de1b237a739a87aef303651d8664938f5545c->leave($__internal_37508b9a8a5b8a87dccecd1faf3de1b237a739a87aef303651d8664938f5545c_prof);
 
     }
 
@@ -78,7 +77,7 @@ class __TwigTemplate_cc209a980d5ec969f75d752fbf3846ef146b84dc96a9151baa6c59c1962
 
     public function getDebugInfo()
     {
-        return array (  49 => 26,  22 => 1,);
+        return array (  48 => 25,  22 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -94,7 +93,6 @@ class __TwigTemplate_cc209a980d5ec969f75d752fbf3846ef146b84dc96a9151baa6c59c1962
 /* */
 /*     <title>Authentification</title>*/
 /* */
-/*     <!-- Bootstrap core CSS -->*/
 /* 	<link href="../bootstrap/css/bootstrap.min.css"*/
 /* 	rel="stylesheet">*/
 /* 	*/
@@ -106,7 +104,7 @@ class __TwigTemplate_cc209a980d5ec969f75d752fbf3846ef146b84dc96a9151baa6c59c1962
 /* */
 /*     <div class="container">*/
 /* */
-/*       <form class="form-signin" action="{{ path('login_check') }}" method="post">*/
+/*       <form class="form-signin" action="{{ base_url ~path('login_check') }}" method="post">*/
 /*         <h2 class="form-signin-heading">S'authentifier</h2>*/
 /*         <label for="username" class="sr-only">Nom d'utilisateur</label>*/
 /*         <input type="text" id="username" name="_username" class="form-control" placeholder="Nom d'utilisateur" required autofocus>*/
@@ -115,7 +113,7 @@ class __TwigTemplate_cc209a980d5ec969f75d752fbf3846ef146b84dc96a9151baa6c59c1962
 /*         <button class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>*/
 /*       </form>*/
 /* */
-/*     </div> <!-- /container -->*/
+/*     </div>*/
 /* */
 /*   </body>*/
 /* </html>*/

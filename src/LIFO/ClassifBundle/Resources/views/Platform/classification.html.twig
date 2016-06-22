@@ -61,7 +61,7 @@
 	
     {% for tesson in tessons %}
 		<tr>
-			<td><a href="{{ path('lifo_classif_tesson', {'id': tesson.id}) }}">{{ tesson.id }}</a></td>
+			<td><a href="{{ base_url ~path('lifo_classif_tesson', {'id': tesson.id}) }}">{{ tesson.id }}</a></td>
 			{% if tesson.propositionClasse is not empty %}
 				<td>
 				{% for propClasse in tesson.propositionClasse %}
@@ -151,7 +151,7 @@
 	});
 	
 	function modifierClasse(sel){
-		$.post("{{ path('lifo_classif_classification_modifier') }}", {selID:sel.name, classe:sel.value});
+		$.post("{{ base_url ~path('lifo_classif_classification_modifier') }}", {selID:sel.name, classe:sel.value});
 	};
 	</script>
 

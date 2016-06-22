@@ -10,7 +10,7 @@
 	<tbody>
     {% for utilisateur in utilisateurs %}
 		<tr>
-			<td><a href="{{ path('lifo_classif_admin_utilisateur_afficher', {'id': utilisateur.id}) }}">{{utilisateur.username}}</a></td>
+			<td><a href="{{ base_url ~path('lifo_classif_admin_utilisateur_afficher', {'id': utilisateur.id}) }}">{{utilisateur.username}}</a></td>
 			<td>{{ utilisateur.rolesToString }}</td>
 		</tr>
     {% endfor %}

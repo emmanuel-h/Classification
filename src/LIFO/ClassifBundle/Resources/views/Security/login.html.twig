@@ -11,7 +11,6 @@
 
     <title>Authentification</title>
 
-    <!-- Bootstrap core CSS -->
 	<link href="../bootstrap/css/bootstrap.min.css"
 	rel="stylesheet">
 	
@@ -23,7 +22,7 @@
 
     <div class="container">
 
-      <form class="form-signin" action="{{ path('login_check') }}" method="post">
+      <form class="form-signin" action="{{ base_url ~path('login_check') }}" method="post">
         <h2 class="form-signin-heading">S'authentifier</h2>
         <label for="username" class="sr-only">Nom d'utilisateur</label>
         <input type="text" id="username" name="_username" class="form-control" placeholder="Nom d'utilisateur" required autofocus>
@@ -32,7 +31,7 @@
         <button class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>
       </form>
 
-    </div> <!-- /container -->
+    </div>
 
   </body>
 </html>

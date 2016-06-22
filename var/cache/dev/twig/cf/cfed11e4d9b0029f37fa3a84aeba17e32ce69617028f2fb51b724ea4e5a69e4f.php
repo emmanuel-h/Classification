@@ -22,33 +22,33 @@ class __TwigTemplate_d48983bfe3c4f8c570de11499660b9d824df3625695829ff0a1694ec91f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_328d767fc29a61f319f20e438137a10f53dbea2c55eab7653c11eb1a666dab69 = $this->env->getExtension("native_profiler");
-        $__internal_328d767fc29a61f319f20e438137a10f53dbea2c55eab7653c11eb1a666dab69->enter($__internal_328d767fc29a61f319f20e438137a10f53dbea2c55eab7653c11eb1a666dab69_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/classification.html.twig"));
+        $__internal_191b424c4fdff462bffae8b77f06848a93ef3a8f25a991ee4fdaa1ccf4ca7d1b = $this->env->getExtension("native_profiler");
+        $__internal_191b424c4fdff462bffae8b77f06848a93ef3a8f25a991ee4fdaa1ccf4ca7d1b->enter($__internal_191b424c4fdff462bffae8b77f06848a93ef3a8f25a991ee4fdaa1ccf4ca7d1b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/classification.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_328d767fc29a61f319f20e438137a10f53dbea2c55eab7653c11eb1a666dab69->leave($__internal_328d767fc29a61f319f20e438137a10f53dbea2c55eab7653c11eb1a666dab69_prof);
+        $__internal_191b424c4fdff462bffae8b77f06848a93ef3a8f25a991ee4fdaa1ccf4ca7d1b->leave($__internal_191b424c4fdff462bffae8b77f06848a93ef3a8f25a991ee4fdaa1ccf4ca7d1b_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_965b25c9d251d2f80191f0cddcfff75a6ddb68f1ea0683f47a61b928c5fd843c = $this->env->getExtension("native_profiler");
-        $__internal_965b25c9d251d2f80191f0cddcfff75a6ddb68f1ea0683f47a61b928c5fd843c->enter($__internal_965b25c9d251d2f80191f0cddcfff75a6ddb68f1ea0683f47a61b928c5fd843c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_2bad843858e5f86ef1f446752c05e3dcfa26ce9a0a0556434ba51100bf7ecc0b = $this->env->getExtension("native_profiler");
+        $__internal_2bad843858e5f86ef1f446752c05e3dcfa26ce9a0a0556434ba51100bf7ecc0b->enter($__internal_2bad843858e5f86ef1f446752c05e3dcfa26ce9a0a0556434ba51100bf7ecc0b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Classification";
         
-        $__internal_965b25c9d251d2f80191f0cddcfff75a6ddb68f1ea0683f47a61b928c5fd843c->leave($__internal_965b25c9d251d2f80191f0cddcfff75a6ddb68f1ea0683f47a61b928c5fd843c_prof);
+        $__internal_2bad843858e5f86ef1f446752c05e3dcfa26ce9a0a0556434ba51100bf7ecc0b->leave($__internal_2bad843858e5f86ef1f446752c05e3dcfa26ce9a0a0556434ba51100bf7ecc0b_prof);
 
     }
 
     // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_1d7fdf982e84cfef6e8030c14a5aae9beed1af3b27b29c008aa867a9d640a713 = $this->env->getExtension("native_profiler");
-        $__internal_1d7fdf982e84cfef6e8030c14a5aae9beed1af3b27b29c008aa867a9d640a713->enter($__internal_1d7fdf982e84cfef6e8030c14a5aae9beed1af3b27b29c008aa867a9d640a713_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_aa3d7e154b1e6bebd6857effa0ad4edc8f501ddc098a64c4b722a6241ef69140 = $this->env->getExtension("native_profiler");
+        $__internal_aa3d7e154b1e6bebd6857effa0ad4edc8f501ddc098a64c4b722a6241ef69140->enter($__internal_aa3d7e154b1e6bebd6857effa0ad4edc8f501ddc098a64c4b722a6241ef69140_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 6
         echo "
@@ -173,7 +173,7 @@ class __TwigTemplate_d48983bfe3c4f8c570de11499660b9d824df3625695829ff0a1694ec91f
                 echo "\t\t<tr>
 \t\t\t<td><a href=\"";
                 // line 64
-                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("lifo_classif_tesson", array("id" => $this->getAttribute($context["tesson"], "id", array()))), "html", null, true);
+                echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_tesson", array("id" => $this->getAttribute($context["tesson"], "id", array())))), "html", null, true);
                 echo "\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["tesson"], "id", array()), "html", null, true);
                 echo "</a></td>
@@ -437,14 +437,14 @@ class __TwigTemplate_d48983bfe3c4f8c570de11499660b9d824df3625695829ff0a1694ec91f
 \tfunction modifierClasse(sel){
 \t\t\$.post(\"";
         // line 154
-        echo $this->env->getExtension('routing')->getPath("lifo_classif_classification_modifier");
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_classification_modifier")), "html", null, true);
         echo "\", {selID:sel.name, classe:sel.value});
 \t};
 \t</script>
 
 ";
         
-        $__internal_1d7fdf982e84cfef6e8030c14a5aae9beed1af3b27b29c008aa867a9d640a713->leave($__internal_1d7fdf982e84cfef6e8030c14a5aae9beed1af3b27b29c008aa867a9d640a713_prof);
+        $__internal_aa3d7e154b1e6bebd6857effa0ad4edc8f501ddc098a64c4b722a6241ef69140->leave($__internal_aa3d7e154b1e6bebd6857effa0ad4edc8f501ddc098a64c4b722a6241ef69140_prof);
 
     }
 
@@ -526,7 +526,7 @@ class __TwigTemplate_d48983bfe3c4f8c570de11499660b9d824df3625695829ff0a1694ec91f
 /* 	*/
 /*     {% for tesson in tessons %}*/
 /* 		<tr>*/
-/* 			<td><a href="{{ path('lifo_classif_tesson', {'id': tesson.id}) }}">{{ tesson.id }}</a></td>*/
+/* 			<td><a href="{{ base_url ~path('lifo_classif_tesson', {'id': tesson.id}) }}">{{ tesson.id }}</a></td>*/
 /* 			{% if tesson.propositionClasse is not empty %}*/
 /* 				<td>*/
 /* 				{% for propClasse in tesson.propositionClasse %}*/
@@ -616,7 +616,7 @@ class __TwigTemplate_d48983bfe3c4f8c570de11499660b9d824df3625695829ff0a1694ec91f
 /* 	});*/
 /* 	*/
 /* 	function modifierClasse(sel){*/
-/* 		$.post("{{ path('lifo_classif_classification_modifier') }}", {selID:sel.name, classe:sel.value});*/
+/* 		$.post("{{ base_url ~path('lifo_classif_classification_modifier') }}", {selID:sel.name, classe:sel.value});*/
 /* 	};*/
 /* 	</script>*/
 /* */

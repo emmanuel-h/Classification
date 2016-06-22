@@ -10,11 +10,11 @@
   <fieldset>
   	<legend>&nbsp;&nbsp;Décor</legend>
   	<div class="form-group">
-  	  <div class="col-sm-6">
+  	  <div class="col-sm-3">
 	    <b>&nbsp;Type de numérisation&nbsp;&nbsp;</b>
         {{ form_errors(form.typeNumerisation) }}
    	  </div>
- 	  <div class="col-sm-6">
+ 	  <div class="col-sm-4">
     	{{ form_widget(form.typeNumerisation) }}
       </div>
     </div>
@@ -29,7 +29,7 @@
 	<tbody>
 	 {% for tesson in tessons %}
 		<tr>
-			<td><a href="{{ path('lifo_classif_tesson', {'id': tesson.t_id}) }}">{{ tesson.t_id }}</a></td>
+			<td><a href="{{ base_url ~path('lifo_classif_tesson', {'id': tesson.t_id}) }}">{{ tesson.t_id }}</a></td>
 			<td>{{ tesson.site_codeINSEE|default('NO') }}&nbsp;{{ tesson.site_numSiteCommune|default('NO') }}</td>
 			<td>{{ tesson.u_s_nom|default('NO') }}</td>
 			<td>{{ tesson.t_numIsolation }}</td>
@@ -40,27 +40,27 @@
 <ul class="pagination">
         
                             <li class="active">
-                <a href=" {{ path('lifo_classif_numerisations', {'page': page}) }}">
+                <a href=" {{ base_url ~path('lifo_classif_numerisations', {'page': page}) }}">
                 	{{ page }}
                 </a>
             </li>
                <li>
-                <a href=" {{ path('lifo_classif_numerisations', {'page': page+1}) }}">
+                <a href=" {{ base_url ~path('lifo_classif_numerisations', {'page': page+1}) }}">
                 	{{ page+1 }}
                 </a>
             </li>
                <li>
-                <a href=" {{ path('lifo_classif_numerisations', {'page': page+2}) }}">
+                <a href=" {{ base_url ~path('lifo_classif_numerisations', {'page': page+2}) }}">
                 	{{ page+2 }}
                 </a>
             </li>
                <li>
-                <a href=" {{ path('lifo_classif_numerisations', {'page': page+3}) }}">
+                <a href=" {{ base_url ~path('lifo_classif_numerisations', {'page': page+3}) }}">
                 	{{ page+3 }}
                 </a>
             </li>
                <li>
-                <a href=" {{ path('lifo_classif_numerisations', {'page': page+4}) }}">
+                <a href=" {{ base_url ~path('lifo_classif_numerisations', {'page': page+4}) }}">
                 	{{ page+4 }}
                 </a>
             </li>

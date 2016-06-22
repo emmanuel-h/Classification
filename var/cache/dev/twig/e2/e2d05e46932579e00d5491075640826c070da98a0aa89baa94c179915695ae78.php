@@ -22,43 +22,43 @@ class __TwigTemplate_15d248a09ffea0fb775fe3f599fcd38529064bdfc740d5528a4417b15b6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_bf23ffcb029cbc6645abd6e96f34a429599ddbad5f40bd2936248315936fb282 = $this->env->getExtension("native_profiler");
-        $__internal_bf23ffcb029cbc6645abd6e96f34a429599ddbad5f40bd2936248315936fb282->enter($__internal_bf23ffcb029cbc6645abd6e96f34a429599ddbad5f40bd2936248315936fb282_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:tesson.html.twig"));
+        $__internal_dc8950e82536d60c77da123cd2f53db5ee98347eb9f360ff2f2401aca83788e0 = $this->env->getExtension("native_profiler");
+        $__internal_dc8950e82536d60c77da123cd2f53db5ee98347eb9f360ff2f2401aca83788e0->enter($__internal_dc8950e82536d60c77da123cd2f53db5ee98347eb9f360ff2f2401aca83788e0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:tesson.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_bf23ffcb029cbc6645abd6e96f34a429599ddbad5f40bd2936248315936fb282->leave($__internal_bf23ffcb029cbc6645abd6e96f34a429599ddbad5f40bd2936248315936fb282_prof);
+        $__internal_dc8950e82536d60c77da123cd2f53db5ee98347eb9f360ff2f2401aca83788e0->leave($__internal_dc8950e82536d60c77da123cd2f53db5ee98347eb9f360ff2f2401aca83788e0_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_5731e885b6de0db4b53382196c95e8e64c6180508273941da8222b779845e6e7 = $this->env->getExtension("native_profiler");
-        $__internal_5731e885b6de0db4b53382196c95e8e64c6180508273941da8222b779845e6e7->enter($__internal_5731e885b6de0db4b53382196c95e8e64c6180508273941da8222b779845e6e7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_6f13649a5d6e0d9d48cfbbdeccc7dcd7f227bd2467163ee961b654c099ccf47c = $this->env->getExtension("native_profiler");
+        $__internal_6f13649a5d6e0d9d48cfbbdeccc7dcd7f227bd2467163ee961b654c099ccf47c->enter($__internal_6f13649a5d6e0d9d48cfbbdeccc7dcd7f227bd2467163ee961b654c099ccf47c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Tesson";
         
-        $__internal_5731e885b6de0db4b53382196c95e8e64c6180508273941da8222b779845e6e7->leave($__internal_5731e885b6de0db4b53382196c95e8e64c6180508273941da8222b779845e6e7_prof);
+        $__internal_6f13649a5d6e0d9d48cfbbdeccc7dcd7f227bd2467163ee961b654c099ccf47c->leave($__internal_6f13649a5d6e0d9d48cfbbdeccc7dcd7f227bd2467163ee961b654c099ccf47c_prof);
 
     }
 
     // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_7519de97bbecbd0d07b0cddb51629fa8a55e87cc71ae4f0f40b07ce0bc34c346 = $this->env->getExtension("native_profiler");
-        $__internal_7519de97bbecbd0d07b0cddb51629fa8a55e87cc71ae4f0f40b07ce0bc34c346->enter($__internal_7519de97bbecbd0d07b0cddb51629fa8a55e87cc71ae4f0f40b07ce0bc34c346_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_09fba883aad22c4631ad40fb07431f61bf0eb9f7fa781a689d1abdfc80663b49 = $this->env->getExtension("native_profiler");
+        $__internal_09fba883aad22c4631ad40fb07431f61bf0eb9f7fa781a689d1abdfc80663b49->enter($__internal_09fba883aad22c4631ad40fb07431f61bf0eb9f7fa781a689d1abdfc80663b49_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 6
         echo "
 \t<a class=\"btn btn-primary\" href=\"";
         // line 7
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("lifo_classif_tesson_exporter", array("id" => $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "id", array()))), "html", null, true);
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_tesson_exporter", array("id" => $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "id", array())))), "html", null, true);
         echo "\">Exporter</a>
 \t<a class=\"btn btn-primary\" href=\"";
         // line 8
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("lifo_classif_tesson_modifier", array("id" => $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "id", array()))), "html", null, true);
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_tesson_modifier", array("id" => $this->getAttribute((isset($context["tesson"]) ? $context["tesson"] : $this->getContext($context, "tesson")), "id", array())))), "html", null, true);
         echo "\">Modifier</a>
 \t<br /><br/>
 \t<table class=\"table table-bordered table-striped table-hover\">
@@ -280,7 +280,7 @@ class __TwigTemplate_15d248a09ffea0fb775fe3f599fcd38529064bdfc740d5528a4417b15b6
 \t\t\t\t\t\t
 \t\t\t\t\t\t<a href=\"";
                 // line 100
-                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("lifo_classif_telechargement_numerisation", array("id" => $this->getAttribute($context["numerisation"], "id", array()))), "html", null, true);
+                echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_telechargement_numerisation", array("id" => $this->getAttribute($context["numerisation"], "id", array())))), "html", null, true);
                 echo "\">Télécharger l'image</a></td>
 \t\t\t\t\t</tr>
 \t\t\t\t";
@@ -307,7 +307,7 @@ class __TwigTemplate_15d248a09ffea0fb775fe3f599fcd38529064bdfc740d5528a4417b15b6
 \t</script>
 ";
         
-        $__internal_7519de97bbecbd0d07b0cddb51629fa8a55e87cc71ae4f0f40b07ce0bc34c346->leave($__internal_7519de97bbecbd0d07b0cddb51629fa8a55e87cc71ae4f0f40b07ce0bc34c346_prof);
+        $__internal_09fba883aad22c4631ad40fb07431f61bf0eb9f7fa781a689d1abdfc80663b49->leave($__internal_09fba883aad22c4631ad40fb07431f61bf0eb9f7fa781a689d1abdfc80663b49_prof);
 
     }
 
@@ -332,8 +332,8 @@ class __TwigTemplate_15d248a09ffea0fb775fe3f599fcd38529064bdfc740d5528a4417b15b6
 /* */
 /* {% block LIFOClassif_body %}*/
 /* */
-/* 	<a class="btn btn-primary" href="{{ path('lifo_classif_tesson_exporter', {'id': tesson.id}) }}">Exporter</a>*/
-/* 	<a class="btn btn-primary" href="{{ path('lifo_classif_tesson_modifier', {'id': tesson.id}) }}">Modifier</a>*/
+/* 	<a class="btn btn-primary" href="{{ base_url ~path('lifo_classif_tesson_exporter', {'id': tesson.id}) }}">Exporter</a>*/
+/* 	<a class="btn btn-primary" href="{{ base_url ~path('lifo_classif_tesson_modifier', {'id': tesson.id}) }}">Modifier</a>*/
 /* 	<br /><br/>*/
 /* 	<table class="table table-bordered table-striped table-hover">*/
 /* 		<thead><tr><td colspan = "2" class="warning" align="center"><b>Description du tesson</b></td></tr></thead>*/
@@ -425,7 +425,7 @@ class __TwigTemplate_15d248a09ffea0fb775fe3f599fcd38529064bdfc740d5528a4417b15b6
 /* 						<img src="{{ asset(numerisation.webPath) }}" width="400" alt="{{ numerisation.alt }}"/>*/
 /* 						</a>*/
 /* 						*/
-/* 						<a href="{{ path('lifo_classif_telechargement_numerisation', {'id': numerisation.id}) }}">Télécharger l'image</a></td>*/
+/* 						<a href="{{ base_url ~path('lifo_classif_telechargement_numerisation', {'id': numerisation.id}) }}">Télécharger l'image</a></td>*/
 /* 					</tr>*/
 /* 				{% endfor %}*/
 /* 			{% else %}*/

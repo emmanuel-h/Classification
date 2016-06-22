@@ -22,33 +22,33 @@ class __TwigTemplate_868de066f650fe35ea9a1deeb0f88335ee49e79c8d9735dd8a71db65bc9
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d99fb6620cd70d956d28535c20be34b5b5d213c234311724c6e7e62d6d1c8af4 = $this->env->getExtension("native_profiler");
-        $__internal_d99fb6620cd70d956d28535c20be34b5b5d213c234311724c6e7e62d6d1c8af4->enter($__internal_d99fb6620cd70d956d28535c20be34b5b5d213c234311724c6e7e62d6d1c8af4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/afficherNumerisations.html.twig"));
+        $__internal_1503972f3942b7eef2fdd927e656893ffca5c59c710fee9e06dc9f5abb51e456 = $this->env->getExtension("native_profiler");
+        $__internal_1503972f3942b7eef2fdd927e656893ffca5c59c710fee9e06dc9f5abb51e456->enter($__internal_1503972f3942b7eef2fdd927e656893ffca5c59c710fee9e06dc9f5abb51e456_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/afficherNumerisations.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_d99fb6620cd70d956d28535c20be34b5b5d213c234311724c6e7e62d6d1c8af4->leave($__internal_d99fb6620cd70d956d28535c20be34b5b5d213c234311724c6e7e62d6d1c8af4_prof);
+        $__internal_1503972f3942b7eef2fdd927e656893ffca5c59c710fee9e06dc9f5abb51e456->leave($__internal_1503972f3942b7eef2fdd927e656893ffca5c59c710fee9e06dc9f5abb51e456_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_1a87e9b4a4c861b3a28d0ee567d932257391e5b35adef33991cec249b1ebbf69 = $this->env->getExtension("native_profiler");
-        $__internal_1a87e9b4a4c861b3a28d0ee567d932257391e5b35adef33991cec249b1ebbf69->enter($__internal_1a87e9b4a4c861b3a28d0ee567d932257391e5b35adef33991cec249b1ebbf69_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_2c23c539273330c91cae6ef9545ff543734854279f15a3f09c7a90d2d0be0a9f = $this->env->getExtension("native_profiler");
+        $__internal_2c23c539273330c91cae6ef9545ff543734854279f15a3f09c7a90d2d0be0a9f->enter($__internal_2c23c539273330c91cae6ef9545ff543734854279f15a3f09c7a90d2d0be0a9f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Numérisations";
         
-        $__internal_1a87e9b4a4c861b3a28d0ee567d932257391e5b35adef33991cec249b1ebbf69->leave($__internal_1a87e9b4a4c861b3a28d0ee567d932257391e5b35adef33991cec249b1ebbf69_prof);
+        $__internal_2c23c539273330c91cae6ef9545ff543734854279f15a3f09c7a90d2d0be0a9f->leave($__internal_2c23c539273330c91cae6ef9545ff543734854279f15a3f09c7a90d2d0be0a9f_prof);
 
     }
 
     // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_d6cb69ddbd826dd7d7633b0893e96b80b2fff163fa09d5e15d7e98b981a0f282 = $this->env->getExtension("native_profiler");
-        $__internal_d6cb69ddbd826dd7d7633b0893e96b80b2fff163fa09d5e15d7e98b981a0f282->enter($__internal_d6cb69ddbd826dd7d7633b0893e96b80b2fff163fa09d5e15d7e98b981a0f282_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_6d5bbc7f9a47ff92e049ab9a525ac8195f79d55699b3f93cba748d79097840b9 = $this->env->getExtension("native_profiler");
+        $__internal_6d5bbc7f9a47ff92e049ab9a525ac8195f79d55699b3f93cba748d79097840b9->enter($__internal_6d5bbc7f9a47ff92e049ab9a525ac8195f79d55699b3f93cba748d79097840b9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 6
         echo "
@@ -64,14 +64,14 @@ class __TwigTemplate_868de066f650fe35ea9a1deeb0f88335ee49e79c8d9735dd8a71db65bc9
   <fieldset>
   \t<legend>&nbsp;&nbsp;Décor</legend>
   \t<div class=\"form-group\">
-  \t  <div class=\"col-sm-6\">
+  \t  <div class=\"col-sm-3\">
 \t    <b>&nbsp;Type de numérisation&nbsp;&nbsp;</b>
         ";
         // line 15
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "typeNumerisation", array()), 'errors');
         echo "
    \t  </div>
- \t  <div class=\"col-sm-6\">
+ \t  <div class=\"col-sm-4\">
     \t";
         // line 18
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "typeNumerisation", array()), 'widget');
@@ -105,7 +105,7 @@ class __TwigTemplate_868de066f650fe35ea9a1deeb0f88335ee49e79c8d9735dd8a71db65bc9
             echo "\t\t<tr>
 \t\t\t<td><a href=\"";
             // line 32
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("lifo_classif_tesson", array("id" => $this->getAttribute($context["tesson"], "t_id", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_tesson", array("id" => $this->getAttribute($context["tesson"], "t_id", array())))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["tesson"], "t_id", array()), "html", null, true);
             echo "</a></td>
@@ -137,7 +137,7 @@ class __TwigTemplate_868de066f650fe35ea9a1deeb0f88335ee49e79c8d9735dd8a71db65bc9
                             <li class=\"active\">
                 <a href=\" ";
         // line 43
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("lifo_classif_numerisations", array("page" => (isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")))), "html", null, true);
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_numerisations", array("page" => (isset($context["page"]) ? $context["page"] : $this->getContext($context, "page"))))), "html", null, true);
         echo "\">
                 \t";
         // line 44
@@ -148,7 +148,7 @@ class __TwigTemplate_868de066f650fe35ea9a1deeb0f88335ee49e79c8d9735dd8a71db65bc9
                <li>
                 <a href=\" ";
         // line 48
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("lifo_classif_numerisations", array("page" => ((isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")) + 1))), "html", null, true);
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_numerisations", array("page" => ((isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")) + 1)))), "html", null, true);
         echo "\">
                 \t";
         // line 49
@@ -159,7 +159,7 @@ class __TwigTemplate_868de066f650fe35ea9a1deeb0f88335ee49e79c8d9735dd8a71db65bc9
                <li>
                 <a href=\" ";
         // line 53
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("lifo_classif_numerisations", array("page" => ((isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")) + 2))), "html", null, true);
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_numerisations", array("page" => ((isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")) + 2)))), "html", null, true);
         echo "\">
                 \t";
         // line 54
@@ -170,7 +170,7 @@ class __TwigTemplate_868de066f650fe35ea9a1deeb0f88335ee49e79c8d9735dd8a71db65bc9
                <li>
                 <a href=\" ";
         // line 58
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("lifo_classif_numerisations", array("page" => ((isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")) + 3))), "html", null, true);
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_numerisations", array("page" => ((isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")) + 3)))), "html", null, true);
         echo "\">
                 \t";
         // line 59
@@ -181,7 +181,7 @@ class __TwigTemplate_868de066f650fe35ea9a1deeb0f88335ee49e79c8d9735dd8a71db65bc9
                <li>
                 <a href=\" ";
         // line 63
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("lifo_classif_numerisations", array("page" => ((isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")) + 4))), "html", null, true);
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_numerisations", array("page" => ((isset($context["page"]) ? $context["page"] : $this->getContext($context, "page")) + 4)))), "html", null, true);
         echo "\">
                 \t";
         // line 64
@@ -204,7 +204,7 @@ class __TwigTemplate_868de066f650fe35ea9a1deeb0f88335ee49e79c8d9735dd8a71db65bc9
 
 ";
         
-        $__internal_d6cb69ddbd826dd7d7633b0893e96b80b2fff163fa09d5e15d7e98b981a0f282->leave($__internal_d6cb69ddbd826dd7d7633b0893e96b80b2fff163fa09d5e15d7e98b981a0f282_prof);
+        $__internal_6d5bbc7f9a47ff92e049ab9a525ac8195f79d55699b3f93cba748d79097840b9->leave($__internal_6d5bbc7f9a47ff92e049ab9a525ac8195f79d55699b3f93cba748d79097840b9_prof);
 
     }
 
@@ -235,11 +235,11 @@ class __TwigTemplate_868de066f650fe35ea9a1deeb0f88335ee49e79c8d9735dd8a71db65bc9
 /*   <fieldset>*/
 /*   	<legend>&nbsp;&nbsp;Décor</legend>*/
 /*   	<div class="form-group">*/
-/*   	  <div class="col-sm-6">*/
+/*   	  <div class="col-sm-3">*/
 /* 	    <b>&nbsp;Type de numérisation&nbsp;&nbsp;</b>*/
 /*         {{ form_errors(form.typeNumerisation) }}*/
 /*    	  </div>*/
-/*  	  <div class="col-sm-6">*/
+/*  	  <div class="col-sm-4">*/
 /*     	{{ form_widget(form.typeNumerisation) }}*/
 /*       </div>*/
 /*     </div>*/
@@ -254,7 +254,7 @@ class __TwigTemplate_868de066f650fe35ea9a1deeb0f88335ee49e79c8d9735dd8a71db65bc9
 /* 	<tbody>*/
 /* 	 {% for tesson in tessons %}*/
 /* 		<tr>*/
-/* 			<td><a href="{{ path('lifo_classif_tesson', {'id': tesson.t_id}) }}">{{ tesson.t_id }}</a></td>*/
+/* 			<td><a href="{{ base_url ~path('lifo_classif_tesson', {'id': tesson.t_id}) }}">{{ tesson.t_id }}</a></td>*/
 /* 			<td>{{ tesson.site_codeINSEE|default('NO') }}&nbsp;{{ tesson.site_numSiteCommune|default('NO') }}</td>*/
 /* 			<td>{{ tesson.u_s_nom|default('NO') }}</td>*/
 /* 			<td>{{ tesson.t_numIsolation }}</td>*/
@@ -265,27 +265,27 @@ class __TwigTemplate_868de066f650fe35ea9a1deeb0f88335ee49e79c8d9735dd8a71db65bc9
 /* <ul class="pagination">*/
 /*         */
 /*                             <li class="active">*/
-/*                 <a href=" {{ path('lifo_classif_numerisations', {'page': page}) }}">*/
+/*                 <a href=" {{ base_url ~path('lifo_classif_numerisations', {'page': page}) }}">*/
 /*                 	{{ page }}*/
 /*                 </a>*/
 /*             </li>*/
 /*                <li>*/
-/*                 <a href=" {{ path('lifo_classif_numerisations', {'page': page+1}) }}">*/
+/*                 <a href=" {{ base_url ~path('lifo_classif_numerisations', {'page': page+1}) }}">*/
 /*                 	{{ page+1 }}*/
 /*                 </a>*/
 /*             </li>*/
 /*                <li>*/
-/*                 <a href=" {{ path('lifo_classif_numerisations', {'page': page+2}) }}">*/
+/*                 <a href=" {{ base_url ~path('lifo_classif_numerisations', {'page': page+2}) }}">*/
 /*                 	{{ page+2 }}*/
 /*                 </a>*/
 /*             </li>*/
 /*                <li>*/
-/*                 <a href=" {{ path('lifo_classif_numerisations', {'page': page+3}) }}">*/
+/*                 <a href=" {{ base_url ~path('lifo_classif_numerisations', {'page': page+3}) }}">*/
 /*                 	{{ page+3 }}*/
 /*                 </a>*/
 /*             </li>*/
 /*                <li>*/
-/*                 <a href=" {{ path('lifo_classif_numerisations', {'page': page+4}) }}">*/
+/*                 <a href=" {{ base_url ~path('lifo_classif_numerisations', {'page': page+4}) }}">*/
 /*                 	{{ page+4 }}*/
 /*                 </a>*/
 /*             </li>*/

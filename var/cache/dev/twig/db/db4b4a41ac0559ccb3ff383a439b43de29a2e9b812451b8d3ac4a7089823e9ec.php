@@ -18,8 +18,8 @@ class __TwigTemplate_e9555ec78be19d9f886969a9c6744a1893cbc09a129f7331bcb6f6965f2
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d689ab1a929e703b0c7228c71cdf5092577d77f751aeaf436c440b3dbf474f9f = $this->env->getExtension("native_profiler");
-        $__internal_d689ab1a929e703b0c7228c71cdf5092577d77f751aeaf436c440b3dbf474f9f->enter($__internal_d689ab1a929e703b0c7228c71cdf5092577d77f751aeaf436c440b3dbf474f9f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::layout.html.twig"));
+        $__internal_9a114e15715629280abdd982be2ef07587572d7d99e3c8cc39527d8ad2b9ab2d = $this->env->getExtension("native_profiler");
+        $__internal_9a114e15715629280abdd982be2ef07587572d7d99e3c8cc39527d8ad2b9ab2d->enter($__internal_9a114e15715629280abdd982be2ef07587572d7d99e3c8cc39527d8ad2b9ab2d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::layout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE HTML>
@@ -37,45 +37,45 @@ class __TwigTemplate_e9555ec78be19d9f886969a9c6744a1893cbc09a129f7331bcb6f6965f2
         echo "</title>
 <link href=\" ";
         // line 11
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bootstrap/css/bootstrap.min.css"), "html", null, true);
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("bootstrap/css/bootstrap.min.css")), "html", null, true);
         echo "\"
 \trel=\"stylesheet\">
 <link href=\" ";
         // line 13
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bootstrap/css/bootstrap-theme.min.css"), "html", null, true);
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("bootstrap/css/bootstrap-theme.min.css")), "html", null, true);
         echo "\"
 \trel=\"stylesheet\">
 <link href=\" ";
         // line 15
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("styles/layout.css"), "html", null, true);
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("styles/layout.css")), "html", null, true);
         echo "\" rel=\"stylesheet\" />
 <link href=\" ";
         // line 16
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("styles/menu.css"), "html", null, true);
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("styles/menu.css")), "html", null, true);
         echo "\" rel=\"stylesheet\" />
 <link href=\" ";
         // line 17
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("styles/table.css"), "html", null, true);
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("styles/table.css")), "html", null, true);
         echo "\" rel=\"stylesheet\" />
 <link rel=\"stylesheet\" href=\" ";
         // line 18
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("fancybox/source/jquery.fancybox.css"), "html", null, true);
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("fancybox/source/jquery.fancybox.css")), "html", null, true);
         echo "\" type=\"text/css\" media=\"screen\" />
 <script type=\"text/javascript\" src=\" ";
         // line 19
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bootstrap/js/jquery.min.js"), "html", null, true);
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("bootstrap/js/jquery.min.js")), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
         // line 20
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("fancybox/source/jquery.fancybox.pack.js"), "html", null, true);
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("fancybox/source/jquery.fancybox.pack.js")), "html", null, true);
         echo "\"></script>
 <script src=\" ";
         // line 21
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bootstrap/js/bootstrap.min.js"), "html", null, true);
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("bootstrap/js/bootstrap.min.js")), "html", null, true);
         echo "\"></script>
 <script src=\" ";
         // line 22
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bootstrap/js/foToolTip.js"), "html", null, true);
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("bootstrap/js/foToolTip.js")), "html", null, true);
         echo "\"></script>
 </head>
 <body>
@@ -86,19 +86,19 @@ class __TwigTemplate_e9555ec78be19d9f886969a9c6744a1893cbc09a129f7331bcb6f6965f2
 \t\t\t\t\t<ul class=\"nav navbar-nav\">
 \t\t\t\t\t\t<li><a href=\"";
         // line 30
-        echo $this->env->getExtension('routing')->getPath("lifo_classif_upload");
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_upload")), "html", null, true);
         echo "\">Nouveau</a></li>
 \t\t\t\t\t\t<li><a href=\"";
         // line 31
-        echo $this->env->getExtension('routing')->getPath("lifo_classif_recherche");
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_recherche")), "html", null, true);
         echo "\">Recherche</a></li>
 \t\t\t\t\t\t<li><a href=\"";
         // line 32
-        echo $this->env->getExtension('routing')->getPath("lifo_classif_classification");
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_classification")), "html", null, true);
         echo "\">Classification</a></li>
 \t\t\t\t\t\t<li><a href=\"";
         // line 33
-        echo $this->env->getExtension('routing')->getPath("lifo_classif_numerisations");
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_numerisations")), "html", null, true);
         echo "\">Numérisations</a></li>
 \t\t\t\t\t\t";
         // line 34
@@ -110,11 +110,11 @@ class __TwigTemplate_e9555ec78be19d9f886969a9c6744a1893cbc09a129f7331bcb6f6965f2
 \t\t\t\t\t\t\t\t<ul class=\"dropdown-menu\">
 \t\t\t\t\t\t\t\t\t<li><a href=\"";
             // line 37
-            echo $this->env->getExtension('routing')->getPath("lifo_classif_parametres_typeDecor");
+            echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_parametres_typeDecor")), "html", null, true);
             echo "\">Type de décor</a></li>
 \t\t\t\t\t\t\t\t\t<li><a href=\"";
             // line 38
-            echo $this->env->getExtension('routing')->getPath("lifo_classif_parametres_positionDecor");
+            echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_parametres_positionDecor")), "html", null, true);
             echo "\">Position de décor</a></li>
 \t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t</li>
@@ -132,15 +132,15 @@ class __TwigTemplate_e9555ec78be19d9f886969a9c6744a1893cbc09a129f7331bcb6f6965f2
 \t\t\t\t\t                <li class=\"dropdown-header\">Utilisateur</li>
 \t\t\t\t\t\t\t\t\t<li><a href=\"";
             // line 47
-            echo $this->env->getExtension('routing')->getPath("lifo_classif_admin_utilisateur_afficherTous");
+            echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_admin_utilisateur_afficherTous")), "html", null, true);
             echo "\">Afficher la liste</a></li>
 \t\t\t\t\t\t\t\t\t<li><a href=\"";
             // line 48
-            echo $this->env->getExtension('routing')->getPath("lifo_classif_admin_utilisateur");
+            echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_admin_utilisateur")), "html", null, true);
             echo "\">Ajouter</a></li>
 \t\t\t\t\t\t\t\t\t<li><a href=\"";
             // line 49
-            echo $this->env->getExtension('routing')->getPath("lifo_classif_admin_utilisateur_rechercher");
+            echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_admin_utilisateur_rechercher")), "html", null, true);
             echo "\">Rechercher</a></li>
 \t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t</li>
@@ -151,7 +151,7 @@ class __TwigTemplate_e9555ec78be19d9f886969a9c6744a1893cbc09a129f7331bcb6f6965f2
             \t\t\t<ul class=\"nav navbar-nav navbar-right\">
 \t\t\t\t\t\t<li><a href=\"";
         // line 55
-        echo $this->env->getExtension('routing')->getPath("logout");
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("logout")), "html", null, true);
         echo "\">Déconnexion</a></li>
 \t\t\t\t\t</ul>
 \t\t\t</div>
@@ -191,43 +191,43 @@ class __TwigTemplate_e9555ec78be19d9f886969a9c6744a1893cbc09a129f7331bcb6f6965f2
 </body>
 </html>";
         
-        $__internal_d689ab1a929e703b0c7228c71cdf5092577d77f751aeaf436c440b3dbf474f9f->leave($__internal_d689ab1a929e703b0c7228c71cdf5092577d77f751aeaf436c440b3dbf474f9f_prof);
+        $__internal_9a114e15715629280abdd982be2ef07587572d7d99e3c8cc39527d8ad2b9ab2d->leave($__internal_9a114e15715629280abdd982be2ef07587572d7d99e3c8cc39527d8ad2b9ab2d_prof);
 
     }
 
     // line 10
     public function block_title($context, array $blocks = array())
     {
-        $__internal_e6163fc8d483e9765482d0e9a1f8d4a4dcde588e72e933933738914a9663fc44 = $this->env->getExtension("native_profiler");
-        $__internal_e6163fc8d483e9765482d0e9a1f8d4a4dcde588e72e933933738914a9663fc44->enter($__internal_e6163fc8d483e9765482d0e9a1f8d4a4dcde588e72e933933738914a9663fc44_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_e11dcea15f631863f7d9892e38af3f48e28bb83acd70bb3e14d1ed06f815ea46 = $this->env->getExtension("native_profiler");
+        $__internal_e11dcea15f631863f7d9892e38af3f48e28bb83acd70bb3e14d1ed06f815ea46->enter($__internal_e11dcea15f631863f7d9892e38af3f48e28bb83acd70bb3e14d1ed06f815ea46_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Classification";
         
-        $__internal_e6163fc8d483e9765482d0e9a1f8d4a4dcde588e72e933933738914a9663fc44->leave($__internal_e6163fc8d483e9765482d0e9a1f8d4a4dcde588e72e933933738914a9663fc44_prof);
+        $__internal_e11dcea15f631863f7d9892e38af3f48e28bb83acd70bb3e14d1ed06f815ea46->leave($__internal_e11dcea15f631863f7d9892e38af3f48e28bb83acd70bb3e14d1ed06f815ea46_prof);
 
     }
 
     // line 71
     public function block_body($context, array $blocks = array())
     {
-        $__internal_fdf1b7677a94e7a92388ffd7e8994a26471d2808383ac71a66acad4262a0ef0b = $this->env->getExtension("native_profiler");
-        $__internal_fdf1b7677a94e7a92388ffd7e8994a26471d2808383ac71a66acad4262a0ef0b->enter($__internal_fdf1b7677a94e7a92388ffd7e8994a26471d2808383ac71a66acad4262a0ef0b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_d8fca56ab24e989ae6f7b2c2395c866aa6e6a6012168dd5a91182e723469b4f2 = $this->env->getExtension("native_profiler");
+        $__internal_d8fca56ab24e989ae6f7b2c2395c866aa6e6a6012168dd5a91182e723469b4f2->enter($__internal_d8fca56ab24e989ae6f7b2c2395c866aa6e6a6012168dd5a91182e723469b4f2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         echo " ";
         
-        $__internal_fdf1b7677a94e7a92388ffd7e8994a26471d2808383ac71a66acad4262a0ef0b->leave($__internal_fdf1b7677a94e7a92388ffd7e8994a26471d2808383ac71a66acad4262a0ef0b_prof);
+        $__internal_d8fca56ab24e989ae6f7b2c2395c866aa6e6a6012168dd5a91182e723469b4f2->leave($__internal_d8fca56ab24e989ae6f7b2c2395c866aa6e6a6012168dd5a91182e723469b4f2_prof);
 
     }
 
     // line 74
     public function block_footer($context, array $blocks = array())
     {
-        $__internal_f2efc99ddfa9f9921744fe67fba9fbe6e2f62cc30c4d666302d65d1f82c10aeb = $this->env->getExtension("native_profiler");
-        $__internal_f2efc99ddfa9f9921744fe67fba9fbe6e2f62cc30c4d666302d65d1f82c10aeb->enter($__internal_f2efc99ddfa9f9921744fe67fba9fbe6e2f62cc30c4d666302d65d1f82c10aeb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
+        $__internal_ca8fcf1205fe03505dcb27501d9f605cfea12dac58adac8e0a67a42c1a5fdd89 = $this->env->getExtension("native_profiler");
+        $__internal_ca8fcf1205fe03505dcb27501d9f605cfea12dac58adac8e0a67a42c1a5fdd89->enter($__internal_ca8fcf1205fe03505dcb27501d9f605cfea12dac58adac8e0a67a42c1a5fdd89_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "footer"));
 
         echo " ";
         
-        $__internal_f2efc99ddfa9f9921744fe67fba9fbe6e2f62cc30c4d666302d65d1f82c10aeb->leave($__internal_f2efc99ddfa9f9921744fe67fba9fbe6e2f62cc30c4d666302d65d1f82c10aeb_prof);
+        $__internal_ca8fcf1205fe03505dcb27501d9f605cfea12dac58adac8e0a67a42c1a5fdd89->leave($__internal_ca8fcf1205fe03505dcb27501d9f605cfea12dac58adac8e0a67a42c1a5fdd89_prof);
 
     }
 
@@ -256,18 +256,18 @@ class __TwigTemplate_e9555ec78be19d9f886969a9c6744a1893cbc09a129f7331bcb6f6965f2
 /* <meta name="author" content="">*/
 /* <link rel="icon" href="../../favicon.ico">*/
 /* <title>{% block title %}Classification{% endblock %}</title>*/
-/* <link href=" {{ asset('bootstrap/css/bootstrap.min.css') }}"*/
+/* <link href=" {{ base_url~asset('bootstrap/css/bootstrap.min.css') }}"*/
 /* 	rel="stylesheet">*/
-/* <link href=" {{ asset ('bootstrap/css/bootstrap-theme.min.css') }}"*/
+/* <link href=" {{ base_url ~asset ('bootstrap/css/bootstrap-theme.min.css') }}"*/
 /* 	rel="stylesheet">*/
-/* <link href=" {{ asset ('styles/layout.css') }}" rel="stylesheet" />*/
-/* <link href=" {{ asset ('styles/menu.css') }}" rel="stylesheet" />*/
-/* <link href=" {{ asset ('styles/table.css') }}" rel="stylesheet" />*/
-/* <link rel="stylesheet" href=" {{ asset ('fancybox/source/jquery.fancybox.css') }}" type="text/css" media="screen" />*/
-/* <script type="text/javascript" src=" {{ asset('bootstrap/js/jquery.min.js') }}"></script>*/
-/* <script type="text/javascript" src="{{ asset('fancybox/source/jquery.fancybox.pack.js') }}"></script>*/
-/* <script src=" {{ asset('bootstrap/js/bootstrap.min.js') }}"></script>*/
-/* <script src=" {{ asset('bootstrap/js/foToolTip.js') }}"></script>*/
+/* <link href=" {{ base_url ~asset ('styles/layout.css') }}" rel="stylesheet" />*/
+/* <link href=" {{ base_url ~asset ('styles/menu.css') }}" rel="stylesheet" />*/
+/* <link href=" {{ base_url ~asset ('styles/table.css') }}" rel="stylesheet" />*/
+/* <link rel="stylesheet" href=" {{ base_url ~asset ('fancybox/source/jquery.fancybox.css') }}" type="text/css" media="screen" />*/
+/* <script type="text/javascript" src=" {{ base_url ~asset('bootstrap/js/jquery.min.js') }}"></script>*/
+/* <script type="text/javascript" src="{{ base_url ~asset('fancybox/source/jquery.fancybox.pack.js') }}"></script>*/
+/* <script src=" {{ base_url ~asset('bootstrap/js/bootstrap.min.js') }}"></script>*/
+/* <script src=" {{ base_url ~asset('bootstrap/js/foToolTip.js') }}"></script>*/
 /* </head>*/
 /* <body>*/
 /* */
@@ -275,15 +275,15 @@ class __TwigTemplate_e9555ec78be19d9f886969a9c6744a1893cbc09a129f7331bcb6f6965f2
 /* */
 /* 		<div class="container" id="menu_top">*/
 /* 					<ul class="nav navbar-nav">*/
-/* 						<li><a href="{{ path('lifo_classif_upload') }}">Nouveau</a></li>*/
-/* 						<li><a href="{{ path('lifo_classif_recherche') }}">Recherche</a></li>*/
-/* 						<li><a href="{{ path('lifo_classif_classification') }}">Classification</a></li>*/
-/* 						<li><a href="{{ path('lifo_classif_numerisations') }}">Numérisations</a></li>*/
+/* 						<li><a href="{{ base_url ~path('lifo_classif_upload') }}">Nouveau</a></li>*/
+/* 						<li><a href="{{ base_url ~path('lifo_classif_recherche') }}">Recherche</a></li>*/
+/* 						<li><a href="{{ base_url ~path('lifo_classif_classification') }}">Classification</a></li>*/
+/* 						<li><a href="{{ base_url ~path('lifo_classif_numerisations') }}">Numérisations</a></li>*/
 /* 						{% if is_granted('ROLE_ARCHEOLOGUE') %}*/
 /* 							<li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="{{ path('lifo_classif_parametres_typeDecor') }}">Paramètres<b class="caret"></b></a>*/
 /* 								<ul class="dropdown-menu">*/
-/* 									<li><a href="{{ path('lifo_classif_parametres_typeDecor') }}">Type de décor</a></li>*/
-/* 									<li><a href="{{ path('lifo_classif_parametres_positionDecor') }}">Position de décor</a></li>*/
+/* 									<li><a href="{{ base_url ~path('lifo_classif_parametres_typeDecor') }}">Type de décor</a></li>*/
+/* 									<li><a href="{{ base_url ~path('lifo_classif_parametres_positionDecor') }}">Position de décor</a></li>*/
 /* 								</ul>*/
 /* 							</li>*/
 /* 						{% endif %}*/
@@ -292,15 +292,15 @@ class __TwigTemplate_e9555ec78be19d9f886969a9c6744a1893cbc09a129f7331bcb6f6965f2
 /* 								<ul class="dropdown-menu">*/
 /* 					                <li role="separator" class="divider"></li>*/
 /* 					                <li class="dropdown-header">Utilisateur</li>*/
-/* 									<li><a href="{{ path('lifo_classif_admin_utilisateur_afficherTous') }}">Afficher la liste</a></li>*/
-/* 									<li><a href="{{ path('lifo_classif_admin_utilisateur') }}">Ajouter</a></li>*/
-/* 									<li><a href="{{ path('lifo_classif_admin_utilisateur_rechercher') }}">Rechercher</a></li>*/
+/* 									<li><a href="{{ base_url ~path('lifo_classif_admin_utilisateur_afficherTous') }}">Afficher la liste</a></li>*/
+/* 									<li><a href="{{ base_url ~path('lifo_classif_admin_utilisateur') }}">Ajouter</a></li>*/
+/* 									<li><a href="{{ base_url ~path('lifo_classif_admin_utilisateur_rechercher') }}">Rechercher</a></li>*/
 /* 								</ul>*/
 /* 							</li>*/
 /* 						{% endif %}*/
 /* 						</ul>*/
 /*             			<ul class="nav navbar-nav navbar-right">*/
-/* 						<li><a href="{{ path('logout') }}">Déconnexion</a></li>*/
+/* 						<li><a href="{{ base_url ~path('logout') }}">Déconnexion</a></li>*/
 /* 					</ul>*/
 /* 			</div>*/
 /* 		</div>*/

@@ -15,8 +15,8 @@ class __TwigTemplate_eff946059a16195d1b2583d1f29284c26b611723910e89b708b24af0236
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a97ac9420556c5c64c340c0d982276e35571ef18f26c344d082a8de481dbda98 = $this->env->getExtension("native_profiler");
-        $__internal_a97ac9420556c5c64c340c0d982276e35571ef18f26c344d082a8de481dbda98->enter($__internal_a97ac9420556c5c64c340c0d982276e35571ef18f26c344d082a8de481dbda98_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:menu.html.twig"));
+        $__internal_6616f93e2c82ac324109cef4cca93e1edad363362993a001212d0af9c2bea598 = $this->env->getExtension("native_profiler");
+        $__internal_6616f93e2c82ac324109cef4cca93e1edad363362993a001212d0af9c2bea598->enter($__internal_6616f93e2c82ac324109cef4cca93e1edad363362993a001212d0af9c2bea598_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:menu.html.twig"));
 
         // line 1
         echo "<div class=\"list-group\">
@@ -28,7 +28,7 @@ class __TwigTemplate_eff946059a16195d1b2583d1f29284c26b611723910e89b708b24af0236
             echo " <a
 \t\thref=\"";
             // line 3
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("lifo_classif_tesson", array("id" => $this->getAttribute($context["tesson"], "id", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_tesson", array("id" => $this->getAttribute($context["tesson"], "id", array())))), "html", null, true);
             echo "\"
 \t\tclass=\"list-group-item\">
 \t\t<h4 class=\"list-group-item-heading\">ID : ";
@@ -66,7 +66,7 @@ class __TwigTemplate_eff946059a16195d1b2583d1f29284c26b611723910e89b708b24af0236
 
 ";
         
-        $__internal_a97ac9420556c5c64c340c0d982276e35571ef18f26c344d082a8de481dbda98->leave($__internal_a97ac9420556c5c64c340c0d982276e35571ef18f26c344d082a8de481dbda98_prof);
+        $__internal_6616f93e2c82ac324109cef4cca93e1edad363362993a001212d0af9c2bea598->leave($__internal_6616f93e2c82ac324109cef4cca93e1edad363362993a001212d0af9c2bea598_prof);
 
     }
 
@@ -87,7 +87,7 @@ class __TwigTemplate_eff946059a16195d1b2583d1f29284c26b611723910e89b708b24af0236
 }
 /* <div class="list-group">*/
 /* 	{% for tesson in listeTessons %} <a*/
-/* 		href="{{ path('lifo_classif_tesson', {'id': tesson.id}) }}"*/
+/* 		href="{{ base_url ~path('lifo_classif_tesson', {'id': tesson.id}) }}"*/
 /* 		class="list-group-item">*/
 /* 		<h4 class="list-group-item-heading">ID : {{ tesson.id }} - Site :*/
 /* 			{{tesson.site.codeINSEE}} {{tesson.site.numSiteCommune}}</h4>*/

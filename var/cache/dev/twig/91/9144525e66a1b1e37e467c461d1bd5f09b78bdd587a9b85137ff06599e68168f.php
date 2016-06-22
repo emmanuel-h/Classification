@@ -21,20 +21,20 @@ class __TwigTemplate_9df7e72e38999eeffaed10aba43e8f5090ac788ed99988f6cc0061970c4
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c6124381f79c363015900047d8b10d16208b2fc24970da63d24c018f07b44062 = $this->env->getExtension("native_profiler");
-        $__internal_c6124381f79c363015900047d8b10d16208b2fc24970da63d24c018f07b44062->enter($__internal_c6124381f79c363015900047d8b10d16208b2fc24970da63d24c018f07b44062_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Admin/utilisateurAfficherTous.html.twig"));
+        $__internal_d25e6972ecd6d9aeaf1c70ff0f01c973518d9b0fbc678853161fccbe764251c6 = $this->env->getExtension("native_profiler");
+        $__internal_d25e6972ecd6d9aeaf1c70ff0f01c973518d9b0fbc678853161fccbe764251c6->enter($__internal_d25e6972ecd6d9aeaf1c70ff0f01c973518d9b0fbc678853161fccbe764251c6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Admin/utilisateurAfficherTous.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c6124381f79c363015900047d8b10d16208b2fc24970da63d24c018f07b44062->leave($__internal_c6124381f79c363015900047d8b10d16208b2fc24970da63d24c018f07b44062_prof);
+        $__internal_d25e6972ecd6d9aeaf1c70ff0f01c973518d9b0fbc678853161fccbe764251c6->leave($__internal_d25e6972ecd6d9aeaf1c70ff0f01c973518d9b0fbc678853161fccbe764251c6_prof);
 
     }
 
     // line 3
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_51d31f015c6fb86b8c8f8ce63fe27978bcbe9ca744b1d7593245eb5fc0479ebd = $this->env->getExtension("native_profiler");
-        $__internal_51d31f015c6fb86b8c8f8ce63fe27978bcbe9ca744b1d7593245eb5fc0479ebd->enter($__internal_51d31f015c6fb86b8c8f8ce63fe27978bcbe9ca744b1d7593245eb5fc0479ebd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_d0b9f47b9485db39e4b98f7f7b7233e203f59e4df818b659a0363b11f42ea9e9 = $this->env->getExtension("native_profiler");
+        $__internal_d0b9f47b9485db39e4b98f7f7b7233e203f59e4df818b659a0363b11f42ea9e9->enter($__internal_d0b9f47b9485db39e4b98f7f7b7233e203f59e4df818b659a0363b11f42ea9e9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 4
         echo "
@@ -56,7 +56,7 @@ class __TwigTemplate_9df7e72e38999eeffaed10aba43e8f5090ac788ed99988f6cc0061970c4
                 echo "\t\t<tr>
 \t\t\t<td><a href=\"";
                 // line 13
-                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("lifo_classif_admin_utilisateur_afficher", array("id" => $this->getAttribute($context["utilisateur"], "id", array()))), "html", null, true);
+                echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_admin_utilisateur_afficher", array("id" => $this->getAttribute($context["utilisateur"], "id", array())))), "html", null, true);
                 echo "\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["utilisateur"], "username", array()), "html", null, true);
                 echo "</a></td>
@@ -88,7 +88,7 @@ class __TwigTemplate_9df7e72e38999eeffaed10aba43e8f5090ac788ed99988f6cc0061970c4
         echo "
 ";
         
-        $__internal_51d31f015c6fb86b8c8f8ce63fe27978bcbe9ca744b1d7593245eb5fc0479ebd->leave($__internal_51d31f015c6fb86b8c8f8ce63fe27978bcbe9ca744b1d7593245eb5fc0479ebd_prof);
+        $__internal_d0b9f47b9485db39e4b98f7f7b7233e203f59e4df818b659a0363b11f42ea9e9->leave($__internal_d0b9f47b9485db39e4b98f7f7b7233e203f59e4df818b659a0363b11f42ea9e9_prof);
 
     }
 
@@ -119,7 +119,7 @@ class __TwigTemplate_9df7e72e38999eeffaed10aba43e8f5090ac788ed99988f6cc0061970c4
 /* 	<tbody>*/
 /*     {% for utilisateur in utilisateurs %}*/
 /* 		<tr>*/
-/* 			<td><a href="{{ path('lifo_classif_admin_utilisateur_afficher', {'id': utilisateur.id}) }}">{{utilisateur.username}}</a></td>*/
+/* 			<td><a href="{{ base_url ~path('lifo_classif_admin_utilisateur_afficher', {'id': utilisateur.id}) }}">{{utilisateur.username}}</a></td>*/
 /* 			<td>{{ utilisateur.rolesToString }}</td>*/
 /* 		</tr>*/
 /*     {% endfor %}*/
