@@ -112,8 +112,8 @@
 					{% for numerisation in tesson.numerisation if not break %}
 						{% if numerisation.typeNumerisation.nom == typeNumerisation %}
 							<td>
-							<a class="group" title=" {{ numerisation.alt }}" href="{{ base_url ~asset(numerisation.webPath) }}">
-							<img src="{{ base_url ~asset(numerisation.webPath) }}" width="50" height="50" alt="{{ numerisation.alt }}"/>
+							<a class="group" title=" {{ numerisation.alt }}" href="{{ asset(numerisation.webPath) }}">
+							<img src="{{ asset(numerisation.webPath) }}" width="50" height="50" alt="{{ numerisation.alt }}"/>
 							</a>
 							</td>
 							{% set break = true %}
@@ -125,8 +125,8 @@
 			{% else %}
 				{% if tesson.numerisation is not empty %}
 							<td>
-							<a class="group" title=" {{ tesson.numerisation[0].alt }}" href="{{ base_url ~asset(tesson.numerisation[0].webPath) }}">
-							<img src="{{ base_url ~asset(tesson.numerisation[0].webPath) }}" width="50" height="50" alt="{{ tesson.numerisation[0].alt }}"/>
+							<a class="group" title=" {{ tesson.numerisation[0].alt }}" href="{{ asset(tesson.numerisation[0].webPath) }}">
+							<img src="{{ asset(tesson.numerisation[0].webPath) }}" width="50" height="50" alt="{{ tesson.numerisation[0].alt }}"/>
 							</a>
 							</td>
 				{% else %}

@@ -70,7 +70,10 @@ class AdminController extends Controller{
 				'messageImportant' => ""
 		) );
 	}
-	
+
+	/**
+	 * @Security("has_role('ROLE_ADMIN')")
+	 */
 	public function utilisateurRechercherAction(Request $request){
 
 		$em = $this->getDoctrine ()->getManager ();

@@ -15,8 +15,8 @@ class __TwigTemplate_cc209a980d5ec969f75d752fbf3846ef146b84dc96a9151baa6c59c1962
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_bfb74e47149b717c81af0c6e76ba3b016c274f0ed0a8d7c3fed92ecdc2b63951 = $this->env->getExtension("native_profiler");
-        $__internal_bfb74e47149b717c81af0c6e76ba3b016c274f0ed0a8d7c3fed92ecdc2b63951->enter($__internal_bfb74e47149b717c81af0c6e76ba3b016c274f0ed0a8d7c3fed92ecdc2b63951_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Security:login.html.twig"));
+        $__internal_3c7230323513ee41e0e4cbd02652e279688308595ba240573aee5f47364a5e3b = $this->env->getExtension("native_profiler");
+        $__internal_3c7230323513ee41e0e4cbd02652e279688308595ba240573aee5f47364a5e3b->enter($__internal_3c7230323513ee41e0e4cbd02652e279688308595ba240573aee5f47364a5e3b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Security:login.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -30,20 +30,20 @@ class __TwigTemplate_cc209a980d5ec969f75d752fbf3846ef146b84dc96a9151baa6c59c1962
     <meta name=\"author\" content=\"\">
 \t<link rel=\"icon\" href=\" ";
         // line 10
-        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("favicon.ico")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("favicon.ico"), "html", null, true);
         echo "\">
 
     <title>Authentification</title>
 
 \t<link href=\" ";
         // line 14
-        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("bootstrap/css/bootstrap.min.css")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bootstrap/css/bootstrap.min.css"), "html", null, true);
         echo "\"
 \trel=\"stylesheet\">
 \t
 \t<link href=\" ";
         // line 17
-        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("styles/signin.css")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("styles/signin.css"), "html", null, true);
         echo "\"
 \trel=\"stylesheet\">
 
@@ -71,7 +71,7 @@ class __TwigTemplate_cc209a980d5ec969f75d752fbf3846ef146b84dc96a9151baa6c59c1962
 </html>
 ";
         
-        $__internal_bfb74e47149b717c81af0c6e76ba3b016c274f0ed0a8d7c3fed92ecdc2b63951->leave($__internal_bfb74e47149b717c81af0c6e76ba3b016c274f0ed0a8d7c3fed92ecdc2b63951_prof);
+        $__internal_3c7230323513ee41e0e4cbd02652e279688308595ba240573aee5f47364a5e3b->leave($__internal_3c7230323513ee41e0e4cbd02652e279688308595ba240573aee5f47364a5e3b_prof);
 
     }
 
@@ -99,14 +99,14 @@ class __TwigTemplate_cc209a980d5ec969f75d752fbf3846ef146b84dc96a9151baa6c59c1962
 /*     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->*/
 /*     <meta name="description" content="">*/
 /*     <meta name="author" content="">*/
-/* 	<link rel="icon" href=" {{ base_url~asset('favicon.ico') }}">*/
+/* 	<link rel="icon" href=" {{ asset('favicon.ico') }}">*/
 /* */
 /*     <title>Authentification</title>*/
 /* */
-/* 	<link href=" {{ base_url~asset('bootstrap/css/bootstrap.min.css') }}"*/
+/* 	<link href=" {{ asset('bootstrap/css/bootstrap.min.css') }}"*/
 /* 	rel="stylesheet">*/
 /* 	*/
-/* 	<link href=" {{ base_url~asset('styles/signin.css') }}"*/
+/* 	<link href=" {{ asset('styles/signin.css') }}"*/
 /* 	rel="stylesheet">*/
 /* */
 /*   </head>*/

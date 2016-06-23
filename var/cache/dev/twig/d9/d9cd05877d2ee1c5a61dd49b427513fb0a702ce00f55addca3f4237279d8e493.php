@@ -15,14 +15,14 @@ class __TwigTemplate_ab564e98658af36602298dde2e76e9a128bcb2358102fde28b020085ddf
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_487138abb5cbce929c7a5074057af825f5f58d700771e54876478e139f45e8a5 = $this->env->getExtension("native_profiler");
-        $__internal_487138abb5cbce929c7a5074057af825f5f58d700771e54876478e139f45e8a5->enter($__internal_487138abb5cbce929c7a5074057af825f5f58d700771e54876478e139f45e8a5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/search_widget.html.php"));
+        $__internal_22f1ec8f9d85799d1133304c23cca0c973bdc1ff789c686e684a3368d52b371d = $this->env->getExtension("native_profiler");
+        $__internal_22f1ec8f9d85799d1133304c23cca0c973bdc1ff789c686e684a3368d52b371d->enter($__internal_22f1ec8f9d85799d1133304c23cca0c973bdc1ff789c686e684a3368d52b371d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/search_widget.html.php"));
 
         // line 1
         echo "<?php echo \$view['form']->block(\$form, 'form_widget_simple',  array('type' => isset(\$type) ? \$type : 'search')) ?>
 ";
         
-        $__internal_487138abb5cbce929c7a5074057af825f5f58d700771e54876478e139f45e8a5->leave($__internal_487138abb5cbce929c7a5074057af825f5f58d700771e54876478e139f45e8a5_prof);
+        $__internal_22f1ec8f9d85799d1133304c23cca0c973bdc1ff789c686e684a3368d52b371d->leave($__internal_22f1ec8f9d85799d1133304c23cca0c973bdc1ff789c686e684a3368d52b371d_prof);
 
     }
 

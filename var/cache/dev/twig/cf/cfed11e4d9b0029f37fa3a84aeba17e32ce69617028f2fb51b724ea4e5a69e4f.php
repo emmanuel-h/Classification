@@ -22,33 +22,33 @@ class __TwigTemplate_d48983bfe3c4f8c570de11499660b9d824df3625695829ff0a1694ec91f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2f63b473a578f43e507c99eb833349672a5eeb7d7b5e8209c4616844a2c71741 = $this->env->getExtension("native_profiler");
-        $__internal_2f63b473a578f43e507c99eb833349672a5eeb7d7b5e8209c4616844a2c71741->enter($__internal_2f63b473a578f43e507c99eb833349672a5eeb7d7b5e8209c4616844a2c71741_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/classification.html.twig"));
+        $__internal_218943b4a02f5c1b35187e84a19bc85c90bc4d1dbbe3740d8d1789fb8e2b88fa = $this->env->getExtension("native_profiler");
+        $__internal_218943b4a02f5c1b35187e84a19bc85c90bc4d1dbbe3740d8d1789fb8e2b88fa->enter($__internal_218943b4a02f5c1b35187e84a19bc85c90bc4d1dbbe3740d8d1789fb8e2b88fa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/classification.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_2f63b473a578f43e507c99eb833349672a5eeb7d7b5e8209c4616844a2c71741->leave($__internal_2f63b473a578f43e507c99eb833349672a5eeb7d7b5e8209c4616844a2c71741_prof);
+        $__internal_218943b4a02f5c1b35187e84a19bc85c90bc4d1dbbe3740d8d1789fb8e2b88fa->leave($__internal_218943b4a02f5c1b35187e84a19bc85c90bc4d1dbbe3740d8d1789fb8e2b88fa_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_dcfe401fbaeac86c6f9838bafc61a583e085e536dd389629c2ae244ffad14404 = $this->env->getExtension("native_profiler");
-        $__internal_dcfe401fbaeac86c6f9838bafc61a583e085e536dd389629c2ae244ffad14404->enter($__internal_dcfe401fbaeac86c6f9838bafc61a583e085e536dd389629c2ae244ffad14404_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_c038d8bc184f2fd44ccd524a13db6d0bf74163c190bd83f8d6a708c56c1ec6e3 = $this->env->getExtension("native_profiler");
+        $__internal_c038d8bc184f2fd44ccd524a13db6d0bf74163c190bd83f8d6a708c56c1ec6e3->enter($__internal_c038d8bc184f2fd44ccd524a13db6d0bf74163c190bd83f8d6a708c56c1ec6e3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Classification";
         
-        $__internal_dcfe401fbaeac86c6f9838bafc61a583e085e536dd389629c2ae244ffad14404->leave($__internal_dcfe401fbaeac86c6f9838bafc61a583e085e536dd389629c2ae244ffad14404_prof);
+        $__internal_c038d8bc184f2fd44ccd524a13db6d0bf74163c190bd83f8d6a708c56c1ec6e3->leave($__internal_c038d8bc184f2fd44ccd524a13db6d0bf74163c190bd83f8d6a708c56c1ec6e3_prof);
 
     }
 
     // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_f9a5db279ce09b74b1014ece158ac695566daf917c4f6f5801b3d147ce947820 = $this->env->getExtension("native_profiler");
-        $__internal_f9a5db279ce09b74b1014ece158ac695566daf917c4f6f5801b3d147ce947820->enter($__internal_f9a5db279ce09b74b1014ece158ac695566daf917c4f6f5801b3d147ce947820_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_6751d11e2c8cf061e6a924bbd0f5c05d4a41c6e9db82cafe9423d8b8b724ce5f = $this->env->getExtension("native_profiler");
+        $__internal_6751d11e2c8cf061e6a924bbd0f5c05d4a41c6e9db82cafe9423d8b8b724ce5f->enter($__internal_6751d11e2c8cf061e6a924bbd0f5c05d4a41c6e9db82cafe9423d8b8b724ce5f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 6
         echo "
@@ -345,11 +345,11 @@ class __TwigTemplate_d48983bfe3c4f8c570de11499660b9d824df3625695829ff0a1694ec91f
                                     // line 115
                                     echo twig_escape_filter($this->env, $this->getAttribute($context["numerisation"], "alt", array()), "html", null, true);
                                     echo "\" href=\"";
-                                    echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl($this->getAttribute($context["numerisation"], "webPath", array()))), "html", null, true);
+                                    echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl($this->getAttribute($context["numerisation"], "webPath", array())), "html", null, true);
                                     echo "\">
 \t\t\t\t\t\t\t<img src=\"";
                                     // line 116
-                                    echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl($this->getAttribute($context["numerisation"], "webPath", array()))), "html", null, true);
+                                    echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl($this->getAttribute($context["numerisation"], "webPath", array())), "html", null, true);
                                     echo "\" width=\"50\" height=\"50\" alt=\"";
                                     echo twig_escape_filter($this->env, $this->getAttribute($context["numerisation"], "alt", array()), "html", null, true);
                                     echo "\"/>
@@ -387,11 +387,11 @@ class __TwigTemplate_d48983bfe3c4f8c570de11499660b9d824df3625695829ff0a1694ec91f
                         // line 128
                         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["tesson"], "numerisation", array()), 0, array(), "array"), "alt", array()), "html", null, true);
                         echo "\" href=\"";
-                        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl($this->getAttribute($this->getAttribute($this->getAttribute($context["tesson"], "numerisation", array()), 0, array(), "array"), "webPath", array()))), "html", null, true);
+                        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl($this->getAttribute($this->getAttribute($this->getAttribute($context["tesson"], "numerisation", array()), 0, array(), "array"), "webPath", array())), "html", null, true);
                         echo "\">
 \t\t\t\t\t\t\t<img src=\"";
                         // line 129
-                        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl($this->getAttribute($this->getAttribute($this->getAttribute($context["tesson"], "numerisation", array()), 0, array(), "array"), "webPath", array()))), "html", null, true);
+                        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl($this->getAttribute($this->getAttribute($this->getAttribute($context["tesson"], "numerisation", array()), 0, array(), "array"), "webPath", array())), "html", null, true);
                         echo "\" width=\"50\" height=\"50\" alt=\"";
                         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["tesson"], "numerisation", array()), 0, array(), "array"), "alt", array()), "html", null, true);
                         echo "\"/>
@@ -442,7 +442,7 @@ class __TwigTemplate_d48983bfe3c4f8c570de11499660b9d824df3625695829ff0a1694ec91f
 
 ";
         
-        $__internal_f9a5db279ce09b74b1014ece158ac695566daf917c4f6f5801b3d147ce947820->leave($__internal_f9a5db279ce09b74b1014ece158ac695566daf917c4f6f5801b3d147ce947820_prof);
+        $__internal_6751d11e2c8cf061e6a924bbd0f5c05d4a41c6e9db82cafe9423d8b8b724ce5f->leave($__internal_6751d11e2c8cf061e6a924bbd0f5c05d4a41c6e9db82cafe9423d8b8b724ce5f_prof);
 
     }
 
@@ -575,8 +575,8 @@ class __TwigTemplate_d48983bfe3c4f8c570de11499660b9d824df3625695829ff0a1694ec91f
 /* 					{% for numerisation in tesson.numerisation if not break %}*/
 /* 						{% if numerisation.typeNumerisation.nom == typeNumerisation %}*/
 /* 							<td>*/
-/* 							<a class="group" title=" {{ numerisation.alt }}" href="{{ base_url ~asset(numerisation.webPath) }}">*/
-/* 							<img src="{{ base_url ~asset(numerisation.webPath) }}" width="50" height="50" alt="{{ numerisation.alt }}"/>*/
+/* 							<a class="group" title=" {{ numerisation.alt }}" href="{{ asset(numerisation.webPath) }}">*/
+/* 							<img src="{{ asset(numerisation.webPath) }}" width="50" height="50" alt="{{ numerisation.alt }}"/>*/
 /* 							</a>*/
 /* 							</td>*/
 /* 							{% set break = true %}*/
@@ -588,8 +588,8 @@ class __TwigTemplate_d48983bfe3c4f8c570de11499660b9d824df3625695829ff0a1694ec91f
 /* 			{% else %}*/
 /* 				{% if tesson.numerisation is not empty %}*/
 /* 							<td>*/
-/* 							<a class="group" title=" {{ tesson.numerisation[0].alt }}" href="{{ base_url ~asset(tesson.numerisation[0].webPath) }}">*/
-/* 							<img src="{{ base_url ~asset(tesson.numerisation[0].webPath) }}" width="50" height="50" alt="{{ tesson.numerisation[0].alt }}"/>*/
+/* 							<a class="group" title=" {{ tesson.numerisation[0].alt }}" href="{{ asset(tesson.numerisation[0].webPath) }}">*/
+/* 							<img src="{{ asset(tesson.numerisation[0].webPath) }}" width="50" height="50" alt="{{ tesson.numerisation[0].alt }}"/>*/
 /* 							</a>*/
 /* 							</td>*/
 /* 				{% else %}*/

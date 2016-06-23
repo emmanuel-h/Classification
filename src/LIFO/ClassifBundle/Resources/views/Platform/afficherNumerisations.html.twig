@@ -10,15 +10,13 @@
   <fieldset>
   	<legend>&nbsp;&nbsp;Type de numérisations</legend>
   	<div class="form-group">
+      <div class="col-sm-5">
+      	<b>Type de numérisation manquant à afficher :</b>
+      </div>
   	  <div class="col-sm-4">
     	{{ form_widget(form.typeNumerisation) }}
         {{ form_errors(form.typeNumerisation) }}
    	  </div>
-      <div class="col-sm-8">
-        <div class="alert alert-info" role="alert">
-		  <strong>Actuellement : </strong>{{ typeNumerisation }}
-	    </div>
-      </div>
     </div>
   </fieldset>
   {{ form_widget(form.afficher, {'attr': {'class': 'btn btn-primary'}}) }}
@@ -27,7 +25,7 @@
 </div>
 
 <table class="table table-bordered table-striped table-hover">
-	<thead align="middle"><tr class="warning"><td width=5%><b>ID tesson</b></td><td width=10%><b>Site</b><td width=10%><b>US</b></td><td width=10%><b>Numéro d'isolation</b></td></tr></thead>
+	<thead align="middle"><tr class="warning"><td width=5%><b>ID tesson</b></td><td width=10%><b>Site</b><td width=10%><b>US</b></td><td width=10%><b>Numéro d'isolation</b></td><td width=10%><b>{{ typeNumerisation }}</b></td></tr></thead>
 	<tbody>
 	 {% for tesson in tessons %}
 		<tr>
@@ -35,61 +33,23 @@
 			<td>{{ tesson.site_codeINSEE|default('NO') }}&nbsp;{{ tesson.site_numSiteCommune|default('NO') }}</td>
 			<td>{{ tesson.u_s_nom|default('NO') }}</td>
 			<td>{{ tesson.t_numIsolation }}</td>
+			<td><input type="file" id="tesson_numerisation_2_file" name="tesson[numerisation][2][file]"/></td>
 		</tr>
 	{% endfor %}
 </table>
-<p> Nombre de pages : {{ nbPages }}</p>
 
-{#
-<ul class="pagination">
-        
-                            <li class="active">
-                <a href=" {{ base_url ~path('lifo_classif_numerisations', {'page': page}) }}">
-                	{{ page }}
-                </a>
-            </li>
-               <li>
-                <a href=" {{ base_url ~path('lifo_classif_numerisations', {'page': page+1}) }}">
-                	{{ page+1 }}
-                </a>
-            </li>
-               <li>
-                <a href=" {{ base_url ~path('lifo_classif_numerisations', {'page': page+2}) }}">
-                	{{ page+2 }}
-                </a>
-            </li>
-               <li>
-                <a href=" {{ base_url ~path('lifo_classif_numerisations', {'page': page+3}) }}">
-                	{{ page+3 }}
-                </a>
-            </li>
-               <li>
-                <a href=" {{ base_url ~path('lifo_classif_numerisations', {'page': page+4}) }}">
-                	{{ page+4 }}
-                </a>
-            </li>
-                    <li>
-                <a href="/Classification/web/app_dev.php/classification/2?typeNumerisationChoisi=Aucune&amp;typeClassifChoisi=Aucune&amp;tessonsClasses=0">
-                    >
-                </a>
-            </li>
-            <li>
-                <a href="/Classification/web/app_dev.php/classification/137?typeNumerisationChoisi=Aucune&amp;typeClassifChoisi=Aucune&amp;tessonsClasses=0">
-                    >>
-                </a>
-            </li>
-            </ul>
-#}
+
+
 {% if nbPages > 0 %}
     <ul class="pagination">
         {% if page > 1 %}
             <li>
-                <a href="{{ base_url ~path('lifo_classif_numerisations', {'page': 1}) }}">
+                <a href="{{ base_url ~path('lifo_classif_numerisations', {'page': 1, 'typeNumerisation': typeNumerisation}) }}">
                     <<
                 </a>
             </li>
             <li>
-                <a href="{{ base_url ~path('lifo_classif_numerisations', {'page': page-1}) }}">
+                <a href="{{ base_url ~path('lifo_classif_numerisations', {'page': page-1, 'typeNumerisation': typeNumerisation}) }}">
                     <
                 </a>
             </li>
@@ -98,7 +58,7 @@
         {# Affichage de toutes les pages entre p-4 et p+4 sauf si < 1 ou > nbPages #}
         {% for p in range(max(page-4, 1), min(page+4, nbPages)) %}
             <li {% if p == page %}class="active"{% endif %}>
-                <a href="{{ base_url ~path('lifo_classif_numerisations', {'page': p}) }}">
+                <a href="{{ base_url ~path('lifo_classif_numerisations', {'page': p, 'typeNumerisation': typeNumerisation}) }}">
                     {{ p }}
                 </a>
             </li>
@@ -106,12 +66,12 @@
 
         {% if page < nbPages %}
             <li>
-                <a href="{{ base_url ~path('lifo_classif_numerisations', {'page': page+1}) }}">
+                <a href="{{ base_url ~path('lifo_classif_numerisations', {'page': page+1, 'typeNumerisation': typeNumerisation}) }}">
                     >
                 </a>
             </li>
             <li>
-                <a href="{{ base_url ~path('lifo_classif_numerisations', {'page': nbPages}) }}">
+                <a href="{{ base_url ~path('lifo_classif_numerisations', {'page': nbPages, 'typeNumerisation': typeNumerisation}) }}">
                     >>
                 </a>
             </li>

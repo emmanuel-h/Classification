@@ -22,33 +22,33 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6f0630ba03c72ac5ad2e6c245e28254496f73c2d8088c40b5395829383adeb53 = $this->env->getExtension("native_profiler");
-        $__internal_6f0630ba03c72ac5ad2e6c245e28254496f73c2d8088c40b5395829383adeb53->enter($__internal_6f0630ba03c72ac5ad2e6c245e28254496f73c2d8088c40b5395829383adeb53_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:upload.html.twig"));
+        $__internal_5367978e19642c880a776b9ad59fe9484df0c64dd1020c29808b51ff7d880d45 = $this->env->getExtension("native_profiler");
+        $__internal_5367978e19642c880a776b9ad59fe9484df0c64dd1020c29808b51ff7d880d45->enter($__internal_5367978e19642c880a776b9ad59fe9484df0c64dd1020c29808b51ff7d880d45_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "LIFOClassifBundle:Platform:upload.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_6f0630ba03c72ac5ad2e6c245e28254496f73c2d8088c40b5395829383adeb53->leave($__internal_6f0630ba03c72ac5ad2e6c245e28254496f73c2d8088c40b5395829383adeb53_prof);
+        $__internal_5367978e19642c880a776b9ad59fe9484df0c64dd1020c29808b51ff7d880d45->leave($__internal_5367978e19642c880a776b9ad59fe9484df0c64dd1020c29808b51ff7d880d45_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_2f7c38f843b0ca5d0d1cbc45e43e3556eff30295c5d05127bed6c44c506072a7 = $this->env->getExtension("native_profiler");
-        $__internal_2f7c38f843b0ca5d0d1cbc45e43e3556eff30295c5d05127bed6c44c506072a7->enter($__internal_2f7c38f843b0ca5d0d1cbc45e43e3556eff30295c5d05127bed6c44c506072a7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_dc23c81936115ffeb70cd96c596b34d4734baea68c3a64a5bd30355cb3e1da40 = $this->env->getExtension("native_profiler");
+        $__internal_dc23c81936115ffeb70cd96c596b34d4734baea68c3a64a5bd30355cb3e1da40->enter($__internal_dc23c81936115ffeb70cd96c596b34d4734baea68c3a64a5bd30355cb3e1da40_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Upload";
         
-        $__internal_2f7c38f843b0ca5d0d1cbc45e43e3556eff30295c5d05127bed6c44c506072a7->leave($__internal_2f7c38f843b0ca5d0d1cbc45e43e3556eff30295c5d05127bed6c44c506072a7_prof);
+        $__internal_dc23c81936115ffeb70cd96c596b34d4734baea68c3a64a5bd30355cb3e1da40->leave($__internal_dc23c81936115ffeb70cd96c596b34d4734baea68c3a64a5bd30355cb3e1da40_prof);
 
     }
 
     // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_cad84c8ae58ed3e691019fdac668f1ad09e97a1a4ec6a275ffe227a5c14a1b91 = $this->env->getExtension("native_profiler");
-        $__internal_cad84c8ae58ed3e691019fdac668f1ad09e97a1a4ec6a275ffe227a5c14a1b91->enter($__internal_cad84c8ae58ed3e691019fdac668f1ad09e97a1a4ec6a275ffe227a5c14a1b91_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_5bf9aed39b19daeb57016c92debf38e72bc620318cbd64516f961348f8c1db5b = $this->env->getExtension("native_profiler");
+        $__internal_5bf9aed39b19daeb57016c92debf38e72bc620318cbd64516f961348f8c1db5b->enter($__internal_5bf9aed39b19daeb57016c92debf38e72bc620318cbd64516f961348f8c1db5b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 6
         echo "
@@ -70,7 +70,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 \t    <b>&nbsp;Année de la découverte</b>
 \t\t<img src= \"";
         // line 17
-        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("info.png")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
         echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Année durant laquelle le tesson a été découvert')\" align = \"right\">
         ";
         // line 18
@@ -102,7 +102,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 \t    <b>&nbsp;Lot/Individu</b>
 \t\t<img src= \"";
         // line 34
-        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("info.png")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
         echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Y a-t-il un ou plusieurs tessons recevant ce même décor ?')\" align = \"right\">
         ";
         // line 35
@@ -113,7 +113,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 \t    <b>&nbsp;Numéro de tombe</b>
 \t\t<img src= \"";
         // line 39
-        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("info.png")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
         echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'A renseigner s\\'il a été trouvé dans une sépulture')\" align = \"right\">
     \t";
         // line 40
@@ -138,7 +138,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 \t    <b>&nbsp;Fait</b>
 \t\t<img src= \"";
         // line 52
-        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("info.png")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
         echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Numéro de structure où le tesson a été trouvé,<br />regroupant un ensemble chrono-stratigraphique')\" align = \"right\">
         ";
         // line 53
@@ -173,7 +173,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 \t    <b>&nbsp;Largeur</b>
 \t\t<img src= \"";
         // line 72
-        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("info.png")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
         echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Hauteur en centimètres du décor')\" align = \"right\">
         ";
         // line 73
@@ -184,7 +184,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 \t    <b>&nbsp;Longueur</b>
 \t\t<img src= \"";
         // line 77
-        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("info.png")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
         echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Longueur en centimètres du décor')\" align = \"right\">
     \t";
         // line 78
@@ -264,7 +264,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 \t    <b>&nbsp;Code INSEE</b>
 \t\t<img src= \"";
         // line 121
-        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("info.png")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
         echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Code INSEE à 5 chiffres de la commune')\" align = \"right\">
         ";
         // line 122
@@ -275,7 +275,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 \t    <b>&nbsp;Numéro de site</b>
 \t\t<img src= \"";
         // line 126
-        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("info.png")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
         echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Numéro du site fouillé de la commune')\" align = \"right\">
     \t";
         // line 127
@@ -286,7 +286,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 \t    <b>&nbsp;Zone</b>
 \t\t<img src= \"";
         // line 131
-        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("info.png")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
         echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Zone du site fouillée')\" align = \"right\">
     \t";
         // line 132
@@ -317,7 +317,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 \t    <b>&nbsp;Nom de l'US</b>
 \t\t<img src= \"";
         // line 147
-        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("info.png")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
         echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Unité stratigraphique')\" align = \"right\">
         ";
         // line 148
@@ -335,7 +335,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 \t    <b>&nbsp;Numéro d'isolation</b>
 \t\t<img src= \"";
         // line 156
-        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("info.png")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
         echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Permet l\\'unicité d\\'un tesson<br />une fois couplé à un site et un us')\" align = \"right\">
     \t";
         // line 157
@@ -502,7 +502,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 \t    <b>&nbsp;Nom</b>
 \t\t<img src= \"";
         // line 260
-        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("info.png")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
         echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Code alphanumérique de la molette')\" align=\"right\">
         ";
         // line 261
@@ -534,7 +534,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 \t    <b>&nbsp;Égal ou équivalent&nbsp;&nbsp;</b>
 \t\t<img src= \"";
         // line 277
-        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("info.png")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
         echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'<b>egal</b> est une correspondance sur le répertoire<br />tandis qu\\'<b>equi</b> s\\'en rapproche seulement')\">
         ";
         // line 278
@@ -545,7 +545,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 \t    <b>&nbsp;Référence&nbsp;&nbsp;</b>
 \t\t<img src= \"";
         // line 282
-        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('asset')->getAssetUrl("info.png")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
         echo "\" width=\"18\" height=\"18\" onmouseover=\"FoToolTip.show(this,'Matrice complète ou réputée comme telle<br />qui servira de référence pour l\\'appariement')\">
     \t";
         // line 283
@@ -635,7 +635,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 
 ";
         
-        $__internal_cad84c8ae58ed3e691019fdac668f1ad09e97a1a4ec6a275ffe227a5c14a1b91->leave($__internal_cad84c8ae58ed3e691019fdac668f1ad09e97a1a4ec6a275ffe227a5c14a1b91_prof);
+        $__internal_5bf9aed39b19daeb57016c92debf38e72bc620318cbd64516f961348f8c1db5b->leave($__internal_5bf9aed39b19daeb57016c92debf38e72bc620318cbd64516f961348f8c1db5b_prof);
 
     }
 
@@ -670,7 +670,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 /*     <div class="form-group">*/
 /*   	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Année de la découverte</b>*/
-/* 		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Année durant laquelle le tesson a été découvert')" align = "right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Année durant laquelle le tesson a été découvert')" align = "right">*/
 /*         {{ form_errors(form.anneeDecouverte) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-6">*/
@@ -687,12 +687,12 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 /*     <div class="form-group">*/
 /*   	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Lot/Individu</b>*/
-/* 		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Y a-t-il un ou plusieurs tessons recevant ce même décor ?')" align = "right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Y a-t-il un ou plusieurs tessons recevant ce même décor ?')" align = "right">*/
 /*         {{ form_errors(form.lotIndividu) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Numéro de tombe</b>*/
-/* 		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'A renseigner s\'il a été trouvé dans une sépulture')" align = "right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'A renseigner s\'il a été trouvé dans une sépulture')" align = "right">*/
 /*     	{{ form_errors(form.numTombe) }}*/
 /*   	  </div>*/
 /*       <div class="col-sm-6">*/
@@ -705,7 +705,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 /*     <div class="form-group">*/
 /*   	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Fait</b>*/
-/* 		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Numéro de structure où le tesson a été trouvé,<br />regroupant un ensemble chrono-stratigraphique')" align = "right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Numéro de structure où le tesson a été trouvé,<br />regroupant un ensemble chrono-stratigraphique')" align = "right">*/
 /*         {{ form_errors(form.fait) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-6">*/
@@ -725,12 +725,12 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 /*   	<div class="form-group">*/
 /*   	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Largeur</b>*/
-/* 		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Hauteur en centimètres du décor')" align = "right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Hauteur en centimètres du décor')" align = "right">*/
 /*         {{ form_errors(form.largeur) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Longueur</b>*/
-/* 		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Longueur en centimètres du décor')" align = "right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Longueur en centimètres du décor')" align = "right">*/
 /*     	{{ form_errors(form.longueur) }}*/
 /*   	  </div>*/
 /*   	  <div class="col-sm-1">*/
@@ -774,17 +774,17 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 /*     <div class="form-group">*/
 /*   	  <div class="col-sm-4">*/
 /* 	    <b>&nbsp;Code INSEE</b>*/
-/* 		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Code INSEE à 5 chiffres de la commune')" align = "right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Code INSEE à 5 chiffres de la commune')" align = "right">*/
 /*         {{ form_errors(form.site.codeINSEE) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-4">*/
 /* 	    <b>&nbsp;Numéro de site</b>*/
-/* 		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Numéro du site fouillé de la commune')" align = "right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Numéro du site fouillé de la commune')" align = "right">*/
 /*     	{{ form_errors(form.site.numSiteCommune) }}*/
 /*   	  </div>*/
 /*  	  <div class="col-sm-4">*/
 /* 	    <b>&nbsp;Zone</b>*/
-/* 		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Zone du site fouillée')" align = "right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Zone du site fouillée')" align = "right">*/
 /*     	{{ form_errors(form.zone.numero) }}*/
 /*   	  </div>*/
 /*       <div class="col-sm-4">*/
@@ -800,7 +800,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 /*     <div class="form-group">*/
 /*   	  <div class="col-sm-4">*/
 /* 	    <b>&nbsp;Nom de l'US</b>*/
-/* 		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Unité stratigraphique')" align = "right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Unité stratigraphique')" align = "right">*/
 /*         {{ form_errors(form.US.nom) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-4">*/
@@ -809,7 +809,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 /*   	  </div>*/
 /*  	  <div class="col-sm-4">*/
 /* 	    <b>&nbsp;Numéro d'isolation</b>*/
-/* 		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Permet l\'unicité d\'un tesson<br />une fois couplé à un site et un us')" align = "right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Permet l\'unicité d\'un tesson<br />une fois couplé à un site et un us')" align = "right">*/
 /*     	{{ form_errors(form.numIsolation) }}*/
 /*   	  </div>*/
 /*       <div class="col-sm-4">*/
@@ -913,7 +913,7 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 /*   	<div class="form-group">*/
 /*   	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Nom</b>*/
-/* 		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Code alphanumérique de la molette')" align="right">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Code alphanumérique de la molette')" align="right">*/
 /*         {{ form_errors(form.tessonMolette.molette.nom) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-6">*/
@@ -930,12 +930,12 @@ class __TwigTemplate_180ba4bf573390925e85048c281516c6908dfc7556968addf2f60966557
 /*   	<div class="form-group">*/
 /*   	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Égal ou équivalent&nbsp;&nbsp;</b>*/
-/* 		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'<b>egal</b> est une correspondance sur le répertoire<br />tandis qu\'<b>equi</b> s\'en rapproche seulement')">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'<b>egal</b> est une correspondance sur le répertoire<br />tandis qu\'<b>equi</b> s\'en rapproche seulement')">*/
 /*         {{ form_errors(form.tessonMolette.egal) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-6">*/
 /* 	    <b>&nbsp;Référence&nbsp;&nbsp;</b>*/
-/* 		<img src= "{{ base_url ~asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Matrice complète ou réputée comme telle<br />qui servira de référence pour l\'appariement')">*/
+/* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Matrice complète ou réputée comme telle<br />qui servira de référence pour l\'appariement')">*/
 /*     	{{ form_errors(form.tessonMolette.molette.reference) }}*/
 /*  	  </div>*/
 /*       <div class="col-sm-6">*/

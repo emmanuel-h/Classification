@@ -161,7 +161,10 @@ class PlatformController extends Controller {
 				'messageImportant' => $messageImportant
 		) );
 	}
-	
+
+	/**
+	 * @Security("has_role('ROLE_USER')")
+	 */
 	public function rechercheAfficherAction(Request $request, $page){
 		$em = $this->getDoctrine()->getManager();
 
@@ -213,6 +216,9 @@ class PlatformController extends Controller {
 		));
 	}
 
+	/**
+	 * @Security("has_role('ROLE_USER')")
+	 */
 	public function classeModifierAction(Request $request) {
 		$em = $this->getDoctrine()->getManager();
 		$tesson=$em->getRepository('LIFOClassifBundle:Tesson')->findOneById($request->request->get('selID'));
@@ -360,7 +366,10 @@ class PlatformController extends Controller {
 			'listeTessons' => $listeTessons
 		));
 	}
-	
+
+	/**
+	 * @Security("has_role('ROLE_USER')")
+	 */
 	public function telechargementNumerisationAction($id){
 		$em = $this->getDoctrine ()->getManager ();
 		$numerisation = $em->getRepository('LIFOClassifBundle:Numerisation')->findOneById($id);
@@ -375,7 +384,10 @@ class PlatformController extends Controller {
 			return $response;
 		}
 	}
-	
+
+	/**
+	 * @Security("has_role('ROLE_USER')")
+	 */
 	protected function verifierFormTesson($tesson){
 		$em = $this->getDoctrine ()->getManager ();
 				
@@ -511,7 +523,10 @@ class PlatformController extends Controller {
 			$em->persist ( $tesson->getSite () );
 			$em->flush ();
 	}
-	
+
+	/**
+	 * @Security("has_role('ROLE_USER')")
+	 */
 	public function tessonModifierAction (Request $request, $id){
 		$messageImportant="";
 		$em = $this->getDoctrine ()->getManager ();
@@ -531,7 +546,10 @@ class PlatformController extends Controller {
 		) );
 		
 	}
-	
+
+	/**
+	 * @Security("has_role('ROLE_USER')")
+	 */
 	public function numerisationsAction (Request $request, $page){
 		$formNumerisations= $this->createFormBuilder()
 			->add('typeNumerisation',  EntityType::class, array(
@@ -561,11 +579,7 @@ class PlatformController extends Controller {
 		
 		$nbPages = $em->getRepository('LIFOClassifBundle:Tesson')->paginationNumerisationsTotalPages($typeNumerisation);
 		$nbPages = $nbPages/$nbTessonsParPage;
-		/*if($page == 1){
-			$nbPages = $em->getRepository('LIFOClassifBundle:Tesson')->paginationNumerisationsTotalPages($typeNumerisation);
-		} else {
-			$nbPages = $typeNumerisation=$request->query->get('nbPages');
-		}*/
+		
 		$tessons=$em->getRepository('LIFOClassifBundle:Tesson')->paginationNumerisations($typeNumerisation, ($page - 1) * $nbTessonsParPage, $nbTessonsParPage);
 		return $this->render ( 'LIFOClassifBundle:Platform:afficherNumerisations.html.twig', array (
 				'form'				=> $formNumerisations->createView (),
@@ -575,7 +589,10 @@ class PlatformController extends Controller {
 				'nbPages'			=> ceil($nbPages)
 		) );
 	}
-	
+
+	/**
+	 * @Security("has_role('ROLE_USER')")
+	 */
 	public function tessonExporterAction($id){
 
 		$em = $this->getDoctrine ()->getManager ();
