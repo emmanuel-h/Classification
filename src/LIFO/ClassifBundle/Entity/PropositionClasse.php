@@ -46,7 +46,7 @@ class PropositionClasse
     /**
      * @ORM\OneToMany(targetEntity="LIFO\ClassifBundle\Entity\EssaiClassification",
      * mappedBy="propositionClasse",
-     * cascade={"persist"})
+     * cascade={"persist", "remove"})
      * 
      * @ORM\JoinColumn(nullable=false)
      */

@@ -74,6 +74,22 @@ class PlatformController extends Controller {
 	/**
 	 * @Security("has_role('ROLE_USER')")
 	 */
+	public function tessonSupprimerAction($id){
+		$em = $this->getDoctrine ()->getManager ();
+		$tesson = $em->getRepository('LIFOClassifBundle:Tesson')->findOneById($id);
+		if($tesson->getTessonMolette() != NULL){
+			$molette = $tesson->getTessonMolette()->getMolette();
+			$molette->setReferencePar(NULL);
+		}
+		$em->remove($tesson);
+		$em->flush();
+		
+		return $this->redirect($this->getParameter("base_url"). $this->generateUrl('lifo_classif_upload'));
+	}
+
+	/**
+	 * @Security("has_role('ROLE_USER')")
+	 */
 	public function rechercheAction(Request $request) {
 		
 		$messageImportant ="";
@@ -416,17 +432,19 @@ class PlatformController extends Controller {
 			}
 			$tesson->setUs ( $us );
 			
-			$zone = $em->getRepository ( 'LIFOClassifBundle:Zone' )->findOneBy ( array (
-					'numero' => $tesson->getZone ()->getNumero (),
-					'site' => $tesson->getSite ()
-			) );
-			if (! is_object ( $zone )) {
-				$zone = new Zone ();
-				$zone->setNumero ( $tesson->getZone ()->getNumero () );
-				$zone->setSite ( $site );
-				$em->persist ( $zone );
+			if($tesson->getZone() != NULL){
+				$zone = $em->getRepository ( 'LIFOClassifBundle:Zone' )->findOneBy ( array (
+						'numero' => $tesson->getZone ()->getNumero (),
+						'site' => $tesson->getSite ()
+				) );
+				if (! is_object ( $zone )) {
+					$zone = new Zone ();
+					$zone->setNumero ( $tesson->getZone ()->getNumero () );
+					$zone->setSite ( $site );
+					$em->persist ( $zone );
+				}
+				$tesson->setZone ( $zone );
 			}
-			$tesson->setZone ( $zone );
 				
 			if($tesson->getSequence() != NULL){
 				if($tesson->getSequence()->getNumeroSequence() != ""){

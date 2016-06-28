@@ -13,12 +13,12 @@
     <legend>&nbsp;&nbsp;Description</legend>
     <div class="form-group">
   	  <div class="col-sm-6">
-	    <b>&nbsp;Année de la découverte</b>
+	    <b>&nbsp;* Année de la découverte</b>
 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Année durant laquelle le tesson a été découvert')" align = "right">
         {{ form_errors(form.anneeDecouverte) }}
    	  </div>
  	  <div class="col-sm-6">
-	    <b>&nbsp;Développé</b>
+	    <b>&nbsp;* Développé</b>
     	{{ form_errors(form.developpe) }}
   	  </div>
       <div class="col-sm-6">
@@ -30,7 +30,7 @@
     </div>
     <div class="form-group">
   	  <div class="col-sm-6">
-	    <b>&nbsp;Lot/Individu</b>
+	    <b>&nbsp;* Lot/Individu</b>
 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Y a-t-il un ou plusieurs tessons recevant ce même décor ?')" align = "right">
         {{ form_errors(form.lotIndividu) }}
    	  </div>
@@ -53,7 +53,7 @@
         {{ form_errors(form.fait) }}
    	  </div>
  	  <div class="col-sm-6">
-	    <b>&nbsp;Commentaire</b>
+	    <b>&nbsp;* Commentaire</b>
     	{{ form_errors(form.commentaire) }}
   	  </div>
       <div class="col-sm-6">
@@ -68,12 +68,12 @@
   	<legend>&nbsp;&nbsp;Dimensions</legend>
   	<div class="form-group">
   	  <div class="col-sm-6">
-	    <b>&nbsp;Largeur</b>
+	    <b>&nbsp;* Largeur</b>
 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Hauteur en centimètres du décor')" align = "right">
         {{ form_errors(form.largeur) }}
    	  </div>
  	  <div class="col-sm-6">
-	    <b>&nbsp;Longueur</b>
+	    <b>&nbsp;* Longueur</b>
 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Longueur en centimètres du décor')" align = "right">
     	{{ form_errors(form.longueur) }}
   	  </div>
@@ -92,11 +92,11 @@
     </div>
   	<div class="form-group">
   	  <div class="col-sm-6">
-	    <b>&nbsp;Nombre de motifs verticaux</b>
+	    <b>&nbsp;* Nombre de motifs verticaux</b>
         {{ form_errors(form.nombreMotifsVerticaux) }}
    	  </div>
  	  <div class="col-sm-6">
-	    <b>&nbsp;Nombre de motifs horizontaux</b>
+	    <b>&nbsp;* Nombre de motifs horizontaux</b>
     	{{ form_errors(form.nombreMotifsHorizontaux) }}
   	  </div>
   	  <div class="col-sm-1">
@@ -117,12 +117,12 @@
   	<legend>&nbsp;&nbsp;Localisation</legend>
     <div class="form-group">
   	  <div class="col-sm-4">
-	    <b>&nbsp;Code INSEE</b>
+	    <b>&nbsp;* Code INSEE</b>
 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Code INSEE à 5 chiffres de la commune')" align = "right">
         {{ form_errors(form.site.codeINSEE) }}
    	  </div>
  	  <div class="col-sm-4">
-	    <b>&nbsp;Numéro de site</b>
+	    <b>&nbsp;* Numéro de site</b>
 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Numéro du site fouillé de la commune')" align = "right">
     	{{ form_errors(form.site.numSiteCommune) }}
   	  </div>
@@ -143,16 +143,16 @@
     </div>
     <div class="form-group">
   	  <div class="col-sm-4">
-	    <b>&nbsp;Nom de l'US</b>
+	    <b>&nbsp;* Nom de l'US</b>
 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Unité stratigraphique')" align = "right">
         {{ form_errors(form.US.nom) }}
    	  </div>
  	  <div class="col-sm-4">
-	    <b>&nbsp;Description de l'US</b>
+	    <b>&nbsp;* Description de l'US</b>
     	{{ form_errors(form.US.description) }}
   	  </div>
  	  <div class="col-sm-4">
-	    <b>&nbsp;Numéro d'isolation</b>
+	    <b>&nbsp;* Numéro d'isolation</b>
 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Permet l\'unicité d\'un tesson<br />une fois couplé à un site et un us')" align = "right">
     	{{ form_errors(form.numIsolation) }}
   	  </div>
@@ -326,5 +326,5 @@
   {# Fermeture de la balise <form> du formulaire HTML #}
   {{ form_end(form) }}
 </div>
-
+<p>* Les champs précédés d'une astérisque sont obligatoires. Il faut soit leur laisser leur valeur par défaut (s'ils en ont une et qu'elle est juste), soit rentrer une nouvelle valeur (s'il n'y a pas de valeur par défaut ou que celle-ci n'est pas juste)</p>
 {% endblock %}

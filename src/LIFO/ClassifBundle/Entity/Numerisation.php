@@ -199,7 +199,7 @@ class Numerisation {
 		return 'uploads/numerisations';
 	}
 	protected function getUploadRootDir() {
-		return __DIR__ . $this->container->getParameter('PICTURES_SAVED_PATH') . $this->getUploadDir ();
+		return __DIR__ . '/../../../../web/' . $this->getUploadDir ();
 	}
 	
 	/**

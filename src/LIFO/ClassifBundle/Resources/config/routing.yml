@@ -63,6 +63,13 @@ lifo_classif_tesson_exporter:
     requirements:
         id: \d+
         
+lifo_classif_tesson_supprimer:
+    path:     /tesson/supprimer/{id}
+    defaults:
+        _controller: LIFOClassifBundle:Platform:tessonSupprimer
+    requirements:
+        id: \d+
+        
 lifo_classif_admin:
     path:     /admin
     defaults:

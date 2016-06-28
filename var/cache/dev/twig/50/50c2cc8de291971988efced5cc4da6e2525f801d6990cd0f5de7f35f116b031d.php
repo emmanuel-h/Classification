@@ -22,33 +22,33 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_cda0ef263de9a8f9be7ecebdc9fc9ade05e9abe969216fda7431064ca6918e60 = $this->env->getExtension("native_profiler");
-        $__internal_cda0ef263de9a8f9be7ecebdc9fc9ade05e9abe969216fda7431064ca6918e60->enter($__internal_cda0ef263de9a8f9be7ecebdc9fc9ade05e9abe969216fda7431064ca6918e60_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/upload.html.twig"));
+        $__internal_5bae3617ac61506663ee30bd45a786d7ca4ff463a69e5c5fbbd98a397b85888a = $this->env->getExtension("native_profiler");
+        $__internal_5bae3617ac61506663ee30bd45a786d7ca4ff463a69e5c5fbbd98a397b85888a->enter($__internal_5bae3617ac61506663ee30bd45a786d7ca4ff463a69e5c5fbbd98a397b85888a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/upload.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_cda0ef263de9a8f9be7ecebdc9fc9ade05e9abe969216fda7431064ca6918e60->leave($__internal_cda0ef263de9a8f9be7ecebdc9fc9ade05e9abe969216fda7431064ca6918e60_prof);
+        $__internal_5bae3617ac61506663ee30bd45a786d7ca4ff463a69e5c5fbbd98a397b85888a->leave($__internal_5bae3617ac61506663ee30bd45a786d7ca4ff463a69e5c5fbbd98a397b85888a_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_7aec06c5f463c96897c9d1cad691f73df5d2113d4917520fd5ea314cde06a3a1 = $this->env->getExtension("native_profiler");
-        $__internal_7aec06c5f463c96897c9d1cad691f73df5d2113d4917520fd5ea314cde06a3a1->enter($__internal_7aec06c5f463c96897c9d1cad691f73df5d2113d4917520fd5ea314cde06a3a1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_d97c45c94264cef7a49d0203920aad287e63048bc0fa239e9cde8ec0ce04403c = $this->env->getExtension("native_profiler");
+        $__internal_d97c45c94264cef7a49d0203920aad287e63048bc0fa239e9cde8ec0ce04403c->enter($__internal_d97c45c94264cef7a49d0203920aad287e63048bc0fa239e9cde8ec0ce04403c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Upload";
         
-        $__internal_7aec06c5f463c96897c9d1cad691f73df5d2113d4917520fd5ea314cde06a3a1->leave($__internal_7aec06c5f463c96897c9d1cad691f73df5d2113d4917520fd5ea314cde06a3a1_prof);
+        $__internal_d97c45c94264cef7a49d0203920aad287e63048bc0fa239e9cde8ec0ce04403c->leave($__internal_d97c45c94264cef7a49d0203920aad287e63048bc0fa239e9cde8ec0ce04403c_prof);
 
     }
 
     // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_5c3e71e996bc3e5ef99ab21239c137d25fd186a2cc44ff11b9d61c2cfa341ac5 = $this->env->getExtension("native_profiler");
-        $__internal_5c3e71e996bc3e5ef99ab21239c137d25fd186a2cc44ff11b9d61c2cfa341ac5->enter($__internal_5c3e71e996bc3e5ef99ab21239c137d25fd186a2cc44ff11b9d61c2cfa341ac5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_0054add1ae0074446534f05a117dfbceafc15b6c8abd883ced711f55259df72a = $this->env->getExtension("native_profiler");
+        $__internal_0054add1ae0074446534f05a117dfbceafc15b6c8abd883ced711f55259df72a->enter($__internal_0054add1ae0074446534f05a117dfbceafc15b6c8abd883ced711f55259df72a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 6
         echo "
@@ -67,7 +67,7 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
     <legend>&nbsp;&nbsp;Description</legend>
     <div class=\"form-group\">
   \t  <div class=\"col-sm-6\">
-\t    <b>&nbsp;Année de la découverte</b>
+\t    <b>&nbsp;* Année de la découverte</b>
 \t\t<img src= \"";
         // line 17
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
@@ -78,7 +78,7 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
         echo "
    \t  </div>
  \t  <div class=\"col-sm-6\">
-\t    <b>&nbsp;Développé</b>
+\t    <b>&nbsp;* Développé</b>
     \t";
         // line 22
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "developpe", array()), 'errors');
@@ -99,7 +99,7 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
     </div>
     <div class=\"form-group\">
   \t  <div class=\"col-sm-6\">
-\t    <b>&nbsp;Lot/Individu</b>
+\t    <b>&nbsp;* Lot/Individu</b>
 \t\t<img src= \"";
         // line 34
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
@@ -146,7 +146,7 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
         echo "
    \t  </div>
  \t  <div class=\"col-sm-6\">
-\t    <b>&nbsp;Commentaire</b>
+\t    <b>&nbsp;* Commentaire</b>
     \t";
         // line 57
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "commentaire", array()), 'errors');
@@ -170,7 +170,7 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
   \t<legend>&nbsp;&nbsp;Dimensions</legend>
   \t<div class=\"form-group\">
   \t  <div class=\"col-sm-6\">
-\t    <b>&nbsp;Largeur</b>
+\t    <b>&nbsp;* Largeur</b>
 \t\t<img src= \"";
         // line 72
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
@@ -181,7 +181,7 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
         echo "
    \t  </div>
  \t  <div class=\"col-sm-6\">
-\t    <b>&nbsp;Longueur</b>
+\t    <b>&nbsp;* Longueur</b>
 \t\t<img src= \"";
         // line 77
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
@@ -218,14 +218,14 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
     </div>
   \t<div class=\"form-group\">
   \t  <div class=\"col-sm-6\">
-\t    <b>&nbsp;Nombre de motifs verticaux</b>
+\t    <b>&nbsp;* Nombre de motifs verticaux</b>
         ";
         // line 96
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nombreMotifsVerticaux", array()), 'errors');
         echo "
    \t  </div>
  \t  <div class=\"col-sm-6\">
-\t    <b>&nbsp;Nombre de motifs horizontaux</b>
+\t    <b>&nbsp;* Nombre de motifs horizontaux</b>
     \t";
         // line 100
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nombreMotifsHorizontaux", array()), 'errors');
@@ -261,7 +261,7 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
   \t<legend>&nbsp;&nbsp;Localisation</legend>
     <div class=\"form-group\">
   \t  <div class=\"col-sm-4\">
-\t    <b>&nbsp;Code INSEE</b>
+\t    <b>&nbsp;* Code INSEE</b>
 \t\t<img src= \"";
         // line 121
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
@@ -272,7 +272,7 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
         echo "
    \t  </div>
  \t  <div class=\"col-sm-4\">
-\t    <b>&nbsp;Numéro de site</b>
+\t    <b>&nbsp;* Numéro de site</b>
 \t\t<img src= \"";
         // line 126
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
@@ -314,7 +314,7 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
     </div>
     <div class=\"form-group\">
   \t  <div class=\"col-sm-4\">
-\t    <b>&nbsp;Nom de l'US</b>
+\t    <b>&nbsp;* Nom de l'US</b>
 \t\t<img src= \"";
         // line 147
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
@@ -325,14 +325,14 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
         echo "
    \t  </div>
  \t  <div class=\"col-sm-4\">
-\t    <b>&nbsp;Description de l'US</b>
+\t    <b>&nbsp;* Description de l'US</b>
     \t";
         // line 152
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "US", array()), "description", array()), 'errors');
         echo "
   \t  </div>
  \t  <div class=\"col-sm-4\">
-\t    <b>&nbsp;Numéro d'isolation</b>
+\t    <b>&nbsp;* Numéro d'isolation</b>
 \t\t<img src= \"";
         // line 156
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("info.png"), "html", null, true);
@@ -632,10 +632,10 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 </div>
-
+<p>* Les champs précédés d'une astérisque sont obligatoires. Il faut soit leur laisser leur valeur par défaut (s'ils en ont une et qu'elle est juste), soit rentrer une nouvelle valeur (s'il n'y a pas de valeur par défaut ou que celle-ci n'est pas juste)</p>
 ";
         
-        $__internal_5c3e71e996bc3e5ef99ab21239c137d25fd186a2cc44ff11b9d61c2cfa341ac5->leave($__internal_5c3e71e996bc3e5ef99ab21239c137d25fd186a2cc44ff11b9d61c2cfa341ac5_prof);
+        $__internal_0054add1ae0074446534f05a117dfbceafc15b6c8abd883ced711f55259df72a->leave($__internal_0054add1ae0074446534f05a117dfbceafc15b6c8abd883ced711f55259df72a_prof);
 
     }
 
@@ -669,12 +669,12 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 /*     <legend>&nbsp;&nbsp;Description</legend>*/
 /*     <div class="form-group">*/
 /*   	  <div class="col-sm-6">*/
-/* 	    <b>&nbsp;Année de la découverte</b>*/
+/* 	    <b>&nbsp;* Année de la découverte</b>*/
 /* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Année durant laquelle le tesson a été découvert')" align = "right">*/
 /*         {{ form_errors(form.anneeDecouverte) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-6">*/
-/* 	    <b>&nbsp;Développé</b>*/
+/* 	    <b>&nbsp;* Développé</b>*/
 /*     	{{ form_errors(form.developpe) }}*/
 /*   	  </div>*/
 /*       <div class="col-sm-6">*/
@@ -686,7 +686,7 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 /*     </div>*/
 /*     <div class="form-group">*/
 /*   	  <div class="col-sm-6">*/
-/* 	    <b>&nbsp;Lot/Individu</b>*/
+/* 	    <b>&nbsp;* Lot/Individu</b>*/
 /* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Y a-t-il un ou plusieurs tessons recevant ce même décor ?')" align = "right">*/
 /*         {{ form_errors(form.lotIndividu) }}*/
 /*    	  </div>*/
@@ -709,7 +709,7 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 /*         {{ form_errors(form.fait) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-6">*/
-/* 	    <b>&nbsp;Commentaire</b>*/
+/* 	    <b>&nbsp;* Commentaire</b>*/
 /*     	{{ form_errors(form.commentaire) }}*/
 /*   	  </div>*/
 /*       <div class="col-sm-6">*/
@@ -724,12 +724,12 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 /*   	<legend>&nbsp;&nbsp;Dimensions</legend>*/
 /*   	<div class="form-group">*/
 /*   	  <div class="col-sm-6">*/
-/* 	    <b>&nbsp;Largeur</b>*/
+/* 	    <b>&nbsp;* Largeur</b>*/
 /* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Hauteur en centimètres du décor')" align = "right">*/
 /*         {{ form_errors(form.largeur) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-6">*/
-/* 	    <b>&nbsp;Longueur</b>*/
+/* 	    <b>&nbsp;* Longueur</b>*/
 /* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Longueur en centimètres du décor')" align = "right">*/
 /*     	{{ form_errors(form.longueur) }}*/
 /*   	  </div>*/
@@ -748,11 +748,11 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 /*     </div>*/
 /*   	<div class="form-group">*/
 /*   	  <div class="col-sm-6">*/
-/* 	    <b>&nbsp;Nombre de motifs verticaux</b>*/
+/* 	    <b>&nbsp;* Nombre de motifs verticaux</b>*/
 /*         {{ form_errors(form.nombreMotifsVerticaux) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-6">*/
-/* 	    <b>&nbsp;Nombre de motifs horizontaux</b>*/
+/* 	    <b>&nbsp;* Nombre de motifs horizontaux</b>*/
 /*     	{{ form_errors(form.nombreMotifsHorizontaux) }}*/
 /*   	  </div>*/
 /*   	  <div class="col-sm-1">*/
@@ -773,12 +773,12 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 /*   	<legend>&nbsp;&nbsp;Localisation</legend>*/
 /*     <div class="form-group">*/
 /*   	  <div class="col-sm-4">*/
-/* 	    <b>&nbsp;Code INSEE</b>*/
+/* 	    <b>&nbsp;* Code INSEE</b>*/
 /* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Code INSEE à 5 chiffres de la commune')" align = "right">*/
 /*         {{ form_errors(form.site.codeINSEE) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-4">*/
-/* 	    <b>&nbsp;Numéro de site</b>*/
+/* 	    <b>&nbsp;* Numéro de site</b>*/
 /* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Numéro du site fouillé de la commune')" align = "right">*/
 /*     	{{ form_errors(form.site.numSiteCommune) }}*/
 /*   	  </div>*/
@@ -799,16 +799,16 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 /*     </div>*/
 /*     <div class="form-group">*/
 /*   	  <div class="col-sm-4">*/
-/* 	    <b>&nbsp;Nom de l'US</b>*/
+/* 	    <b>&nbsp;* Nom de l'US</b>*/
 /* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Unité stratigraphique')" align = "right">*/
 /*         {{ form_errors(form.US.nom) }}*/
 /*    	  </div>*/
 /*  	  <div class="col-sm-4">*/
-/* 	    <b>&nbsp;Description de l'US</b>*/
+/* 	    <b>&nbsp;* Description de l'US</b>*/
 /*     	{{ form_errors(form.US.description) }}*/
 /*   	  </div>*/
 /*  	  <div class="col-sm-4">*/
-/* 	    <b>&nbsp;Numéro d'isolation</b>*/
+/* 	    <b>&nbsp;* Numéro d'isolation</b>*/
 /* 		<img src= "{{ asset ('info.png') }}" width="18" height="18" onmouseover="FoToolTip.show(this,'Permet l\'unicité d\'un tesson<br />une fois couplé à un site et un us')" align = "right">*/
 /*     	{{ form_errors(form.numIsolation) }}*/
 /*   	  </div>*/
@@ -982,5 +982,5 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 /*   {# Fermeture de la balise <form> du formulaire HTML #}*/
 /*   {{ form_end(form) }}*/
 /* </div>*/
-/* */
+/* <p>* Les champs précédés d'une astérisque sont obligatoires. Il faut soit leur laisser leur valeur par défaut (s'ils en ont une et qu'elle est juste), soit rentrer une nouvelle valeur (s'il n'y a pas de valeur par défaut ou que celle-ci n'est pas juste)</p>*/
 /* {% endblock %}*/
