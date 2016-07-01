@@ -21,7 +21,7 @@
 
 
 <table class="table table-bordered table-striped table-hover">
-	<thead align="middle"><tr class="warning"><td width=5%><b>ID tesson</b></td><td width=10%><b>Site</b><td width=10%><b>US</b></td><td width=10%><b>Numéro d'isolation</b></td></tr></thead>
+	<thead align="middle"><tr class="warning"><td width=5%><b>ID tesson</b></td><td width=10%><b>Site</b><td width=10%><b>US</b></td><td width=10%><b>Numéro d'isolation</b></td><td width=10%><b>Numérisation</b></td></tr></thead>
 	<tbody>
 	{% for tesson in tessons %}
 		<tr>
@@ -29,11 +29,30 @@
 			<td>{{ tesson.site.codeINSEE}}&nbsp;{{ tesson.site.numSiteCommune }}</td>
 			<td>{{ tesson.us.nom }}</td>
 			<td>{{ tesson.numIsolation }}</td>
+			<td>
+			{% if tesson.numerisation is not empty %}
+						<a class="group" title=" {{ tesson.numerisation[0].alt }}" href="{{ asset(tesson.numerisation[0].webPath) }}">
+						<img src="{{ asset(tesson.numerisation[0].webPath) }}" width="50" height="50" alt="{{ tesson.numerisation[0].alt }}"/>
+						</a>
+			{% else %}
+				Pas de numérisations trouvées pour ce tesson
+			{% endif %}
+			</td>
 		</tr>
 	{% endfor %}
 	</tbody>
 </table>
 
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".group").fancybox();
+	
+});
+
+function modifierClasse(sel){
+	$.post("{{ base_url ~path('lifo_classif_classification_modifier') }}", {selID:sel.name, classe:sel.value});
+};
+</script>
 {% include 'LIFOClassifBundle::pagination.html.twig' %}
 
 {% endblock %}

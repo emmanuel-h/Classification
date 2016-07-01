@@ -24,9 +24,9 @@ class Molette
     /**
      * @var string
      *
-     * @ORM\Column(name="nom", type="string", length=255)
+     * @ORM\Column(name="code", type="string", length=255)
      */
-    private $nom;
+    private $code;
 
     /**
      * @var string
@@ -34,11 +34,20 @@ class Molette
      * @ORM\Column(name="description", type="text")
      */
     private $description="Aucune";
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=255)
+     */
+    private $nom;
     
     /**
      * @ORM\OneToOne(targetEntity="LIFO\ClassifBundle\Entity\Tesson")
      */
     private $referencePar;
+    
+    private $reference;
 
 
     /**
@@ -97,5 +106,37 @@ class Molette
     public function getReferencePar()
     {
         return $this->referencePar;
+    }
+
+    /**
+     * Set nom
+     *
+     * @param string $nom
+     *
+     * @return Molette
+     */
+    public function setNom($nom)
+    {
+        $this->code = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get nom
+     *
+     * @return string
+     */
+    public function getNom()
+    {
+        return $this->code;
+    }
+    
+    public function setReference($b){
+    	$this->reference=$b;
+    }
+    
+    public function getReference(){
+    	return $this->reference;
     }
 }

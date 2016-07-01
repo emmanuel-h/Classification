@@ -22,33 +22,33 @@ class __TwigTemplate_c69c96b729851006be728e591ca3a23fe43d1408bed52871620990a3ee4
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9fc77f18c3985495725a2d394262ba8b13292144da38d729afe006cd8f626005 = $this->env->getExtension("native_profiler");
-        $__internal_9fc77f18c3985495725a2d394262ba8b13292144da38d729afe006cd8f626005->enter($__internal_9fc77f18c3985495725a2d394262ba8b13292144da38d729afe006cd8f626005_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/afficherTessonsRecherche.html.twig"));
+        $__internal_402d3474ac3193ad3d23f00d8d7041d80604297777c79f6ea0a630900d72cea3 = $this->env->getExtension("native_profiler");
+        $__internal_402d3474ac3193ad3d23f00d8d7041d80604297777c79f6ea0a630900d72cea3->enter($__internal_402d3474ac3193ad3d23f00d8d7041d80604297777c79f6ea0a630900d72cea3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/afficherTessonsRecherche.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_9fc77f18c3985495725a2d394262ba8b13292144da38d729afe006cd8f626005->leave($__internal_9fc77f18c3985495725a2d394262ba8b13292144da38d729afe006cd8f626005_prof);
+        $__internal_402d3474ac3193ad3d23f00d8d7041d80604297777c79f6ea0a630900d72cea3->leave($__internal_402d3474ac3193ad3d23f00d8d7041d80604297777c79f6ea0a630900d72cea3_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_89b5b180c4d341a600821b97782d865da70220211a56c5816ddaa3307d1f8534 = $this->env->getExtension("native_profiler");
-        $__internal_89b5b180c4d341a600821b97782d865da70220211a56c5816ddaa3307d1f8534->enter($__internal_89b5b180c4d341a600821b97782d865da70220211a56c5816ddaa3307d1f8534_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_4f542f40d8945f81d0552621822114b0d65b9acc011a7d84549f153977234e4f = $this->env->getExtension("native_profiler");
+        $__internal_4f542f40d8945f81d0552621822114b0d65b9acc011a7d84549f153977234e4f->enter($__internal_4f542f40d8945f81d0552621822114b0d65b9acc011a7d84549f153977234e4f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Résultats de la recherche";
         
-        $__internal_89b5b180c4d341a600821b97782d865da70220211a56c5816ddaa3307d1f8534->leave($__internal_89b5b180c4d341a600821b97782d865da70220211a56c5816ddaa3307d1f8534_prof);
+        $__internal_4f542f40d8945f81d0552621822114b0d65b9acc011a7d84549f153977234e4f->leave($__internal_4f542f40d8945f81d0552621822114b0d65b9acc011a7d84549f153977234e4f_prof);
 
     }
 
     // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_48be53fa15994da1cb034d173984da3a018ec59199595952b04c259b90e0aa8b = $this->env->getExtension("native_profiler");
-        $__internal_48be53fa15994da1cb034d173984da3a018ec59199595952b04c259b90e0aa8b->enter($__internal_48be53fa15994da1cb034d173984da3a018ec59199595952b04c259b90e0aa8b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_b2456c3df6a199cf7256ef16ff044afb7aeceb548da1ca59d441af11eed1cca2 = $this->env->getExtension("native_profiler");
+        $__internal_b2456c3df6a199cf7256ef16ff044afb7aeceb548da1ca59d441af11eed1cca2->enter($__internal_b2456c3df6a199cf7256ef16ff044afb7aeceb548da1ca59d441af11eed1cca2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 6
         echo "
@@ -93,7 +93,7 @@ class __TwigTemplate_c69c96b729851006be728e591ca3a23fe43d1408bed52871620990a3ee4
 
 
 <table class=\"table table-bordered table-striped table-hover\">
-\t<thead align=\"middle\"><tr class=\"warning\"><td width=5%><b>ID tesson</b></td><td width=10%><b>Site</b><td width=10%><b>US</b></td><td width=10%><b>Numéro d'isolation</b></td></tr></thead>
+\t<thead align=\"middle\"><tr class=\"warning\"><td width=5%><b>ID tesson</b></td><td width=10%><b>Site</b><td width=10%><b>US</b></td><td width=10%><b>Numéro d'isolation</b></td><td width=10%><b>Numérisation</b></td></tr></thead>
 \t<tbody>
 \t";
         // line 26
@@ -122,24 +122,62 @@ class __TwigTemplate_c69c96b729851006be728e591ca3a23fe43d1408bed52871620990a3ee4
             // line 31
             echo twig_escape_filter($this->env, $this->getAttribute($context["tesson"], "numIsolation", array()), "html", null, true);
             echo "</td>
+\t\t\t<td>
+\t\t\t";
+            // line 33
+            if ( !twig_test_empty($this->getAttribute($context["tesson"], "numerisation", array()))) {
+                // line 34
+                echo "\t\t\t\t\t\t<a class=\"group\" title=\" ";
+                echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["tesson"], "numerisation", array()), 0, array(), "array"), "alt", array()), "html", null, true);
+                echo "\" href=\"";
+                echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl($this->getAttribute($this->getAttribute($this->getAttribute($context["tesson"], "numerisation", array()), 0, array(), "array"), "webPath", array())), "html", null, true);
+                echo "\">
+\t\t\t\t\t\t<img src=\"";
+                // line 35
+                echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl($this->getAttribute($this->getAttribute($this->getAttribute($context["tesson"], "numerisation", array()), 0, array(), "array"), "webPath", array())), "html", null, true);
+                echo "\" width=\"50\" height=\"50\" alt=\"";
+                echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["tesson"], "numerisation", array()), 0, array(), "array"), "alt", array()), "html", null, true);
+                echo "\"/>
+\t\t\t\t\t\t</a>
+\t\t\t";
+            } else {
+                // line 38
+                echo "\t\t\t\tPas de numérisations trouvées pour ce tesson
+\t\t\t";
+            }
+            // line 40
+            echo "\t\t\t</td>
 \t\t</tr>
 \t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['tesson'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 34
+        // line 43
         echo "\t</tbody>
 </table>
 
+<script type=\"text/javascript\">
+\$(document).ready(function() {
+\t\$(\".group\").fancybox();
+\t
+});
+
+function modifierClasse(sel){
+\t\$.post(\"";
+        // line 53
+        echo twig_escape_filter($this->env, ((isset($context["base_url"]) ? $context["base_url"] : $this->getContext($context, "base_url")) . $this->env->getExtension('routing')->getPath("lifo_classif_classification_modifier")), "html", null, true);
+        echo "\", {selID:sel.name, classe:sel.value});
+};
+</script>
 ";
-        // line 37
-        $this->loadTemplate("LIFOClassifBundle::pagination.html.twig", "@LIFOClassif/Platform/afficherTessonsRecherche.html.twig", 37)->display($context);
-        // line 38
+        // line 56
+        $this->loadTemplate("LIFOClassifBundle::pagination.html.twig", "@LIFOClassif/Platform/afficherTessonsRecherche.html.twig", 56)->display($context);
+        // line 57
         echo "
 ";
         
-        $__internal_48be53fa15994da1cb034d173984da3a018ec59199595952b04c259b90e0aa8b->leave($__internal_48be53fa15994da1cb034d173984da3a018ec59199595952b04c259b90e0aa8b_prof);
+        $__internal_b2456c3df6a199cf7256ef16ff044afb7aeceb548da1ca59d441af11eed1cca2->leave($__internal_b2456c3df6a199cf7256ef16ff044afb7aeceb548da1ca59d441af11eed1cca2_prof);
 
     }
 
@@ -155,7 +193,7 @@ class __TwigTemplate_c69c96b729851006be728e591ca3a23fe43d1408bed52871620990a3ee4
 
     public function getDebugInfo()
     {
-        return array (  139 => 38,  137 => 37,  132 => 34,  123 => 31,  119 => 30,  113 => 29,  107 => 28,  104 => 27,  100 => 26,  90 => 18,  87 => 17,  81 => 16,  73 => 14,  70 => 13,  65 => 12,  61 => 10,  59 => 9,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
+        return array (  177 => 57,  175 => 56,  169 => 53,  157 => 43,  149 => 40,  145 => 38,  137 => 35,  130 => 34,  128 => 33,  123 => 31,  119 => 30,  113 => 29,  107 => 28,  104 => 27,  100 => 26,  90 => 18,  87 => 17,  81 => 16,  73 => 14,  70 => 13,  65 => 12,  61 => 10,  59 => 9,  54 => 6,  48 => 5,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends "LIFOClassifBundle::layoutGeneral.html.twig" %}*/
@@ -181,7 +219,7 @@ class __TwigTemplate_c69c96b729851006be728e591ca3a23fe43d1408bed52871620990a3ee4
 /* */
 /* */
 /* <table class="table table-bordered table-striped table-hover">*/
-/* 	<thead align="middle"><tr class="warning"><td width=5%><b>ID tesson</b></td><td width=10%><b>Site</b><td width=10%><b>US</b></td><td width=10%><b>Numéro d'isolation</b></td></tr></thead>*/
+/* 	<thead align="middle"><tr class="warning"><td width=5%><b>ID tesson</b></td><td width=10%><b>Site</b><td width=10%><b>US</b></td><td width=10%><b>Numéro d'isolation</b></td><td width=10%><b>Numérisation</b></td></tr></thead>*/
 /* 	<tbody>*/
 /* 	{% for tesson in tessons %}*/
 /* 		<tr>*/
@@ -189,11 +227,30 @@ class __TwigTemplate_c69c96b729851006be728e591ca3a23fe43d1408bed52871620990a3ee4
 /* 			<td>{{ tesson.site.codeINSEE}}&nbsp;{{ tesson.site.numSiteCommune }}</td>*/
 /* 			<td>{{ tesson.us.nom }}</td>*/
 /* 			<td>{{ tesson.numIsolation }}</td>*/
+/* 			<td>*/
+/* 			{% if tesson.numerisation is not empty %}*/
+/* 						<a class="group" title=" {{ tesson.numerisation[0].alt }}" href="{{ asset(tesson.numerisation[0].webPath) }}">*/
+/* 						<img src="{{ asset(tesson.numerisation[0].webPath) }}" width="50" height="50" alt="{{ tesson.numerisation[0].alt }}"/>*/
+/* 						</a>*/
+/* 			{% else %}*/
+/* 				Pas de numérisations trouvées pour ce tesson*/
+/* 			{% endif %}*/
+/* 			</td>*/
 /* 		</tr>*/
 /* 	{% endfor %}*/
 /* 	</tbody>*/
 /* </table>*/
 /* */
+/* <script type="text/javascript">*/
+/* $(document).ready(function() {*/
+/* 	$(".group").fancybox();*/
+/* 	*/
+/* });*/
+/* */
+/* function modifierClasse(sel){*/
+/* 	$.post("{{ base_url ~path('lifo_classif_classification_modifier') }}", {selID:sel.name, classe:sel.value});*/
+/* };*/
+/* </script>*/
 /* {% include 'LIFOClassifBundle::pagination.html.twig' %}*/
 /* */
 /* {% endblock %}*/

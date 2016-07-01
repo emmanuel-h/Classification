@@ -22,33 +22,33 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5bae3617ac61506663ee30bd45a786d7ca4ff463a69e5c5fbbd98a397b85888a = $this->env->getExtension("native_profiler");
-        $__internal_5bae3617ac61506663ee30bd45a786d7ca4ff463a69e5c5fbbd98a397b85888a->enter($__internal_5bae3617ac61506663ee30bd45a786d7ca4ff463a69e5c5fbbd98a397b85888a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/upload.html.twig"));
+        $__internal_573c51928fde8c808a6a9525575a45aabf0c19d425bff92bb1cf3e3058a38ccb = $this->env->getExtension("native_profiler");
+        $__internal_573c51928fde8c808a6a9525575a45aabf0c19d425bff92bb1cf3e3058a38ccb->enter($__internal_573c51928fde8c808a6a9525575a45aabf0c19d425bff92bb1cf3e3058a38ccb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@LIFOClassif/Platform/upload.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_5bae3617ac61506663ee30bd45a786d7ca4ff463a69e5c5fbbd98a397b85888a->leave($__internal_5bae3617ac61506663ee30bd45a786d7ca4ff463a69e5c5fbbd98a397b85888a_prof);
+        $__internal_573c51928fde8c808a6a9525575a45aabf0c19d425bff92bb1cf3e3058a38ccb->leave($__internal_573c51928fde8c808a6a9525575a45aabf0c19d425bff92bb1cf3e3058a38ccb_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_d97c45c94264cef7a49d0203920aad287e63048bc0fa239e9cde8ec0ce04403c = $this->env->getExtension("native_profiler");
-        $__internal_d97c45c94264cef7a49d0203920aad287e63048bc0fa239e9cde8ec0ce04403c->enter($__internal_d97c45c94264cef7a49d0203920aad287e63048bc0fa239e9cde8ec0ce04403c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_27bfbf5971da1cbea700246e113eb8b887effb187065c40c955cea8572c5e71a = $this->env->getExtension("native_profiler");
+        $__internal_27bfbf5971da1cbea700246e113eb8b887effb187065c40c955cea8572c5e71a->enter($__internal_27bfbf5971da1cbea700246e113eb8b887effb187065c40c955cea8572c5e71a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
         echo " - Upload";
         
-        $__internal_d97c45c94264cef7a49d0203920aad287e63048bc0fa239e9cde8ec0ce04403c->leave($__internal_d97c45c94264cef7a49d0203920aad287e63048bc0fa239e9cde8ec0ce04403c_prof);
+        $__internal_27bfbf5971da1cbea700246e113eb8b887effb187065c40c955cea8572c5e71a->leave($__internal_27bfbf5971da1cbea700246e113eb8b887effb187065c40c955cea8572c5e71a_prof);
 
     }
 
     // line 5
     public function block_LIFOClassif_body($context, array $blocks = array())
     {
-        $__internal_0054add1ae0074446534f05a117dfbceafc15b6c8abd883ced711f55259df72a = $this->env->getExtension("native_profiler");
-        $__internal_0054add1ae0074446534f05a117dfbceafc15b6c8abd883ced711f55259df72a->enter($__internal_0054add1ae0074446534f05a117dfbceafc15b6c8abd883ced711f55259df72a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
+        $__internal_2797f46ae31a4031e09c06781ab01b63455145b701c00d09d0bca0f6e5b2c125 = $this->env->getExtension("native_profiler");
+        $__internal_2797f46ae31a4031e09c06781ab01b63455145b701c00d09d0bca0f6e5b2c125->enter($__internal_2797f46ae31a4031e09c06781ab01b63455145b701c00d09d0bca0f6e5b2c125_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "LIFOClassif_body"));
 
         // line 6
         echo "
@@ -632,10 +632,10 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 </div>
-<p>* Les champs précédés d'une astérisque sont obligatoires. Il faut soit leur laisser leur valeur par défaut (s'ils en ont une et qu'elle est juste), soit rentrer une nouvelle valeur (s'il n'y a pas de valeur par défaut ou que celle-ci n'est pas juste)</p>
+<p>* Les champs précédés d'un astérisque sont obligatoires. Il faut soit leur laisser leur valeur par défaut (s'ils en ont une et qu'elle est juste), soit rentrer une nouvelle valeur (s'il n'y a pas de valeur par défaut ou que celle-ci n'est pas juste)</p>
 ";
         
-        $__internal_0054add1ae0074446534f05a117dfbceafc15b6c8abd883ced711f55259df72a->leave($__internal_0054add1ae0074446534f05a117dfbceafc15b6c8abd883ced711f55259df72a_prof);
+        $__internal_2797f46ae31a4031e09c06781ab01b63455145b701c00d09d0bca0f6e5b2c125->leave($__internal_2797f46ae31a4031e09c06781ab01b63455145b701c00d09d0bca0f6e5b2c125_prof);
 
     }
 
@@ -982,5 +982,5 @@ class __TwigTemplate_4c3aa0a302672e3696da7497f6ccdf6c090c7c8242d508a96b671890edb
 /*   {# Fermeture de la balise <form> du formulaire HTML #}*/
 /*   {{ form_end(form) }}*/
 /* </div>*/
-/* <p>* Les champs précédés d'une astérisque sont obligatoires. Il faut soit leur laisser leur valeur par défaut (s'ils en ont une et qu'elle est juste), soit rentrer une nouvelle valeur (s'il n'y a pas de valeur par défaut ou que celle-ci n'est pas juste)</p>*/
+/* <p>* Les champs précédés d'un astérisque sont obligatoires. Il faut soit leur laisser leur valeur par défaut (s'ils en ont une et qu'elle est juste), soit rentrer une nouvelle valeur (s'il n'y a pas de valeur par défaut ou que celle-ci n'est pas juste)</p>*/
 /* {% endblock %}*/
